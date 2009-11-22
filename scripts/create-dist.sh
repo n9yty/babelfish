@@ -12,12 +12,11 @@ if [ -f $IMAHE ]; then
 	rm $IMAGE;
 fi
 
-FOLDER=$TEMP/$NAME
-if [ ! -d $FOLDER ]; then
-	mkdir -p $FOLDER;
-else
+FOLDER=/tmp/$NAME
+if [ -d $FOLDER ]; then
 	rm -fr $FOLDER;
 fi
+mkdir -p $FOLDER;
 
 cp -vr $SERVICE $FOLDER
 hdiutil create -srcfolder $FOLDER -nospotlight -noanyowners -volname $NAME $IMAGE
