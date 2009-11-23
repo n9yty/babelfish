@@ -44,6 +44,10 @@
 				</array>
 				<key>NSUserData</key>
 				<string>fr-en</string>
+				<key>NSTimeout</key>
+				<string>60</string>
+				<key>NSServiceDescription</key>
+				<string>Translates selected text from French language into English language using Google translation service</string>
 			</dict>
 			<dict>
 				<key>NSMenuItem</key>
@@ -65,6 +69,10 @@
 				</array>
 				<key>NSUserData</key>
 				<string>en-fr</string>
+				<key>NSTimeout</key>
+				<string>60</string>
+				<key>NSServiceDescription</key>
+				<string>Translates selected text from French language into English language using Google translation service</string>
 			</dict>
 		</array>
 		<key>NSUIElement</key>
