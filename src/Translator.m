@@ -27,7 +27,8 @@ static SBJSON *parser;
 }
 
 + (NSString*)translateText:(NSString*)text from:(NSString*)from to:(NSString*)to {
-	// TODO: how about all these string - shoudl I release them ;)
+	// TODO: check the arguments
+	// TODO: how about all these string - should I release them ;)
 	// compose the URL string
 	// expected URL is like: http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=hello%20world&langpair=en%7Cit
 	NSString* encodedText = [text stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];

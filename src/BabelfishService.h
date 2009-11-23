@@ -22,8 +22,5 @@
 
 }
 
--(void)translateFrenchToEnglish:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error;
--(void)translateEnglishToFrench:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error;
-
--(void)doTranslate:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error from:(NSString *)from to:(NSString *)to;
+-(void)translateText:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error;
 @end

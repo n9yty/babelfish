@@ -22,13 +22,10 @@ int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
 	BabelfishService *service = [[BabelfishService alloc] init];
-	NSRegisterServicesProvider(service, @"BabelfishTranslator");
-	
-	[[NSRunLoop currentRunLoop] acceptInputForMode:NSDefaultRunLoopMode
-										beforeDate:[NSDate dateWithTimeIntervalSinceNow:60.0]];
-	
+	NSRegisterServicesProvider(service, @"BabelfishTranslator");		
 	[service release];
+	
     [pool drain];
-    
+
 	return 0;
 }

@@ -21,23 +21,24 @@
 // this is where the services gets defined
 @implementation BabelfishService
 
-// French -> English
--(void)translateFrenchToEnglish:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error {	
-	[self doTranslate:pboard userData:userData error:error from:@"fr" to:@"en"];
-}
-
-// English -> French
--(void)translateEnglishToFrench:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error {
-	[self doTranslate:pboard userData:userData error:error from:@"en" to:@"fr"];
-}
-
 // the actual part where stuff happens
--(void)doTranslate:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error from:(NSString *)from to:(NSString *)to {	
-	NSString *pboardString;
-    NSArray *types;
+// the userData variable contains the desired language pair in form of <from>|<to>
+-(void)translateText:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error {		
+	// userData is really the only one to check as the others are defined by the service protocol
+	if (userData == nil) {
+		*error = NSLocalizedString(@"Error: couldn't translate text.",
+								   @"userData does not contain language pair description in form of <from>|<to>. It is empty.");
+	}
+	
+	// extract the language pair
+	NSArray *languagePair = [userData componentsSeparatedByString:@"-"];
+	if ([languagePair count] != 2) {
+		*error = NSLocalizedString(@"Error: couldn't translate text.",
+								   @"userData does not contain language pair description in form of <from>|<to>");
+	}
 	
 	// check for string in pasteboard
-    types = [pboard types];
+    NSArray *types = [pboard types];
     if (![types containsObject:NSStringPboardType]) {
         *error = NSLocalizedString(@"Error: couldn't translate text.",
 								   @"pboard couldn't give string.");
@@ -45,8 +46,8 @@
     }
 	
 	// get the string - this will return the selected text
-    pboardString = [pboard stringForType:NSStringPboardType];
-    if (!pboardString) {
+    NSString *text = [pboard stringForType:NSStringPboardType];
+    if (!text) {
         *error = NSLocalizedString(@"Error: couldn't translate text.",
 								   @"pboard couldn't give string.");
         return;
@@ -54,7 +55,7 @@
 	
 	@try {
 		// translate
-		NSString *translation = [Translator translateText:pboardString from:from to:to];
+		NSString *translation = [Translator translateText:text from:[languagePair objectAtIndex:0] to:[languagePair objectAtIndex:1]];
 		
 		// set resulting type
 		types = [NSArray arrayWithObject:NSStringPboardType];
