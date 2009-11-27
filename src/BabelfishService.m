@@ -16,14 +16,35 @@
 //  Created by Filip Krikava on 11/20/09.
 
 #import "BabelfishService.h"
-#import "Translator.h"
 
 // this is where the services gets defined
 @implementation BabelfishService
 
+-(id)initWithTranslator:(NSObject<Translator> *)theTranslator {
+	// FIXME: is this correct order?
+	if (theTranslator == nil) {
+		[self release];
+
+		return nil;
+	}
+	
+	if (self = [super init]) {
+		translator = [theTranslator retain];
+	}
+	
+	return self;
+}
+
+-(void)dealloc {
+	[translator release];
+	
+	[super dealloc];
+}
+
+// TODO: NSLocalizedString
 // the actual part where stuff happens
-// the userData variable contains the desired language pair in form of <from>|<to>
--(void)translateText:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error {		
+// the userData variable contains the desired language pair in form of <from>-<to>
+-(void)translateText:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error {
 	// userData is really the only one to check as the others are defined by the service protocol
 	if (userData == nil) {
 		*error = NSLocalizedString(@"Error: couldn't translate text.",
@@ -53,18 +74,27 @@
         return;
     }
 	
+	NSString *translation = nil;
 	@try {
 		// translate
-		NSString *translation = [Translator translateText:text from:[languagePair objectAtIndex:0] to:[languagePair objectAtIndex:1]];
-		
-		// set resulting type
-		types = [NSArray arrayWithObject:NSStringPboardType];
-		[pboard declareTypes:types owner:nil];
-		// encode
-		[pboard setString:translation forType:NSStringPboardType];
+		translation = [translator translateText:text from:[languagePair objectAtIndex:0] to:[languagePair objectAtIndex:1]];		
 	} @catch (NSException *e) {
 		*error = [NSString stringWithFormat:@"Unable to translate text: %@: %@", [e name], [e reason]];
 	}
+	
+	// check if the pboard supports pasting string
+	if ([pboard availableTypeFromArray:[NSArray arrayWithObject:NSStringPboardType]] == nil) {
+		NSLog(@"does not support :(");
+	} else {
+		NSLog(@"does support :)");
+	}
+	
+	// set resulting type
+	types = [NSArray arrayWithObject:NSStringPboardType];
+	[pboard declareTypes:types owner:nil];
+	// encode
+	[pboard setString:translation forType:NSStringPboardType];
+	
 	
 	return;
 }

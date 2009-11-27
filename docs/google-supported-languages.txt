@@ -1,0 +1,52 @@
+ Afrikaans (South-Africa)
+ Albanian
+ Arabic (Saudi-Arabia)
+ Belarusian
+ Bulgarian
+ Chinese
+Catalan
+ Croatian
+ Czech
+ Danish
+ Dutch
+ English
+ Estonian
+ Filipino
+ Finnish
+ French
+Galician
+ German
+ Greek
+ Hebrew
+ Hindi
+ Hungarian
+ Icelandic
+ Indonesian
+ Irish
+ Italian
+ Japanese
+ Korean
+ Latvian
+ Lithuanian
+ Macedonian
+ Malay
+ Maltese
+ Norwegian
+ Persian (Iran)
+ Polish
+ Portuguese
+ Romanian
+ Russian
+ Spanish
+ Serbian
+ Slovak
+ Slovenian
+ Swahili (Tanzania)
+ Swedish
+ Thai
+ Turkish
+ Ukrainian
+ Vietnamese
+Welsh 
+Yiddish
+

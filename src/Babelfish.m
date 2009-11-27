@@ -17,14 +17,21 @@
 
 #import <Foundation/Foundation.h>
 #import "BabelfishService.h"
+#import "GoogleTranslator.h"
 
 int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
-	BabelfishService *service = [[BabelfishService alloc] init];
-	NSRegisterServicesProvider(service, @"BabelfishTranslator");		
-	[service release];
+	GoogleTranslator *translator = [[GoogleTranslator alloc] init];
+	BabelfishService *service = [[BabelfishService alloc] initWithTranslator:translator];
 	
+	NSLog(@"Registering service");
+	NSRegisterServicesProvider(service, @"BabelfishTranslator");		
+	
+	[[NSRunLoop currentRunLoop] acceptInputForMode:NSDefaultRunLoopMode
+										beforeDate:[NSDate dateWithTimeIntervalSinceNow:60.0]];
+	
+	[service release];	
     [pool drain];
 
 	return 0;

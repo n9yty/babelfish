@@ -15,10 +15,19 @@
 
 //  Created by Filip Krikava on 11/20/09.
 
-#import <SenTestingKit/SenTestingKit.h>
+#import "GoogleTranslatorTest.h"
 
-@interface TranslatorTest : SenTestCase {
+#import "GoogleTranslator.h"
 
+@implementation GoogleTranslatorTest
+
+// very simple test case, just to see it works. This is actually not a unit test,
+// but more an integration test (in project of this size, it does not really matter how you call it).
+-(void) testTranslate {
+	
+	NSString *translation = [GoogleTranslator translateText:@"Hello World" from:@"en" to:@"fr"];
+	STAssertEqualObjects(@"Bonjour tout le monde", translation, @"Translations are not equal ");
+	
 }
 
 @end

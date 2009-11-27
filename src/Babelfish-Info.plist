@@ -34,10 +34,6 @@
 				<string>translateText</string>
 				<key>NSPortName</key>
 				<string>BabelfishTranslator</string>
-				<key>NSReturnTypes</key>
-				<array>
-					<string>NSStringPboardType</string>
-				</array>
 				<key>NSSendTypes</key>
 				<array>
 					<string>NSStringPboardType</string>
@@ -45,7 +41,7 @@
 				<key>NSUserData</key>
 				<string>fr-en</string>
 				<key>NSTimeout</key>
-				<string>60</string>
+				<string>60000</string>
 				<key>NSServiceDescription</key>
 				<string>Translates selected text from French language into English language using Google translation service</string>
 			</dict>
@@ -59,10 +55,6 @@
 				<string>translateText</string>
 				<key>NSPortName</key>
 				<string>BabelfishTranslator</string>
-				<key>NSReturnTypes</key>
-				<array>
-					<string>NSStringPboardType</string>
-				</array>
 				<key>NSSendTypes</key>
 				<array>
 					<string>NSStringPboardType</string>
@@ -70,7 +62,7 @@
 				<key>NSUserData</key>
 				<string>en-fr</string>
 				<key>NSTimeout</key>
-				<string>60</string>
+				<string>60000</string>
 				<key>NSServiceDescription</key>
 				<string>Translates selected text from English language into French language using Google translation service</string>
 			</dict>

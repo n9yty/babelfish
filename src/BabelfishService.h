@@ -17,10 +17,13 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "Translator.h"
 
 @interface BabelfishService : NSObject {
-
+	@private
+	NSObject<Translator> *translator;
 }
 
+-(id)initWithTranslator:(NSObject<Translator> *)theTranslator;
 -(void)translateText:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error;
 @end

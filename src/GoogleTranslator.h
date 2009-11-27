@@ -17,15 +17,16 @@
 
 #import <Cocoa/Cocoa.h>
 #import "JSON.h"
+#import "Translator.h"
 
 #define TIMEOUT					55
 
 // example: http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=hello%20world&langpair=en%7Cit
 #define GOOGLE_TRANSLATE_URL	@"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0"
 
-@interface Translator : NSObject {
+@interface GoogleTranslator : NSObject <Translator> {
+	@private
+	SBJSON *parser;
 }
-
-+ (NSString*)translateText:(NSString*)text from:(NSString*)from to:(NSString*)to;
 
 @end
