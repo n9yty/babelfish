@@ -15,9 +15,9 @@
 
 //  Created by Filip Krikava on 11/28/09.
 
-#import <Cocoa/Cocoa.h>
+#ifndef __VERSION_H__
+#define __VERSION_H__
 
-int main(int argc, char *argv[])
-{
-    return NSApplicationMain(argc,  (const char **) argv);
-}
+#define BUILD_NUMBER	147
+
+#endif

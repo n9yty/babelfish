@@ -17,15 +17,22 @@
 
 #import "GoogleTranslatorTest.h"
 
-#import "GoogleTranslator.h"
 
 @implementation GoogleTranslatorTest
+
+-(void)setUp {
+	translator = [[GoogleTranslator alloc] init];
+}
+
+-(void)tearDown {
+	[translator release];
+}
 
 // very simple test case, just to see it works. This is actually not a unit test,
 // but more an integration test (in project of this size, it does not really matter how you call it).
 -(void) testTranslate {
 	
-	NSString *translation = [GoogleTranslator translateText:@"Hello World" from:@"en" to:@"fr"];
+	NSString *translation = [translator translateText:@"Hello World" from:@"en" to:@"fr"];
 	STAssertEqualObjects(@"Bonjour tout le monde", translation, @"Translations are not equal ");
 	
 }

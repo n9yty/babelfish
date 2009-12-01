@@ -13,17 +13,10 @@
  OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-//  Created by Filip Krikava on 11/20/09.
+//  Created by Filip Krikava on 11/26/09.
 
-#import <Cocoa/Cocoa.h>
+@protocol Translator
 
-#import "Translator.h"
+- (NSString*)translateText:(NSString*)text from:(NSString*)from to:(NSString*)to;
 
-@interface BabelfishService : NSObject {
-	@private
-	NSObject<Translator> *translator;
-}
-
--(id)initWithTranslator:(NSObject<Translator> *)theTranslator;
--(void)translateText:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error;
 @end

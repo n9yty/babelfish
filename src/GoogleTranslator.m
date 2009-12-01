@@ -19,15 +19,25 @@
 @implementation GoogleTranslator
 
 - (id) init {
-	if(self = [super init]) {
-		// create the JSON parser
-		parser = [[SBJSON alloc] init];	
+	if(![super init]) {
+		return nil;
 	}
+	
+#ifndef NDEBUG
+	NSLog(@"Initializing %@", [GoogleTranslator class]);
+#endif
+	
+	// create the JSON parser
+	parser = [[SBJSON alloc] init];	
 	
 	return self;
 }
 
 - (void) dealloc {
+#ifndef NDEBUG
+	NSLog(@"Deallocing %@", [GoogleTranslator class]);
+#endif
+
 	[parser release];
 	
 	[super dealloc];
@@ -69,8 +79,7 @@
 	//  "responseStatus": 200}
 	
 	NSDictionary *result = [parser objectWithString:contents error:&error];
-	[parser autorelease];
-	
+ 	
 	if (result == nil) {
 		@throw [NSException
 				exceptionWithName:@"InvalidResponseException"
@@ -91,8 +100,17 @@
 	// get the translation
 	NSDictionary *responseData = [result objectForKey:@"responseData"];
 	NSString *translatedText = [responseData objectForKey:@"translatedText"];
+
+	// UTF-8
+	translatedText = [translatedText stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	// '
+	translatedText = [translatedText stringByReplacingOccurrencesOfString:@"&#39;" withString:@"'"];
 	
 	return translatedText;
+}
+
+- (NSString *)description {
+	return [NSString stringWithFormat:@"Google Translator (%@)", GOOGLE_TRANSLATE_URL];
 }
 
 @end

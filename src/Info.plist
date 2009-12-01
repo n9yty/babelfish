@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFile</key>
+	<string>Babelfish.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.nkuyu.apps.${PRODUCT_NAME:identifier}</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Translate from French to English</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>translateText</string>
+			<key>NSPortName</key>
+			<string>Babelfish</string>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>NSServiceDescription</key>
+			<string>Translates selected text from French language into English language using Google translation service</string>
+			<key>NSTimeout</key>
+			<string>60000</string>
+			<key>NSUserData</key>
+			<string>fr-en</string>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Translate from English to French</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>translateText</string>
+			<key>NSPortName</key>
+			<string>Babelfish</string>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>NSServiceDescription</key>
+			<string>Translates selected text from English language into French language using Google translation service</string>
+			<key>NSTimeout</key>
+			<string>60000</string>
+			<key>NSUserData</key>
+			<string>en-fr</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -13,21 +13,31 @@
  OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-//  Created by Filip Krikava on 11/20/09.
-// just for debugging
+//  Created by Filip Krikava on 11/29/09.
 
+#import <Cocoa/Cocoa.h>
 #import "Translator.h"
 
-int main(int argc, char **argv)	{ 
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init]; 
+#define TRANSLATION_FINISHED_NOTIFICATION	@"TranslationFinishedNotification"
 
-	@try {
-		NSString *translation = [Translator translateText:@"Hello World" from:@"en" to:@"fr"];		
-		NSLog(@"%@", translation);
-	} @catch (NSException *e) {
-		NSLog(@"Unable to translate text: %@: %@", [e name], [e reason]);
-	}
+@class Language;
+
+@interface TranslateTextOperation : NSOperation {
+
+@private
+	NSString *_text;
+	Language *_from;
+	Language *_to;
+	NSObject<Translator> *_translator;
 	
-	[pool drain]; 
-	exit (EXIT_SUCCESS); 
-} 
+	NSString *_translation;
+	NSException *_exception;
+}
+
+- (id) initWithText:(NSString *)text from:(Language *)from to:(Language *)to translator:(NSObject<Translator> *)translator;
+
+- (NSString *) translation;
+- (Language *) from;
+- (Language *) to;
+
+@end
