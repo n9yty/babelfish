@@ -85,7 +85,7 @@
 		510A5B0C10C334A600088B20 /* LanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageManager.h; sourceTree = "<group>"; };
 		510A5B0D10C334A600088B20 /* LanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageManager.m; sourceTree = "<group>"; };
 		510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SupportedLanguages.plist; sourceTree = "<group>"; };
-		510A5B2310C3403700088B20 /* Babelfish-Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Babelfish-Tests.octest"; path = "build/Debug/Babelfish-Tests.octest"; sourceTree = "<group>"; };
+		510A5B2310C3403700088B20 /* Babelfish-Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Babelfish-Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		510A5B2410C3403700088B20 /* Babelfish-Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Babelfish-Tests-Info.plist"; sourceTree = "<group>"; };
 		510A5B3010C3409D00088B20 /* LanguageManagerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageManagerTest.h; sourceTree = "<group>"; };
 		510A5B3110C3409D00088B20 /* LanguageManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageManagerTest.m; sourceTree = "<group>"; };
