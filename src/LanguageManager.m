@@ -7,62 +7,18 @@
 //
 
 #import "LanguageManager.h"
-
-@implementation Language
-
-- (id) initWithCode:(NSString *)code name:(NSString *)name imagePath:(NSString *)imagePath {
-	if (![super init]) {
-		return nil;
-	}
-	
-	_code = [code retain];
-	_name = [name retain];
-	_imagePath = [imagePath retain];
-	
-	return self;
-}
-
-- (void)dealloc {
-	[_code release];
-	[_name release];
-	[_imagePath release];
-	[_image release];
-	
-	[super dealloc];
-}
-
-- (NSString *)code {
-	return _code;
-}
-
-- (NSString *)name {
-	return _name;
-}
-
-- (NSImage *)image {
-	if (_image == nil) {
-		_image = [[NSImage alloc] initWithContentsOfFile:_imagePath];
-	}
-	
-	return _image;
-}
-
-- (NSString *)description {
-	return _name;
-}
-
-@end
+#import "Language.h"
 
 @implementation LanguageManager
 
-static LanguageManager *_languageManager = nil; 
+static LanguageManager *languageManager = nil; 
 
 + (LanguageManager *) languageManager {
-	if (_languageManager == nil) {
-		_languageManager = [[super allocWithZone:nil] init];
+	if (languageManager == nil) {
+		languageManager = [[super allocWithZone:nil] init];
 	}
 	
-	return _languageManager;
+	return languageManager;
 }
 
 + (id)allocWithZone:(NSZone *)zone
@@ -142,6 +98,10 @@ static LanguageManager *_languageManager = nil;
 	
 	Language *lang = [allLanguages objectForKey:code];
 	return lang;
+}
+
+- (NSArray *) allLanguages {
+	return [allLanguages allValues];
 }
 
 - (int)count {

@@ -17,10 +17,18 @@
 
 #import "TranslateTextOperation.h"
 #import "LanguageManager.h"
+#import "Language.h"
+
+NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNotificationKey";
 
 @implementation TranslateTextOperation
 
-- (id) initWithText:(NSString *)text from:(Language *)from to:(Language *)to translator:(NSObject<Translator> *)translator {
+@synthesize from;
+@synthesize to;
+@synthesize translation;
+@synthesize error;
+
+- (id) initWithText:(NSString *)aText from:(Language *)fromLang to:(Language *)toLang translator:(NSObject<Translator> *)aTranslator {
 #ifndef NDEBUG
 	NSLog(@"Initializing %@", [TranslateTextOperation class]);
 #endif
@@ -31,10 +39,10 @@
 	
 	// TODO: check arguments
 	
-	_text = [text retain];
-	_from = [from retain];
-	_to = [to retain];
-	_translator = [translator retain];
+	text = [aText retain];
+	from = [fromLang retain];
+	to = [toLang retain];
+	translator = [aTranslator retain];
 	
 	return self;
 }
@@ -44,59 +52,35 @@
 	NSLog(@"Deallocing %@", [TranslateTextOperation class]);
 #endif
 	
-	[_text release];
-	[_from release];
-	[_to release];
-	[_translator release];
-	[_translation release];
-	[_exception release];
+	[text release];
+	[from release];
+	[to release];
+	[translation release];
+	[error release];
 	
 	[super dealloc];
 }
 
 - (void) main {
 #ifndef NDEBUG
-	NSLog(@"Translating text:\"%@\" from:\"%@\" to:\"%@\" using %@", _text, _from, _to, [_translator description]);
+	NSLog(@"Translating text:\"%@\" from:\"%@\" to:\"%@\" using %@", text, from, to, [translation description]);
 #endif
-	@try {
-		// translate
-		NSString *translation = [_translator translateText:_text from:[_from code] to:[_to code]];
-		
-		if (translation == nil) {
-			@throw [NSException exceptionWithName:@"NilTranslation" reason:@"Translator returned no trsnaltion" userInfo:nil];
-		}
-		
+
+	NSString *t = [translator translateText:text from:[from code] to:[to code] error:&error];
+	
 #ifndef NDEBUG
-		NSLog(@"Translation: %@", translation);
-#endif	
-		
-		_translation = [translation retain];		
-	} @catch (NSException *e) {
-		NSString *error = [NSString stringWithFormat:@"Unable to translate text: %@: %@", [e name], [e reason]];
-		NSLog(error);
-
-		_exception = e;
-	} @finally {
-		if (![self isCancelled]) {
-			[[NSNotificationCenter defaultCenter] performSelectorOnMainThread:@selector(postNotification:) withObject: [NSNotification notificationWithName:TRANSLATION_FINISHED_NOTIFICATION object:self] waitUntilDone:NO];
-		}
-	}
-}
-
-- (NSString *) translation {
-	if (_exception == nil) {
-		return _translation;
+	if (t == nil) {
+		NSLog(@"Translation error: %@", error);
 	} else {
-		@throw _exception;
+		NSLog(@"Translation: %@", t);
 	}
-}
-
-- (Language *) from {
-	return _from;
-}
-
-- (Language *) to {
-	return _to;
+#endif	
+	
+	translation = [t retain];		
+	if (![self isCancelled]) {
+		[[NSNotificationCenter defaultCenter] performSelectorOnMainThread:@selector(postNotification:) withObject: [NSNotification notificationWithName:BFTranslationFinishedNotificationKey object:self] waitUntilDone:NO];
+	}
+	
 }
 
 @end

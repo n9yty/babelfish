@@ -18,26 +18,27 @@
 #import <Cocoa/Cocoa.h>
 #import "Translator.h"
 
-#define TRANSLATION_FINISHED_NOTIFICATION	@"TranslationFinishedNotification"
-
 @class Language;
+
+extern NSString *const BFTranslationFinishedNotificationKey;
 
 @interface TranslateTextOperation : NSOperation {
 
 @private
-	NSString *_text;
-	Language *_from;
-	Language *_to;
-	NSObject<Translator> *_translator;
+	NSString *text;
+	Language *from;
+	Language *to;
+	NSObject<Translator> *translator;
 	
-	NSString *_translation;
-	NSException *_exception;
+	NSString *translation;
+	NSError *error;
 }
 
-- (id) initWithText:(NSString *)text from:(Language *)from to:(Language *)to translator:(NSObject<Translator> *)translator;
+- (id) initWithText:(NSString *)aText from:(Language *)fromLang to:(Language *)toLang translator:(NSObject<Translator> *)aTranslator;
 
-- (NSString *) translation;
-- (Language *) from;
-- (Language *) to;
+@property (readonly) NSString *translation;
+@property (readonly) Language *from;
+@property (readonly) Language *to;
+@property (readonly) NSError *error;
 
 @end

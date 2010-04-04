@@ -19,6 +19,7 @@
 #import "JSON.h"
 #import "Translator.h"
 
+// TODO: change to constanst
 #define TIMEOUT					55
 
 // example: http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=hello%20world&langpair=en%7Cit
@@ -27,6 +28,10 @@
 @interface GoogleTranslator : NSObject <Translator> {
 	@private
 	SBJSON *parser;
+	
 }
+
+- (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description underlyingError:(NSError *)underlyingError;
+- (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description reason:(NSString *)reason;
 
 @end

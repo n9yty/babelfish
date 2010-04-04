@@ -32,10 +32,16 @@
 		510A5CC210C5CAC600088B20 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A588A10C1BC6D00088B20 /* SBJsonBase.m */; };
 		510A5CC410C5CAC600088B20 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A588C10C1BC6D00088B20 /* SBJsonParser.m */; };
 		510A5CC610C5CAC600088B20 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A588E10C1BC6D00088B20 /* SBJsonWriter.m */; };
-		5115951510C19356001E60A8 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5115950310C19356001E60A8 /* AppController.m */; };
+		5115951510C19356001E60A8 /* TranslationWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5115950310C19356001E60A8 /* TranslationWindowController.m */; };
 		5115951610C19356001E60A8 /* GoogleTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5115950510C19356001E60A8 /* GoogleTranslator.m */; };
+		512192C7115E95EB00150E9E /* BFTranslationWindowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */; };
 		514A6DA910DC17050039CE28 /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */; };
 		514A6DB510DC18610039CE28 /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */; };
+		5168A55511680813004C576A /* GoogleTranslateLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5168A55411680813004C576A /* GoogleTranslateLogo.gif */; };
+		518CEFFA1128AB6000658FB0 /* Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CEFF91128AB6000658FB0 /* Language.m */; };
+		518CF0011128AC3700658FB0 /* RatedLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CF0001128AC3700658FB0 /* RatedLanguage.m */; };
+		51999EF9112A02F1008BAC42 /* TranslationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51999EF8112A02F1008BAC42 /* TranslationWindow.xib */; };
+		51999F14112A0729008BAC42 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51999F13112A0729008BAC42 /* AppController.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -90,12 +96,22 @@
 		510A5B3110C3409D00088B20 /* LanguageManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageManagerTest.m; sourceTree = "<group>"; };
 		510A5CB510C5CA9F00088B20 /* GoogleTranslatorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleTranslatorTest.h; sourceTree = "<group>"; };
 		510A5CB610C5CA9F00088B20 /* GoogleTranslatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleTranslatorTest.m; sourceTree = "<group>"; };
-		5115950210C19356001E60A8 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
-		5115950310C19356001E60A8 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		5115950210C19356001E60A8 /* TranslationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslationWindowController.h; sourceTree = "<group>"; };
+		5115950310C19356001E60A8 /* TranslationWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslationWindowController.m; sourceTree = "<group>"; };
 		5115950410C19356001E60A8 /* GoogleTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleTranslator.h; sourceTree = "<group>"; };
 		5115950510C19356001E60A8 /* GoogleTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleTranslator.m; sourceTree = "<group>"; };
 		5115951410C19356001E60A8 /* Translator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Translator.h; sourceTree = "<group>"; };
+		512192C5115E95EB00150E9E /* BFTranslationWindowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTranslationWindowModel.h; sourceTree = "<group>"; };
+		512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslationWindowModel.m; sourceTree = "<group>"; };
 		514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = ../../../../Development/objc/BGHUDAppKit/build/Release/BGHUDAppKit.framework; sourceTree = SOURCE_ROOT; };
+		5168A55411680813004C576A /* GoogleTranslateLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GoogleTranslateLogo.gif; sourceTree = "<group>"; };
+		518CEFF81128AB6000658FB0 /* Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Language.h; sourceTree = "<group>"; };
+		518CEFF91128AB6000658FB0 /* Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Language.m; sourceTree = "<group>"; };
+		518CEFFF1128AC3700658FB0 /* RatedLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatedLanguage.h; sourceTree = "<group>"; };
+		518CF0001128AC3700658FB0 /* RatedLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatedLanguage.m; sourceTree = "<group>"; };
+		51999EF8112A02F1008BAC42 /* TranslationWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslationWindow.xib; sourceTree = "<group>"; };
+		51999F12112A0729008BAC42 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		51999F13112A0729008BAC42 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Babelfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Babelfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -124,18 +140,20 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				51999F0C112A0429008BAC42 /* Translator */,
 				510A5B1B10C3401B00088B20 /* Unit Tests */,
 				510A587B10C1BC5B00088B20 /* JSON */,
-				5115950210C19356001E60A8 /* AppController.h */,
-				5115950310C19356001E60A8 /* AppController.m */,
-				5115950410C19356001E60A8 /* GoogleTranslator.h */,
-				5115950510C19356001E60A8 /* GoogleTranslator.m */,
-				5115951410C19356001E60A8 /* Translator.h */,
+				51999F12112A0729008BAC42 /* AppController.h */,
+				51999F13112A0729008BAC42 /* AppController.m */,
+				512192C5115E95EB00150E9E /* BFTranslationWindowModel.h */,
+				512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */,
+				5115950210C19356001E60A8 /* TranslationWindowController.h */,
+				5115950310C19356001E60A8 /* TranslationWindowController.m */,
 				510A593610C1D48A00088B20 /* version.h */,
 				510A5A0910C3136200088B20 /* TranslateTextOperation.h */,
 				510A5A0A10C3136200088B20 /* TranslateTextOperation.m */,
-				510A5B0C10C334A600088B20 /* LanguageManager.h */,
-				510A5B0D10C334A600088B20 /* LanguageManager.m */,
+				518CEFFF1128AC3700658FB0 /* RatedLanguage.h */,
+				518CF0001128AC3700658FB0 /* RatedLanguage.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -192,6 +210,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5168A55411680813004C576A /* GoogleTranslateLogo.gif */,
+				51999EF8112A02F1008BAC42 /* TranslationWindow.xib */,
 				510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */,
 				510A5AA010C3344900088B20 /* Flags */,
 				510A57C310C1B12F00088B20 /* Babelfish.icns */,
@@ -241,6 +261,20 @@
 				510A5B3110C3409D00088B20 /* LanguageManagerTest.m */,
 			);
 			name = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		51999F0C112A0429008BAC42 /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				5115950410C19356001E60A8 /* GoogleTranslator.h */,
+				5115950510C19356001E60A8 /* GoogleTranslator.m */,
+				5115951410C19356001E60A8 /* Translator.h */,
+				518CEFF81128AB6000658FB0 /* Language.h */,
+				518CEFF91128AB6000658FB0 /* Language.m */,
+				510A5B0C10C334A600088B20 /* LanguageManager.h */,
+				510A5B0D10C334A600088B20 /* LanguageManager.m */,
+			);
+			name = Translator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +355,8 @@
 				510A57C410C1B12F00088B20 /* Babelfish.icns in Resources */,
 				510A5AD610C3344900088B20 /* Flags in Resources */,
 				510A5B1110C33B5A00088B20 /* SupportedLanguages.plist in Resources */,
+				51999EF9112A02F1008BAC42 /* TranslationWindow.xib in Resources */,
+				5168A55511680813004C576A /* GoogleTranslateLogo.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				5115951510C19356001E60A8 /* AppController.m in Sources */,
+				5115951510C19356001E60A8 /* TranslationWindowController.m in Sources */,
 				5115951610C19356001E60A8 /* GoogleTranslator.m in Sources */,
 				510A588F10C1BC6D00088B20 /* NSObject+SBJSON.m in Sources */,
 				510A589010C1BC6D00088B20 /* NSString+SBJSON.m in Sources */,
@@ -388,6 +424,10 @@
 				510A589410C1BC6D00088B20 /* SBJsonWriter.m in Sources */,
 				510A5A0B10C3136200088B20 /* TranslateTextOperation.m in Sources */,
 				510A5B0E10C334A600088B20 /* LanguageManager.m in Sources */,
+				518CEFFA1128AB6000658FB0 /* Language.m in Sources */,
+				518CF0011128AC3700658FB0 /* RatedLanguage.m in Sources */,
+				51999F14112A0729008BAC42 /* AppController.m in Sources */,
+				512192C7115E95EB00150E9E /* BFTranslationWindowModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

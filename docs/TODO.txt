@@ -1,0 +1,16 @@
+- auto lang
+- timer
+- animation of target
+- swap icon
+- swap functionality
+
+- migrate to mercurial
+
+- About
+- Write Changelog
+- Auto-update
+- Better DMG
+- Credits
+- Icon from linuxart.com
+- preference
+- localization

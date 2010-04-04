@@ -8,27 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
+// TODO: change to constants
 #define IMAGE_TYPE	@"png"
+
 #define CODE_KEY	@"Code"
 #define NAME_KEY	@"Name"
 #define FLAGS_DIR	@"Flags"
 
-@interface Language : NSObject {
-	
-	@private
-	NSString *_code;
-	NSString *_name;
-	NSString *_imagePath;
-	NSImage *_image;	
-}
-
-- (id) initWithCode:(NSString *)code name:(NSString *)name imagePath:(NSString *)imagePath;
-
-- (NSString *)code;
-- (NSString *)name;
-- (NSImage *)image;
-
-@end
+@class Language;
 
 @interface LanguageManager : NSObject {
 	@private
@@ -38,6 +25,7 @@
 + (LanguageManager *) languageManager;
 
 - (Language *)languageByCode:(NSString *)code;
+- (NSArray *) allLanguages;
 - (int)count;
 
 @end

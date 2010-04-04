@@ -17,6 +17,12 @@
 
 @protocol Translator
 
-- (NSString*)translateText:(NSString*)text from:(NSString*)from to:(NSString*)to;
+extern NSString * const BFTranslatorErrorDomainKey;
+
+extern NSInteger const BFNoResponseErrorCodeKey;
+extern NSInteger const BFInvalidResponseErrorCodeKey;
+extern NSInteger const BFServiceFailedErrorCodeKey;
+
+- (NSString*)translateText:(NSString*)text from:(NSString*)from to:(NSString*)to error:(NSError**)error;
 
 @end

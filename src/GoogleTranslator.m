@@ -18,6 +18,12 @@
 
 @implementation GoogleTranslator
 
+NSString *const BFTranslatorErrorDomainKey = @"net.nkuyu.babelfishapp.ErrorDomain";
+
+NSInteger const BFNoResponseErrorCodeKey = 1;
+NSInteger const BFInvalidResponseErrorCodeKey = 2;
+NSInteger const BFServiceFailedErrorCodeKey = 3;
+
 - (id) init {
 	if(![super init]) {
 		return nil;
@@ -43,7 +49,7 @@
 	[super dealloc];
 }
 
-- (NSString*)translateText:(NSString*)text from:(NSString*)from to:(NSString*)to {
+- (NSString*)translateText:(NSString*)text from:(NSString*)from to:(NSString*)to error:(NSError **)error{
 	// TODO: check the arguments
 	// TODO: how about all these string - should I release them ;)
 	// compose the URL string
@@ -58,19 +64,19 @@
 	NSURL* url = [NSURL URLWithString: requestUrl];
 	NSURLRequest* request = [NSURLRequest requestWithURL: url cachePolicy: NSURLRequestReloadIgnoringCacheData timeoutInterval: TIMEOUT];
 	NSURLResponse* response = nil; 
-	NSError* error = nil;
-	NSData* data = [NSURLConnection sendSynchronousRequest: request returningResponse: &response error: &error];
+	NSError *underlyingError = nil;
+	NSData* data = [NSURLConnection sendSynchronousRequest: request returningResponse: &response error: &underlyingError];
 	
 	// check if something did happened
 	if (data == nil) {
-		@throw [NSException
-				exceptionWithName:@"NoResponseFromServerException"
-				reason:[NSString stringWithFormat:@"Did not get any respose from the server: %@ %@", requestUrl, error != nil ? [error description] : @"unknown error"]
-				userInfo:nil];
+		[self raiseError:error code:BFNoResponseErrorCodeKey description:@"No response from translation service" underlyingError:underlyingError];
+		return nil;
+		// reason:[NSString stringWithFormat:@"Did not get any respose from the server: %@ %@", requestUrl, error != nil ? [error description] : @"unknown error"]
 	} 
 	
 	NSString* contents = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
 	[contents autorelease];
+	
 	// the answer is in this kind of format decode:
 	// {"responseData": {
 	//		"translatedText":"Ciao mondo"
@@ -78,23 +84,21 @@
 	//  "responseDetails": null, 
 	//  "responseStatus": 200}
 	
-	NSDictionary *result = [parser objectWithString:contents error:&error];
+	NSDictionary *result = [parser objectWithString:contents error:&underlyingError];
  	
 	if (result == nil) {
-		@throw [NSException
-				exceptionWithName:@"InvalidResponseException"
-				reason:[NSString stringWithFormat:@"Received invalid response %@", [error description]]
-				userInfo:[NSDictionary dictionaryWithObject:contents forKey:@"response"]];
+		[self raiseError:error code:BFInvalidResponseErrorCodeKey description:@"Invalid response from translation service" underlyingError:underlyingError];
+		return nil;
+		// reason:[NSString stringWithFormat:@"Received invalid response %@", [error description]]
 	}
 	
 	// there could be a problem - so check for correct error code
 	int responseStatus = [[result objectForKey:@"responseStatus"] intValue];
 	if (responseStatus != 200) {
 		NSString *responseDetails = [result objectForKey:@"responseDetails"];
-		@throw [NSException
-				exceptionWithName:@"RequestFailedException"
-				reason:[NSString stringWithFormat:@"Request failed with error code %d (%@)", responseStatus, responseDetails]
-				userInfo:nil];
+		
+		[self raiseError:error code:BFServiceFailedErrorCodeKey description:@"Translation service failed" reason:[NSString stringWithFormat:@"Request failed with error code %d (%@)", responseStatus, responseDetails]];
+		return nil;
 	} 
 	
 	// get the translation
@@ -107,6 +111,23 @@
 	translatedText = [translatedText stringByReplacingOccurrencesOfString:@"&#39;" withString:@"'"];
 	
 	return translatedText;
+}
+
+- (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description reason:(NSString*)reason {
+	NSDictionary *d = [NSDictionary dictionary];
+	[d setValue:description forKey:NSLocalizedDescriptionKey];
+	[d setValue:reason forKey:NSLocalizedFailureReasonErrorKey];
+	
+	*error = [[[NSError alloc] initWithDomain:BFTranslatorErrorDomainKey code:code userInfo:d] autorelease];
+}
+
+- (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description underlyingError:(NSError*)underlyingError {
+
+	NSDictionary *d = [NSDictionary dictionary];
+	[d setValue:description forKey:NSLocalizedDescriptionKey];
+	[d setValue:underlyingError forKey:NSUnderlyingErrorKey];
+	
+	*error = [[[NSError alloc] initWithDomain:BFTranslatorErrorDomainKey code:code userInfo:d] autorelease];
 }
 
 - (NSString *)description {
