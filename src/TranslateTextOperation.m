@@ -76,7 +76,11 @@ NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNo
 	}
 #endif	
 	
-	translation = [t retain];		
+	translation = [t retain];
+	if (error) {
+		[error retain];
+	}
+	
 	if (![self isCancelled]) {
 		[[NSNotificationCenter defaultCenter] performSelectorOnMainThread:@selector(postNotification:) withObject: [NSNotification notificationWithName:BFTranslationFinishedNotificationKey object:self] waitUntilDone:NO];
 	}

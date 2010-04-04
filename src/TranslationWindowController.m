@@ -27,11 +27,14 @@
 
 @synthesize model;
 
-static NSString* cOriginalTextChangedCtx = @"cOriginalTextChangedCtx";
-static NSString* cSourceLanguageChangedCtx = @"cSourceLanguageChangedCtx";
-static NSString* cTargetLanguageChangedCtx = @"cTargetLanguageChangedCtx";
+static NSString const* BFOriginalTextChangedCtxKey = @"BFOriginalTextChangedCtxKey";
+static NSString const* BFTranslationChangedCtxKey = @"BFTranslationChangedCtxKey";
+static NSString const* BFSourceLanguageChangedCtxKey = @"BFSourceLanguageChangedCtxKey";
+static NSString const* BFTargetLanguageChangedCtxKey = @"BFTargetLanguageChangedCtxKey";
 
-const RatedLanguage *autoDetectedLanguage;
+static NSTimeInterval const BFTypingStoppedDelay = 1.3;
+
+static RatedLanguage const* BFAutoDetectedLanguage;
 
 - (id)initWithModel:(BFTranslationWindowModel*)aModel {
 #ifndef NDEBUG
@@ -41,18 +44,17 @@ const RatedLanguage *autoDetectedLanguage;
 	if (![super initWithWindowNibName:@"TranslationWindow"]) {
 		return nil;
 	}
+	BFAutoDetectedLanguage = [RatedLanguage ratedLanguage:[[Language alloc] initWithCode:@"" name:@"Detect Language" imagePath:nil] tag:-1 rating:0];
 	
-	model = [aModel retain];
-	
+	model = [aModel retain];	
 	operationQueue = [[NSOperationQueue alloc] init];
-	
-	autoDetectedLanguage = [RatedLanguage ratedLanguage:[[Language alloc] initWithCode:@"auto" name:@"Auto-Detect" imagePath:nil] tag:-1 rating:0];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(translationOperationDidFinish:) name:BFTranslationFinishedNotificationKey object:nil];
 	
-	[model addObserver:self forKeyPath:@"originalText" options:NSKeyValueObservingOptionNew context:&cOriginalTextChangedCtx];
-	[model addObserver:self forKeyPath:@"selectedSourceLanguage" options:NSKeyValueObservingOptionNew context:&cSourceLanguageChangedCtx];
-	[model addObserver:self forKeyPath:@"selectedTargetLanguage" options:NSKeyValueObservingOptionNew context:&cTargetLanguageChangedCtx];
+	[model addObserver:self forKeyPath:@"originalText" options:NSKeyValueObservingOptionNew context:&BFOriginalTextChangedCtxKey];
+	[model addObserver:self forKeyPath:@"translation" options:NSKeyValueObservingOptionNew context:&BFTranslationChangedCtxKey];
+	[model addObserver:self forKeyPath:@"selectedSourceLanguage" options:NSKeyValueObservingOptionNew context:&BFSourceLanguageChangedCtxKey];
+	[model addObserver:self forKeyPath:@"selectedTargetLanguage" options:NSKeyValueObservingOptionNew context:&BFTargetLanguageChangedCtxKey];
 	
 	return self;
 }
@@ -64,11 +66,15 @@ const RatedLanguage *autoDetectedLanguage;
 	
 	//	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	
+	[typingTimer release];
+	[lastKeypress release];
+	[lastOriginalText release];
+	
 	[operationQueue cancelAllOperations];
 	[operationQueue release];	
 	[model release];
 	
-	[autoDetectedLanguage release];
+	[BFAutoDetectedLanguage release];
 	//	[selectLangMenuItem release];
 	
 	[super dealloc];
@@ -79,9 +85,7 @@ const RatedLanguage *autoDetectedLanguage;
 	NSLog(@"TranslationWindow Nib has been loaded");
 #endif
 	
-	// hide translation view
-	[translatedTextViewDisclosureTriangle setState:NSOffState];
-	[self showHideTranslationViewAction:translatedTextViewDisclosureTriangle];
+	[self setTranslationBoxHidden:YES];
 	
 	NSSortDescriptor *ratingSort = [[[NSSortDescriptor alloc] initWithKey:@"rating" ascending:NO] autorelease];
 	NSSortDescriptor *nameSort = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
@@ -90,7 +94,7 @@ const RatedLanguage *autoDetectedLanguage;
 	
 	// populate source language selector
 	NSMutableArray *a = [NSMutableArray array];
-	[a addObject:autoDetectedLanguage];
+	[a addObject:BFAutoDetectedLanguage];
 	[a addObject:[NSMenuItem separatorItem]];
 	[a addObjectsFromArray:langs];
 	
@@ -120,28 +124,93 @@ const RatedLanguage *autoDetectedLanguage;
 		[model setSelectedTargetLanguage:[[targetLanguagePopup selectedItem] representedObject]];
 	}
 	
-	[self update];
+	[self handleOriginalTextChanged];
+	[self handleLanguageSelectionChanged];
+	[self handleTranslationChanged];
+}
+
+- (void) stopTypingTimer {
+	NSLog(@"Stopping timer");
+	[typingTimer invalidate];
+	[typingTimer release];
+	typingTimer = nil;
+}
+
+- (void) startTypingTimer {
+	NSLog(@"Starting timer %@", typingTimer);
+	[self stopTypingTimer];
+	if (!typingTimer) {
+		lastKeypress = [[NSDate date] retain];
+		typingTimer = [[NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(typingTimerDidFired:) userInfo:nil repeats:YES] retain];
+	}
+}
+
+- (void) typingTimerDidFired:(NSTimer *)aTimer {
+	NSDate *now = [NSDate date];
+	NSTimeInterval interval = [now timeIntervalSinceDate:lastKeypress];
+	NSString *originalText = [[[model originalText] copy] autorelease];
+	
+	NSLog(@"Time fired %f last: %@ new: %@", interval, lastOriginalText, originalText);
+	
+	if (interval > BFTypingStoppedDelay) {
+		NSLog(@"Interval bigger than delay - stopping", interval);
+		[self stopTypingTimer];
+	} 	
+
+	if ([lastOriginalText isEqualToString:originalText]) { 
+		NSLog(@"text is the same");
+	} else {		
+		[lastKeypress release];
+		lastKeypress = [now retain];
+		
+		[self translate];
+	}
+
+	// get the text
+	[lastOriginalText release];
+	lastOriginalText = [originalText retain];
+}
+
+- (void) handleOriginalTextChanged {
+	NSLog(@"Text changed %@", [model originalText]);
+	
+	if ([[model originalText] length] > 0) {
+		[translateButton setEnabled:YES];
+		if (!typingTimer) {
+			NSLog(@"Timer not running - launching a new one");
+			[self startTypingTimer];
+			[self translate];
+		}
+	} else {
+		[translateButton setEnabled:NO];
+		[model setTranslation:@""];
+		[self stopTypingTimer];
+	}
+	
+}
+
+- (void) handleLanguageSelectionChanged {
+	[swapLanguagesButton setHidden:[model selectedSourceLanguage] == BFAutoDetectedLanguage];
+	if ([[model originalText] length] > 0) {
+		[self translate];
+	}
+}
+
+- (void) handleTranslationChanged {
+	[copyAndCloseButton setEnabled:[[model translation] length] > 0];		
 }
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	if (context == &cOriginalTextChangedCtx
-		|| context == &cSourceLanguageChangedCtx
-		|| context == &cTargetLanguageChangedCtx) {
-		[self update];
+	if (context == &BFOriginalTextChangedCtxKey) {
+		[self handleOriginalTextChanged];
+	} else if (context == &BFSourceLanguageChangedCtxKey
+			   || context == &BFTargetLanguageChangedCtxKey) {
+		[self handleLanguageSelectionChanged];
+	} else if (context == &BFTranslationChangedCtxKey) {
+		[self handleTranslationChanged];
 	} else {
 		[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-	}
-}
-
-- (void) update {
-	BOOL ready = [[model originalText] length] > 0;
-	
-	[copyButton setEnabled:[[model translation] length] > 0];
-	[translateButton setEnabled:ready];
-	
-	if (ready) {
-		[self translate];
 	}
 }
 
@@ -154,6 +223,7 @@ const RatedLanguage *autoDetectedLanguage;
 			NSMenuItem *mi = [menu addItemWithTitle:[l name] action:nil keyEquivalent:@""];
 			[mi setRepresentedObject:l];
 			[mi setImage:[l image]];
+			[mi setTag:[l tag]];
 		} else {
 			// TODO: crash here
 			NSLog(@"Unexpected item: %@", e);
@@ -161,27 +231,13 @@ const RatedLanguage *autoDetectedLanguage;
 	}
 }
 
-- (void)setSourceLanguage:(id)aSender {
-#ifndef NDEBUG
-	NSLog(@"setSourceLanguage:\"%@\"", aSender);	
-#endif
-	
-	[model setSelectedSourceLanguage:[[sourceLanguagePopup selectedItem] representedObject]];
-}
-
-- (void)setTargetLanguage:(id)aSender {
-#ifndef NDEBUG
-	NSLog(@"setTargetLanguage:\"%@\"", aSender);
-#endif
-	
-	[model setSelectedTargetLanguage:[[targetLanguagePopup selectedItem] representedObject]];
-}
-
 - (void)translate {
 	NSString* text = [model originalText];
 	Language *from = [model selectedSourceLanguage];
 	Language *to = [model selectedTargetLanguage];
 	NSObject<Translator> *translator = [model translator];
+	
+	// TODO assert
 	
 #ifndef NDEBUG
 	NSLog(@"translateText:\"%@\" from:\"%@\" to:\"%@\"", text, from, to);
@@ -198,8 +254,6 @@ const RatedLanguage *autoDetectedLanguage;
 	
 	// enqueue
 	[operationQueue addOperation:operation];	
-	
-	[copyButton setEnabled:NO];
 }
 
 - (void)translationOperationDidFinish:(id)aNotification {
@@ -208,28 +262,75 @@ const RatedLanguage *autoDetectedLanguage;
 #endif
 	
 	[progressIndicator stopAnimation:nil];
-	[copyButton setEnabled:YES];
-	
-	[translatedTextViewDisclosureTriangle setState:NSOnState];
-	[self showHideTranslationViewAction:translatedTextViewDisclosureTriangle];
 	
 	TranslateTextOperation *operation = [aNotification object];
 	// TODO: assert operation != nil
 	if ([operation error]) {
+		// TODO: to retry count?
+		
 		[NSApp presentError:[operation error]];
 		return;
 	}
 	
 	[model setTranslation:[operation translation]];
+	[self setTranslationBoxHidden:NO];
+}
+
+
+- (void)setTranslationBoxHidden:(BOOL)hidden {
+#ifndef NDEBUG
+	NSLog(@"setTranslationVisible: %d", hidden);
+#endif
+	
+	if ([translationBox isHidden] == hidden) {
+		return; 
+	}
+	
+	// hide translation view
+	NSWindow* window = [translationBox window];
+	NSRect frame = [window frame];
+	
+	// origin here has 0 at the bottom of the screen
+	frame.origin.y += hidden ? [translationBox frame].size.height : -[translationBox frame].size.height;
+	frame.size.height += hidden ? -[translationBox frame].size.height : [translationBox frame].size.height;
+	
+	if (hidden) {
+		// first hide
+		[translationBox setHidden:hidden];
+		// then shortern
+		[window setFrame:frame display:YES animate:YES];
+	} else {
+		// first extend the size
+		[window setFrame:frame display:YES animate:YES];
+		// then show
+		[translationBox setHidden:hidden];
+	}
+	
+}
+
+- (IBAction)setSourceLanguage:(id)aSender {
+#ifndef NDEBUG
+	NSLog(@"setSourceLanguage:\"%@\"", aSender);	
+#endif
+	
+	[model setSelectedSourceLanguage:[[sourceLanguagePopup selectedItem] representedObject]];
+}
+
+- (IBAction)setTargetLanguage:(id)aSender {
+#ifndef NDEBUG
+	NSLog(@"setTargetLanguage:\"%@\"", aSender);
+#endif
+	
+	[model setSelectedTargetLanguage:[[targetLanguagePopup selectedItem] representedObject]];
 }
 
 - (IBAction)translateTextAction:(id)aSender {
 	[self translate];
 }
 
-- (IBAction)copyTranslationAction:(id)aSender {
+- (IBAction)copyTranslationAndCloseAction:(id)aSender {
 #ifndef NDEBUG
-	NSLog(@"copyTranslation:\"%@\"", aSender);
+	NSLog(@"copyTranslationAndCloseAction:\"%@\"", aSender);
 #endif
 	
 	// TODO: this should be synchronized	
@@ -249,52 +350,18 @@ const RatedLanguage *autoDetectedLanguage;
 	[self close];
 }
 
-- (void)closeWindowAction:(id)aSender {
-#ifndef NDEBUG
-	NSLog(@"closeWindow:\"%@\"", aSender);
-#endif
+- (IBAction)swapLanguages:(id)aSender {
+	RatedLanguage *s = [[sourceLanguagePopup selectedItem] representedObject];
+	if (s == BFAutoDetectedLanguage) {
+		return;
+	}
 	
-	// close window
-	[self close];
-}
-
-- (IBAction)showHideTranslationViewAction:(id)aSender {
-#ifndef NDEBUG
-	NSLog(@"showHideTranslationViewAction:\"%@\"", aSender);
-#endif
+	RatedLanguage *t = [[targetLanguagePopup selectedItem] representedObject];
 	
-    NSWindow *window = [translatedTextViewContainer window];
-    NSRect frame = [window frame];
-	NSLog(@"o: %f %f", frame.size.height, frame.origin.y);
-    // The extra +14 accounts for the space between the box and its neighboring views
-	NSRect rect = [translatedTextViewContainer frame];
-    CGFloat sizeChange = rect.size.height;// + 14;
-		
-    switch ([translatedTextViewDisclosureTriangle state]) {
-        case NSOnState:
-            // Make the window bigger.
-            frame.size.height += sizeChange;
-            // Move the origin.
-            frame.origin.y -= sizeChange;
-			// resize
-			[window setFrame:frame display:YES animate:YES];
-            // Show the extra box.
-            [translatedTextViewContainer setHidden:NO];
-            break;
-        case NSOffState:
-            // Hide the extra box.
-            [translatedTextViewContainer setHidden:YES];
-            // Make the window smaller.
-            frame.size.height -= sizeChange;
-            // Move the origin.
-            frame.origin.y += sizeChange;
-			// resize
-			[window setFrame:frame display:YES animate:YES];
-            break;
-        default:
-            break;
-    }
-	NSLog(@"o: %f %f", frame.size.height, frame.origin.y);
+	[sourceLanguagePopup selectItemWithTag:[t tag]];
+	[self setSourceLanguage:sourceLanguagePopup];
+	[targetLanguagePopup selectItemWithTag:[s tag]];
+	[self setTargetLanguage:targetLanguagePopup];
 }
 
 @end

@@ -38,6 +38,7 @@
 		514A6DA910DC17050039CE28 /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */; };
 		514A6DB510DC18610039CE28 /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */; };
 		5168A55511680813004C576A /* GoogleTranslateLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5168A55411680813004C576A /* GoogleTranslateLogo.gif */; };
+		5168A6701168B547004C576A /* SwapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5168A66F1168B547004C576A /* SwapIcon.png */; };
 		518CEFFA1128AB6000658FB0 /* Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CEFF91128AB6000658FB0 /* Language.m */; };
 		518CF0011128AC3700658FB0 /* RatedLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CF0001128AC3700658FB0 /* RatedLanguage.m */; };
 		51999EF9112A02F1008BAC42 /* TranslationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51999EF8112A02F1008BAC42 /* TranslationWindow.xib */; };
@@ -105,6 +106,7 @@
 		512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslationWindowModel.m; sourceTree = "<group>"; };
 		514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = ../../../../Development/objc/BGHUDAppKit/build/Release/BGHUDAppKit.framework; sourceTree = SOURCE_ROOT; };
 		5168A55411680813004C576A /* GoogleTranslateLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GoogleTranslateLogo.gif; sourceTree = "<group>"; };
+		5168A66F1168B547004C576A /* SwapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwapIcon.png; sourceTree = "<group>"; };
 		518CEFF81128AB6000658FB0 /* Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Language.h; sourceTree = "<group>"; };
 		518CEFF91128AB6000658FB0 /* Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Language.m; sourceTree = "<group>"; };
 		518CEFFF1128AC3700658FB0 /* RatedLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatedLanguage.h; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5168A66F1168B547004C576A /* SwapIcon.png */,
 				5168A55411680813004C576A /* GoogleTranslateLogo.gif */,
 				51999EF8112A02F1008BAC42 /* TranslationWindow.xib */,
 				510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */,
@@ -357,6 +360,7 @@
 				510A5B1110C33B5A00088B20 /* SupportedLanguages.plist in Resources */,
 				51999EF9112A02F1008BAC42 /* TranslationWindow.xib in Resources */,
 				5168A55511680813004C576A /* GoogleTranslateLogo.gif in Resources */,
+				5168A6701168B547004C576A /* SwapIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +530,7 @@
 				GCC_PREFIX_HEADER = Babelfish_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				OTHER_CFLAGS = "";
+				OTHER_CFLAGS = "-DCOUNT_REQUESTS";
 				PRODUCT_NAME = Babelfish;
 			};
 			name = Debug;

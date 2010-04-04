@@ -1,8 +1,8 @@
-- auto lang
 - timer
-- animation of target
-- swap icon
-- swap functionality
+- service
+
+- recovery from failures like:
+400 (could not reliably detect source language)
 
 - migrate to mercurial
 
@@ -14,3 +14,9 @@
 - Icon from linuxart.com
 - preference
 - localization
+
+- cleanup code
+- indent + rename
+- comments
+- asserts
+- tests

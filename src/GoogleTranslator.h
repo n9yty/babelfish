@@ -29,6 +29,9 @@
 	@private
 	SBJSON *parser;
 	
+#ifdef COUNT_REQUEST
+	int numRequests;
+#endif
 }
 
 - (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description underlyingError:(NSError *)underlyingError;

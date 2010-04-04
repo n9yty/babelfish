@@ -53,12 +53,17 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 	// TODO: check the arguments
 	// TODO: how about all these string - should I release them ;)
 	// compose the URL string
+	// experiment URL http://translate.google.com/translate_a/t?client=t&text=Bon&hl=en&sl=auto&tl=en&otf=2&pc=0
 	// expected URL is like: http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=hello%20world&langpair=en%7Cit
 	NSString* encodedText = [text stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
 	NSString* langPair = [[NSString stringWithFormat:@"%@|%@", from, to] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
 	NSString* requestUrl = [NSString stringWithFormat:@"%@&q=%@&langpair=%@", GOOGLE_TRANSLATE_URL, encodedText, langPair];
 	
+#ifdef COUNT_REQUEST
+	NSLog(@"Making %d. call to google translate %@", numRequests++,requestUrl);
+#else
 	NSLog(@"Making call to google translate %@", requestUrl);
+#endif
 	
 	// make the call
 	NSURL* url = [NSURL URLWithString: requestUrl];
@@ -96,8 +101,10 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 	int responseStatus = [[result objectForKey:@"responseStatus"] intValue];
 	if (responseStatus != 200) {
 		NSString *responseDetails = [result objectForKey:@"responseDetails"];
+		NSString *reason = [NSString stringWithFormat:@"Request failed with error code %d (%@)", responseStatus, responseDetails];
 		
-		[self raiseError:error code:BFServiceFailedErrorCodeKey description:@"Translation service failed" reason:[NSString stringWithFormat:@"Request failed with error code %d (%@)", responseStatus, responseDetails]];
+		[self raiseError:error code:BFServiceFailedErrorCodeKey description:@"Translation service failed" reason:reason];
+		NSLog(@"%@", reason);
 		return nil;
 	} 
 	
@@ -114,7 +121,7 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 }
 
 - (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description reason:(NSString*)reason {
-	NSDictionary *d = [NSDictionary dictionary];
+	NSMutableDictionary *d = [NSMutableDictionary dictionary];
 	[d setValue:description forKey:NSLocalizedDescriptionKey];
 	[d setValue:reason forKey:NSLocalizedFailureReasonErrorKey];
 	

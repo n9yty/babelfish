@@ -25,19 +25,21 @@
 @class RatedLanguage;
 
 @interface TranslationWindowController : NSWindowController {
+	IBOutlet NSBox *translationBox;
 	IBOutlet NSTextView *originalTextView;
 	IBOutlet NSTextView *translatedTextView;
-	IBOutlet NSButton *translatedTextViewDisclosureTriangle;
-	IBOutlet NSView *translatedTextViewContainer;
 	IBOutlet NSProgressIndicator *progressIndicator;
-	IBOutlet NSButton *copyButton;
-	IBOutlet NSButton *closeButton;
+	IBOutlet NSButton *copyAndCloseButton;
 	IBOutlet NSButton *translateButton;
+	IBOutlet NSButton *swapLanguagesButton;
 	IBOutlet NSPopUpButton *sourceLanguagePopup;
 	IBOutlet NSPopUpButton *targetLanguagePopup;
 	IBOutlet NSTextField *copyrightLabel;
 		
 @private
+	NSDate *lastKeypress;
+	NSString *lastOriginalText;
+	NSTimer *typingTimer;
 	NSOperationQueue *operationQueue;
 	
 	BFTranslationWindowModel* model;
@@ -48,16 +50,18 @@
 - (id)initWithModel:(BFTranslationWindowModel*) aModel;
 
 - (void)translationOperationDidFinish:(id)aNotification;
+- (void)typingTimerDidFired:(NSTimer *)aTimer;
 - (void)populateMenu:(NSMenu *)menu withItems:(NSArray *)items;
-- (void)update;
 - (void)translate;
+- (void)setTranslationBoxHidden:(BOOL)hidden;
+- (void)handleOriginalTextChanged;
+- (void)handleLanguageSelectionChanged;
+- (void)handleTranslationChanged;	
 
 - (IBAction)setTargetLanguage:(id)aSender;
 - (IBAction)setSourceLanguage:(id)aSender;
-- (IBAction)copyTranslationAction:(id)aSender;
-- (IBAction)closeWindowAction:(id)aSender;
+- (IBAction)copyTranslationAndCloseAction:(id)aSender;
 - (IBAction)translateTextAction:(id)aSender;
-- (IBAction)showHideTranslationViewAction:(id)aSender;
-
+- (IBAction)swapLanguages:(id)aSender;
 
 @end
