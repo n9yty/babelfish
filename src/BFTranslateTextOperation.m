@@ -15,22 +15,22 @@
 
 //  Created by Filip Krikava on 11/29/09.
 
-#import "TranslateTextOperation.h"
-#import "LanguageManager.h"
-#import "Language.h"
+#import "BFTranslateTextOperation.h"
+#import "BFLanguageManager.h"
+#import "BFLanguage.h"
 
 NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNotificationKey";
 
-@implementation TranslateTextOperation
+@implementation BFTranslateTextOperation
 
 @synthesize from;
 @synthesize to;
 @synthesize translation;
 @synthesize error;
 
-- (id) initWithText:(NSString *)aText from:(Language *)fromLang to:(Language *)toLang translator:(NSObject<Translator> *)aTranslator {
+- (id) initWithText:(NSString *)aText from:(BFLanguage *)fromLang to:(BFLanguage *)toLang translator:(NSObject<BFTranslator> *)aTranslator {
 #ifndef NDEBUG
-	NSLog(@"Initializing %@", [TranslateTextOperation class]);
+	NSLog(@"Initializing %@", [BFTranslateTextOperation class]);
 #endif
 	
 	if (![super init]) {
@@ -49,7 +49,7 @@ NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNo
 
 - (void) dealloc {
 #ifndef NDEBUG
-	NSLog(@"Deallocing %@", [TranslateTextOperation class]);
+	NSLog(@"Deallocing %@", [BFTranslateTextOperation class]);
 #endif
 	
 	[text release];

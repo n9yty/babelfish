@@ -13,32 +13,28 @@
  OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-//  Created by Filip Krikava on 11/29/09.
+//  Created by Filip Krikava on 11/20/09.
 
 #import <Cocoa/Cocoa.h>
-#import "Translator.h"
+#import "JSON.h"
+#import "BFTranslator.h"
 
-@class Language;
+// TODO: change to constanst
+#define TIMEOUT					55
 
-extern NSString *const BFTranslationFinishedNotificationKey;
+// example: http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=hello%20world&langpair=en%7Cit
+#define GOOGLE_TRANSLATE_URL	@"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0"
 
-@interface TranslateTextOperation : NSOperation {
-
-@private
-	NSString *text;
-	Language *from;
-	Language *to;
-	NSObject<Translator> *translator;
+@interface BFGoogleTranslator : NSObject <BFTranslator> {
+	@private
+	SBJSON *parser;
 	
-	NSString *translation;
-	NSError *error;
+#ifdef COUNT_REQUEST
+	int numRequests;
+#endif
 }
 
-- (id) initWithText:(NSString *)aText from:(Language *)fromLang to:(Language *)toLang translator:(NSObject<Translator> *)aTranslator;
-
-@property (readonly) NSString *translation;
-@property (readonly) Language *from;
-@property (readonly) Language *to;
-@property (readonly) NSError *error;
+- (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description underlyingError:(NSError *)underlyingError;
+- (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description reason:(NSString *)reason;
 
 @end

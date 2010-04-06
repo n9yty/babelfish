@@ -1,12 +1,13 @@
-- timer
 - service
+
+- empty lines
+- better font
 
 - recovery from failures like:
 400 (could not reliably detect source language)
 
 - migrate to mercurial
 
-- About
 - Write Changelog
 - Auto-update
 - Better DMG
@@ -16,7 +17,21 @@
 - localization
 
 - cleanup code
-- indent + rename
+- indent
 - comments
 - asserts
 - tests
+- font properties
+
+- keywords submission
+- check domain for this name: babelfiska, thebabelfishapp
+- translating using monitor - only one request every n sec queu size of 1
+- maximu size for the interactive translation
+- split requests by new line
+- about box : name framewoks, icons, flags
+- font properties
+- resizeable window
+- horizontal vertical layout 
+
+- if the text returned aftern new translation especially requested by
+  user - display some smart ass message

@@ -17,12 +17,12 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-#import "GoogleTranslator.h"
+#import "BFGoogleTranslator.h"
 #import "Translator.h"
 
 @interface GoogleTranslatorTest : SenTestCase {
 	@private
-	GoogleTranslator *translator;
+	BFGoogleTranslator *translator;
 }
 
 @end

@@ -21,7 +21,7 @@
 @implementation GoogleTranslatorTest
 
 -(void)setUp {
-	translator = [[GoogleTranslator alloc] init];
+	translator = [[BFGoogleTranslator alloc] init];
 }
 
 -(void)tearDown {

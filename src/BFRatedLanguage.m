@@ -6,16 +6,16 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "Language.h"
-#import "RatedLanguage.h"
+#import "BFLanguage.h"
+#import "BFRatedLanguage.h"
 
 
-@implementation RatedLanguage 
+@implementation BFRatedLanguage 
 
 @synthesize tag;
 @synthesize rating;
 
-- (id)initWithLanguage:(Language*)aLanguage tag:(NSInteger)aTag rating:(NSInteger)aRating {
+- (id)initWithLanguage:(BFLanguage*)aLanguage tag:(NSInteger)aTag rating:(NSInteger)aRating {
 	if (![super initWithCode:[aLanguage code] name:[aLanguage name] imagePath:[aLanguage imagePath]]) {
 		return nil;
 	}
@@ -26,8 +26,8 @@
 	return self;
 }
 
-+ (RatedLanguage *) ratedLanguage:(Language *)aLanguage tag:(NSInteger)aTag rating:(NSInteger)aRating {
-	RatedLanguage *rl = [[RatedLanguage alloc] initWithLanguage:aLanguage tag:aTag rating:aRating];
++ (BFRatedLanguage *) ratedLanguage:(BFLanguage *)aLanguage tag:(NSInteger)aTag rating:(NSInteger)aRating {
+	BFRatedLanguage *rl = [[BFRatedLanguage alloc] initWithLanguage:aLanguage tag:aTag rating:aRating];
 	
 	return [rl autorelease];
 }

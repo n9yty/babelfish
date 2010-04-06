@@ -15,15 +15,15 @@
 
 //  Created by Filip Krikava on 11/26/09.
 
-#import "TranslationWindowController.h"
-#import "GoogleTranslator.h"
-#import "TranslateTextOperation.h"
-#import "LanguageManager.h"
-#import "RatedLanguage.h"
+#import "BFTranslationWindowController.h"
+#import "BFGoogleTranslator.h"
+#import "BFTranslateTextOperation.h"
+#import "BFLanguageManager.h"
+#import "BFRatedLanguage.h"
 #import "Translation.h"
 #import "BFTranslationWindowModel.h"
 
-@implementation TranslationWindowController
+@implementation BFTranslationWindowController
 
 @synthesize model;
 
@@ -32,22 +32,23 @@ static NSString const* BFTranslationChangedCtxKey = @"BFTranslationChangedCtxKey
 static NSString const* BFSourceLanguageChangedCtxKey = @"BFSourceLanguageChangedCtxKey";
 static NSString const* BFTargetLanguageChangedCtxKey = @"BFTargetLanguageChangedCtxKey";
 
-static NSTimeInterval const BFTypingStoppedDelay = 1.3;
+static NSTimeInterval const BFDelayBetweenTranslations = 1.0;
 
-static RatedLanguage const* BFAutoDetectedLanguage;
+static BFRatedLanguage const* BFAutoDetectedLanguage;
 
 - (id)initWithModel:(BFTranslationWindowModel*)aModel {
 #ifndef NDEBUG
-	NSLog(@"Initializing %@", [TranslationWindowController class]);
+	NSLog(@"Initializing %@", [BFTranslationWindowController class]);
 #endif
 	
 	if (![super initWithWindowNibName:@"TranslationWindow"]) {
 		return nil;
 	}
-	BFAutoDetectedLanguage = [RatedLanguage ratedLanguage:[[Language alloc] initWithCode:@"" name:@"Detect Language" imagePath:nil] tag:-1 rating:0];
+	BFAutoDetectedLanguage = [BFRatedLanguage ratedLanguage:[[BFLanguage alloc] initWithCode:@"" name:@"Detect Language" imagePath:nil] tag:-1 rating:0];
 	
 	model = [aModel retain];	
 	operationQueue = [[NSOperationQueue alloc] init];
+	[operationQueue setMaxConcurrentOperationCount:1];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(translationOperationDidFinish:) name:BFTranslationFinishedNotificationKey object:nil];
 	
@@ -56,26 +57,26 @@ static RatedLanguage const* BFAutoDetectedLanguage;
 	[model addObserver:self forKeyPath:@"selectedSourceLanguage" options:NSKeyValueObservingOptionNew context:&BFSourceLanguageChangedCtxKey];
 	[model addObserver:self forKeyPath:@"selectedTargetLanguage" options:NSKeyValueObservingOptionNew context:&BFTargetLanguageChangedCtxKey];
 	
+	NSLog(@"%@",[NSThread currentThread]);
+	
 	return self;
 }
 
 - (void)dealloc {
 #ifndef NDEBUG
-	NSLog(@"Deallocing %@", [TranslationWindowController class]);
+	NSLog(@"Deallocing %@", [BFTranslationWindowController class]);
 #endif
 	
-	//	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	
-	[typingTimer release];
-	[lastKeypress release];
-	[lastOriginalText release];
-	
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[operationQueue cancelAllOperations];
 	[operationQueue release];	
+	
 	[model release];
+	[translateTimer release];
+	[requestedTextToTranslate release];
+	[lastTextToTranslate release];
 	
 	[BFAutoDetectedLanguage release];
-	//	[selectLangMenuItem release];
 	
 	[super dealloc];
 }
@@ -85,8 +86,10 @@ static RatedLanguage const* BFAutoDetectedLanguage;
 	NSLog(@"TranslationWindow Nib has been loaded");
 #endif
 	
+	// we start with no translation
 	[self setTranslationBoxHidden:YES];
 	
+	// prepare sort description
 	NSSortDescriptor *ratingSort = [[[NSSortDescriptor alloc] initWithKey:@"rating" ascending:NO] autorelease];
 	NSSortDescriptor *nameSort = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
 	
@@ -129,46 +132,35 @@ static RatedLanguage const* BFAutoDetectedLanguage;
 	[self handleTranslationChanged];
 }
 
-- (void) stopTypingTimer {
+- (void) stopTranslateTimer {
 	NSLog(@"Stopping timer");
-	[typingTimer invalidate];
-	[typingTimer release];
-	typingTimer = nil;
+
+	[translateTimer invalidate];
+	[translateTimer release];
+	translateTimer = nil;
 }
 
-- (void) startTypingTimer {
-	NSLog(@"Starting timer %@", typingTimer);
-	[self stopTypingTimer];
-	if (!typingTimer) {
-		lastKeypress = [[NSDate date] retain];
-		typingTimer = [[NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(typingTimerDidFired:) userInfo:nil repeats:YES] retain];
+- (void) startTranslateTimer {
+	NSLog(@"Starting timer %@", translateTimer);
+	
+	if (!translateTimer) {
+		translateTimer = [[NSTimer scheduledTimerWithTimeInterval:BFDelayBetweenTranslations target:self selector:@selector(translateTimerDidFire:) userInfo:nil repeats:YES] retain];
 	}
 }
 
-- (void) typingTimerDidFired:(NSTimer *)aTimer {
-	NSDate *now = [NSDate date];
-	NSTimeInterval interval = [now timeIntervalSinceDate:lastKeypress];
-	NSString *originalText = [[[model originalText] copy] autorelease];
+- (void) translateTimerDidFire:(NSTimer *)aTimer {	
+	NSLog(@"Time fired last: %@ new: %@", lastTextToTranslate, requestedTextToTranslate);
 	
-	NSLog(@"Time fired %f last: %@ new: %@", interval, lastOriginalText, originalText);
-	
-	if (interval > BFTypingStoppedDelay) {
-		NSLog(@"Interval bigger than delay - stopping", interval);
-		[self stopTypingTimer];
-	} 	
-
-	if ([lastOriginalText isEqualToString:originalText]) { 
-		NSLog(@"text is the same");
-	} else {		
-		[lastKeypress release];
-		lastKeypress = [now retain];
+	if ([lastTextToTranslate isEqualToString:[requestedTextToTranslate stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]]) { 
+		NSLog(@"text is the same - stopping");
 		
+		[self stopTranslateTimer];
+	} else {				
 		[self translate];
+		
+		[lastTextToTranslate release];
+		lastTextToTranslate = [[requestedTextToTranslate stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] retain];
 	}
-
-	// get the text
-	[lastOriginalText release];
-	lastOriginalText = [originalText retain];
 }
 
 - (void) handleOriginalTextChanged {
@@ -176,17 +168,19 @@ static RatedLanguage const* BFAutoDetectedLanguage;
 	
 	if ([[model originalText] length] > 0) {
 		[translateButton setEnabled:YES];
-		if (!typingTimer) {
+		
+		[requestedTextToTranslate release];
+		requestedTextToTranslate = [[model originalText] copy];
+		
+		if (!translateTimer) {
 			NSLog(@"Timer not running - launching a new one");
-			[self startTypingTimer];
-			[self translate];
+			[self startTranslateTimer];
 		}
 	} else {
 		[translateButton setEnabled:NO];
 		[model setTranslation:@""];
-		[self stopTypingTimer];
+		[self stopTranslateTimer];
 	}
-	
 }
 
 - (void) handleLanguageSelectionChanged {
@@ -218,8 +212,8 @@ static RatedLanguage const* BFAutoDetectedLanguage;
 	for (id e in items) {
 		if ([e isKindOfClass: [NSMenuItem class]]) {
 			[menu addItem: (NSMenuItem *)e];
-		} else if ([e isKindOfClass: [RatedLanguage class]]) {
-			RatedLanguage *l = (RatedLanguage *)e;
+		} else if ([e isKindOfClass: [BFRatedLanguage class]]) {
+			BFRatedLanguage *l = (BFRatedLanguage *)e;
 			NSMenuItem *mi = [menu addItemWithTitle:[l name] action:nil keyEquivalent:@""];
 			[mi setRepresentedObject:l];
 			[mi setImage:[l image]];
@@ -233,15 +227,31 @@ static RatedLanguage const* BFAutoDetectedLanguage;
 
 - (void)translate {
 	NSString* text = [model originalText];
-	Language *from = [model selectedSourceLanguage];
-	Language *to = [model selectedTargetLanguage];
-	NSObject<Translator> *translator = [model translator];
+	BFLanguage *from = [model selectedSourceLanguage];
+	BFLanguage *to = [model selectedTargetLanguage];
+	NSObject<BFTranslator> *translator = [model translator];
 	
 	// TODO assert
 	
 #ifndef NDEBUG
 	NSLog(@"translateText:\"%@\" from:\"%@\" to:\"%@\"", text, from, to);
 #endif
+	
+	if ([lastTextToTranslate isEqualToString:[text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]]
+		&& [[operationQueue operations] count] == 0) {
+		
+		NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+		[alert addButtonWithTitle:@"Translate"];
+		[alert addButtonWithTitle:@"Cancel"];
+		[alert setMessageText:@"Translate again?"];
+		[alert setInformativeText:@"The same text has been already translated. Are you sure you wanna do it again?"];
+		[alert setAlertStyle:NSInformationalAlertStyle];
+		
+		if ([alert runModal] == NSAlertSecondButtonReturn) {
+			// cancel clicked
+			return;
+		}
+	}
 	
 	// cancel all pending translation (should be at max one)
 	[operationQueue cancelAllOperations];
@@ -250,7 +260,7 @@ static RatedLanguage const* BFAutoDetectedLanguage;
 	[progressIndicator startAnimation:nil];
 	
 	// create a new translation operation
-	TranslateTextOperation *operation = [[TranslateTextOperation alloc] initWithText:text from:from to:to translator:translator];
+	BFTranslateTextOperation *operation = [[BFTranslateTextOperation alloc] initWithText:text from:from to:to translator:translator];
 	
 	// enqueue
 	[operationQueue addOperation:operation];	
@@ -263,7 +273,7 @@ static RatedLanguage const* BFAutoDetectedLanguage;
 	
 	[progressIndicator stopAnimation:nil];
 	
-	TranslateTextOperation *operation = [aNotification object];
+	BFTranslateTextOperation *operation = [aNotification object];
 	// TODO: assert operation != nil
 	if ([operation error]) {
 		// TODO: to retry count?
@@ -325,6 +335,10 @@ static RatedLanguage const* BFAutoDetectedLanguage;
 }
 
 - (IBAction)translateTextAction:(id)aSender {
+	if (translateTimer) {
+		[self stopTranslateTimer];
+	}
+	
 	[self translate];
 }
 
@@ -351,12 +365,13 @@ static RatedLanguage const* BFAutoDetectedLanguage;
 }
 
 - (IBAction)swapLanguages:(id)aSender {
-	RatedLanguage *s = [[sourceLanguagePopup selectedItem] representedObject];
+	
+	BFRatedLanguage *s = [[sourceLanguagePopup selectedItem] representedObject];
 	if (s == BFAutoDetectedLanguage) {
 		return;
 	}
 	
-	RatedLanguage *t = [[targetLanguagePopup selectedItem] representedObject];
+	BFRatedLanguage *t = [[targetLanguagePopup selectedItem] representedObject];
 	
 	[sourceLanguagePopup selectItemWithTag:[t tag]];
 	[self setSourceLanguage:sourceLanguagePopup];

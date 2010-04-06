@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface Language : NSObject <NSCopying> {
+@interface BFLanguage : NSObject <NSCopying> {
 	
 @private
 	NSString *code;

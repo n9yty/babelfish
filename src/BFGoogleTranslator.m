@@ -14,9 +14,9 @@
  */
 
 //  Created by Filip Krikava on 11/20/09.
-#import "GoogleTranslator.h"
+#import "BFGoogleTranslator.h"
 
-@implementation GoogleTranslator
+@implementation BFGoogleTranslator
 
 NSString *const BFTranslatorErrorDomainKey = @"net.nkuyu.babelfishapp.ErrorDomain";
 
@@ -30,7 +30,7 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 	}
 	
 #ifndef NDEBUG
-	NSLog(@"Initializing %@", [GoogleTranslator class]);
+	NSLog(@"Initializing %@", [BFGoogleTranslator class]);
 #endif
 	
 	// create the JSON parser
@@ -41,7 +41,7 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 
 - (void) dealloc {
 #ifndef NDEBUG
-	NSLog(@"Deallocing %@", [GoogleTranslator class]);
+	NSLog(@"Deallocing %@", [BFGoogleTranslator class]);
 #endif
 
 	[parser release];

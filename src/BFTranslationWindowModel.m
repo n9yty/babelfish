@@ -18,7 +18,7 @@
 @synthesize selectedSourceLanguage;
 @synthesize selectedTargetLanguage;
 
-- (id)initWithTranslator:(NSObject<Translator> *)aTranslator sourceLanguages:(NSArray *)theSourceLanguages targetLanguages:(NSArray *)theTargetLanguages{
+- (id)initWithTranslator:(NSObject<BFTranslator> *)aTranslator sourceLanguages:(NSArray *)theSourceLanguages targetLanguages:(NSArray *)theTargetLanguages{
 	if (![super init]) {
 		return nil;
 	}

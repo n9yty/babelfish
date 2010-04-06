@@ -17,14 +17,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "Translator.h"
+#import "BFTranslator.h"
 
 @class Translation;
-@class TranslateTextOperation;
+@class BFTranslateTextOperation;
 @class BFTranslationWindowModel;
-@class RatedLanguage;
+@class BFRatedLanguage;
 
-@interface TranslationWindowController : NSWindowController {
+@interface BFTranslationWindowController : NSWindowController {
 	IBOutlet NSBox *translationBox;
 	IBOutlet NSTextView *originalTextView;
 	IBOutlet NSTextView *translatedTextView;
@@ -37,9 +37,10 @@
 	IBOutlet NSTextField *copyrightLabel;
 		
 @private
-	NSDate *lastKeypress;
-	NSString *lastOriginalText;
-	NSTimer *typingTimer;
+	NSString *lastTextToTranslate;
+	NSString *requestedTextToTranslate;
+	NSTimer *translateTimer;
+
 	NSOperationQueue *operationQueue;
 	
 	BFTranslationWindowModel* model;
@@ -50,13 +51,18 @@
 - (id)initWithModel:(BFTranslationWindowModel*) aModel;
 
 - (void)translationOperationDidFinish:(id)aNotification;
-- (void)typingTimerDidFired:(NSTimer *)aTimer;
 - (void)populateMenu:(NSMenu *)menu withItems:(NSArray *)items;
 - (void)translate;
 - (void)setTranslationBoxHidden:(BOOL)hidden;
+
 - (void)handleOriginalTextChanged;
 - (void)handleLanguageSelectionChanged;
 - (void)handleTranslationChanged;	
+
+- (void)startTranslateTimer;
+- (void)stopTranslateTimer;
+- (void)translateTimerDidFire:(NSTimer *)aTimer;
+
 
 - (IBAction)setTargetLanguage:(id)aSender;
 - (IBAction)setSourceLanguage:(id)aSender;

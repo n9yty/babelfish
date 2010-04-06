@@ -13,28 +13,32 @@
  OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-//  Created by Filip Krikava on 11/20/09.
+//  Created by Filip Krikava on 11/29/09.
 
 #import <Cocoa/Cocoa.h>
-#import "JSON.h"
-#import "Translator.h"
+#import "BFTranslator.h"
 
-// TODO: change to constanst
-#define TIMEOUT					55
+@class BFLanguage;
 
-// example: http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=hello%20world&langpair=en%7Cit
-#define GOOGLE_TRANSLATE_URL	@"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0"
+extern NSString *const BFTranslationFinishedNotificationKey;
 
-@interface GoogleTranslator : NSObject <Translator> {
-	@private
-	SBJSON *parser;
+@interface BFTranslateTextOperation : NSOperation {
+
+@private
+	NSString *text;
+	BFLanguage *from;
+	BFLanguage *to;
+	NSObject<BFTranslator> *translator;
 	
-#ifdef COUNT_REQUEST
-	int numRequests;
-#endif
+	NSString *translation;
+	NSError *error;
 }
 
-- (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description underlyingError:(NSError *)underlyingError;
-- (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description reason:(NSString *)reason;
+- (id) initWithText:(NSString *)aText from:(BFLanguage *)fromLang to:(BFLanguage *)toLang translator:(NSObject<BFTranslator> *)aTranslator;
+
+@property (readonly) NSString *translation;
+@property (readonly) BFLanguage *from;
+@property (readonly) BFLanguage *to;
+@property (readonly) NSError *error;
 
 @end

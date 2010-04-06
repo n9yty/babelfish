@@ -8,12 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "Translator.h"
+#import "BFTranslator.h"
 
-@interface AppController : NSObject {
+@interface BFAppController : NSObject {
 
 	@private
-	NSObject<Translator> *translator;
+	NSObject<BFTranslator> *translator;
 	NSMutableArray *windows;
 }
 

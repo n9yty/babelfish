@@ -15,16 +15,16 @@
 #define NAME_KEY	@"Name"
 #define FLAGS_DIR	@"Flags"
 
-@class Language;
+@class BFLanguage;
 
-@interface LanguageManager : NSObject {
+@interface BFLanguageManager : NSObject {
 	@private
 	NSDictionary *allLanguages;
 }
 
-+ (LanguageManager *) languageManager;
++ (BFLanguageManager *) languageManager;
 
-- (Language *)languageByCode:(NSString *)code;
+- (BFLanguage *)languageByCode:(NSString *)code;
 - (NSArray *) allLanguages;
 - (int)count;
 

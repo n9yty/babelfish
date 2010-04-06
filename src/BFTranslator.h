@@ -15,7 +15,7 @@
 
 //  Created by Filip Krikava on 11/26/09.
 
-@protocol Translator
+@protocol BFTranslator
 
 extern NSString * const BFTranslatorErrorDomainKey;
 

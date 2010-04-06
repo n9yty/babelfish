@@ -15,16 +15,16 @@
 	NSString *originalText;
 	NSString *translatedText;
 	
-	RatedLanguage *sourceLanguage;
-	RatedLanguage *targetLanguge;
+	BFRatedLanguage *sourceLanguage;
+	BFRatedLanguage *targetLanguge;
 	
 }
 
 @property (retain) NSString *originalText;
 @property (retain) NSString *translatedText;
 
-@property (retain) RatedLanguage *sourceLanguage;
-@property (retain) RatedLanguage *targetLanguage;
+@property (retain) BFRatedLanguage *sourceLanguage;
+@property (retain) BFRatedLanguage *targetLanguage;
 
 
 @end

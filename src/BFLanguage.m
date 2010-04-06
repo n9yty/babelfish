@@ -6,9 +6,9 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "Language.h"
+#import "BFLanguage.h"
 
-@implementation Language
+@implementation BFLanguage
 
 @synthesize code;
 @synthesize name;
@@ -52,7 +52,7 @@
 }
 
 - (id) copyWithZone:(NSZone *)zone {
-	Language *clone = [[Language allocWithZone:zone] initWithCode:code name:name imagePath:imagePath];
+	BFLanguage *clone = [[BFLanguage allocWithZone:zone] initWithCode:code name:name imagePath:imagePath];
 	return clone;
 }
 
@@ -64,7 +64,7 @@
         return NO;
 	}
 	else {
-		Language *other = (Language *)anObject;
+		BFLanguage *other = (BFLanguage *)anObject;
 		if (![code isEqualToString: [other code]]) {
 			return NO;
 		} 

@@ -6,14 +6,14 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "LanguageManager.h"
-#import "Language.h"
+#import "BFLanguageManager.h"
+#import "BFLanguage.h"
 
-@implementation LanguageManager
+@implementation BFLanguageManager
 
-static LanguageManager *languageManager = nil; 
+static BFLanguageManager *languageManager = nil; 
 
-+ (LanguageManager *) languageManager {
++ (BFLanguageManager *) languageManager {
 	if (languageManager == nil) {
 		languageManager = [[super allocWithZone:nil] init];
 	}
@@ -43,7 +43,7 @@ static LanguageManager *languageManager = nil;
 	for (NSDictionary *dict in languages) {
 		NSString *code = [dict objectForKey:CODE_KEY];
 		NSString *name = [dict objectForKey:NAME_KEY];
-		Language *lang = [[Language alloc] initWithCode:code name:name imagePath:[[NSBundle mainBundle] pathForResource:code ofType:IMAGE_TYPE inDirectory:FLAGS_DIR]];
+		BFLanguage *lang = [[BFLanguage alloc] initWithCode:code name:name imagePath:[[NSBundle mainBundle] pathForResource:code ofType:IMAGE_TYPE inDirectory:FLAGS_DIR]];
 		// TODO: if this fails?
 		[d setObject:lang forKey:code];
 	}
@@ -89,14 +89,14 @@ static LanguageManager *languageManager = nil;
     return self;
 }
 
-- (Language *)languageByCode:(NSString *)code {
+- (BFLanguage *)languageByCode:(NSString *)code {
 #ifndef NDEBUG
 	NSLog(@"languageByCode:\"%@\"", code);
 #endif
 	
 	// TODO: check arguments
 	
-	Language *lang = [allLanguages objectForKey:code];
+	BFLanguage *lang = [allLanguages objectForKey:code];
 	return lang;
 }
 

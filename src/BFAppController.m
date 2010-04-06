@@ -6,17 +6,17 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "AppController.h"
-#import "RatedLanguage.h"
-#import "LanguageManager.h"
-#import "TranslationWindowController.h"
-#import "Translator.h"
-#import "GoogleTranslator.h"
+#import "BFAppController.h"
+#import "BFRatedLanguage.h"
+#import "BFLanguageManager.h"
+#import "BFTranslationWindowController.h"
+#import "BFTranslator.h"
+#import "BFGoogleTranslator.h"
 #import "BFTranslationWindowModel.h"
 
 #import "version.h"
 
-@implementation AppController
+@implementation BFAppController
 
 - (id)init {
 	if (![super init]) {
@@ -24,17 +24,17 @@
 	}
 	
 #ifndef NDEBUG
-	NSLog(@"Initializing %@ build number %@", [AppController class], [NSNumber numberWithInt:BUILD_NUMBER]);
+	NSLog(@"Initializing %@ build number %@", [BFAppController class], [NSNumber numberWithInt:BUILD_NUMBER]);
 #endif
 	
 	windows = [[NSMutableArray alloc] init];
-	translator = [[GoogleTranslator alloc] init];
+	translator = [[BFGoogleTranslator alloc] init];
 	return self;
 }
 
 - (void)dealloc {
 #ifndef NDEBUG
-	NSLog(@"Deallocing %@", [AppController class]);
+	NSLog(@"Deallocing %@", [BFAppController class]);
 #endif
 
 	[windows release];
@@ -64,9 +64,9 @@
 - (NSArray *) fakeRating:(NSArray *)languages {
 	NSMutableArray *array = [NSMutableArray arrayWithCapacity:[languages count]];
 	int tag = 0;
-	for (Language *l in languages) {
+	for (BFLanguage *l in languages) {
 		int r =  [[l name] isEqualToString:@"French"] ? 200 : 1;
-		RatedLanguage *rl = [RatedLanguage ratedLanguage:l tag:tag++ rating:r];
+		BFRatedLanguage *rl = [BFRatedLanguage ratedLanguage:l tag:tag++ rating:r];
 		[array addObject:rl];
 	}
 	
@@ -74,12 +74,12 @@
 }
 
 - (void) newTranslationWindow {
-	NSArray *sourceLanguages = [self fakeRating:[[LanguageManager languageManager] allLanguages]];
-	NSArray *targetLanguages = [self fakeRating:[[LanguageManager languageManager] allLanguages]];
+	NSArray *sourceLanguages = [self fakeRating:[[BFLanguageManager languageManager] allLanguages]];
+	NSArray *targetLanguages = [self fakeRating:[[BFLanguageManager languageManager] allLanguages]];
 	
 	BFTranslationWindowModel *model = [[[BFTranslationWindowModel alloc] initWithTranslator:translator sourceLanguages:sourceLanguages targetLanguages:targetLanguages] autorelease];
 	
-	TranslationWindowController *window = [[TranslationWindowController alloc] initWithModel:model];
+	BFTranslationWindowController *window = [[BFTranslationWindowController alloc] initWithModel:model];
 	[window showWindow:nil];
 }
 
