@@ -41,7 +41,6 @@
 		5168A6701168B547004C576A /* SwapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5168A66F1168B547004C576A /* SwapIcon.png */; };
 		5168A7B4116A8EB0004C576A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5168A7B3116A8EB0004C576A /* Credits.rtf */; };
 		518CEFFA1128AB6000658FB0 /* BFLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CEFF91128AB6000658FB0 /* BFLanguage.m */; };
-		518CF0011128AC3700658FB0 /* BFRatedLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CF0001128AC3700658FB0 /* BFRatedLanguage.m */; };
 		51999EF9112A02F1008BAC42 /* TranslationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51999EF8112A02F1008BAC42 /* TranslationWindow.xib */; };
 		51999F14112A0729008BAC42 /* BFAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51999F13112A0729008BAC42 /* BFAppController.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -111,8 +110,6 @@
 		5168A7B3116A8EB0004C576A /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		518CEFF81128AB6000658FB0 /* BFLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFLanguage.h; sourceTree = "<group>"; };
 		518CEFF91128AB6000658FB0 /* BFLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFLanguage.m; sourceTree = "<group>"; };
-		518CEFFF1128AC3700658FB0 /* BFRatedLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFRatedLanguage.h; sourceTree = "<group>"; };
-		518CF0001128AC3700658FB0 /* BFRatedLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFRatedLanguage.m; sourceTree = "<group>"; };
 		51999EF8112A02F1008BAC42 /* TranslationWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslationWindow.xib; sourceTree = "<group>"; };
 		51999F12112A0729008BAC42 /* BFAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFAppController.h; sourceTree = "<group>"; };
 		51999F13112A0729008BAC42 /* BFAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFAppController.m; sourceTree = "<group>"; };
@@ -156,8 +153,6 @@
 				510A593610C1D48A00088B20 /* version.h */,
 				510A5A0910C3136200088B20 /* BFTranslateTextOperation.h */,
 				510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */,
-				518CEFFF1128AC3700658FB0 /* BFRatedLanguage.h */,
-				518CF0001128AC3700658FB0 /* BFRatedLanguage.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -433,7 +428,6 @@
 				510A5A0B10C3136200088B20 /* BFTranslateTextOperation.m in Sources */,
 				510A5B0E10C334A600088B20 /* BFLanguageManager.m in Sources */,
 				518CEFFA1128AB6000658FB0 /* BFLanguage.m in Sources */,
-				518CF0011128AC3700658FB0 /* BFRatedLanguage.m in Sources */,
 				51999F14112A0729008BAC42 /* BFAppController.m in Sources */,
 				512192C7115E95EB00150E9E /* BFTranslationWindowModel.m in Sources */,
 			);

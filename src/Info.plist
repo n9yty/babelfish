@@ -42,9 +42,13 @@ Copyright (c) 2010 Filip Krikava
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
-	<string>????</string>
+	<string>Babelfishapp</string>
+	<key>CFBundleShortVersionString</key>
+    <string>2.0</string>
 	<key>CFBundleVersion</key>
-	<string>2.0</string>
+	<string>10</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.5.0</string>	
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright (c) 2010, Filip Křikava. Licensed under MIT license.</string>
 	<key>NSMainNibFile</key>
@@ -57,10 +61,10 @@ Copyright (c) 2010 Filip Krikava
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Translate with ${PRODUCT_NAME}</string>
+				<string>Translate with Babelfish</string>
 			</dict>
 			<key>NSMessage</key>
-			<string>openTranslation</string>
+			<string>newTransaltionWindowFromSericeCall</string>
 			<key>NSPortName</key>
 			<string>Babelfish</string>
 			<key>NSSendTypes</key>

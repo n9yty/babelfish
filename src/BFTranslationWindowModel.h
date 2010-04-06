@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "BFTranslator.h"
-#import "BFRatedLanguage.h"
+#import "BFLanguage.h"
 
 @interface BFTranslationWindowModel : NSObject {
 	NSObject<BFTranslator>* translator;
@@ -19,8 +19,8 @@
 	NSString* originalText;
 	NSString* translation;
 	
-	BFRatedLanguage* selectedSourceLanguage;
-	BFRatedLanguage* selectedTargetLanguage;
+	BFLanguage* selectedSourceLanguage;
+	BFLanguage* selectedTargetLanguage;
 }
 
 @property (readonly) NSObject<BFTranslator>* translator;
@@ -28,8 +28,8 @@
 @property (readonly) NSArray* targetLanguages;
 @property (copy) NSString* originalText;
 @property (copy) NSString* translation;
-@property (retain) BFRatedLanguage* selectedSourceLanguage;
-@property (retain) BFRatedLanguage* selectedTargetLanguage;
+@property (retain) BFLanguage* selectedSourceLanguage;
+@property (retain) BFLanguage* selectedTargetLanguage;
 
 - (id)initWithTranslator:(NSObject<BFTranslator> *)aTranslator sourceLanguages:(NSArray *)theSourceLanguages targetLanguages:(NSArray *)theTargetLanguages;
 

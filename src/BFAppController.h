@@ -10,17 +10,25 @@
 
 #import "BFTranslator.h"
 
+@class BFLanguage;
+
 @interface BFAppController : NSObject {
 
 	@private
 	NSObject<BFTranslator> *translator;
-	NSMutableArray *windows;
+	
+	NSArray *sourceLanguages;
+	NSArray *targetLanguages;
 }
 
-- (NSArray *) fakeRating:(NSArray *)languages;
-//- (void)openWindow:(NSPasteboard *)aPboard userData:(NSString *)aUserData error:(NSString **)anError;
-
+- (void) newTransaltionWindowFromSericeCall:(NSPasteboard *)aPboard userData:(NSString *)aUserData error:(NSString **)anError;
+- (void) newTranslationWindowToTranslateText:(NSString *)anOriginaltext from:(BFLanguage *)aSourceLang to:(BFLanguage *)aTargetLang;
 - (void) newTranslationWindow;
+
+- (NSDictionary *) loadLanguages:(NSError **)anError;
+- (void) loadRating:(NSArray *)theLanguages source:(NSString *)aSource error:(NSError **)anError;
+
+
 - (IBAction) newTranslationWindow:(id)aSender;
 
 @end

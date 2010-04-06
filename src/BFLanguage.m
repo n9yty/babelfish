@@ -14,6 +14,7 @@
 @synthesize name;
 @synthesize imagePath;
 @dynamic image;
+@synthesize rating;
 
 - (id) initWithCode:(NSString *)aCode name:(NSString *)aName imagePath:(NSString *)anImagePath {
 	if (![super init]) {

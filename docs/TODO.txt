@@ -1,5 +1,5 @@
 - service
-
+- rating
 - empty lines
 - better font
 
@@ -25,7 +25,7 @@
 
 - keywords submission
 - check domain for this name: babelfiska, thebabelfishapp
-
+- latest revision into about box
 - split requests by new line
 - font properties
 - resizeable window
@@ -33,3 +33,6 @@
 
 - if the text returned aftern new translation especially requested by
   user - display some smart ass message
+
+ NSString *folder = @"~/Library/Application Support/MailDemo/";
+  folder = [folder stringByExpandingTildeInPath];

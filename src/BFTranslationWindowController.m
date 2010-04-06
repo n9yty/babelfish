@@ -19,8 +19,7 @@
 #import "BFGoogleTranslator.h"
 #import "BFTranslateTextOperation.h"
 #import "BFLanguageManager.h"
-#import "BFRatedLanguage.h"
-#import "Translation.h"
+#import "BFLanguage.h"
 #import "BFTranslationWindowModel.h"
 
 @implementation BFTranslationWindowController
@@ -35,7 +34,7 @@ static NSString const* BFTargetLanguageChangedCtxKey = @"BFTargetLanguageChanged
 static NSTimeInterval const BFDelayBetweenTranslations = 1.0;
 static NSInteger const BFMaxTextSizeForInteractiveTranslation = 1024;
 
-static BFRatedLanguage const* BFAutoDetectedLanguage;
+static BFLanguage const* BFAutoDetectedLanguage;
 
 - (id)initWithModel:(BFTranslationWindowModel*)aModel {
 #ifndef NDEBUG
@@ -46,7 +45,7 @@ static BFRatedLanguage const* BFAutoDetectedLanguage;
 		return nil;
 	}
 	
-	BFAutoDetectedLanguage = [BFRatedLanguage ratedLanguage:[[BFLanguage alloc] initWithCode:@"" name:@"Detect Language" imagePath:nil] tag:-1 rating:0];
+	BFAutoDetectedLanguage = [[BFLanguage alloc] initWithCode:@"" name:@"Detect Language" imagePath:nil];
 	
 	model = [aModel retain];	
 	operationQueue = [[NSOperationQueue alloc] init];
@@ -228,12 +227,12 @@ static BFRatedLanguage const* BFAutoDetectedLanguage;
 	for (id e in items) {
 		if ([e isKindOfClass: [NSMenuItem class]]) {
 			[menu addItem: (NSMenuItem *)e];
-		} else if ([e isKindOfClass: [BFRatedLanguage class]]) {
-			BFRatedLanguage *l = (BFRatedLanguage *)e;
+		} else if ([e isKindOfClass: [BFLanguage class]]) {
+			BFLanguage *l = (BFLanguage *)e;
 			NSMenuItem *mi = [menu addItemWithTitle:[l name] action:nil keyEquivalent:@""];
 			[mi setRepresentedObject:l];
 			[mi setImage:[l image]];
-			[mi setTag:[l tag]];
+			[mi setTag:[l hash]];
 		} else {
 			// TODO: crash here
 			NSLog(@"Unexpected item: %@", e);
@@ -382,16 +381,16 @@ static BFRatedLanguage const* BFAutoDetectedLanguage;
 
 - (IBAction)swapLanguages:(id)aSender {
 	
-	BFRatedLanguage *s = [[sourceLanguagePopup selectedItem] representedObject];
+	BFLanguage *s = [[sourceLanguagePopup selectedItem] representedObject];
 	if (s == BFAutoDetectedLanguage) {
 		return;
 	}
 	
-	BFRatedLanguage *t = [[targetLanguagePopup selectedItem] representedObject];
+	BFLanguage *t = [[targetLanguagePopup selectedItem] representedObject];
 	
-	[sourceLanguagePopup selectItemWithTag:[t tag]];
+	[sourceLanguagePopup selectItemWithTag:[t hash]];
 	[self setSourceLanguage:sourceLanguagePopup];
-	[targetLanguagePopup selectItemWithTag:[s tag]];
+	[targetLanguagePopup selectItemWithTag:[s hash]];
 	[self setTargetLanguage:targetLanguagePopup];
 }
 

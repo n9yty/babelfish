@@ -35,24 +35,6 @@ static BFLanguageManager *languageManager = nil;
 		return nil;
 	}
 	
-	NSArray *languages = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SupportedLanguages" ofType:@"plist"]];
-	NSMutableDictionary *d = [NSMutableDictionary dictionaryWithCapacity:[languages count]];
-	
-	// TODO: if this fails?
-	
-	for (NSDictionary *dict in languages) {
-		NSString *code = [dict objectForKey:CODE_KEY];
-		NSString *name = [dict objectForKey:NAME_KEY];
-		BFLanguage *lang = [[BFLanguage alloc] initWithCode:code name:name imagePath:[[NSBundle mainBundle] pathForResource:code ofType:IMAGE_TYPE inDirectory:FLAGS_DIR]];
-		// TODO: if this fails?
-		[d setObject:lang forKey:code];
-	}
-	
-	allLanguages = [[NSDictionary dictionaryWithDictionary:d] retain];
-
-#ifndef NDEBUG
-	NSLog(@"language manager initialized with %d entries", [allLanguages count]);
-#endif
 	
 	return self;
 }

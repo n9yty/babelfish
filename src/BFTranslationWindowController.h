@@ -22,7 +22,7 @@
 @class Translation;
 @class BFTranslateTextOperation;
 @class BFTranslationWindowModel;
-@class BFRatedLanguage;
+@class BFLanguage;
 
 @interface BFTranslationWindowController : NSWindowController {
 	IBOutlet NSBox *translationBox;
