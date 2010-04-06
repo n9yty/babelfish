@@ -16,7 +16,6 @@
 //  Created by Filip Krikava on 11/29/09.
 
 #import "BFTranslateTextOperation.h"
-#import "BFLanguageManager.h"
 #import "BFLanguage.h"
 
 NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNotificationKey";

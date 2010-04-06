@@ -286,13 +286,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
-									<integer>1</integer>
+									<integer>33</integer>
+									<integer>26</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {295, 760}}</string>
+							<string>{{0, 38}, {295, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -329,7 +329,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>5167DAD91017B65F0098CF5B</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>BFAppController.m</string>
+								<string>Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -337,11 +337,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>5167DADA1017B65F0098CF5B</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>BFAppController.m</string>
+										<string>Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>5168A903116BF40D004C576A</string>
+										<string>5168A923116BF655004C576A</string>
 										<key>history</key>
 										<array>
 											<string>510A58ED10C1C63700088B20</string>
@@ -365,11 +365,8 @@
 											<string>518CEEA411286A3B00658FB0</string>
 											<string>51C5DB4C1162A5F700604497</string>
 											<string>5168A48D1168002F004C576A</string>
-											<string>5168A55611680C6F004C576A</string>
-											<string>5168A7C1116A958E004C576A</string>
 											<string>5168A7C2116A958E004C576A</string>
 											<string>5168A832116BD4DF004C576A</string>
-											<string>5168A86E116BE5D2004C576A</string>
 											<string>5168A870116BE5D2004C576A</string>
 											<string>5168A871116BE5D2004C576A</string>
 											<string>5168A872116BE5D2004C576A</string>
@@ -378,12 +375,15 @@
 											<string>5168A8D8116BEFB0004C576A</string>
 											<string>5168A8D9116BEFB0004C576A</string>
 											<string>5168A8DA116BEFB0004C576A</string>
-											<string>5168A8DB116BEFB0004C576A</string>
-											<string>5168A8DC116BEFB0004C576A</string>
 											<string>5168A8DD116BEFB0004C576A</string>
 											<string>5168A8DE116BEFB0004C576A</string>
 											<string>5168A8F5116BF256004C576A</string>
-											<string>5168A8FF116BF353004C576A</string>
+											<string>5168A909116BF5DB004C576A</string>
+											<string>5168A90A116BF5DB004C576A</string>
+											<string>5168A917116BF62E004C576A</string>
+											<string>5168A918116BF62E004C576A</string>
+											<string>5168A919116BF62E004C576A</string>
+											<string>5168A922116BF64D004C576A</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -612,7 +612,6 @@
 											<string>5168A79C11691464004C576A</string>
 											<string>5168A7B9116A8EFB004C576A</string>
 											<string>5168A7BA116A8EFB004C576A</string>
-											<string>5168A7C4116A958E004C576A</string>
 											<string>5168A7C5116A958E004C576A</string>
 											<string>5168A7D4116BC6DE004C576A</string>
 											<string>5168A7D5116BC6DE004C576A</string>
@@ -711,6 +710,12 @@
 											<string>5168A8EB116BEFB0004C576A</string>
 											<string>5168A8F7116BF256004C576A</string>
 											<string>5168A8F8116BF256004C576A</string>
+											<string>5168A90C116BF5DB004C576A</string>
+											<string>5168A90D116BF5DB004C576A</string>
+											<string>5168A91B116BF62E004C576A</string>
+											<string>5168A91C116BF62E004C576A</string>
+											<string>5168A91D116BF62E004C576A</string>
+											<string>5168A91E116BF62E004C576A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

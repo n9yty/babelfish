@@ -37,7 +37,7 @@
 		514A6DB510DC18610039CE28 /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */; };
 		5168A55511680813004C576A /* GoogleTranslateLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5168A55411680813004C576A /* GoogleTranslateLogo.gif */; };
 		5168A6701168B547004C576A /* SwapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5168A66F1168B547004C576A /* SwapIcon.png */; };
-		5168A7B4116A8EB0004C576A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5168A7B3116A8EB0004C576A /* Credits.rtf */; };
+		5168A907116BF5C3004C576A /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 5168A906116BF5C2004C576A /* Credits.rtfd */; };
 		518CEFFA1128AB6000658FB0 /* BFLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CEFF91128AB6000658FB0 /* BFLanguage.m */; };
 		51999EF9112A02F1008BAC42 /* TranslationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51999EF8112A02F1008BAC42 /* TranslationWindow.xib */; };
 		51999F14112A0729008BAC42 /* BFAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51999F13112A0729008BAC42 /* BFAppController.m */; };
@@ -103,7 +103,7 @@
 		514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = ../../../../Development/objc/BGHUDAppKit/build/Release/BGHUDAppKit.framework; sourceTree = SOURCE_ROOT; };
 		5168A55411680813004C576A /* GoogleTranslateLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GoogleTranslateLogo.gif; sourceTree = "<group>"; };
 		5168A66F1168B547004C576A /* SwapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwapIcon.png; sourceTree = "<group>"; };
-		5168A7B3116A8EB0004C576A /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		5168A906116BF5C2004C576A /* Credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = Credits.rtfd; sourceTree = "<group>"; };
 		518CEFF81128AB6000658FB0 /* BFLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFLanguage.h; sourceTree = "<group>"; };
 		518CEFF91128AB6000658FB0 /* BFLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFLanguage.m; sourceTree = "<group>"; };
 		51999EF8112A02F1008BAC42 /* TranslationWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslationWindow.xib; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
-				5168A7B3116A8EB0004C576A /* Credits.rtf */,
+				5168A906116BF5C2004C576A /* Credits.rtfd */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -353,7 +353,7 @@
 				51999EF9112A02F1008BAC42 /* TranslationWindow.xib in Resources */,
 				5168A55511680813004C576A /* GoogleTranslateLogo.gif in Resources */,
 				5168A6701168B547004C576A /* SwapIcon.png in Resources */,
-				5168A7B4116A8EB0004C576A /* Credits.rtf in Resources */,
+				5168A907116BF5C3004C576A /* Credits.rtfd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

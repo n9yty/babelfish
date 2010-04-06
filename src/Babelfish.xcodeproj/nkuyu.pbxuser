@@ -23,8 +23,8 @@
 			518CF0491128AFDB00658FB0 /* BFTranslationWindowController.m:18 */,
 			518CF0571128B12800658FB0 /* BFTranslationWindowController.m:18 */,
 			5168A4E91168042E004C576A /* BFGoogleTranslator.m:58 */,
-			5168A50A11680466004C576A /* BFTranslateTextOperation.m:69 */,
-			5168A6931168B894004C576A /* BFTranslationWindowController.m:22 */,
+			5168A50A11680466004C576A /* BFTranslateTextOperation.m:68 */,
+			5168A6931168B894004C576A /* BFTranslationWindowController.m:21 */,
 			5168A6BA1168C185004C576A /* BFGoogleTranslator.m:69 */,
 			5168A6DC1168C406004C576A /* BFTranslationWindowController.m:20 */,
 			5168A7341168D3A8004C576A /* BFTranslationWindowController.m:20 */,
@@ -1166,6 +1166,28 @@
 			5168A8FF116BF353004C576A /* PBXTextBookmark */ = 5168A8FF116BF353004C576A /* PBXTextBookmark */;
 			5168A900116BF353004C576A /* PBXTextBookmark */ = 5168A900116BF353004C576A /* PBXTextBookmark */;
 			5168A903116BF40D004C576A /* PBXTextBookmark */ = 5168A903116BF40D004C576A /* PBXTextBookmark */;
+			5168A909116BF5DB004C576A /* PBXTextBookmark */ = 5168A909116BF5DB004C576A /* PBXTextBookmark */;
+			5168A90A116BF5DB004C576A /* PBXBookmark */ = 5168A90A116BF5DB004C576A /* PBXBookmark */;
+			5168A90B116BF5DB004C576A /* PBXTextBookmark */ = 5168A90B116BF5DB004C576A /* PBXTextBookmark */;
+			5168A90C116BF5DB004C576A /* PBXTextBookmark */ = 5168A90C116BF5DB004C576A /* PBXTextBookmark */;
+			5168A90D116BF5DB004C576A /* PBXBookmark */ = 5168A90D116BF5DB004C576A /* PBXBookmark */;
+			5168A90E116BF5DB004C576A /* PBXTextBookmark */ = 5168A90E116BF5DB004C576A /* PBXTextBookmark */;
+			5168A90F116BF5DB004C576A /* PBXTextBookmark */ = 5168A90F116BF5DB004C576A /* PBXTextBookmark */;
+			5168A910116BF5E5004C576A /* PBXTextBookmark */ = 5168A910116BF5E5004C576A /* PBXTextBookmark */;
+			5168A911116BF5E5004C576A /* PBXTextBookmark */ = 5168A911116BF5E5004C576A /* PBXTextBookmark */;
+			5168A917116BF62E004C576A /* PBXTextBookmark */ = 5168A917116BF62E004C576A /* PBXTextBookmark */;
+			5168A918116BF62E004C576A /* PBXTextBookmark */ = 5168A918116BF62E004C576A /* PBXTextBookmark */;
+			5168A919116BF62E004C576A /* PBXTextBookmark */ = 5168A919116BF62E004C576A /* PBXTextBookmark */;
+			5168A91A116BF62E004C576A /* PBXTextBookmark */ = 5168A91A116BF62E004C576A /* PBXTextBookmark */;
+			5168A91B116BF62E004C576A /* PBXTextBookmark */ = 5168A91B116BF62E004C576A /* PBXTextBookmark */;
+			5168A91C116BF62E004C576A /* PBXTextBookmark */ = 5168A91C116BF62E004C576A /* PBXTextBookmark */;
+			5168A91D116BF62E004C576A /* PBXTextBookmark */ = 5168A91D116BF62E004C576A /* PBXTextBookmark */;
+			5168A91E116BF62E004C576A /* PBXTextBookmark */ = 5168A91E116BF62E004C576A /* PBXTextBookmark */;
+			5168A91F116BF62E004C576A /* PBXTextBookmark */ = 5168A91F116BF62E004C576A /* PBXTextBookmark */;
+			5168A920116BF62E004C576A /* PBXTextBookmark */ = 5168A920116BF62E004C576A /* PBXTextBookmark */;
+			5168A921116BF64D004C576A /* PBXTextBookmark */ = 5168A921116BF64D004C576A /* PBXTextBookmark */;
+			5168A922116BF64D004C576A /* PBXTextBookmark */ = 5168A922116BF64D004C576A /* PBXTextBookmark */;
+			5168A923116BF655004C576A /* PBXTextBookmark */ = 5168A923116BF655004C576A /* PBXTextBookmark */;
 			518CEDA51128549800658FB0 = 518CEDA51128549800658FB0 /* PlistBookmark */;
 			518CEDA61128549800658FB0 = 518CEDA61128549800658FB0 /* PBXBookmark */;
 			518CEDA81128549800658FB0 = 518CEDA81128549800658FB0 /* PBXBookmark */;
@@ -1437,9 +1459,9 @@
 	};
 	510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 1190}}";
-			sepNavSelRange = "{1248, 0}";
-			sepNavVisRange = "{680, 879}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 1204}}";
+			sepNavSelRange = "{863, 0}";
+			sepNavVisRange = "{680, 850}";
 		};
 	};
 	510A5A1610C3187D00088B20 /* PBXTextBookmark */ = {
@@ -1781,9 +1803,9 @@
 	};
 	5115950310C19356001E60A8 /* BFTranslationWindowController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 5586}}";
-			sepNavSelRange = "{12449, 0}";
-			sepNavVisRange = "{11534, 923}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 5692}}";
+			sepNavSelRange = "{4765, 81}";
+			sepNavVisRange = "{3861, 1201}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
@@ -2285,7 +2307,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 77";
 		rLen = 0;
-		rLoc = 2212;
+		rLoc = 2182;
 		rType = 0;
 		vrLen = 1044;
 		vrLoc = 1543;
@@ -2405,7 +2427,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 77";
 		rLen = 0;
-		rLoc = 2212;
+		rLoc = 2182;
 		rType = 0;
 		vrLen = 1044;
 		vrLoc = 1543;
@@ -2973,7 +2995,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 68";
 		rLen = 0;
-		rLoc = 2019;
+		rLoc = 1989;
 		rType = 0;
 		vrLen = 809;
 		vrLoc = 951;
@@ -2993,7 +3015,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 68";
 		rLen = 0;
-		rLoc = 2019;
+		rLoc = 1989;
 		rType = 0;
 		vrLen = 674;
 		vrLoc = 1086;
@@ -3013,7 +3035,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 62";
 		rLen = 0;
-		rLoc = 1927;
+		rLoc = 1897;
 		rType = 0;
 		vrLen = 868;
 		vrLoc = 1369;
@@ -4900,7 +4922,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 67";
 		rLen = 0;
-		rLoc = 1962;
+		rLoc = 1932;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 1445;
@@ -4930,7 +4952,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 67";
 		rLen = 0;
-		rLoc = 1962;
+		rLoc = 1932;
 		rType = 0;
 		vrLen = 864;
 		vrLoc = 1447;
@@ -5000,7 +5022,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 67";
 		rLen = 0;
-		rLoc = 1962;
+		rLoc = 1932;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 1445;
@@ -5070,7 +5092,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 67";
 		rLen = 0;
-		rLoc = 1962;
+		rLoc = 1932;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 1445;
@@ -5100,7 +5122,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 58";
 		rLen = 0;
-		rLoc = 1755;
+		rLoc = 1725;
 		rType = 0;
 		vrLen = 849;
 		vrLoc = 1467;
@@ -5120,12 +5142,12 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 58";
 		rLen = 0;
-		rLoc = 1755;
+		rLoc = 1725;
 		rType = 0;
 		vrLen = 345;
 		vrLoc = 1467;
 	};
-	5168A50A11680466004C576A /* BFTranslateTextOperation.m:69 */ = {
+	5168A50A11680466004C576A /* BFTranslateTextOperation.m:68 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -5137,7 +5159,7 @@
 		functionName = "-main";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 69;
+		lineNumber = 68;
 		location = Babelfish;
 		modificationTime = 292276014.132775;
 		state = 2;
@@ -5147,7 +5169,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 58";
 		rLen = 0;
-		rLoc = 1755;
+		rLoc = 1725;
 		rType = 0;
 		vrLen = 862;
 		vrLoc = 1448;
@@ -5157,7 +5179,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 58";
 		rLen = 0;
-		rLoc = 1755;
+		rLoc = 1725;
 		rType = 0;
 		vrLen = 690;
 		vrLoc = 1342;
@@ -5167,7 +5189,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 58";
 		rLen = 0;
-		rLoc = 1755;
+		rLoc = 1725;
 		rType = 0;
 		vrLen = 689;
 		vrLoc = 1342;
@@ -5177,7 +5199,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 58";
 		rLen = 0;
-		rLoc = 1755;
+		rLoc = 1725;
 		rType = 0;
 		vrLen = 689;
 		vrLoc = 1342;
@@ -5197,7 +5219,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 67";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1896;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 1639;
@@ -5234,7 +5256,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 67";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1896;
 		rType = 0;
 		vrLen = 394;
 		vrLoc = 1639;
@@ -5254,7 +5276,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 67";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1896;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 1639;
@@ -5294,7 +5316,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 81";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2392;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 1563;
@@ -5324,7 +5346,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 58";
 		rLen = 0;
-		rLoc = 1755;
+		rLoc = 1725;
 		rType = 0;
 		vrLen = 965;
 		vrLoc = 479;
@@ -5344,7 +5366,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 81";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2392;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 1563;
@@ -7661,7 +7683,7 @@
 		vrLen = 610;
 		vrLoc = 4233;
 	};
-	5168A6931168B894004C576A /* BFTranslationWindowController.m:22 */ = {
+	5168A6931168B894004C576A /* BFTranslationWindowController.m:21 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -7673,7 +7695,7 @@
 		functionName = "-swapLanguages:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 22;
+		lineNumber = 21;
 		location = Babelfish;
 		modificationTime = 292276014.13299;
 		state = 2;
@@ -7693,7 +7715,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 300";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 890;
 		vrLoc = 8848;
@@ -7703,7 +7725,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 298";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 886;
 		vrLoc = 8848;
@@ -7713,7 +7735,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 298";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 887;
 		vrLoc = 8851;
@@ -7723,7 +7745,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 298";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 995;
 		vrLoc = 8848;
@@ -7733,7 +7755,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 298";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 1012;
 		vrLoc = 8848;
@@ -7743,7 +7765,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 298";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 1038;
 		vrLoc = 8848;
@@ -7753,7 +7775,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 303";
 		rLen = 0;
-		rLoc = 12252;
+		rLoc = 12224;
 		rType = 0;
 		vrLen = 577;
 		vrLoc = 9368;
@@ -7793,7 +7815,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 306";
 		rLen = 0;
-		rLoc = 12351;
+		rLoc = 12323;
 		rType = 0;
 		vrLen = 977;
 		vrLoc = 8874;
@@ -7803,7 +7825,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 306";
 		rLen = 0;
-		rLoc = 12351;
+		rLoc = 12323;
 		rType = 0;
 		vrLen = 910;
 		vrLoc = 8946;
@@ -7813,7 +7835,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 306";
 		rLen = 0;
-		rLoc = 12351;
+		rLoc = 12323;
 		rType = 0;
 		vrLen = 464;
 		vrLoc = 9392;
@@ -7823,7 +7845,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 306";
 		rLen = 0;
-		rLoc = 12351;
+		rLoc = 12323;
 		rType = 0;
 		vrLen = 981;
 		vrLoc = 8875;
@@ -7843,7 +7865,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 81";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2392;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 861;
@@ -7853,7 +7875,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 294";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 981;
 		vrLoc = 8875;
@@ -7863,7 +7885,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 294";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 981;
 		vrLoc = 8875;
@@ -7883,7 +7905,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 81";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2392;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 861;
@@ -8204,7 +8226,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 81";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2392;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 889;
@@ -8254,7 +8276,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 83";
 		rLen = 0;
-		rLoc = 2211;
+		rLoc = 2181;
 		rType = 0;
 		vrLen = 879;
 		vrLoc = 1563;
@@ -8264,7 +8286,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 83";
 		rLen = 0;
-		rLoc = 2211;
+		rLoc = 2181;
 		rType = 0;
 		vrLen = 877;
 		vrLoc = 1563;
@@ -8274,7 +8296,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 83";
 		rLen = 0;
-		rLoc = 2211;
+		rLoc = 2181;
 		rType = 0;
 		vrLen = 771;
 		vrLoc = 1679;
@@ -8284,7 +8306,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 83";
 		rLen = 0;
-		rLoc = 2211;
+		rLoc = 2181;
 		rType = 0;
 		vrLen = 532;
 		vrLoc = 1908;
@@ -8311,7 +8333,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 83";
 		rLen = 0;
-		rLoc = 2211;
+		rLoc = 2181;
 		rType = 0;
 		vrLen = 532;
 		vrLoc = 1908;
@@ -8341,7 +8363,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "TranslateTextOperation.m: 83";
 		rLen = 0;
-		rLoc = 2211;
+		rLoc = 2181;
 		rType = 0;
 		vrLen = 805;
 		vrLoc = 1645;
@@ -8361,7 +8383,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 312";
 		rLen = 0;
-		rLoc = 12457;
+		rLoc = 12429;
 		rType = 0;
 		vrLen = 981;
 		vrLoc = 8892;
@@ -8391,7 +8413,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 312";
 		rLen = 0;
-		rLoc = 12457;
+		rLoc = 12429;
 		rType = 0;
 		vrLen = 981;
 		vrLoc = 8892;
@@ -8401,7 +8423,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 312";
 		rLen = 0;
-		rLoc = 12457;
+		rLoc = 12429;
 		rType = 0;
 		vrLen = 981;
 		vrLoc = 8892;
@@ -9717,10 +9739,15 @@
 		rLoc = 2147483647;
 	};
 	5168A7B3116A8EB0004C576A /* Credits.rtf */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.rtf;
+		name = Credits.rtf;
+		path = /Users/nkuyu/Documents/Projects/Babelfish/src/Credits.rtf;
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1076, 756}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1076, 524}}";
 			sepNavSelRange = "{141, 0}";
-			sepNavVisRect = "{{0, 0}, {1076, 756}}";
+			sepNavVisRect = "{{0, 0}, {1076, 524}}";
 		};
 	};
 	5168A7B6116A8EFB004C576A /* PBXTextBookmark */ = {
@@ -9738,7 +9765,7 @@
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 49";
 		rLen = 0;
-		rLoc = 2017;
+		rLoc = 2009;
 		rType = 0;
 		vrLen = 2068;
 		vrLoc = 0;
@@ -9768,7 +9795,7 @@
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 49";
 		rLen = 0;
-		rLoc = 2017;
+		rLoc = 2009;
 		rType = 0;
 		vrLen = 2068;
 		vrLoc = 0;
@@ -10246,7 +10273,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 324";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 9735;
@@ -10276,7 +10303,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 300";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 1066;
 		vrLoc = 9217;
@@ -10406,7 +10433,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 369";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 1357;
 		vrLoc = 10813;
@@ -10416,7 +10443,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 369";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 1299;
 		vrLoc = 10925;
@@ -10426,7 +10453,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 369";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 10813;
@@ -10436,7 +10463,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 368";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 10710;
@@ -10583,7 +10610,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "BFTranslateTextOperation.m: 31";
 		rLen = 0;
-		rLoc = 1248;
+		rLoc = 1218;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 742;
@@ -10593,7 +10620,7 @@
 		comments = "error: cannot find protocol declaration for 'Translator'";
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		rLen = 1;
-		rLoc = 246;
+		rLoc = 245;
 		rType = 1;
 	};
 	5168A83B116BD4DF004C576A /* PBXTextBookmark */ = {
@@ -10601,7 +10628,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "TranslationWindowController.m: 368";
 		rLen = 0;
-		rLoc = 975;
+		rLoc = 945;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 10710;
@@ -10807,7 +10834,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "BFTranslateTextOperation.m: 31";
 		rLen = 0;
-		rLoc = 1248;
+		rLoc = 1218;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 742;
@@ -10817,7 +10844,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 232";
 		rLen = 0;
-		rLoc = 8446;
+		rLoc = 8418;
 		rType = 0;
 		vrLen = 1297;
 		vrLoc = 7544;
@@ -10837,7 +10864,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 36";
 		rLen = 0;
-		rLoc = 1571;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 2113;
 		vrLoc = 0;
@@ -10847,7 +10874,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 36";
 		rLen = 0;
-		rLoc = 1571;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 2361;
 		vrLoc = 546;
@@ -10857,7 +10884,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 47";
 		rLen = 0;
-		rLoc = 1847;
+		rLoc = 1817;
 		rType = 0;
 		vrLen = 373;
 		vrLoc = 3094;
@@ -10867,7 +10894,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 191";
 		rLen = 0;
-		rLoc = 6735;
+		rLoc = 6707;
 		rType = 0;
 		vrLen = 1590;
 		vrLoc = 5288;
@@ -10877,7 +10904,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 36";
 		rLen = 0;
-		rLoc = 1571;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 2167;
 		vrLoc = 0;
@@ -10887,7 +10914,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 36";
 		rLen = 0;
-		rLoc = 1571;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 2167;
 		vrLoc = 0;
@@ -10897,7 +10924,7 @@
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 49";
 		rLen = 0;
-		rLoc = 2017;
+		rLoc = 2009;
 		rType = 0;
 		vrLen = 2068;
 		vrLoc = 0;
@@ -10907,7 +10934,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 36";
 		rLen = 0;
-		rLoc = 1571;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 2167;
 		vrLoc = 0;
@@ -10917,7 +10944,7 @@
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 51";
 		rLen = 0;
-		rLoc = 1953;
+		rLoc = 1945;
 		rType = 0;
 		vrLen = 1599;
 		vrLoc = 1123;
@@ -10927,7 +10954,7 @@
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 51";
 		rLen = 0;
-		rLoc = 1953;
+		rLoc = 1945;
 		rType = 0;
 		vrLen = 1603;
 		vrLoc = 1119;
@@ -10937,7 +10964,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 47";
 		rLen = 0;
-		rLoc = 1847;
+		rLoc = 1817;
 		rType = 0;
 		vrLen = 394;
 		vrLoc = 3033;
@@ -10947,7 +10974,7 @@
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 45";
 		rLen = 0;
-		rLoc = 1793;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 780;
 		vrLoc = 0;
@@ -10957,7 +10984,7 @@
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 67";
 		rLen = 34;
-		rLoc = 2391;
+		rLoc = 2383;
 		rType = 0;
 		vrLen = 1502;
 		vrLoc = 1308;
@@ -10987,7 +11014,7 @@
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 67";
 		rLen = 34;
-		rLoc = 2391;
+		rLoc = 2383;
 		rType = 0;
 		vrLen = 1502;
 		vrLoc = 1308;
@@ -11027,7 +11054,7 @@
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 67";
 		rLen = 0;
-		rLoc = 2425;
+		rLoc = 2417;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 1308;
@@ -11157,7 +11184,7 @@
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 67";
 		rLen = 0;
-		rLoc = 2425;
+		rLoc = 2417;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 1308;
@@ -11997,7 +12024,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 394";
 		rLen = 0;
-		rLoc = 12449;
+		rLoc = 12421;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 11534;
@@ -12007,7 +12034,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "BFTranslateTextOperation.m: 31";
 		rLen = 0;
-		rLoc = 1248;
+		rLoc = 1218;
 		rType = 0;
 		vrLen = 879;
 		vrLoc = 680;
@@ -12085,7 +12112,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 23";
 		rLen = 0;
-		rLoc = 989;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 1264;
 		vrLoc = 615;
@@ -12105,7 +12132,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 394";
 		rLen = 0;
-		rLoc = 12449;
+		rLoc = 12421;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 11534;
@@ -12115,7 +12142,7 @@
 		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
 		name = "BFTranslateTextOperation.m: 31";
 		rLen = 0;
-		rLoc = 1248;
+		rLoc = 1218;
 		rType = 0;
 		vrLen = 879;
 		vrLoc = 680;
@@ -12185,7 +12212,7 @@
 		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
 		name = "Info.plist: 45";
 		rLen = 0;
-		rLoc = 1793;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 780;
 		vrLoc = 0;
@@ -12305,6 +12332,221 @@
 		rType = 0;
 		vrLen = 781;
 		vrLoc = 0;
+	};
+	5168A906116BF5C2004C576A /* Credits.rtfd */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1393, 264}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1393, 264}}";
+		};
+	};
+	5168A909116BF5DB004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 22";
+		rLen = 0;
+		rLoc = 509;
+		rType = 0;
+		vrLen = 781;
+		vrLoc = 0;
+	};
+	5168A90A116BF5DB004C576A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 5168A55411680813004C576A /* GoogleTranslateLogo.gif */;
+	};
+	5168A90B116BF5DB004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5168A906116BF5C2004C576A /* Credits.rtfd */;
+		name = "Credits.rtfd: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	5168A90C116BF5DB004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 22";
+		rLen = 0;
+		rLoc = 509;
+		rType = 0;
+		vrLen = 781;
+		vrLoc = 0;
+	};
+	5168A90D116BF5DB004C576A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 5168A55411680813004C576A /* GoogleTranslateLogo.gif */;
+	};
+	5168A90E116BF5DB004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5168A906116BF5C2004C576A /* Credits.rtfd */;
+		name = "Credits.rtfd: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	5168A90F116BF5DB004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5168A906116BF5C2004C576A /* Credits.rtfd */;
+		name = "Credits.rtfd: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	5168A910116BF5E5004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 219";
+		rLen = 0;
+		rLoc = 6322;
+		rType = 0;
+		vrLen = 375;
+		vrLoc = 2879;
+	};
+	5168A911116BF5E5004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5168A906116BF5C2004C576A /* Credits.rtfd */;
+		name = "Credits.rtfd: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	5168A917116BF62E004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
+		name = "BFTranslateTextOperation.m: 19";
+		rLen = 0;
+		rLoc = 863;
+		rType = 0;
+		vrLen = 847;
+		vrLoc = 680;
+	};
+	5168A918116BF62E004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 125";
+		rLen = 81;
+		rLoc = 4765;
+		rType = 0;
+		vrLen = 1137;
+		vrLoc = 3816;
+	};
+	5168A919116BF62E004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5168A906116BF5C2004C576A /* Credits.rtfd */;
+		name = "Credits.rtfd: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	5168A91A116BF62E004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		name = "Info.plist: 67";
+		rLen = 0;
+		rLoc = 2417;
+		rType = 0;
+		vrLen = 1127;
+		vrLoc = 1308;
+	};
+	5168A91B116BF62E004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5168A906116BF5C2004C576A /* Credits.rtfd */;
+		name = "Credits.rtfd: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	5168A91C116BF62E004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
+		name = "BFTranslateTextOperation.m: 19";
+		rLen = 0;
+		rLoc = 863;
+		rType = 0;
+		vrLen = 847;
+		vrLoc = 680;
+	};
+	5168A91D116BF62E004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 125";
+		rLen = 81;
+		rLoc = 4765;
+		rType = 0;
+		vrLen = 1137;
+		vrLoc = 3816;
+	};
+	5168A91E116BF62E004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5168A906116BF5C2004C576A /* Credits.rtfd */;
+		name = "Credits.rtfd: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	5168A91F116BF62E004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		name = "Info.plist: 45";
+		rLen = 0;
+		rLoc = 1776;
+		rType = 0;
+		vrLen = 1040;
+		vrLoc = 1308;
+	};
+	5168A920116BF62E004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		name = "Info.plist: 45";
+		rLen = 0;
+		rLoc = 1776;
+		rType = 0;
+		vrLen = 1027;
+		vrLoc = 1241;
+	};
+	5168A921116BF64D004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5168A906116BF5C2004C576A /* Credits.rtfd */;
+		name = "Credits.rtfd: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	5168A922116BF64D004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		name = "Info.plist: 45";
+		rLen = 0;
+		rLoc = 1776;
+		rType = 0;
+		vrLen = 647;
+		vrLoc = 1431;
+	};
+	5168A923116BF655004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		name = "Info.plist: 45";
+		rLen = 0;
+		rLoc = 1776;
+		rType = 0;
+		vrLen = 1153;
+		vrLoc = 1138;
 	};
 	518CEDA51128549800658FB0 /* PlistBookmark */ = {
 		isa = PlistBookmark;
@@ -12730,9 +12972,9 @@
 	};
 	51999F13112A0729008BAC42 /* BFAppController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1098, 3290}}";
-			sepNavSelRange = "{509, 0}";
-			sepNavVisRange = "{0, 781}";
+			sepNavIntBoundsRect = "{{0, 0}, {1379, 2940}}";
+			sepNavSelRange = "{6322, 0}";
+			sepNavVisRange = "{2879, 375}";
 			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
 		};
 	};
@@ -12875,9 +13117,9 @@
 	};
 	8D1107310486CEB800E47090 /* Info.plist */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1379, 1176}}";
-			sepNavSelRange = "{1793, 0}";
-			sepNavVisRange = "{0, 780}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 1162}}";
+			sepNavSelRange = "{1776, 0}";
+			sepNavVisRange = "{1138, 1153}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};

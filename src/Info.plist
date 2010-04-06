@@ -42,7 +42,7 @@ Copyright (c) 2010 Filip Krikava
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
-	<string>Babelfishapp</string>
+	<string>bapp</string>
 	<key>CFBundleShortVersionString</key>
     <string>2.0</string>
 	<key>CFBundleVersion</key>

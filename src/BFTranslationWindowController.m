@@ -18,7 +18,6 @@
 #import "BFTranslationWindowController.h"
 #import "BFGoogleTranslator.h"
 #import "BFTranslateTextOperation.h"
-#import "BFLanguageManager.h"
 #import "BFLanguage.h"
 #import "BFTranslationWindowModel.h"
 
@@ -116,14 +115,14 @@ static BFLanguage const* BFAutoDetectedLanguage;
 	
 	// synchronize source language - FIXME issue#2
 	if ([model selectedSourceLanguage]) {
-		[sourceLanguagePopup selectItemWithTag:[[model selectedSourceLanguage] tag]];
+		[sourceLanguagePopup selectItemWithTag:[[model selectedSourceLanguage] hash]];
 	} else {
 		[model setSelectedSourceLanguage:[[sourceLanguagePopup selectedItem] representedObject]];
 	}
 	
 	// synchronize target language - FIXME issue#2
 	if ([model selectedTargetLanguage]) {
-		[targetLanguagePopup selectItemWithTag:[[model selectedTargetLanguage] tag]];
+		[targetLanguagePopup selectItemWithTag:[[model selectedTargetLanguage] hash]];
 	} else {
 		[model setSelectedTargetLanguage:[[targetLanguagePopup selectedItem] representedObject]];
 	}
