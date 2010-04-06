@@ -17,11 +17,9 @@
 		510A589410C1BC6D00088B20 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A588E10C1BC6D00088B20 /* SBJsonWriter.m */; };
 		510A5A0B10C3136200088B20 /* BFTranslateTextOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */; };
 		510A5AD610C3344900088B20 /* Flags in Resources */ = {isa = PBXBuildFile; fileRef = 510A5AA010C3344900088B20 /* Flags */; };
-		510A5B0E10C334A600088B20 /* BFLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A5B0D10C334A600088B20 /* BFLanguageManager.m */; };
 		510A5B1110C33B5A00088B20 /* SupportedLanguages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */; };
 		510A5B2A10C3406400088B20 /* SupportedLanguages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */; };
 		510A5B2B10C3406F00088B20 /* Flags in Resources */ = {isa = PBXBuildFile; fileRef = 510A5AA010C3344900088B20 /* Flags */; };
-		510A5B2C10C3407B00088B20 /* BFLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A5B0D10C334A600088B20 /* BFLanguageManager.m */; };
 		510A5B2F10C3408400088B20 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		510A5B3210C3409D00088B20 /* LanguageManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A5B3110C3409D00088B20 /* LanguageManagerTest.m */; };
 		510A5CB710C5CA9F00088B20 /* GoogleTranslatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A5CB610C5CA9F00088B20 /* GoogleTranslatorTest.m */; };
@@ -88,8 +86,6 @@
 		510A5A0910C3136200088B20 /* BFTranslateTextOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTranslateTextOperation.h; sourceTree = "<group>"; };
 		510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslateTextOperation.m; sourceTree = "<group>"; };
 		510A5AA010C3344900088B20 /* Flags */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Flags; sourceTree = "<group>"; };
-		510A5B0C10C334A600088B20 /* BFLanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFLanguageManager.h; sourceTree = "<group>"; };
-		510A5B0D10C334A600088B20 /* BFLanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFLanguageManager.m; sourceTree = "<group>"; };
 		510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SupportedLanguages.plist; sourceTree = "<group>"; };
 		510A5B2310C3403700088B20 /* Babelfish-Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Babelfish-Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		510A5B2410C3403700088B20 /* Babelfish-Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Babelfish-Tests-Info.plist"; sourceTree = "<group>"; };
@@ -272,8 +268,6 @@
 				5115951410C19356001E60A8 /* BFTranslator.h */,
 				518CEFF81128AB6000658FB0 /* BFLanguage.h */,
 				518CEFF91128AB6000658FB0 /* BFLanguage.m */,
-				510A5B0C10C334A600088B20 /* BFLanguageManager.h */,
-				510A5B0D10C334A600088B20 /* BFLanguageManager.m */,
 			);
 			name = Translator;
 			sourceTree = "<group>";
@@ -407,7 +401,6 @@
 				510A5CC610C5CAC600088B20 /* SBJsonWriter.m in Sources */,
 				510A5CB810C5CAA800088B20 /* BFGoogleTranslator.m in Sources */,
 				510A5B3210C3409D00088B20 /* LanguageManagerTest.m in Sources */,
-				510A5B2C10C3407B00088B20 /* BFLanguageManager.m in Sources */,
 				510A5CB710C5CA9F00088B20 /* GoogleTranslatorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,7 +419,6 @@
 				510A589310C1BC6D00088B20 /* SBJsonParser.m in Sources */,
 				510A589410C1BC6D00088B20 /* SBJsonWriter.m in Sources */,
 				510A5A0B10C3136200088B20 /* BFTranslateTextOperation.m in Sources */,
-				510A5B0E10C334A600088B20 /* BFLanguageManager.m in Sources */,
 				518CEFFA1128AB6000658FB0 /* BFLanguage.m in Sources */,
 				51999F14112A0729008BAC42 /* BFAppController.m in Sources */,
 				512192C7115E95EB00150E9E /* BFTranslationWindowModel.m in Sources */,

@@ -1157,6 +1157,15 @@
 			5168A8EF116BEFCF004C576A /* PBXTextBookmark */ = 5168A8EF116BEFCF004C576A /* PBXTextBookmark */;
 			5168A8F0116BEFDA004C576A /* PBXTextBookmark */ = 5168A8F0116BEFDA004C576A /* PBXTextBookmark */;
 			5168A8F1116BF070004C576A /* PBXTextBookmark */ = 5168A8F1116BF070004C576A /* PBXTextBookmark */;
+			5168A8F5116BF256004C576A /* PBXTextBookmark */ = 5168A8F5116BF256004C576A /* PBXTextBookmark */;
+			5168A8F6116BF256004C576A /* PBXTextBookmark */ = 5168A8F6116BF256004C576A /* PBXTextBookmark */;
+			5168A8F7116BF256004C576A /* PBXTextBookmark */ = 5168A8F7116BF256004C576A /* PBXTextBookmark */;
+			5168A8F8116BF256004C576A /* PBXTextBookmark */ = 5168A8F8116BF256004C576A /* PBXTextBookmark */;
+			5168A8F9116BF256004C576A /* PBXTextBookmark */ = 5168A8F9116BF256004C576A /* PBXTextBookmark */;
+			5168A8FA116BF27D004C576A /* PBXTextBookmark */ = 5168A8FA116BF27D004C576A /* PBXTextBookmark */;
+			5168A8FF116BF353004C576A /* PBXTextBookmark */ = 5168A8FF116BF353004C576A /* PBXTextBookmark */;
+			5168A900116BF353004C576A /* PBXTextBookmark */ = 5168A900116BF353004C576A /* PBXTextBookmark */;
+			5168A903116BF40D004C576A /* PBXTextBookmark */ = 5168A903116BF40D004C576A /* PBXTextBookmark */;
 			518CEDA51128549800658FB0 = 518CEDA51128549800658FB0 /* PlistBookmark */;
 			518CEDA61128549800658FB0 = 518CEDA61128549800658FB0 /* PBXBookmark */;
 			518CEDA81128549800658FB0 = 518CEDA81128549800658FB0 /* PBXBookmark */;
@@ -1464,13 +1473,25 @@
 		vrLoc = 0;
 	};
 	510A5B0C10C334A600088B20 /* BFLanguageManager.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = BFLanguageManager.h;
+		path = /Users/nkuyu/Documents/Projects/Babelfish/src/BFLanguageManager.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 741}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 509}}";
 			sepNavSelRange = "{549, 0}";
 			sepNavVisRange = "{0, 549}";
 		};
 	};
 	510A5B0D10C334A600088B20 /* BFLanguageManager.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = BFLanguageManager.m;
+		path = /Users/nkuyu/Documents/Projects/Babelfish/src/BFLanguageManager.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1062, 1372}}";
 			sepNavSelRange = "{1038, 0}";
@@ -1479,6 +1500,9 @@
 	};
 	510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */ = {
 		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 4438}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 751}";
 			sepNavWindowFrame = "{{130, 210}, {750, 558}}";
 		};
 	};
@@ -10529,7 +10553,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 13";
 		rLen = 0;
-		rLoc = 255;
+		rLoc = 225;
 		rType = 0;
 		vrLen = 798;
 		vrLoc = 0;
@@ -10617,7 +10641,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 92";
 		rLen = 0;
-		rLoc = 6159;
+		rLoc = 6322;
 		rType = 0;
 		vrLen = 1109;
 		vrLoc = 0;
@@ -10753,7 +10777,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 13";
 		rLen = 0;
-		rLoc = 255;
+		rLoc = 225;
 		rType = 0;
 		vrLen = 798;
 		vrLoc = 0;
@@ -10953,7 +10977,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 13";
 		rLen = 0;
-		rLoc = 255;
+		rLoc = 225;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 0;
@@ -10973,7 +10997,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 13";
 		rLen = 0;
-		rLoc = 255;
+		rLoc = 225;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 0;
@@ -10993,7 +11017,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 90";
 		rLen = 0;
-		rLoc = 4224;
+		rLoc = 4387;
 		rType = 0;
 		vrLen = 1462;
 		vrLoc = 806;
@@ -11103,7 +11127,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 79";
 		rLen = 0;
-		rLoc = 2595;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 1133;
 		vrLoc = 990;
@@ -11113,7 +11137,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 90";
 		rLen = 0;
-		rLoc = 4266;
+		rLoc = 4429;
 		rType = 0;
 		vrLen = 1978;
 		vrLoc = 1454;
@@ -11143,7 +11167,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 76";
 		rLen = 0;
-		rLoc = 3950;
+		rLoc = 4113;
 		rType = 0;
 		vrLen = 2200;
 		vrLoc = 1226;
@@ -11193,7 +11217,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 76";
 		rLen = 0;
-		rLoc = 3950;
+		rLoc = 4113;
 		rType = 0;
 		vrLen = 2132;
 		vrLoc = 1226;
@@ -11213,7 +11237,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 73";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 3247;
 		rType = 0;
 		vrLen = 2170;
 		vrLoc = 1226;
@@ -11333,7 +11357,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 50";
 		rLen = 0;
-		rLoc = 1396;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 778;
 		vrLoc = 427;
@@ -11353,7 +11377,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 79";
 		rLen = 0;
-		rLoc = 2595;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 1133;
 		vrLoc = 990;
@@ -11393,7 +11417,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 70";
 		rLen = 0;
-		rLoc = 2285;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 1133;
 		vrLoc = 990;
@@ -11403,7 +11427,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 55";
 		rLen = 0;
-		rLoc = 1249;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 884;
 		vrLoc = 841;
@@ -11413,7 +11437,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 61";
 		rLen = 0;
-		rLoc = 1398;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 890;
 		vrLoc = 841;
@@ -11433,7 +11457,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 39";
 		rLen = 0;
-		rLoc = 791;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 427;
@@ -11453,7 +11477,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 52";
 		rLen = 0;
-		rLoc = 1045;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 776;
 		vrLoc = 821;
@@ -11473,7 +11497,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 39";
 		rLen = 0;
-		rLoc = 791;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 427;
@@ -11503,7 +11527,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 39";
 		rLen = 0;
-		rLoc = 791;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 427;
@@ -11523,7 +11547,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 102";
 		rLen = 0;
-		rLoc = 2900;
+		rLoc = 3063;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 1444;
@@ -11542,8 +11566,8 @@
 		isa = PBXTextBookmark;
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 78";
-		rLen = 55;
-		rLoc = 2075;
+		rLen = 0;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 1444;
@@ -11553,7 +11577,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 103";
 		rLen = 0;
-		rLoc = 2964;
+		rLoc = 3127;
 		rType = 0;
 		vrLen = 1536;
 		vrLoc = 1622;
@@ -11572,8 +11596,8 @@
 		isa = PBXTextBookmark;
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 78";
-		rLen = 55;
-		rLoc = 2075;
+		rLen = 0;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 1444;
@@ -11593,7 +11617,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 68";
 		rLen = 0;
-		rLoc = 1741;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 953;
 		vrLoc = 957;
@@ -11613,7 +11637,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 73";
 		rLen = 0;
-		rLoc = 1885;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 880;
 		vrLoc = 869;
@@ -11623,7 +11647,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 73";
 		rLen = 0;
-		rLoc = 1885;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 880;
 		vrLoc = 869;
@@ -11643,7 +11667,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 41";
 		rLen = 0;
-		rLoc = 791;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 754;
 		vrLoc = 244;
@@ -11673,7 +11697,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 41";
 		rLen = 0;
-		rLoc = 791;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 754;
 		vrLoc = 244;
@@ -11683,7 +11707,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 41";
 		rLen = 0;
-		rLoc = 791;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 754;
 		vrLoc = 244;
@@ -11703,7 +11727,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 41";
 		rLen = 0;
-		rLoc = 791;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 754;
 		vrLoc = 244;
@@ -11723,7 +11747,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 64";
 		rLen = 0;
-		rLoc = 1395;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 866;
 		vrLoc = 859;
@@ -11743,7 +11767,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 57";
 		rLen = 0;
-		rLoc = 1218;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 866;
 		vrLoc = 859;
@@ -11753,7 +11777,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 57";
 		rLen = 0;
-		rLoc = 1218;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 866;
 		vrLoc = 859;
@@ -11773,7 +11797,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 89";
 		rLen = 0;
-		rLoc = 2074;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 979;
 		vrLoc = 1201;
@@ -11793,7 +11817,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 128";
 		rLen = 0;
-		rLoc = 3842;
+		rLoc = 4005;
 		rType = 0;
 		vrLen = 1250;
 		vrLoc = 2412;
@@ -11803,7 +11827,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 128";
 		rLen = 0;
-		rLoc = 3842;
+		rLoc = 4005;
 		rType = 0;
 		vrLen = 1250;
 		vrLoc = 2412;
@@ -11823,7 +11847,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 41";
 		rLen = 0;
-		rLoc = 792;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 1314;
 		vrLoc = 2089;
@@ -11853,7 +11877,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 155";
 		rLen = 0;
-		rLoc = 4922;
+		rLoc = 5085;
 		rType = 0;
 		vrLen = 1391;
 		vrLoc = 3757;
@@ -11863,7 +11887,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 122";
 		rLen = 0;
-		rLoc = 3611;
+		rLoc = 3774;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 1657;
@@ -11883,7 +11907,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 155";
 		rLen = 0;
-		rLoc = 4922;
+		rLoc = 5085;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 3756;
@@ -11903,7 +11927,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 146";
 		rLen = 0;
-		rLoc = 4207;
+		rLoc = 4370;
 		rType = 0;
 		vrLen = 1165;
 		vrLoc = 3493;
@@ -11913,7 +11937,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 171";
 		rLen = 0;
-		rLoc = 5180;
+		rLoc = 5343;
 		rType = 0;
 		vrLen = 1314;
 		vrLoc = 3795;
@@ -11923,7 +11947,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 119";
 		rLen = 0;
-		rLoc = 3087;
+		rLoc = 3250;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 2657;
@@ -11933,7 +11957,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 120";
 		rLen = 0;
-		rLoc = 3167;
+		rLoc = 3330;
 		rType = 0;
 		vrLen = 1364;
 		vrLoc = 2657;
@@ -12013,7 +12037,7 @@
 		comments = "warning: method definition for '-newTranslationWindow' not found";
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		rLen = 1;
-		rLoc = 213;
+		rLoc = 217;
 		rType = 1;
 	};
 	5168A8E0116BEFB0004C576A /* PBXTextBookmark */ = {
@@ -12021,7 +12045,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 120";
 		rLen = 0;
-		rLoc = 3167;
+		rLoc = 3330;
 		rType = 0;
 		vrLen = 736;
 		vrLoc = 0;
@@ -12121,7 +12145,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 204";
 		rLen = 0;
-		rLoc = 6152;
+		rLoc = 6315;
 		rType = 0;
 		vrLen = 1290;
 		vrLoc = 3838;
@@ -12141,7 +12165,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 133";
 		rLen = 0;
-		rLoc = 3880;
+		rLoc = 4043;
 		rType = 0;
 		vrLen = 1243;
 		vrLoc = 2548;
@@ -12151,7 +12175,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 133";
 		rLen = 0;
-		rLoc = 3880;
+		rLoc = 4043;
 		rType = 0;
 		vrLen = 1140;
 		vrLoc = 2876;
@@ -12171,7 +12195,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 130";
 		rLen = 0;
-		rLoc = 3845;
+		rLoc = 4008;
 		rType = 0;
 		vrLen = 831;
 		vrLoc = 2960;
@@ -12181,7 +12205,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 66";
 		rLen = 0;
-		rLoc = 1547;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 922;
 		vrLoc = 817;
@@ -12191,10 +12215,96 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 54";
 		rLen = 0;
-		rLoc = 1202;
+		rLoc = 449;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 817;
+	};
+	5168A8F5116BF256004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */;
+		name = "SupportedLanguages.plist: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 751;
+		vrLoc = 0;
+	};
+	5168A8F6116BF256004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: passing argument 2 of 'pathForResource:ofType:inDirectory:' discards qualifiers from pointer target type";
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		rLen = 1;
+		rLoc = 110;
+		rType = 1;
+	};
+	5168A8F7116BF256004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 22";
+		rLen = 0;
+		rLoc = 449;
+		rType = 0;
+		vrLen = 762;
+		vrLoc = 0;
+	};
+	5168A8F8116BF256004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */;
+		name = "SupportedLanguages.plist: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 751;
+		vrLoc = 0;
+	};
+	5168A8F9116BF256004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 22";
+		rLen = 0;
+		rLoc = 509;
+		rType = 0;
+		vrLen = 854;
+		vrLoc = 0;
+	};
+	5168A8FA116BF27D004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 22";
+		rLen = 0;
+		rLoc = 509;
+		rType = 0;
+		vrLen = 854;
+		vrLoc = 0;
+	};
+	5168A8FF116BF353004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: passing argument 2 of 'pathForResource:ofType:inDirectory:' discards qualifiers from pointer target type";
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		rLen = 1;
+		rLoc = 110;
+		rType = 1;
+	};
+	5168A900116BF353004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 22";
+		rLen = 0;
+		rLoc = 482;
+		rType = 0;
+		vrLen = 854;
+		vrLoc = 0;
+	};
+	5168A903116BF40D004C576A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 22";
+		rLen = 0;
+		rLoc = 509;
+		rType = 0;
+		vrLen = 781;
+		vrLoc = 0;
 	};
 	518CEDA51128549800658FB0 /* PlistBookmark */ = {
 		isa = PlistBookmark;
@@ -12620,9 +12730,9 @@
 	};
 	51999F13112A0729008BAC42 /* BFAppController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1236, 3010}}";
-			sepNavSelRange = "{1202, 0}";
-			sepNavVisRange = "{817, 963}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 3290}}";
+			sepNavSelRange = "{509, 0}";
+			sepNavVisRange = "{0, 781}";
 			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
 		};
 	};
@@ -12715,7 +12825,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "AppController.m: 78";
 		rLen = 0;
-		rLoc = 3950;
+		rLoc = 4113;
 		rType = 0;
 		vrLen = 1147;
 		vrLoc = 953;

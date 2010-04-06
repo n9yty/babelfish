@@ -7,7 +7,6 @@
 //
 
 #import "BFAppController.h"
-#import "BFLanguageManager.h"
 #import "BFTranslationWindowController.h"
 #import "BFTranslator.h"
 #import "BFGoogleTranslator.h"
@@ -16,6 +15,11 @@
 #import "version.h"
 
 @implementation BFAppController
+
+#define BFLanguageCodeKey @"Code"
+#define BFLanguageNameKey @"Name" 
+#define BFLanguageFlagImageFileType @"png"
+#define BFLanguageFlagsDir @"Flags"
 
 - (id)init {
 	if (![super init]) {
@@ -102,9 +106,9 @@
 	NSMutableDictionary *d = [NSMutableDictionary dictionaryWithCapacity:[languages count]];
 		
 	for (NSDictionary *dict in languages) {
-		NSString *code = [dict objectForKey:CODE_KEY];
-		NSString *name = [dict objectForKey:NAME_KEY];
-		BFLanguage *lang = [[BFLanguage alloc] initWithCode:code name:name imagePath:[[NSBundle mainBundle] pathForResource:code ofType:IMAGE_TYPE inDirectory:FLAGS_DIR]];
+		NSString *code = [dict objectForKey:BFLanguageCodeKey];
+		NSString *name = [dict objectForKey:BFLanguageNameKey];
+		BFLanguage *lang = [[BFLanguage alloc] initWithCode:code name:name imagePath:[[NSBundle mainBundle] pathForResource:code ofType:BFLanguageFlagImageFileType inDirectory:BFLanguageFlagsDir]];
 		
 		if (!lang) {
 			// TODO: handle error
