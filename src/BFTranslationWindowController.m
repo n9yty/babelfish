@@ -33,6 +33,7 @@ static NSString const* BFSourceLanguageChangedCtxKey = @"BFSourceLanguageChanged
 static NSString const* BFTargetLanguageChangedCtxKey = @"BFTargetLanguageChangedCtxKey";
 
 static NSTimeInterval const BFDelayBetweenTranslations = 1.0;
+static NSInteger const BFMaxTextSizeForInteractiveTranslation = 1024;
 
 static BFRatedLanguage const* BFAutoDetectedLanguage;
 
@@ -44,6 +45,7 @@ static BFRatedLanguage const* BFAutoDetectedLanguage;
 	if (![super initWithWindowNibName:@"TranslationWindow"]) {
 		return nil;
 	}
+	
 	BFAutoDetectedLanguage = [BFRatedLanguage ratedLanguage:[[BFLanguage alloc] initWithCode:@"" name:@"Detect Language" imagePath:nil] tag:-1 rating:0];
 	
 	model = [aModel retain];	
@@ -166,15 +168,29 @@ static BFRatedLanguage const* BFAutoDetectedLanguage;
 - (void) handleOriginalTextChanged {
 	NSLog(@"Text changed %@", [model originalText]);
 	
-	if ([[model originalText] length] > 0) {
+	NSInteger size = [[model originalText] length];
+	
+	if (size > 0) {
 		[translateButton setEnabled:YES];
 		
-		[requestedTextToTranslate release];
-		requestedTextToTranslate = [[model originalText] copy];
-		
-		if (!translateTimer) {
-			NSLog(@"Timer not running - launching a new one");
-			[self startTranslateTimer];
+		if (size < BFMaxTextSizeForInteractiveTranslation) {
+			// implicit translate
+			NSLog(@"Implicit translation");
+			
+			[requestedTextToTranslate release];
+			requestedTextToTranslate = [[model originalText] copy];
+			
+			if (!translateTimer) {
+				NSLog(@"Timer not running - launching a new one");
+				[self startTranslateTimer];
+			}
+		} else {
+			// from now on we only use expricit translate
+			NSLog(@"Explicit translation");
+			
+			if (translateTimer) {
+				[self stopTranslateTimer];
+			}
 		}
 	} else {
 		[translateButton setEnabled:NO];
