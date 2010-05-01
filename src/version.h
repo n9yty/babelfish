@@ -18,6 +18,6 @@
 #ifndef __VERSION_H__
 #define __VERSION_H__
 
-#define BUILD_NUMBER	1032
+#define BUILD_NUMBER	1059
 
 #endif

@@ -21,6 +21,15 @@ NSString *const BFSymbols[3][3] = {
 		
 	NSString *encodedString = self;
 	
+	// espace any of the symbols that might have been preset
+	encodedString = [encodedString stringByReplacingOccurrencesOfRegex:@"\\\\" withString:@"\\\\\\\\"];
+	
+	for (int i = 0; i<3; i++) {
+		NSString *regexp = [NSString stringWithFormat:@"<%@(\\d+)>", BFSymbols[i][2]]; 
+		NSString *rep = [NSString stringWithFormat:@"\\\\<%@$1\\\\>", BFSymbols[i][2]]; 
+		encodedString = [encodedString stringByReplacingOccurrencesOfRegex:regexp withString:rep];
+	}
+	
 	for (int i = 0; i<3; i++) {
 		NSString *testSymbolRegExp = [NSString stringWithFormat:@"[%@]%@", BFSymbols[i][0], BFSymbols[i][1]]; 
 		NSString *outputSymbol = BFSymbols[i][2];
@@ -68,6 +77,15 @@ NSString *const BFSymbols[3][3] = {
 		NSAssert1(error == nil, @"Error in the regular expression %@", error);	
 		//		NSLog(@" %@ -- %@", error, encodedString);
 	}
+	
+	for (int i = 0; i<3; i++) {
+		NSString *regexp = [NSString stringWithFormat:@"\\\\<%@(\\d+)\\\\>", BFSymbols[i][2]]; 
+		NSString *rep = [NSString stringWithFormat:@"<%@$1>", BFSymbols[i][2]]; 
+		encodedString = [encodedString stringByReplacingOccurrencesOfRegex:regexp withString:rep];
+	}
+
+	// espace any of the symbols that might have been preset
+	encodedString = [encodedString stringByReplacingOccurrencesOfRegex:@"\\\\\\\\" withString:@"\\\\"];
 	
 	return encodedString;	
 	
