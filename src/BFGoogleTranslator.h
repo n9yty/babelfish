@@ -16,23 +16,22 @@
 //  Created by Filip Krikava on 11/20/09.
 
 #import <Cocoa/Cocoa.h>
-#import "JSON.h"
 #import "BFTranslator.h"
 
-// TODO: change to constanst
-#define TIMEOUT					55
-
-// example: http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=hello%20world&langpair=en%7Cit
-#define GOOGLE_TRANSLATE_URL	@"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0"
+@class BFHTTPInvoker;
+@class SBJSON;
 
 @interface BFGoogleTranslator : NSObject <BFTranslator> {
 	@private
 	SBJSON *parser;
+	BFHTTPInvoker *httpInvoker;
 	
 #ifdef COUNT_REQUEST
 	int numRequests;
 #endif
 }
+
+- (id) initWithHTTPInvoker:(BFHTTPInvoker *)invoker;
 
 - (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description underlyingError:(NSError *)underlyingError;
 - (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description reason:(NSString *)reason;

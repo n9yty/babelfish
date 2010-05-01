@@ -16,7 +16,19 @@
 //  Created by Filip Krikava on 11/20/09.
 #import "BFGoogleTranslator.h"
 
+#import "RegexKitLite.h"
+#import "JSON.h"
+#import "NSString+URLEncode.h"
+
+#import "BFHTTPInvoker.h"
+
 @implementation BFGoogleTranslator
+
+// example: http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=hello%20world&langpair=en%7Cit
+NSString *const BFGoogleTranslateURLBase = @"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0";
+
+// service timeout in seconds
+NSTimeInterval const BFGoogleTranslateServiceTimeout = 50.0;
 
 NSString *const BFTranslatorErrorDomainKey = @"net.nkuyu.babelfishapp.ErrorDomain";
 
@@ -24,7 +36,7 @@ NSInteger const BFNoResponseErrorCodeKey = 1;
 NSInteger const BFInvalidResponseErrorCodeKey = 2;
 NSInteger const BFServiceFailedErrorCodeKey = 3;
 
-- (id) init {
+- (id) initWithHTTPInvoker:(BFHTTPInvoker *)invoker {
 	if(![super init]) {
 		return nil;
 	}
@@ -34,7 +46,8 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 #endif
 	
 	// create the JSON parser
-	parser = [[SBJSON alloc] init];	
+	parser = [[SBJSON alloc] init];
+	httpInvoker = [invoker retain];
 	
 	return self;
 }
@@ -45,19 +58,24 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 #endif
 
 	[parser release];
+	[httpInvoker release];
 	
 	[super dealloc];
 }
 
-- (NSString*)translateText:(NSString*)text from:(NSString*)from to:(NSString*)to error:(NSError **)error{
+- (NSString*)translateText:(NSString*)text from:(NSString*)from to:(NSString*)to error:(NSError **)error {
 	// TODO: check the arguments
-	// TODO: how about all these string - should I release them ;)
+
+	// prepepare text
+	NSString* encodedText = [text stringByReplacingOccurrencesOfString:@"\n" withString:@"<BR>"];
+	encodedText = [encodedText stringByURLEscape];
+	
 	// compose the URL string
 	// experiment URL http://translate.google.com/translate_a/t?client=t&text=Bon&hl=en&sl=auto&tl=en&otf=2&pc=0
 	// expected URL is like: http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=hello%20world&langpair=en%7Cit
-	NSString* encodedText = [text stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-	NSString* langPair = [[NSString stringWithFormat:@"%@|%@", from, to] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-	NSString* requestUrl = [NSString stringWithFormat:@"%@&q=%@&langpair=%@", GOOGLE_TRANSLATE_URL, encodedText, langPair];
+	
+	NSString* langPair = [[NSString stringWithFormat:@"%@|%@", from, to] stringByURLEscape];
+	NSString* requestUrl = [NSString stringWithFormat:@"%@&q=%@&langpair=%@", BFGoogleTranslateURLBase, encodedText, langPair];
 	
 #ifdef COUNT_REQUEST
 	NSLog(@"Making %d. call to google translate %@", numRequests++,requestUrl);
@@ -67,10 +85,10 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 	
 	// make the call
 	NSURL* url = [NSURL URLWithString: requestUrl];
-	NSURLRequest* request = [NSURLRequest requestWithURL: url cachePolicy: NSURLRequestReloadIgnoringCacheData timeoutInterval: TIMEOUT];
+	NSURLRequest* request = [NSURLRequest requestWithURL: url cachePolicy: NSURLRequestReloadIgnoringCacheData timeoutInterval: BFGoogleTranslateServiceTimeout];
 	NSURLResponse* response = nil; 
 	NSError *underlyingError = nil;
-	NSData* data = [NSURLConnection sendSynchronousRequest: request returningResponse: &response error: &underlyingError];
+	NSData* data = [httpInvoker syncInvokeRequest: request returningResponse: &response error: &underlyingError];
 	
 	// check if something did happened
 	if (data == nil) {
@@ -116,6 +134,13 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 	translatedText = [translatedText stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	// '
 	translatedText = [translatedText stringByReplacingOccurrencesOfString:@"&#39;" withString:@"'"];
+	// new lines
+	// TODO: use regular expressions
+//	translatedText = [translatedText stringByReplacingOccurrencesOfString:@" <BR> " withString:@"\n"];
+//	translatedText = [translatedText stringByReplacingOccurrencesOfString:@" <BR>" withString:@"\n"];
+//	translatedText = [translatedText stringByReplacingOccurrencesOfString:@"<BR> " withString:@"\n"];
+//	translatedText = [translatedText stringByReplacingOccurrencesOfString:@"<BR>" withString:@"\n"];
+	translatedText = [translatedText stringByReplacingOccurrencesOfRegex:@"[ ]?<BR>[ ]?" withString:@"\n"];
 	
 	return translatedText;
 }
@@ -130,7 +155,7 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 
 - (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description underlyingError:(NSError*)underlyingError {
 
-	NSDictionary *d = [NSDictionary dictionary];
+	NSMutableDictionary *d = [NSMutableDictionary dictionary];
 	[d setValue:description forKey:NSLocalizedDescriptionKey];
 	[d setValue:underlyingError forKey:NSUnderlyingErrorKey];
 	
@@ -138,7 +163,7 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 }
 
 - (NSString *)description {
-	return [NSString stringWithFormat:@"Google Translator (%@)", GOOGLE_TRANSLATE_URL];
+	return [NSString stringWithFormat:@"Google Translator (%@)", BFGoogleTranslateURLBase];
 }
 
 @end
