@@ -18,8 +18,9 @@
 
 #import "RegexKitLite.h"
 #import "JSON.h"
-#import "NSString+URLEncode.h"
 
+#import "NSString+URLEncode.h"
+#import "NSString+BFGoogleTranslateEncoder.h"
 #import "BFHTTPInvoker.h"
 
 @implementation BFGoogleTranslator
@@ -35,6 +36,7 @@ NSString *const BFTranslatorErrorDomainKey = @"net.nkuyu.babelfishapp.ErrorDomai
 NSInteger const BFNoResponseErrorCodeKey = 1;
 NSInteger const BFInvalidResponseErrorCodeKey = 2;
 NSInteger const BFServiceFailedErrorCodeKey = 3;
+
 
 - (id) initWithHTTPInvoker:(NSObject<BFHTTPInvoker> *)invoker {
 	if(![super init]) {
@@ -67,8 +69,12 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 	// TODO: check the arguments
 
 	// prepepare text
-	NSString* encodedText = [text stringByReplacingOccurrencesOfString:@"\n" withString:@"<BR>"];
+	NSString* encodedText = text;
+	// encode special characters
+	encodedText = [encodedText stringByEncodingForGoogleTranslate];
+	// espace
 	encodedText = [encodedText stringByURLEscape];
+
 	
 	// compose the URL string
 	// experiment URL http://translate.google.com/translate_a/t?client=t&text=Bon&hl=en&sl=auto&tl=en&otf=2&pc=0
@@ -134,13 +140,8 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 	translatedText = [translatedText stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	// '
 	translatedText = [translatedText stringByReplacingOccurrencesOfString:@"&#39;" withString:@"'"];
-	// new lines
-	// TODO: use regular expressions
-//	translatedText = [translatedText stringByReplacingOccurrencesOfString:@" <BR> " withString:@"\n"];
-//	translatedText = [translatedText stringByReplacingOccurrencesOfString:@" <BR>" withString:@"\n"];
-//	translatedText = [translatedText stringByReplacingOccurrencesOfString:@"<BR> " withString:@"\n"];
-//	translatedText = [translatedText stringByReplacingOccurrencesOfString:@"<BR>" withString:@"\n"];
-	translatedText = [translatedText stringByReplacingOccurrencesOfRegex:@"[ ]?<BR>[ ]?" withString:@"\n"];
+	// decode special characters
+	translatedText = [translatedText stringByDecodingFromGoogleTranslate];
 	
 	return translatedText;
 }

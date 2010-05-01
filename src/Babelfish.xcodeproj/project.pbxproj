@@ -36,13 +36,18 @@
 		5115951510C19356001E60A8 /* BFTranslationWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */; };
 		5115951610C19356001E60A8 /* BFGoogleTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */; };
 		512192C7115E95EB00150E9E /* BFTranslationWindowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */; };
-		514A6DA910DC17050039CE28 /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */; };
-		514A6DB510DC18610039CE28 /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */; };
+		5133EA56118CAD53001F4E01 /* PLBlocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EA55118CAD53001F4E01 /* PLBlocks.framework */; };
+		5133EA57118CAD53001F4E01 /* PLBlocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EA55118CAD53001F4E01 /* PLBlocks.framework */; };
+		5133EA5B118CAD6C001F4E01 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EA5A118CAD6C001F4E01 /* GHUnit.framework */; };
+		5133EA5F118CAD83001F4E01 /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EA5E118CAD83001F4E01 /* BGHUDAppKit.framework */; };
+		5133EABA118CADC0001F4E01 /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5133EA5E118CAD83001F4E01 /* BGHUDAppKit.framework */; };
+		5133EABB118CADC5001F4E01 /* PLBlocks.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5133EA55118CAD53001F4E01 /* PLBlocks.framework */; };
+		5133EABC118CADCC001F4E01 /* GHUnit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5133EA5A118CAD6C001F4E01 /* GHUnit.framework */; };
+		5133EABD118CADCC001F4E01 /* PLBlocks.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5133EA55118CAD53001F4E01 /* PLBlocks.framework */; };
+		5133EABF118CADDC001F4E01 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EABE118CADDC001F4E01 /* Cocoa.framework */; };
+		5133EAC2118CADE5001F4E01 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EABE118CADDC001F4E01 /* Cocoa.framework */; };
 		51679391118A1E7300A96627 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679390118A1E7300A96627 /* NSString+URLEncode.m */; };
 		51679406118A252B00A96627 /* BFDefaultHTTPInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */; };
-		51679621118C75B900A96627 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5167939E118A1F9800A96627 /* Cocoa.framework */; };
-		51679624118C760500A96627 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5167960F118C757400A96627 /* GHUnit.framework */; };
-		51679661118C763400A96627 /* GHUnit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5167960F118C757400A96627 /* GHUnit.framework */; };
 		51679663118C764E00A96627 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 516794F7118A388100A96627 /* GHUnitTestMain.m */; };
 		51679667118C766400A96627 /* BFGoogleTranslatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */; };
 		516796A3118C780500A96627 /* BFTranslationWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */; };
@@ -61,6 +66,9 @@
 		516796B0118C780500A96627 /* BFDefaultHTTPInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */; };
 		516797C0118C903B00A96627 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 516797BF118C903B00A96627 /* RegexKitLite.m */; };
 		516797C1118C905200A96627 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 516797BF118C903B00A96627 /* RegexKitLite.m */; };
+		516798DF118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */; };
+		516798E0118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */; };
+		516798E5118CA0E900A96627 /* NSString+BFGoogleTranslateEncoderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 516798E4118CA0E900A96627 /* NSString+BFGoogleTranslateEncoderTest.m */; };
 		5168A55511680813004C576A /* GoogleTranslateLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5168A55411680813004C576A /* GoogleTranslateLogo.gif */; };
 		5168A6701168B547004C576A /* SwapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5168A66F1168B547004C576A /* SwapIcon.png */; };
 		5168A907116BF5C3004C576A /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 5168A906116BF5C2004C576A /* Credits.rtfd */; };
@@ -69,7 +77,6 @@
 		51999F14112A0729008BAC42 /* BFAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51999F13112A0729008BAC42 /* BFAppController.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
-		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,21 +84,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* Babelfish */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = Babelfish;
 		};
 		516797F8118C96C000A96627 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* Babelfish - App */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = "Babelfish - App";
 		};
 		516797FA118C96C000A96627 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 51679618118C759E00A96627 /* Babelfish - UnitTests */;
+			remoteGlobalIDString = 51679618118C759E00A96627;
 			remoteInfo = "Babelfish - UnitTests";
 		};
 /* End PBXContainerItemProxy section */
@@ -103,7 +110,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				514A6DB510DC18610039CE28 /* BGHUDAppKit.framework in CopyFiles */,
+				5133EABB118CADC5001F4E01 /* PLBlocks.framework in CopyFiles */,
+				5133EABA118CADC0001F4E01 /* BGHUDAppKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +121,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				51679661118C763400A96627 /* GHUnit.framework in CopyFiles */,
+				5133EABC118CADCC001F4E01 /* GHUnit.framework in CopyFiles */,
+				5133EABD118CADCC001F4E01 /* PLBlocks.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,12 +130,8 @@
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Babelfish_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Babelfish_Prefix.pch; sourceTree = "<group>"; };
 		510A57C310C1B12F00088B20 /* Babelfish.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Babelfish.icns; sourceTree = "<group>"; };
 		510A588210C1BC6D00088B20 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
@@ -156,23 +161,26 @@
 		5115951410C19356001E60A8 /* BFTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTranslator.h; sourceTree = "<group>"; };
 		512192C5115E95EB00150E9E /* BFTranslationWindowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTranslationWindowModel.h; sourceTree = "<group>"; };
 		512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslationWindowModel.m; sourceTree = "<group>"; };
-		514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = ../../../../Development/objc/BGHUDAppKit/build/Release/BGHUDAppKit.framework; sourceTree = SOURCE_ROOT; };
+		5133EA55118CAD53001F4E01 /* PLBlocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PLBlocks.framework; path = ../../../../Development/objc/PLBlocks/PLBlocks.framework; sourceTree = SOURCE_ROOT; };
+		5133EA5A118CAD6C001F4E01 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = ../../../../Development/objc/GHUnit_OCMock/src/build/Release/GHUnit.framework; sourceTree = SOURCE_ROOT; };
+		5133EA5E118CAD83001F4E01 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = ../../../../Development/objc/BGHUDAppKit/build/Release/BGHUDAppKit.framework; sourceTree = SOURCE_ROOT; };
+		5133EABE118CADDC001F4E01 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5167934B118A1A1B00A96627 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		5167938F118A1E7300A96627 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
 		51679390118A1E7300A96627 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
-		5167939E118A1F9800A96627 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		516793A7118A208700A96627 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		51679404118A252B00A96627 /* BFHTTPInvoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFHTTPInvoker.h; sourceTree = "<group>"; };
 		51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDefaultHTTPInvoker.m; sourceTree = "<group>"; };
 		51679462118A2B3600A96627 /* Babelfish - UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Babelfish - UnitTests-Info.plist"; sourceTree = "<group>"; };
 		516794E2118A373800A96627 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		516794F7118A388100A96627 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitTestMain.m; sourceTree = "<group>"; };
 		51679561118C6A6700A96627 /* Babelfish.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Babelfish.app; path = ../build/Debug/Babelfish.app; sourceTree = SOURCE_ROOT; };
-		5167960F118C757400A96627 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = ../../../../Development/objc/GHUnit_OCMock/src/build/Release/GHUnit.framework; sourceTree = SOURCE_ROOT; };
 		51679619118C759E00A96627 /* Babelfish - UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Babelfish - UnitTests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		516797BE118C903B00A96627 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		516797BF118C903B00A96627 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		516797E6118C956400A96627 /* BFDefaultHTTPInvoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDefaultHTTPInvoker.h; sourceTree = "<group>"; };
+		516798DD118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BFGoogleTranslateEncoder.h"; sourceTree = "<group>"; };
+		516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BFGoogleTranslateEncoder.m"; sourceTree = "<group>"; };
+		516798E4118CA0E900A96627 /* NSString+BFGoogleTranslateEncoderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BFGoogleTranslateEncoderTest.m"; sourceTree = "<group>"; };
 		5168A55411680813004C576A /* GoogleTranslateLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GoogleTranslateLogo.gif; sourceTree = "<group>"; };
 		5168A66F1168B547004C576A /* SwapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwapIcon.png; sourceTree = "<group>"; };
 		5168A906116BF5C2004C576A /* Credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = Credits.rtfd; sourceTree = "<group>"; };
@@ -190,8 +198,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51679624118C760500A96627 /* GHUnit.framework in Frameworks */,
-				51679621118C75B900A96627 /* Cocoa.framework in Frameworks */,
+				5133EA56118CAD53001F4E01 /* PLBlocks.framework in Frameworks */,
+				5133EA5B118CAD6C001F4E01 /* GHUnit.framework in Frameworks */,
+				5133EABF118CADDC001F4E01 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +208,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				514A6DA910DC17050039CE28 /* BGHUDAppKit.framework in Frameworks */,
+				5133EA57118CAD53001F4E01 /* PLBlocks.framework in Frameworks */,
+				5133EA5F118CAD83001F4E01 /* BGHUDAppKit.framework in Frameworks */,
+				5133EAC2118CADE5001F4E01 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,24 +236,6 @@
 			name = Sources;
 			sourceTree = "<group>";
 		};
-		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
-				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
-				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,20 +248,21 @@
 		29B97314FDCFA39411CA2CEA /* Babelfish */ = {
 			isa = PBXGroup;
 			children = (
+				5133EA5E118CAD83001F4E01 /* BGHUDAppKit.framework */,
+				5133EA5A118CAD6C001F4E01 /* GHUnit.framework */,
+				5133EA55118CAD53001F4E01 /* PLBlocks.framework */,
 				51679561118C6A6700A96627 /* Babelfish.app */,
 				51679373118A1D0D00A96627 /* External */,
 				510A5B1B10C3401B00088B20 /* Unit Tests */,
 				080E96DDFE201D6D7F000001 /* Sources */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				510A5B2410C3403700088B20 /* Babelfish-Tests-Info.plist */,
 				5167934B118A1A1B00A96627 /* UnitTests-Info.plist */,
-				5167939E118A1F9800A96627 /* Cocoa.framework */,
-				516793A7118A208700A96627 /* Foundation.framework */,
 				51679462118A2B3600A96627 /* Babelfish - UnitTests-Info.plist */,
 				516794E2118A373800A96627 /* Tests-Info.plist */,
+				5133EABE118CADDC001F4E01 /* Cocoa.framework */,
 			);
 			name = Babelfish;
 			sourceTree = "<group>";
@@ -298,17 +291,6 @@
 				5168A906116BF5C2004C576A /* Credits.rtfd */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5167960F118C757400A96627 /* GHUnit.framework */,
-				514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */,
-				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
-				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		510A587B10C1BC5B00088B20 /* JSON */ = {
@@ -361,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */,
+				516798E4118CA0E900A96627 /* NSString+BFGoogleTranslateEncoderTest.m */,
 			);
 			name = Translator;
 			sourceTree = "<group>";
@@ -385,6 +368,8 @@
 				51679404118A252B00A96627 /* BFHTTPInvoker.h */,
 				51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */,
 				516797E6118C956400A96627 /* BFDefaultHTTPInvoker.h */,
+				516798DD118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.h */,
+				516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */,
 			);
 			name = Translator;
 			sourceTree = "<group>";
@@ -443,9 +428,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				516797F5118C96B400A96627 /* Babelfish - All */,
 				8D1107260486CEB800E47090 /* Babelfish - App */,
 				51679618118C759E00A96627 /* Babelfish - UnitTests */,
-				516797F5118C96B400A96627 /* Babelfish - All */,
 			);
 		};
 /* End PBXProject section */
@@ -514,6 +499,8 @@
 				51679667118C766400A96627 /* BFGoogleTranslatorTest.m in Sources */,
 				51679663118C764E00A96627 /* GHUnitTestMain.m in Sources */,
 				516796B0118C780500A96627 /* BFDefaultHTTPInvoker.m in Sources */,
+				516798E0118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m in Sources */,
+				516798E5118CA0E900A96627 /* NSString+BFGoogleTranslateEncoderTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +524,7 @@
 				512192C7115E95EB00150E9E /* BFTranslationWindowModel.m in Sources */,
 				51679391118A1E7300A96627 /* NSString+URLEncode.m in Sources */,
 				51679406118A252B00A96627 /* BFDefaultHTTPInvoker.m in Sources */,
+				516798DF118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +576,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Development/objc/GHUnit_OCMock/src/build/Release\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../../Development/objc/PLBlocks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -619,6 +609,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Development/objc/GHUnit_OCMock/src/build/Release\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../../Development/objc/PLBlocks\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
@@ -626,6 +618,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "Babelfish - UnitTests-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -671,6 +664,8 @@
 					"\"$(SRCROOT)/../../objc/BGHUDAppKit/build/Release\"",
 					"\"$(SRCROOT)/../../../../Development/objc/BGHUDAppKit/build/Release\"",
 					"\"$(SRCROOT)/../../../../Development/objc/GHUnit_OCMock/src/build/Release\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../../Development/objc/PLBlocks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -680,7 +675,11 @@
 				GCC_PREFIX_HEADER = Babelfish_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				OTHER_CFLAGS = "-DCOUNT_REQUESTS";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_CFLAGS = (
+					"-DCOUNT_REQUESTS",
+					"-DRKL_BLOCKS=1",
+				);
 				OTHER_LDFLAGS = "-licucore";
 				PRODUCT_NAME = Babelfish;
 			};
@@ -697,13 +696,19 @@
 					"\"$(SRCROOT)/../../objc/BGHUDAppKit/build/Release\"",
 					"\"$(SRCROOT)/../../../../Development/objc/BGHUDAppKit/build/Release\"",
 					"\"$(SRCROOT)/../../../../Development/objc/GHUnit_OCMock/src/build/Release\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../../Development/objc/PLBlocks\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Babelfish_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				OTHER_CFLAGS = "-DNDEBUG";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-DRKL_BLOCKS=1",
+				);
 				OTHER_LDFLAGS = "-licucore";
 				PRODUCT_NAME = Babelfish;
 			};
@@ -715,9 +720,11 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = coop.plausible.blocks.compilers.gcc.4_2;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DRKL_BLOCKS=1";
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
 				SYMROOT = build;
@@ -729,8 +736,10 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = coop.plausible.blocks.compilers.gcc.4_2;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DRKL_BLOCKS=1";
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
 				SYMROOT = build;
