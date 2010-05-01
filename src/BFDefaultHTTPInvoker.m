@@ -6,10 +6,9 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "BFHTTPInvoker.h"
+#import "BFDefaultHTTPInvoker.h"
 
-
-@implementation BFHTTPInvoker
+@implementation BFDefaultHTTPInvoker
 
 - (NSData *) syncInvokeRequest:(NSURLRequest *)request returningResponse:(NSURLResponse **)response error:(NSError **)error {
 	NSData* data = [NSURLConnection sendSynchronousRequest: request returningResponse: response error: error];

@@ -6,6 +6,21 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		516797F5118C96B400A96627 /* Babelfish - All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 516797FD118C96DE00A96627 /* Build configuration list for PBXAggregateTarget "Babelfish - All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				516797F9118C96C000A96627 /* PBXTargetDependency */,
+				516797FB118C96C000A96627 /* PBXTargetDependency */,
+			);
+			name = "Babelfish - All";
+			productName = "Babelfish - All";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		510A57C410C1B12F00088B20 /* Babelfish.icns in Resources */ = {isa = PBXBuildFile; fileRef = 510A57C310C1B12F00088B20 /* Babelfish.icns */; };
@@ -24,7 +39,7 @@
 		514A6DA910DC17050039CE28 /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */; };
 		514A6DB510DC18610039CE28 /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 514A6DA810DC17050039CE28 /* BGHUDAppKit.framework */; };
 		51679391118A1E7300A96627 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679390118A1E7300A96627 /* NSString+URLEncode.m */; };
-		51679406118A252B00A96627 /* BFHTTPInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */; };
+		51679406118A252B00A96627 /* BFDefaultHTTPInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */; };
 		51679621118C75B900A96627 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5167939E118A1F9800A96627 /* Cocoa.framework */; };
 		51679624118C760500A96627 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5167960F118C757400A96627 /* GHUnit.framework */; };
 		51679661118C763400A96627 /* GHUnit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5167960F118C757400A96627 /* GHUnit.framework */; };
@@ -43,7 +58,7 @@
 		516796AD118C780500A96627 /* BFAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51999F13112A0729008BAC42 /* BFAppController.m */; };
 		516796AE118C780500A96627 /* BFTranslationWindowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */; };
 		516796AF118C780500A96627 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679390118A1E7300A96627 /* NSString+URLEncode.m */; };
-		516796B0118C780500A96627 /* BFHTTPInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */; };
+		516796B0118C780500A96627 /* BFDefaultHTTPInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */; };
 		516797C0118C903B00A96627 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 516797BF118C903B00A96627 /* RegexKitLite.m */; };
 		516797C1118C905200A96627 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 516797BF118C903B00A96627 /* RegexKitLite.m */; };
 		5168A55511680813004C576A /* GoogleTranslateLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5168A55411680813004C576A /* GoogleTranslateLogo.gif */; };
@@ -64,6 +79,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8D1107260486CEB800E47090 /* Babelfish */;
 			remoteInfo = Babelfish;
+		};
+		516797F8118C96C000A96627 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090 /* Babelfish - App */;
+			remoteInfo = "Babelfish - App";
+		};
+		516797FA118C96C000A96627 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51679618118C759E00A96627 /* Babelfish - UnitTests */;
+			remoteInfo = "Babelfish - UnitTests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -134,7 +163,7 @@
 		5167939E118A1F9800A96627 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		516793A7118A208700A96627 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		51679404118A252B00A96627 /* BFHTTPInvoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFHTTPInvoker.h; sourceTree = "<group>"; };
-		51679405118A252B00A96627 /* BFHTTPInvoker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFHTTPInvoker.m; sourceTree = "<group>"; };
+		51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDefaultHTTPInvoker.m; sourceTree = "<group>"; };
 		51679462118A2B3600A96627 /* Babelfish - UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Babelfish - UnitTests-Info.plist"; sourceTree = "<group>"; };
 		516794E2118A373800A96627 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		516794F7118A388100A96627 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitTestMain.m; sourceTree = "<group>"; };
@@ -143,6 +172,7 @@
 		51679619118C759E00A96627 /* Babelfish - UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Babelfish - UnitTests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		516797BE118C903B00A96627 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		516797BF118C903B00A96627 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		516797E6118C956400A96627 /* BFDefaultHTTPInvoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDefaultHTTPInvoker.h; sourceTree = "<group>"; };
 		5168A55411680813004C576A /* GoogleTranslateLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GoogleTranslateLogo.gif; sourceTree = "<group>"; };
 		5168A66F1168B547004C576A /* SwapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwapIcon.png; sourceTree = "<group>"; };
 		5168A906116BF5C2004C576A /* Credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = Credits.rtfd; sourceTree = "<group>"; };
@@ -353,7 +383,8 @@
 				518CEFF81128AB6000658FB0 /* BFLanguage.h */,
 				518CEFF91128AB6000658FB0 /* BFLanguage.m */,
 				51679404118A252B00A96627 /* BFHTTPInvoker.h */,
-				51679405118A252B00A96627 /* BFHTTPInvoker.m */,
+				51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */,
+				516797E6118C956400A96627 /* BFDefaultHTTPInvoker.h */,
 			);
 			name = Translator;
 			sourceTree = "<group>";
@@ -380,9 +411,9 @@
 			productReference = 51679619118C759E00A96627 /* Babelfish - UnitTests.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8D1107260486CEB800E47090 /* Babelfish */ = {
+		8D1107260486CEB800E47090 /* Babelfish - App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Babelfish" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Babelfish - App" */;
 			buildPhases = (
 				510A593810C1D4EF00088B20 /* ShellScript */,
 				8D1107290486CEB800E47090 /* Resources */,
@@ -394,7 +425,7 @@
 			);
 			dependencies = (
 			);
-			name = Babelfish;
+			name = "Babelfish - App";
 			productInstallPath = "$(HOME)/Applications";
 			productName = Babelfish;
 			productReference = 8D1107320486CEB800E47090 /* Babelfish.app */;
@@ -412,8 +443,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* Babelfish */,
+				8D1107260486CEB800E47090 /* Babelfish - App */,
 				51679618118C759E00A96627 /* Babelfish - UnitTests */,
+				516797F5118C96B400A96627 /* Babelfish - All */,
 			);
 		};
 /* End PBXProject section */
@@ -479,9 +511,9 @@
 				516796AD118C780500A96627 /* BFAppController.m in Sources */,
 				516796AE118C780500A96627 /* BFTranslationWindowModel.m in Sources */,
 				516796AF118C780500A96627 /* NSString+URLEncode.m in Sources */,
-				516796B0118C780500A96627 /* BFHTTPInvoker.m in Sources */,
 				51679667118C766400A96627 /* BFGoogleTranslatorTest.m in Sources */,
 				51679663118C764E00A96627 /* GHUnitTestMain.m in Sources */,
+				516796B0118C780500A96627 /* BFDefaultHTTPInvoker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +536,7 @@
 				51999F14112A0729008BAC42 /* BFAppController.m in Sources */,
 				512192C7115E95EB00150E9E /* BFTranslationWindowModel.m in Sources */,
 				51679391118A1E7300A96627 /* NSString+URLEncode.m in Sources */,
-				51679406118A252B00A96627 /* BFHTTPInvoker.m in Sources */,
+				51679406118A252B00A96627 /* BFDefaultHTTPInvoker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,8 +545,18 @@
 /* Begin PBXTargetDependency section */
 		5167961E118C75A500A96627 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8D1107260486CEB800E47090 /* Babelfish */;
+			target = 8D1107260486CEB800E47090 /* Babelfish - App */;
 			targetProxy = 5167961D118C75A500A96627 /* PBXContainerItemProxy */;
+		};
+		516797F9118C96C000A96627 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* Babelfish - App */;
+			targetProxy = 516797F8118C96C000A96627 /* PBXContainerItemProxy */;
+		};
+		516797FB118C96C000A96627 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51679618118C759E00A96627 /* Babelfish - UnitTests */;
+			targetProxy = 516797FA118C96C000A96627 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -593,6 +635,27 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Babelfish - UnitTests";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		516797F6118C96B400A96627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Babelfish - All";
+			};
+			name = Debug;
+		};
+		516797F7118C96B400A96627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Babelfish - All";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -686,7 +749,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Babelfish" */ = {
+		516797FD118C96DE00A96627 /* Build configuration list for PBXAggregateTarget "Babelfish - All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				516797F6118C96B400A96627 /* Debug */,
+				516797F7118C96B400A96627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Babelfish - App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,

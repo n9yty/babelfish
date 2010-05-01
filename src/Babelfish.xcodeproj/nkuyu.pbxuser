@@ -13,7 +13,7 @@
 		activeExecutable = 5167961A118C759E00A96627 /* Babelfish - UnitTests */;
 		activeTarget = 51679618118C759E00A96627 /* Babelfish - UnitTests */;
 		addToTargets = (
-			8D1107260486CEB800E47090 /* Babelfish */,
+			8D1107260486CEB800E47090 /* Babelfish - App */,
 		);
 		breakpoints = (
 			510A5B9810C343D600088B20 /* BFLanguageManager.m:10 */,
@@ -33,9 +33,12 @@
 		);
 		codeSenseManager = 5115950110C19342001E60A8 /* Code sense */;
 		executables = (
-			511594FB10C19323001E60A8 /* Babelfish */,
+			511594FB10C19323001E60A8 /* Babelfish - App */,
 			5167961A118C759E00A96627 /* Babelfish - UnitTests */,
 		);
+		ignoreBreakpointsInProjectsDict = {
+			OCMock = Ignored;
+		};
 		perUserDictionary = {
 			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA23EDF0692099D00951B8B" = {
 				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
@@ -582,6 +585,52 @@
 			516797DB118C927D00A96627 /* PBXTextBookmark */ = 516797DB118C927D00A96627 /* PBXTextBookmark */;
 			516797DC118C927D00A96627 /* PBXTextBookmark */ = 516797DC118C927D00A96627 /* PBXTextBookmark */;
 			516797DD118C928500A96627 /* PBXTextBookmark */ = 516797DD118C928500A96627 /* PBXTextBookmark */;
+			516797DF118C947B00A96627 /* PBXTextBookmark */ = 516797DF118C947B00A96627 /* PBXTextBookmark */;
+			516797E0118C947B00A96627 /* PBXTextBookmark */ = 516797E0118C947B00A96627 /* PBXTextBookmark */;
+			516797E1118C947B00A96627 /* PBXTextBookmark */ = 516797E1118C947B00A96627 /* PBXTextBookmark */;
+			516797E2118C947B00A96627 /* PBXTextBookmark */ = 516797E2118C947B00A96627 /* PBXTextBookmark */;
+			516797E3118C947B00A96627 /* PBXTextBookmark */ = 516797E3118C947B00A96627 /* PBXTextBookmark */;
+			516797E4118C948700A96627 /* PBXTextBookmark */ = 516797E4118C948700A96627 /* PBXTextBookmark */;
+			516797E5118C948700A96627 /* PBXTextBookmark */ = 516797E5118C948700A96627 /* PBXTextBookmark */;
+			51679802118C973700A96627 /* PBXTextBookmark */ = 51679802118C973700A96627 /* PBXTextBookmark */;
+			51679803118C973700A96627 /* PBXTextBookmark */ = 51679803118C973700A96627 /* PBXTextBookmark */;
+			51679804118C973700A96627 /* PBXTextBookmark */ = 51679804118C973700A96627 /* PBXTextBookmark */;
+			51679805118C973700A96627 /* PBXTextBookmark */ = 51679805118C973700A96627 /* PBXTextBookmark */;
+			51679806118C973700A96627 /* PBXTextBookmark */ = 51679806118C973700A96627 /* PBXTextBookmark */;
+			51679807118C973700A96627 /* PBXTextBookmark */ = 51679807118C973700A96627 /* PBXTextBookmark */;
+			51679808118C973700A96627 /* PBXTextBookmark */ = 51679808118C973700A96627 /* PBXTextBookmark */;
+			51679809118C973700A96627 /* PBXTextBookmark */ = 51679809118C973700A96627 /* PBXTextBookmark */;
+			5167980A118C973700A96627 /* PBXTextBookmark */ = 5167980A118C973700A96627 /* PBXTextBookmark */;
+			5167980B118C973700A96627 /* PBXTextBookmark */ = 5167980B118C973700A96627 /* PBXTextBookmark */;
+			5167980C118C973700A96627 /* PBXTextBookmark */ = 5167980C118C973700A96627 /* PBXTextBookmark */;
+			5167980D118C973700A96627 /* PBXTextBookmark */ = 5167980D118C973700A96627 /* PBXTextBookmark */;
+			5167980E118C973700A96627 /* PBXTextBookmark */ = 5167980E118C973700A96627 /* PBXTextBookmark */;
+			5167980F118C973700A96627 /* PBXTextBookmark */ = 5167980F118C973700A96627 /* PBXTextBookmark */;
+			51679810118C973700A96627 /* PBXTextBookmark */ = 51679810118C973700A96627 /* PBXTextBookmark */;
+			51679811118C973700A96627 /* PBXTextBookmark */ = 51679811118C973700A96627 /* PBXTextBookmark */;
+			51679812118C973700A96627 /* PBXTextBookmark */ = 51679812118C973700A96627 /* PBXTextBookmark */;
+			51679813118C973700A96627 /* PBXTextBookmark */ = 51679813118C973700A96627 /* PBXTextBookmark */;
+			51679814118C973700A96627 /* PBXTextBookmark */ = 51679814118C973700A96627 /* PBXTextBookmark */;
+			51679815118C973700A96627 /* PBXTextBookmark */ = 51679815118C973700A96627 /* PBXTextBookmark */;
+			51679816118C973700A96627 /* PBXTextBookmark */ = 51679816118C973700A96627 /* PBXTextBookmark */;
+			51679817118C973700A96627 /* PBXTextBookmark */ = 51679817118C973700A96627 /* PBXTextBookmark */;
+			51679818118C973700A96627 /* PBXTextBookmark */ = 51679818118C973700A96627 /* PBXTextBookmark */;
+			51679819118C973700A96627 /* PBXTextBookmark */ = 51679819118C973700A96627 /* PBXTextBookmark */;
+			5167981A118C973700A96627 /* PBXTextBookmark */ = 5167981A118C973700A96627 /* PBXTextBookmark */;
+			5167981B118C973700A96627 /* PBXTextBookmark */ = 5167981B118C973700A96627 /* PBXTextBookmark */;
+			5167981C118C973700A96627 /* PBXTextBookmark */ = 5167981C118C973700A96627 /* PBXTextBookmark */;
+			5167981D118C973700A96627 /* PBXTextBookmark */ = 5167981D118C973700A96627 /* PBXTextBookmark */;
+			5167981E118C973700A96627 /* PBXTextBookmark */ = 5167981E118C973700A96627 /* PBXTextBookmark */;
+			5167981F118C973700A96627 /* PBXTextBookmark */ = 5167981F118C973700A96627 /* PBXTextBookmark */;
+			51679820118C973700A96627 /* PBXTextBookmark */ = 51679820118C973700A96627 /* PBXTextBookmark */;
+			51679821118C973700A96627 /* PBXTextBookmark */ = 51679821118C973700A96627 /* PBXTextBookmark */;
+			51679822118C973700A96627 /* PBXTextBookmark */ = 51679822118C973700A96627 /* PBXTextBookmark */;
+			51679823118C973700A96627 /* PBXTextBookmark */ = 51679823118C973700A96627 /* PBXTextBookmark */;
+			51679824118C973700A96627 /* PBXTextBookmark */ = 51679824118C973700A96627 /* PBXTextBookmark */;
+			51679825118C973700A96627 /* PBXTextBookmark */ = 51679825118C973700A96627 /* PBXTextBookmark */;
+			51679826118C973700A96627 /* PBXTextBookmark */ = 51679826118C973700A96627 /* PBXTextBookmark */;
+			51679827118C973700A96627 /* PBXTextBookmark */ = 51679827118C973700A96627 /* PBXTextBookmark */;
+			51679828118C973700A96627 /* PBXTextBookmark */ = 51679828118C973700A96627 /* PBXTextBookmark */;
 			5168A48D1168002F004C576A = 5168A48D1168002F004C576A /* PBXTextBookmark */;
 			5168A4931168002F004C576A = 5168A4931168002F004C576A /* PBXTextBookmark */;
 			5168A55B11680C6F004C576A = 5168A55B11680C6F004C576A /* PBXBookmark */;
@@ -1076,8 +1125,8 @@
 	510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1524, 1246}}";
-			sepNavSelRange = "{1893, 0}";
-			sepNavVisRange = "{2127, 593}";
+			sepNavSelRange = "{2198, 0}";
+			sepNavVisRange = "{0, 1287}";
 			sepNavWindowFrame = "{{61, 273}, {750, 558}}";
 		};
 	};
@@ -1131,7 +1180,7 @@
 		vrLen = 964;
 		vrLoc = 0;
 	};
-	511594FB10C19323001E60A8 /* Babelfish */ = {
+	511594FB10C19323001E60A8 /* Babelfish - App */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
@@ -1151,7 +1200,7 @@
 		executableSystemSymbolLevel = 0;
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
-		name = Babelfish;
+		name = "Babelfish - App";
 		savedGlobals = {
 		};
 		sourceDirectories = (
@@ -1189,22 +1238,22 @@
 	};
 	5115950410C19356001E60A8 /* BFGoogleTranslator.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 560}}";
-			sepNavSelRange = "{912, 0}";
-			sepNavVisRange = "{0, 1394}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 574}}";
+			sepNavSelRange = "{900, 0}";
+			sepNavVisRange = "{0, 1318}";
 		};
 	};
 	5115950510C19356001E60A8 /* BFGoogleTranslator.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1379, 2380}}";
-			sepNavSelRange = "{5349, 0}";
-			sepNavVisRange = "{4917, 971}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 2394}}";
+			sepNavSelRange = "{1753, 0}";
+			sepNavVisRange = "{5096, 1772}";
 		};
 	};
 	5115951410C19356001E60A8 /* BFTranslator.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 741}}";
-			sepNavSelRange = "{1170, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 509}}";
+			sepNavSelRange = "{826, 23}";
 			sepNavVisRange = "{0, 1170}";
 			sepNavWindowFrame = "{{107, 231}, {750, 558}}";
 		};
@@ -1285,7 +1334,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 104";
 		rLen = 0;
-		rLoc = 3952;
+		rLoc = 3962;
 		rType = 0;
 		vrLen = 1615;
 		vrLoc = 4064;
@@ -1295,7 +1344,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 113";
 		rLen = 0;
-		rLoc = 4332;
+		rLoc = 4342;
 		rType = 0;
 		vrLen = 1615;
 		vrLoc = 4064;
@@ -1317,15 +1366,15 @@
 	51679404118A252B00A96627 /* BFHTTPInvoker.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1062, 509}}";
-			sepNavSelRange = "{323, 0}";
-			sepNavVisRange = "{0, 340}";
+			sepNavSelRange = "{327, 0}";
+			sepNavVisRange = "{0, 328}";
 		};
 	};
-	51679405118A252B00A96627 /* BFHTTPInvoker.m */ = {
+	51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1062, 509}}";
-			sepNavSelRange = "{233, 93}";
-			sepNavVisRange = "{0, 461}";
+			sepNavSelRange = "{176, 0}";
+			sepNavVisRange = "{0, 474}";
 		};
 	};
 	5167941A118A299A00A96627 /* PBXTextBookmark */ = {
@@ -1353,7 +1402,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 32";
 		rLen = 0;
-		rLoc = 1084;
+		rLoc = 1120;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 0;
@@ -1363,17 +1412,17 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 83";
 		rLen = 0;
-		rLoc = 3351;
+		rLoc = 3361;
 		rType = 0;
 		vrLen = 1820;
 		vrLoc = 2159;
 	};
 	5167941E118A299A00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 0;
-		rLoc = 233;
+		rLoc = 246;
 		rType = 0;
 		vrLen = 463;
 		vrLoc = 0;
@@ -1383,7 +1432,7 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 17;
-		rLoc = 220;
+		rLoc = 208;
 		rType = 0;
 		vrLen = 340;
 		vrLoc = 0;
@@ -1403,7 +1452,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 113";
 		rLen = 0;
-		rLoc = 4332;
+		rLoc = 4342;
 		rType = 0;
 		vrLen = 1615;
 		vrLoc = 4064;
@@ -1483,7 +1532,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 1991;
+		rLoc = 2001;
 		rType = 0;
 		vrLen = 1918;
 		vrLoc = 2081;
@@ -1493,7 +1542,7 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 0;
-		rLoc = 205;
+		rLoc = 193;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 0;
@@ -1503,14 +1552,14 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 87";
 		rLen = 13;
-		rLoc = 3173;
+		rLoc = 3183;
 		rType = 0;
 		vrLen = 1918;
 		vrLoc = 2081;
 	};
 	5167942C118A299A00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -1523,7 +1572,7 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 16";
 		rLen = 0;
-		rLoc = 332;
+		rLoc = 320;
 		rType = 0;
 		vrLen = 242;
 		vrLoc = 0;
@@ -1533,7 +1582,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 87";
 		rLen = 13;
-		rLoc = 3173;
+		rLoc = 3183;
 		rType = 0;
 		vrLen = 1817;
 		vrLoc = 3043;
@@ -1543,7 +1592,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 30";
 		rLen = 0;
-		rLoc = 1132;
+		rLoc = 1178;
 		rType = 0;
 		vrLen = 1296;
 		vrLoc = 0;
@@ -1553,7 +1602,7 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 16";
 		rLen = 0;
-		rLoc = 331;
+		rLoc = 319;
 		rType = 0;
 		vrLen = 255;
 		vrLoc = 0;
@@ -1563,7 +1612,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 87";
 		rLen = 13;
-		rLoc = 3173;
+		rLoc = 3183;
 		rType = 0;
 		vrLen = 1817;
 		vrLoc = 3043;
@@ -1573,7 +1622,7 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 16";
 		rLen = 0;
-		rLoc = 331;
+		rLoc = 319;
 		rType = 0;
 		vrLen = 267;
 		vrLoc = 0;
@@ -1583,7 +1632,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 87";
 		rLen = 13;
-		rLoc = 3173;
+		rLoc = 3183;
 		rType = 0;
 		vrLen = 1817;
 		vrLoc = 3043;
@@ -1593,17 +1642,17 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 0;
-		rLoc = 207;
+		rLoc = 195;
 		rType = 0;
 		vrLen = 327;
 		vrLoc = 0;
 	};
 	51679435118A299A00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 15";
 		rLen = 0;
-		rLoc = 453;
+		rLoc = 466;
 		rType = 0;
 		vrLen = 325;
 		vrLoc = 0;
@@ -1613,7 +1662,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 30";
 		rLen = 0;
-		rLoc = 1132;
+		rLoc = 1178;
 		rType = 0;
 		vrLen = 1296;
 		vrLoc = 0;
@@ -1623,7 +1672,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 89";
 		rLen = 111;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1934;
 		vrLoc = 2130;
@@ -1633,7 +1682,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 30";
 		rLen = 0;
-		rLoc = 1132;
+		rLoc = 1178;
 		rType = 0;
 		vrLen = 1296;
 		vrLoc = 0;
@@ -1643,17 +1692,17 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 0;
-		rLoc = 207;
+		rLoc = 195;
 		rType = 0;
 		vrLen = 327;
 		vrLoc = 0;
 	};
 	5167943A118A299A00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 15";
 		rLen = 0;
-		rLoc = 330;
+		rLoc = 343;
 		rType = 0;
 		vrLen = 446;
 		vrLoc = 0;
@@ -1663,17 +1712,17 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 0;
-		rLoc = 218;
+		rLoc = 206;
 		rType = 0;
 		vrLen = 331;
 		vrLoc = 0;
 	};
 	5167943C118A299A00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 17";
 		rLen = 0;
-		rLoc = 451;
+		rLoc = 464;
 		rType = 0;
 		vrLen = 454;
 		vrLoc = 0;
@@ -1683,7 +1732,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 89";
 		rLen = 111;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1933;
 		vrLoc = 2131;
@@ -1692,8 +1741,8 @@
 		isa = PBXTextBookmark;
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 32";
-		rLen = 53;
-		rLoc = 1079;
+		rLen = 63;
+		rLoc = 1115;
 		rType = 0;
 		vrLen = 1397;
 		vrLoc = 0;
@@ -1713,7 +1762,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 32";
 		rLen = 0;
-		rLoc = 1084;
+		rLoc = 1120;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 0;
@@ -1723,7 +1772,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 81";
 		rLen = 0;
-		rLoc = 3266;
+		rLoc = 3276;
 		rType = 0;
 		vrLen = 1768;
 		vrLoc = 1810;
@@ -1733,17 +1782,17 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 17;
-		rLoc = 220;
+		rLoc = 208;
 		rType = 0;
 		vrLen = 340;
 		vrLoc = 0;
 	};
 	51679443118A299A00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 0;
-		rLoc = 233;
+		rLoc = 246;
 		rType = 0;
 		vrLen = 463;
 		vrLoc = 0;
@@ -1753,17 +1802,17 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 83";
 		rLen = 0;
-		rLoc = 3351;
+		rLoc = 3361;
 		rType = 0;
 		vrLen = 1820;
 		vrLoc = 2159;
 	};
 	51679445118A299A00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 0;
-		rLoc = 233;
+		rLoc = 246;
 		rType = 0;
 		vrLen = 463;
 		vrLoc = 0;
@@ -1773,7 +1822,7 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 17;
-		rLoc = 220;
+		rLoc = 208;
 		rType = 0;
 		vrLen = 340;
 		vrLoc = 0;
@@ -1793,17 +1842,17 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 17;
-		rLoc = 220;
+		rLoc = 208;
 		rType = 0;
 		vrLen = 340;
 		vrLoc = 0;
 	};
 	5167948B118A2DAE00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 0;
-		rLoc = 233;
+		rLoc = 246;
 		rType = 0;
 		vrLen = 463;
 		vrLoc = 0;
@@ -1873,7 +1922,7 @@
 		fRef = 51999F12112A0729008BAC42 /* BFAppController.h */;
 		name = "BFAppController.h: 24";
 		rLen = 0;
-		rLoc = 362;
+		rLoc = 427;
 		rType = 0;
 		vrLen = 861;
 		vrLoc = 0;
@@ -1883,7 +1932,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 22";
 		rLen = 0;
-		rLoc = 509;
+		rLoc = 542;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 81;
@@ -1893,7 +1942,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 24";
 		rLen = 58;
-		rLoc = 914;
+		rLoc = 940;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 3;
@@ -1913,7 +1962,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 71";
 		rLen = 0;
-		rLoc = 2794;
+		rLoc = 2804;
 		rType = 0;
 		vrLen = 1160;
 		vrLoc = 1728;
@@ -1933,7 +1982,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "GoogleTranslatorTest.m: 35";
 		rLen = 0;
-		rLoc = 2266;
+		rLoc = 2272;
 		rType = 0;
 		vrLen = 643;
 		vrLoc = 615;
@@ -1943,7 +1992,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 22";
 		rLen = 0;
-		rLoc = 912;
+		rLoc = 938;
 		rType = 0;
 		vrLen = 1395;
 		vrLoc = 0;
@@ -1953,7 +2002,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 22";
 		rLen = 0;
-		rLoc = 509;
+		rLoc = 542;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 81;
@@ -1983,17 +2032,17 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 17;
-		rLoc = 220;
+		rLoc = 208;
 		rType = 0;
 		vrLen = 340;
 		vrLoc = 0;
 	};
 	5167949E118A2DAE00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 0;
-		rLoc = 233;
+		rLoc = 246;
 		rType = 0;
 		vrLen = 463;
 		vrLoc = 0;
@@ -2083,7 +2132,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 22";
 		rLen = 0;
-		rLoc = 509;
+		rLoc = 542;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 81;
@@ -2093,7 +2142,7 @@
 		fRef = 51999F12112A0729008BAC42 /* BFAppController.h */;
 		name = "BFAppController.h: 24";
 		rLen = 0;
-		rLoc = 362;
+		rLoc = 427;
 		rType = 0;
 		vrLen = 861;
 		vrLoc = 0;
@@ -2103,7 +2152,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 22";
 		rLen = 0;
-		rLoc = 509;
+		rLoc = 542;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 81;
@@ -2113,7 +2162,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 19";
 		rLen = 0;
-		rLoc = 876;
+		rLoc = 902;
 		rType = 0;
 		vrLen = 1372;
 		vrLoc = 3;
@@ -2133,7 +2182,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 24";
 		rLen = 58;
-		rLoc = 914;
+		rLoc = 940;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 3;
@@ -2143,7 +2192,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 150";
 		rLen = 0;
-		rLoc = 6847;
+		rLoc = 6857;
 		rType = 0;
 		vrLen = 1376;
 		vrLoc = 4785;
@@ -2163,7 +2212,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 2554;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 1120;
 		vrLoc = 1631;
@@ -2183,7 +2232,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 71";
 		rLen = 0;
-		rLoc = 2794;
+		rLoc = 2804;
 		rType = 0;
 		vrLen = 1160;
 		vrLoc = 1728;
@@ -2440,7 +2489,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "GoogleTranslatorTest.m: 38";
 		rLen = 0;
-		rLoc = 2290;
+		rLoc = 2296;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 479;
@@ -2450,7 +2499,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "GoogleTranslatorTest.m: 38";
 		rLen = 0;
-		rLoc = 2290;
+		rLoc = 2296;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 742;
@@ -2460,7 +2509,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "GoogleTranslatorTest.m: 38";
 		rLen = 0;
-		rLoc = 2290;
+		rLoc = 2296;
 		rType = 0;
 		vrLen = 522;
 		vrLoc = 479;
@@ -2470,7 +2519,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "GoogleTranslatorTest.m: 38";
 		rLen = 0;
-		rLoc = 2290;
+		rLoc = 2296;
 		rType = 0;
 		vrLen = 1173;
 		vrLoc = 0;
@@ -2508,7 +2557,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "GoogleTranslatorTest.m: 38";
 		rLen = 0;
-		rLoc = 2290;
+		rLoc = 2296;
 		rType = 0;
 		vrLen = 1173;
 		vrLoc = 0;
@@ -2538,7 +2587,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 3;
-		rLoc = 2554;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 1027;
 		vrLoc = 1726;
@@ -2548,7 +2597,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 3;
-		rLoc = 2554;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 1745;
@@ -2558,7 +2607,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "GoogleTranslatorTest.m: 38";
 		rLen = 0;
-		rLoc = 2290;
+		rLoc = 2296;
 		rType = 0;
 		vrLen = 522;
 		vrLoc = 479;
@@ -2568,7 +2617,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 2554;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 636;
 		vrLoc = 1886;
@@ -2578,7 +2627,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 2554;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 1745;
@@ -2598,7 +2647,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 38";
 		rLen = 0;
-		rLoc = 2290;
+		rLoc = 2296;
 		rType = 0;
 		vrLen = 1173;
 		vrLoc = 0;
@@ -2608,7 +2657,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 2554;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 1745;
@@ -2628,7 +2677,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 38";
 		rLen = 0;
-		rLoc = 2290;
+		rLoc = 2296;
 		rType = 0;
 		vrLen = 702;
 		vrLoc = 615;
@@ -2638,7 +2687,7 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 17";
 		rLen = 0;
-		rLoc = 340;
+		rLoc = 328;
 		rType = 0;
 		vrLen = 340;
 		vrLoc = 0;
@@ -2668,7 +2717,7 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 17";
 		rLen = 0;
-		rLoc = 340;
+		rLoc = 328;
 		rType = 0;
 		vrLen = 340;
 		vrLoc = 0;
@@ -2678,7 +2727,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 41";
 		rLen = 0;
-		rLoc = 2851;
+		rLoc = 2857;
 		rType = 0;
 		vrLen = 1191;
 		vrLoc = 0;
@@ -2728,7 +2777,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 2554;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 636;
 		vrLoc = 1886;
@@ -2844,7 +2893,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 34";
 		rLen = 0;
-		rLoc = 2269;
+		rLoc = 2275;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 3;
@@ -2854,7 +2903,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 34";
 		rLen = 0;
-		rLoc = 2269;
+		rLoc = 2275;
 		rType = 0;
 		vrLen = 632;
 		vrLoc = 615;
@@ -2874,7 +2923,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 36";
 		rLen = 0;
-		rLoc = 2269;
+		rLoc = 2275;
 		rType = 0;
 		vrLen = 383;
 		vrLoc = 866;
@@ -2898,7 +2947,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 36";
 		rLen = 0;
-		rLoc = 2269;
+		rLoc = 2275;
 		rType = 0;
 		vrLen = 383;
 		vrLoc = 866;
@@ -2950,7 +2999,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 22";
 		rLen = 0;
-		rLoc = 912;
+		rLoc = 938;
 		rType = 0;
 		vrLen = 1394;
 		vrLoc = 0;
@@ -2960,7 +3009,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 39";
 		rLen = 0;
-		rLoc = 2290;
+		rLoc = 2296;
 		rType = 0;
 		vrLen = 821;
 		vrLoc = 479;
@@ -2980,7 +3029,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 39";
 		rLen = 0;
-		rLoc = 2290;
+		rLoc = 2296;
 		rType = 0;
 		vrLen = 754;
 		vrLoc = 546;
@@ -3000,7 +3049,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 22";
 		rLen = 0;
-		rLoc = 912;
+		rLoc = 938;
 		rType = 0;
 		vrLen = 1394;
 		vrLoc = 0;
@@ -3010,7 +3059,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 32";
 		rLen = 0;
-		rLoc = 2192;
+		rLoc = 2198;
 		rType = 0;
 		vrLen = 821;
 		vrLoc = 479;
@@ -3030,7 +3079,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 43";
 		rLen = 0;
-		rLoc = 2574;
+		rLoc = 2580;
 		rType = 0;
 		vrLen = 814;
 		vrLoc = 783;
@@ -3060,7 +3109,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 51";
 		rLen = 20;
-		rLoc = 2772;
+		rLoc = 2778;
 		rType = 0;
 		vrLen = 767;
 		vrLoc = 783;
@@ -3080,7 +3129,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 43";
 		rLen = 0;
-		rLoc = 2574;
+		rLoc = 2580;
 		rType = 0;
 		vrLen = 814;
 		vrLoc = 783;
@@ -3120,7 +3169,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 43";
 		rLen = 0;
-		rLoc = 2574;
+		rLoc = 2580;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 782;
@@ -3140,7 +3189,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 49";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 846;
 		vrLoc = 783;
@@ -3184,7 +3233,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 49";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 783;
@@ -3194,7 +3243,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 49";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 783;
@@ -3204,7 +3253,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 49";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 783;
@@ -3214,7 +3263,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 49";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 783;
@@ -3224,7 +3273,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 49";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 783;
@@ -3234,7 +3283,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 49";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 783;
@@ -3244,7 +3293,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 49";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 783;
@@ -3254,7 +3303,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 49";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 783;
@@ -3274,7 +3323,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 22";
 		rLen = 0;
-		rLoc = 912;
+		rLoc = 938;
 		rType = 0;
 		vrLen = 1394;
 		vrLoc = 0;
@@ -3294,7 +3343,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 49";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 783;
@@ -3314,7 +3363,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 22";
 		rLen = 0;
-		rLoc = 912;
+		rLoc = 938;
 		rType = 0;
 		vrLen = 1394;
 		vrLoc = 0;
@@ -3354,7 +3403,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 49";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 2777;
 		rType = 0;
 		vrLen = 846;
 		vrLoc = 783;
@@ -3434,7 +3483,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 36";
 		rLen = 0;
-		rLoc = 2192;
+		rLoc = 2198;
 		rType = 0;
 		vrLen = 486;
 		vrLoc = 1131;
@@ -3534,7 +3583,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 36";
 		rLen = 0;
-		rLoc = 2192;
+		rLoc = 2198;
 		rType = 0;
 		vrLen = 796;
 		vrLoc = 826;
@@ -3544,7 +3593,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 43";
 		rLen = 0;
-		rLoc = 2333;
+		rLoc = 2339;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 852;
@@ -3564,7 +3613,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 63";
 		rLen = 0;
-		rLoc = 2292;
+		rLoc = 2302;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 1745;
@@ -3574,7 +3623,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 43";
 		rLen = 0;
-		rLoc = 2333;
+		rLoc = 2339;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 852;
@@ -3584,7 +3633,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 63";
 		rLen = 0;
-		rLoc = 2292;
+		rLoc = 2302;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 1745;
@@ -3604,7 +3653,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 2554;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 1745;
@@ -3614,17 +3663,17 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3314;
+		rLoc = 3324;
 		rType = 0;
 		vrLen = 1460;
 		vrLoc = 2489;
 	};
 	516796C9118C796C00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 0;
-		rLoc = 236;
+		rLoc = 249;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 0;
@@ -3634,7 +3683,7 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 0;
-		rLoc = 323;
+		rLoc = 311;
 		rType = 0;
 		vrLen = 340;
 		vrLoc = 0;
@@ -3659,10 +3708,10 @@
 	};
 	516796CD118C796C00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 0;
-		rLoc = 233;
+		rLoc = 246;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 0;
@@ -3672,7 +3721,7 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 0;
-		rLoc = 237;
+		rLoc = 225;
 		rType = 0;
 		vrLen = 338;
 		vrLoc = 0;
@@ -3682,17 +3731,17 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3314;
+		rLoc = 3324;
 		rType = 0;
 		vrLen = 1460;
 		vrLoc = 2489;
 	};
 	516796D0118C796C00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 0;
-		rLoc = 236;
+		rLoc = 249;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 0;
@@ -3702,7 +3751,7 @@
 		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
 		name = "BFHTTPInvoker.h: 14";
 		rLen = 0;
-		rLoc = 323;
+		rLoc = 311;
 		rType = 0;
 		vrLen = 340;
 		vrLoc = 0;
@@ -3752,7 +3801,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 48";
 		rLen = 0;
-		rLoc = 2721;
+		rLoc = 2727;
 		rType = 0;
 		vrLen = 762;
 		vrLoc = 852;
@@ -3762,17 +3811,17 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 45";
 		rLen = 0;
-		rLoc = 2572;
+		rLoc = 2578;
 		rType = 0;
 		vrLen = 776;
 		vrLoc = 852;
 	};
 	516796DC118C7B5100A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 93;
-		rLoc = 233;
+		rLoc = 246;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 0;
@@ -3802,17 +3851,17 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 45";
 		rLen = 0;
-		rLoc = 2408;
+		rLoc = 2414;
 		rType = 0;
 		vrLen = 848;
 		vrLoc = 852;
 	};
 	516796E0118C7B5100A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 93;
-		rLoc = 233;
+		rLoc = 246;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 0;
@@ -3842,7 +3891,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 50";
 		rLen = 0;
-		rLoc = 2383;
+		rLoc = 2389;
 		rType = 0;
 		vrLen = 935;
 		vrLoc = 935;
@@ -3852,7 +3901,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2494;
+		rLoc = 2500;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 1070;
@@ -3862,7 +3911,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2494;
+		rLoc = 2500;
 		rType = 0;
 		vrLen = 935;
 		vrLoc = 1073;
@@ -3872,7 +3921,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2494;
+		rLoc = 2500;
 		rType = 0;
 		vrLen = 416;
 		vrLoc = 1070;
@@ -3882,7 +3931,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2494;
+		rLoc = 2500;
 		rType = 0;
 		vrLen = 433;
 		vrLoc = 1053;
@@ -3892,7 +3941,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2494;
+		rLoc = 2500;
 		rType = 0;
 		vrLen = 909;
 		vrLoc = 852;
@@ -3902,7 +3951,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 57";
 		rLen = 0;
-		rLoc = 2717;
+		rLoc = 2723;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 1070;
@@ -3912,7 +3961,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2570;
+		rLoc = 2576;
 		rType = 0;
 		vrLen = 1001;
 		vrLoc = 1020;
@@ -3922,7 +3971,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2570;
+		rLoc = 2576;
 		rType = 0;
 		vrLen = 1022;
 		vrLoc = 1020;
@@ -3932,7 +3981,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2570;
+		rLoc = 2576;
 		rType = 0;
 		vrLen = 975;
 		vrLoc = 1072;
@@ -3942,7 +3991,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2570;
+		rLoc = 2576;
 		rType = 0;
 		vrLen = 432;
 		vrLoc = 1053;
@@ -3965,7 +4014,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2570;
+		rLoc = 2576;
 		rType = 0;
 		vrLen = 432;
 		vrLoc = 1053;
@@ -4007,7 +4056,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2570;
+		rLoc = 2576;
 		rType = 0;
 		vrLen = 1003;
 		vrLoc = 962;
@@ -4017,7 +4066,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3314;
+		rLoc = 3324;
 		rType = 0;
 		vrLen = 1795;
 		vrLoc = 2239;
@@ -4027,7 +4076,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2570;
+		rLoc = 2576;
 		rType = 0;
 		vrLen = 1003;
 		vrLoc = 962;
@@ -4037,7 +4086,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 79";
 		rLen = 0;
-		rLoc = 2963;
+		rLoc = 2973;
 		rType = 0;
 		vrLen = 1795;
 		vrLoc = 2239;
@@ -4047,7 +4096,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 79";
 		rLen = 0;
-		rLoc = 2963;
+		rLoc = 2973;
 		rType = 0;
 		vrLen = 1862;
 		vrLoc = 1963;
@@ -4057,7 +4106,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 79";
 		rLen = 0;
-		rLoc = 2963;
+		rLoc = 2973;
 		rType = 0;
 		vrLen = 1862;
 		vrLoc = 1963;
@@ -4067,7 +4116,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 148";
 		rLen = 0;
-		rLoc = 6713;
+		rLoc = 6723;
 		rType = 0;
 		vrLen = 945;
 		vrLoc = 2804;
@@ -4077,7 +4126,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 148";
 		rLen = 0;
-		rLoc = 6713;
+		rLoc = 6723;
 		rType = 0;
 		vrLen = 853;
 		vrLoc = 2804;
@@ -4104,7 +4153,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 148";
 		rLen = 0;
-		rLoc = 6713;
+		rLoc = 6723;
 		rType = 0;
 		vrLen = 1887;
 		vrLoc = 1961;
@@ -4134,7 +4183,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 52";
 		rLen = 0;
-		rLoc = 2570;
+		rLoc = 2576;
 		rType = 0;
 		vrLen = 1030;
 		vrLoc = 935;
@@ -4144,7 +4193,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 148";
 		rLen = 0;
-		rLoc = 6713;
+		rLoc = 6723;
 		rType = 0;
 		vrLen = 1887;
 		vrLoc = 1961;
@@ -4194,7 +4243,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 853;
 		vrLoc = 2804;
@@ -4221,7 +4270,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 853;
 		vrLoc = 2804;
@@ -4271,7 +4320,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 853;
 		vrLoc = 2804;
@@ -4291,7 +4340,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 688;
 		vrLoc = 680;
@@ -4301,7 +4350,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1536;
 		vrLoc = 72;
@@ -4321,7 +4370,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1536;
 		vrLoc = 72;
@@ -4361,7 +4410,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 945;
 		vrLoc = 2804;
@@ -4381,7 +4430,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 939;
 		vrLoc = 2810;
@@ -4391,7 +4440,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1721;
 		vrLoc = 2489;
@@ -4411,7 +4460,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1721;
 		vrLoc = 2489;
@@ -4451,7 +4500,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 945;
 		vrLoc = 2804;
@@ -4491,7 +4540,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1721;
 		vrLoc = 2489;
@@ -4511,7 +4560,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1570;
 		vrLoc = 2489;
@@ -4521,7 +4570,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1820;
 		vrLoc = 2129;
@@ -4531,7 +4580,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 4849;
@@ -4541,7 +4590,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 62";
 		rLen = 11;
-		rLoc = 2721;
+		rLoc = 2727;
 		rType = 0;
 		vrLen = 562;
 		vrLoc = 1770;
@@ -4565,7 +4614,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 4849;
@@ -4575,7 +4624,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 62";
 		rLen = 11;
-		rLoc = 2721;
+		rLoc = 2727;
 		rType = 0;
 		vrLen = 562;
 		vrLoc = 1770;
@@ -4607,7 +4656,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1820;
 		vrLoc = 2129;
@@ -4657,7 +4706,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1820;
 		vrLoc = 2129;
@@ -4687,7 +4736,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1820;
 		vrLoc = 2129;
@@ -4707,7 +4756,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 964;
 		vrLoc = 2810;
@@ -4717,7 +4766,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 964;
 		vrLoc = 2810;
@@ -4727,7 +4776,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 62";
 		rLen = 11;
-		rLoc = 2721;
+		rLoc = 2727;
 		rType = 0;
 		vrLen = 561;
 		vrLoc = 1771;
@@ -4737,7 +4786,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1905;
 		vrLoc = 2129;
@@ -4777,7 +4826,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 62";
 		rLen = 11;
-		rLoc = 2721;
+		rLoc = 2727;
 		rType = 0;
 		vrLen = 1260;
 		vrLoc = 1072;
@@ -4787,7 +4836,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 62";
 		rLen = 11;
-		rLoc = 2721;
+		rLoc = 2727;
 		rType = 0;
 		vrLen = 1260;
 		vrLoc = 1072;
@@ -4837,7 +4886,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 57";
 		rLen = 0;
-		rLoc = 2596;
+		rLoc = 2602;
 		rType = 0;
 		vrLen = 1261;
 		vrLoc = 1072;
@@ -4847,7 +4896,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 57";
 		rLen = 0;
-		rLoc = 2596;
+		rLoc = 2602;
 		rType = 0;
 		vrLen = 1259;
 		vrLoc = 1079;
@@ -4857,7 +4906,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 57";
 		rLen = 0;
-		rLoc = 2596;
+		rLoc = 2602;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 1692;
@@ -4867,7 +4916,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 964;
 		vrLoc = 2810;
@@ -4877,7 +4926,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 57";
 		rLen = 0;
-		rLoc = 2596;
+		rLoc = 2602;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 1692;
@@ -4887,7 +4936,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 964;
 		vrLoc = 2810;
@@ -4897,7 +4946,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 63";
 		rLen = 0;
-		rLoc = 2792;
+		rLoc = 2798;
 		rType = 0;
 		vrLen = 1272;
 		vrLoc = 1072;
@@ -4907,7 +4956,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1721;
 		vrLoc = 2489;
@@ -4917,7 +4966,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1721;
 		vrLoc = 2489;
@@ -4927,7 +4976,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 63";
 		rLen = 0;
-		rLoc = 2792;
+		rLoc = 2798;
 		rType = 0;
 		vrLen = 1272;
 		vrLoc = 1072;
@@ -4937,7 +4986,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1570;
 		vrLoc = 2489;
@@ -4947,7 +4996,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1820;
 		vrLoc = 2129;
@@ -4957,7 +5006,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 945;
 		vrLoc = 2804;
@@ -4967,17 +5016,17 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1905;
 		vrLoc = 2129;
 	};
 	5167977D118C830A00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 93;
-		rLoc = 233;
+		rLoc = 246;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 0;
@@ -4997,7 +5046,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 63";
 		rLen = 0;
-		rLoc = 2792;
+		rLoc = 2798;
 		rType = 0;
 		vrLen = 1272;
 		vrLoc = 1072;
@@ -5007,17 +5056,17 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 1905;
 		vrLoc = 2129;
 	};
 	51679781118C830A00A96627 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 51679405118A252B00A96627 /* BFHTTPInvoker.m */;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
 		name = "BFHTTPInvoker.m: 14";
 		rLen = 93;
-		rLoc = 233;
+		rLoc = 246;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 0;
@@ -5037,7 +5086,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 63";
 		rLen = 0;
-		rLoc = 2792;
+		rLoc = 2798;
 		rType = 0;
 		vrLen = 1271;
 		vrLoc = 1073;
@@ -5047,7 +5096,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 79";
 		rLen = 0;
-		rLoc = 3188;
+		rLoc = 3194;
 		rType = 0;
 		vrLen = 1310;
 		vrLoc = 2000;
@@ -5057,7 +5106,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 79";
 		rLen = 0;
-		rLoc = 3188;
+		rLoc = 3194;
 		rType = 0;
 		vrLen = 1130;
 		vrLoc = 2189;
@@ -5067,7 +5116,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3238;
+		rLoc = 3248;
 		rType = 0;
 		vrLen = 945;
 		vrLoc = 2804;
@@ -5077,7 +5126,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 79";
 		rLen = 0;
-		rLoc = 3188;
+		rLoc = 3194;
 		rType = 0;
 		vrLen = 792;
 		vrLoc = 2518;
@@ -5087,7 +5136,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 79";
 		rLen = 0;
-		rLoc = 3188;
+		rLoc = 3194;
 		rType = 0;
 		vrLen = 1206;
 		vrLoc = 2113;
@@ -5097,7 +5146,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 2290;
+		rLoc = 2300;
 		rType = 0;
 		vrLen = 1373;
 		vrLoc = 1890;
@@ -5107,7 +5156,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 79";
 		rLen = 0;
-		rLoc = 3188;
+		rLoc = 3194;
 		rType = 0;
 		vrLen = 1206;
 		vrLoc = 2113;
@@ -5117,7 +5166,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 2240;
+		rLoc = 2250;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 1890;
@@ -5127,7 +5176,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1579;
 		vrLoc = 4244;
@@ -5137,7 +5186,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1560;
 		vrLoc = 4523;
@@ -5147,7 +5196,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1593;
 		vrLoc = 4500;
@@ -5157,7 +5206,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 136";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1564;
 		vrLoc = 4500;
@@ -5167,7 +5216,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1654;
 		vrLoc = 4500;
@@ -5177,7 +5226,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1593;
 		vrLoc = 4500;
@@ -5187,7 +5236,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 134";
 		rLen = 0;
-		rLoc = 5302;
+		rLoc = 5312;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 4730;
@@ -5197,7 +5246,7 @@
 		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
 		name = "BFGoogleTranslatorTest.m: 79";
 		rLen = 0;
-		rLoc = 3188;
+		rLoc = 3194;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 2638;
@@ -5207,7 +5256,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 134";
 		rLen = 0;
-		rLoc = 5302;
+		rLoc = 5312;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 4730;
@@ -5237,7 +5286,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1622;
 		vrLoc = 4530;
@@ -5257,7 +5306,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1622;
 		vrLoc = 4100;
@@ -5267,7 +5316,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1596;
 		vrLoc = 4530;
@@ -5287,7 +5336,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 808;
 		vrLoc = 4914;
@@ -5297,7 +5346,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 808;
 		vrLoc = 4914;
@@ -5307,7 +5356,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 878;
 		vrLoc = 1415;
@@ -5327,7 +5376,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 878;
 		vrLoc = 1415;
@@ -5357,7 +5406,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 4890;
@@ -5397,7 +5446,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 1466;
@@ -5417,7 +5466,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1532;
 		vrLoc = 4730;
@@ -5427,7 +5476,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1622;
 		vrLoc = 4530;
@@ -5437,7 +5486,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 137";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1833;
 		vrLoc = 4530;
@@ -5457,7 +5506,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5350;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 4914;
@@ -5467,16 +5516,16 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5349;
+		rLoc = 5359;
 		rType = 0;
 		vrLen = 1016;
 		vrLoc = 4914;
 	};
 	516797BE118C903B00A96627 /* RegexKitLite.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1302, 4634}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1379, 4284}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1653}";
+			sepNavVisRange = "{0, 549}";
 		};
 	};
 	516797BF118C903B00A96627 /* RegexKitLite.m */ = {
@@ -5491,7 +5540,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5349;
+		rLoc = 5359;
 		rType = 0;
 		vrLen = 1821;
 		vrLoc = 4602;
@@ -5521,7 +5570,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5349;
+		rLoc = 5359;
 		rType = 0;
 		vrLen = 1821;
 		vrLoc = 4602;
@@ -5561,7 +5610,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 143";
 		rLen = 0;
-		rLoc = 5851;
+		rLoc = 5861;
 		rType = 0;
 		vrLen = 1914;
 		vrLoc = 4278;
@@ -5591,7 +5640,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 143";
 		rLen = 0;
-		rLoc = 5851;
+		rLoc = 5861;
 		rType = 0;
 		vrLen = 1914;
 		vrLoc = 4278;
@@ -5641,7 +5690,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 138";
 		rLen = 0;
-		rLoc = 5349;
+		rLoc = 5359;
 		rType = 0;
 		vrLen = 971;
 		vrLoc = 4917;
@@ -5664,6 +5713,476 @@
 		rLoc = 0;
 		rType = 0;
 		vrLen = 1653;
+		vrLoc = 0;
+	};
+	516797DF118C947B00A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516797BE118C903B00A96627 /* RegexKitLite.h */;
+		name = "RegexKitLite.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1653;
+		vrLoc = 0;
+	};
+	516797E0118C947B00A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
+		name = "BFGoogleTranslatorTest.m: 47";
+		rLen = 0;
+		rLoc = 1893;
+		rType = 0;
+		vrLen = 1314;
+		vrLoc = 2112;
+	};
+	516797E1118C947B00A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516797BE118C903B00A96627 /* RegexKitLite.h */;
+		name = "RegexKitLite.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1653;
+		vrLoc = 0;
+	};
+	516797E2118C947B00A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
+		name = "BFGoogleTranslatorTest.m: 47";
+		rLen = 0;
+		rLoc = 1893;
+		rType = 0;
+		vrLen = 1299;
+		vrLoc = 2127;
+	};
+	516797E3118C947B00A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
+		name = "BFGoogleTranslatorTest.m: 47";
+		rLen = 0;
+		rLoc = 1893;
+		rType = 0;
+		vrLen = 1294;
+		vrLoc = 2127;
+	};
+	516797E4118C948700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516797BE118C903B00A96627 /* RegexKitLite.h */;
+		name = "RegexKitLite.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 549;
+		vrLoc = 0;
+	};
+	516797E5118C948700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
+		name = "BFGoogleTranslatorTest.m: 47";
+		rLen = 0;
+		rLoc = 1893;
+		rType = 0;
+		vrLen = 593;
+		vrLoc = 2127;
+	};
+	516797E6118C956400A96627 /* BFDefaultHTTPInvoker.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 509}}";
+			sepNavSelRange = "{264, 0}";
+			sepNavVisRange = "{0, 270}";
+		};
+	};
+	516797F5118C96B400A96627 /* Babelfish - All */ = {
+		activeExec = 0;
+	};
+	51679802118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
+		name = "BFHTTPInvoker.h: 16";
+		rLen = 0;
+		rLoc = 327;
+		rType = 0;
+		vrLen = 328;
+		vrLoc = 0;
+	};
+	51679803118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115951410C19356001E60A8 /* BFTranslator.h */;
+		name = "BFTranslator.h: 18";
+		rLen = 23;
+		rLoc = 826;
+		rType = 0;
+		vrLen = 1170;
+		vrLoc = 0;
+	};
+	51679804118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
+		name = "BFGoogleTranslator.h: 20";
+		rLen = 0;
+		rLoc = 900;
+		rType = 0;
+		vrLen = 1318;
+		vrLoc = 0;
+	};
+	51679805118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F12112A0729008BAC42 /* BFAppController.h */;
+		name = "BFAppController.h: 12";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 926;
+		vrLoc = 0;
+	};
+	51679806118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 15";
+		rLen = 0;
+		rLoc = 340;
+		rType = 0;
+		vrLen = 642;
+		vrLoc = 140;
+	};
+	51679807118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516797E6118C956400A96627 /* BFDefaultHTTPInvoker.h */;
+		name = "BFDefaultHTTPInvoker.h: 13";
+		rLen = 0;
+		rLoc = 264;
+		rType = 0;
+		vrLen = 270;
+		vrLoc = 0;
+	};
+	51679808118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
+		name = "BFDefaultHTTPInvoker.m: 9";
+		rLen = 0;
+		rLoc = 176;
+		rType = 0;
+		vrLen = 474;
+		vrLoc = 0;
+	};
+	51679809118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
+		name = "BFGoogleTranslator.m: 48";
+		rLen = 0;
+		rLoc = 1753;
+		rType = 0;
+		vrLen = 1772;
+		vrLoc = 5096;
+	};
+	5167980A118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
+		name = "BFGoogleTranslatorTest.m: 28";
+		rLen = 0;
+		rLoc = 1057;
+		rType = 0;
+		vrLen = 1344;
+		vrLoc = 783;
+	};
+	5167980B118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
+		name = "BFGoogleTranslatorTest.m: 47";
+		rLen = 0;
+		rLoc = 1893;
+		rType = 0;
+		vrLen = 1299;
+		vrLoc = 2127;
+	};
+	5167980C118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 34";
+		rLen = 11;
+		rLoc = 731;
+		rType = 0;
+		vrLen = 865;
+		vrLoc = 143;
+	};
+	5167980D118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F12112A0729008BAC42 /* BFAppController.h */;
+		name = "BFAppController.h: 12";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 926;
+		vrLoc = 0;
+	};
+	5167980E118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115951410C19356001E60A8 /* BFTranslator.h */;
+		name = "BFTranslator.h: 18";
+		rLen = 23;
+		rLoc = 826;
+		rType = 0;
+		vrLen = 1170;
+		vrLoc = 0;
+	};
+	5167980F118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51679404118A252B00A96627 /* BFHTTPInvoker.h */;
+		name = "BFHTTPInvoker.h: 16";
+		rLen = 0;
+		rLoc = 327;
+		rType = 0;
+		vrLen = 328;
+		vrLoc = 0;
+	};
+	51679810118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
+		name = "BFGoogleTranslator.m: 143";
+		rLen = 0;
+		rLoc = 5861;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 4292;
+	};
+	51679811118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
+		name = "BFGoogleTranslator.h: 23";
+		rLen = 0;
+		rLoc = 939;
+		rType = 0;
+		vrLen = 1394;
+		vrLoc = 0;
+	};
+	51679812118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
+		name = "BFDefaultHTTPInvoker.m: 14";
+		rLen = 93;
+		rLoc = 246;
+		rType = 0;
+		vrLen = 461;
+		vrLoc = 0;
+	};
+	51679813118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516797E6118C956400A96627 /* BFDefaultHTTPInvoker.h */;
+		name = "BFDefaultHTTPInvoker.h: 10";
+		rLen = 0;
+		rLoc = 202;
+		rType = 0;
+		vrLen = 244;
+		vrLoc = 0;
+	};
+	51679814118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115951410C19356001E60A8 /* BFTranslator.h */;
+		name = "BFTranslator.h: 18";
+		rLen = 23;
+		rLoc = 826;
+		rType = 0;
+		vrLen = 1170;
+		vrLoc = 0;
+	};
+	51679815118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
+		name = "BFGoogleTranslator.h: 18";
+		rLen = 23;
+		rLoc = 826;
+		rType = 0;
+		vrLen = 1394;
+		vrLoc = 0;
+	};
+	51679816118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516797E6118C956400A96627 /* BFDefaultHTTPInvoker.h */;
+		name = "BFDefaultHTTPInvoker.h: 10";
+		rLen = 0;
+		rLoc = 177;
+		rType = 0;
+		vrLen = 268;
+		vrLoc = 0;
+	};
+	51679817118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
+		name = "BFGoogleTranslator.h: 18";
+		rLen = 23;
+		rLoc = 826;
+		rType = 0;
+		vrLen = 1394;
+		vrLoc = 0;
+	};
+	51679818118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516797E6118C956400A96627 /* BFDefaultHTTPInvoker.h */;
+		name = "BFDefaultHTTPInvoker.h: 13";
+		rLen = 20;
+		rLoc = 216;
+		rType = 0;
+		vrLen = 268;
+		vrLoc = 0;
+	};
+	51679819118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
+		name = "BFDefaultHTTPInvoker.m: 9";
+		rLen = 0;
+		rLoc = 176;
+		rType = 0;
+		vrLen = 474;
+		vrLoc = 0;
+	};
+	5167981A118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 15";
+		rLen = 0;
+		rLoc = 340;
+		rType = 0;
+		vrLen = 852;
+		vrLoc = 143;
+	};
+	5167981B118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F12112A0729008BAC42 /* BFAppController.h */;
+		name = "BFAppController.h: 12";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 926;
+		vrLoc = 0;
+	};
+	5167981C118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
+		name = "BFGoogleTranslator.h: 18";
+		rLen = 23;
+		rLoc = 826;
+		rType = 0;
+		vrLen = 1394;
+		vrLoc = 0;
+	};
+	5167981D118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
+		name = "BFGoogleTranslator.m: 143";
+		rLen = 0;
+		rLoc = 5861;
+		rType = 0;
+		vrLen = 1900;
+		vrLoc = 4292;
+	};
+	5167981E118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
+		name = "BFGoogleTranslator.h: 34";
+		rLen = 0;
+		rLoc = 1166;
+		rType = 0;
+		vrLen = 1415;
+		vrLoc = 0;
+	};
+	5167981F118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
+		name = "BFGoogleTranslator.m: 48";
+		rLen = 0;
+		rLoc = 1753;
+		rType = 0;
+		vrLen = 1762;
+		vrLoc = 5106;
+	};
+	51679820118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
+		name = "BFGoogleTranslatorTest.m: 28";
+		rLen = 0;
+		rLoc = 1054;
+		rType = 0;
+		vrLen = 1431;
+		vrLoc = 783;
+	};
+	51679821118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
+		name = "BFGoogleTranslator.h: 20";
+		rLen = 0;
+		rLoc = 900;
+		rType = 0;
+		vrLen = 1318;
+		vrLoc = 0;
+	};
+	51679822118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F12112A0729008BAC42 /* BFAppController.h */;
+		name = "BFAppController.h: 12";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 926;
+		vrLoc = 0;
+	};
+	51679823118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 15";
+		rLen = 0;
+		rLoc = 340;
+		rType = 0;
+		vrLen = 642;
+		vrLoc = 140;
+	};
+	51679824118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516797E6118C956400A96627 /* BFDefaultHTTPInvoker.h */;
+		name = "BFDefaultHTTPInvoker.h: 13";
+		rLen = 0;
+		rLoc = 264;
+		rType = 0;
+		vrLen = 270;
+		vrLoc = 0;
+	};
+	51679825118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
+		name = "BFGoogleTranslatorTest.m: 28";
+		rLen = 0;
+		rLoc = 1057;
+		rType = 0;
+		vrLen = 1344;
+		vrLoc = 783;
+	};
+	51679826118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */;
+		name = "BFDefaultHTTPInvoker.m: 9";
+		rLen = 0;
+		rLoc = 176;
+		rType = 0;
+		vrLen = 474;
+		vrLoc = 0;
+	};
+	51679827118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
+		name = "BFGoogleTranslator.m: 48";
+		rLen = 0;
+		rLoc = 1753;
+		rType = 0;
+		vrLen = 1772;
+		vrLoc = 5096;
+	};
+	51679828118C973700A96627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
+		name = "BFGoogleTranslatorTest.m: 53";
+		rLen = 0;
+		rLoc = 2198;
+		rType = 0;
+		vrLen = 1287;
 		vrLoc = 0;
 	};
 	5168A48D1168002F004C576A /* PBXTextBookmark */ = {
@@ -5869,7 +6388,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 107";
 		rLen = 0;
-		rLoc = 4896;
+		rLoc = 4906;
 		rType = 0;
 		vrLen = 2315;
 		vrLoc = 3350;
@@ -5949,7 +6468,7 @@
 		fRef = 51999F12112A0729008BAC42 /* BFAppController.h */;
 		name = "BFAppController.h: 24";
 		rLen = 0;
-		rLoc = 362;
+		rLoc = 427;
 		rType = 0;
 		vrLen = 861;
 		vrLoc = 0;
@@ -5986,7 +6505,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 22";
 		rLen = 0;
-		rLoc = 509;
+		rLoc = 542;
 		rType = 0;
 		vrLen = 781;
 		vrLoc = 0;
@@ -6051,7 +6570,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 30";
 		rLen = 0;
-		rLoc = 1132;
+		rLoc = 1178;
 		rType = 0;
 		vrLen = 1296;
 		vrLoc = 0;
@@ -6072,7 +6591,7 @@
 		fRef = 5115950410C19356001E60A8 /* BFGoogleTranslator.h */;
 		name = "BFGoogleTranslator.h: 30";
 		rLen = 0;
-		rLoc = 1132;
+		rLoc = 1178;
 		rType = 0;
 		vrLen = 1296;
 		vrLoc = 0;
@@ -6082,7 +6601,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 104";
 		rLen = 0;
-		rLoc = 3952;
+		rLoc = 3962;
 		rType = 0;
 		vrLen = 1677;
 		vrLoc = 4064;
@@ -6434,17 +6953,17 @@
 	};
 	51999F12112A0729008BAC42 /* BFAppController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 509}}";
-			sepNavSelRange = "{362, 0}";
-			sepNavVisRange = "{0, 861}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 518}}";
+			sepNavSelRange = "{219, 0}";
+			sepNavVisRange = "{0, 926}";
 			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
 		};
 	};
 	51999F13112A0729008BAC42 /* BFAppController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 3330}}";
-			sepNavSelRange = "{509, 0}";
-			sepNavVisRange = "{81, 774}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 3550}}";
+			sepNavSelRange = "{340, 0}";
+			sepNavVisRange = "{140, 819}";
 			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
 		};
 	};
@@ -6473,7 +6992,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "AppController.m: 78";
 		rLen = 0;
-		rLoc = 4113;
+		rLoc = 4225;
 		rType = 0;
 		vrLen = 1147;
 		vrLoc = 953;
@@ -6505,10 +7024,10 @@
 		vrLen = 1167;
 		vrLoc = 1130;
 	};
-	8D1107260486CEB800E47090 /* Babelfish */ = {
+	8D1107260486CEB800E47090 /* Babelfish - App */ = {
 		activeExec = 0;
 		executables = (
-			511594FB10C19323001E60A8 /* Babelfish */,
+			511594FB10C19323001E60A8 /* Babelfish - App */,
 		);
 	};
 	8D1107310486CEB800E47090 /* Info.plist */ = {

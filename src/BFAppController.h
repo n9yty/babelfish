@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 #import "BFTranslator.h"
+#import "BFHTTPInvoker.h"
 
 @class BFLanguage;
 
@@ -16,6 +17,7 @@
 
 	@private
 	NSObject<BFTranslator> *translator;
+	NSObject<BFHTTPInvoker> *httpInvoker;
 	
 	NSArray *sourceLanguages;
 	NSArray *targetLanguages;

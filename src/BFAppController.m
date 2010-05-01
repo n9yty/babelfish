@@ -11,6 +11,7 @@
 #import "BFTranslator.h"
 #import "BFGoogleTranslator.h"
 #import "BFTranslationWindowModel.h"
+#import "BFDefaultHTTPInvoker.h"
 
 #import "version.h"
 
@@ -30,7 +31,8 @@
 	NSLog(@"Initializing %@ build number %@", [BFAppController class], [NSNumber numberWithInt:BUILD_NUMBER]);
 #endif
 	
-	translator = [[BFGoogleTranslator alloc] init];
+	httpInvoker = [[BFDefaultHTTPInvoker alloc] init];
+	translator = [[BFGoogleTranslator alloc] initWithHTTPInvoker:httpInvoker];
 	return self;
 }
 

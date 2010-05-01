@@ -36,7 +36,7 @@ NSInteger const BFNoResponseErrorCodeKey = 1;
 NSInteger const BFInvalidResponseErrorCodeKey = 2;
 NSInteger const BFServiceFailedErrorCodeKey = 3;
 
-- (id) initWithHTTPInvoker:(BFHTTPInvoker *)invoker {
+- (id) initWithHTTPInvoker:(NSObject<BFHTTPInvoker> *)invoker {
 	if(![super init]) {
 		return nil;
 	}

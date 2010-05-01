@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface BFHTTPInvoker : NSObject
+@protocol BFHTTPInvoker
 
 - (NSData *) syncInvokeRequest:(NSURLRequest *)request returningResponse:(NSURLResponse **)response error:(NSError **)error;  
 

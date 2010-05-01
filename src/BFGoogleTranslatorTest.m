@@ -50,7 +50,7 @@
 // -- set up / tear down code
 
 -(void)setUp {
-	invokerMock = [OCMockObject mockForClass:[BFHTTPInvoker class]];
+	invokerMock = [OCMockObject mockForProtocol:@protocol(BFHTTPInvoker)];
 	translator = [[BFGoogleTranslator alloc] initWithHTTPInvoker:invokerMock];
 }
 

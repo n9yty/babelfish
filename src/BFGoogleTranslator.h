@@ -17,6 +17,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "BFTranslator.h"
+#import "BFHTTPInvoker.h"
 
 @class BFHTTPInvoker;
 @class SBJSON;
@@ -24,14 +25,14 @@
 @interface BFGoogleTranslator : NSObject <BFTranslator> {
 	@private
 	SBJSON *parser;
-	BFHTTPInvoker *httpInvoker;
+	NSObject<BFHTTPInvoker> *httpInvoker;
 	
 #ifdef COUNT_REQUEST
 	int numRequests;
 #endif
 }
 
-- (id) initWithHTTPInvoker:(BFHTTPInvoker *)invoker;
+- (id) initWithHTTPInvoker:(NSObject<BFHTTPInvoker> *)invoker;
 
 - (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description underlyingError:(NSError *)underlyingError;
 - (void) raiseError:(NSError **)error code:(NSInteger)code description:(NSString *)description reason:(NSString *)reason;
