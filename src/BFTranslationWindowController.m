@@ -35,11 +35,7 @@ static NSInteger const BFMaxTextSizeForInteractiveTranslation = 1024;
 
 static BFLanguage const* BFAutoDetectedLanguage;
 
-- (id)initWithModel:(BFTranslationWindowModel*)aModel {
-#ifndef NDEBUG
-	NSLog(@"Initializing %@", [BFTranslationWindowController class]);
-#endif
-	
+- (id)initWithModel:(BFTranslationWindowModel*)aModel {	
 	if (![super initWithWindowNibName:@"TranslationWindow"]) {
 		return nil;
 	}
@@ -56,17 +52,11 @@ static BFLanguage const* BFAutoDetectedLanguage;
 	[model addObserver:self forKeyPath:@"translation" options:NSKeyValueObservingOptionNew context:&BFTranslationChangedCtxKey];
 	[model addObserver:self forKeyPath:@"selectedSourceLanguage" options:NSKeyValueObservingOptionNew context:&BFSourceLanguageChangedCtxKey];
 	[model addObserver:self forKeyPath:@"selectedTargetLanguage" options:NSKeyValueObservingOptionNew context:&BFTargetLanguageChangedCtxKey];
-	
-	NSLog(@"%@",[NSThread currentThread]);
-	
+		
 	return self;
 }
 
 - (void)dealloc {
-#ifndef NDEBUG
-	NSLog(@"Deallocing %@", [BFTranslationWindowController class]);
-#endif
-	
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[operationQueue cancelAllOperations];
 	[operationQueue release];	
@@ -82,10 +72,6 @@ static BFLanguage const* BFAutoDetectedLanguage;
 }
 
 - (void)awakeFromNib {
-#ifndef NDEBUG
-	NSLog(@"TranslationWindow Nib has been loaded");
-#endif
-	
 	// we start with no translation
 	[self setTranslationBoxHidden:YES];
 	
@@ -133,7 +119,7 @@ static BFLanguage const* BFAutoDetectedLanguage;
 }
 
 - (void) stopTranslateTimer {
-	NSLog(@"Stopping timer");
+	BFDevLog(@"Stopping timer");
 
 	[translateTimer invalidate];
 	[translateTimer release];
@@ -141,7 +127,7 @@ static BFLanguage const* BFAutoDetectedLanguage;
 }
 
 - (void) startTranslateTimer {
-	NSLog(@"Starting timer %@", translateTimer);
+	BFDevLog(@"Starting timer %@", translateTimer);
 	
 	if (!translateTimer) {
 		translateTimer = [[NSTimer scheduledTimerWithTimeInterval:BFDelayBetweenTranslations target:self selector:@selector(translateTimerDidFire:) userInfo:nil repeats:YES] retain];
@@ -149,10 +135,10 @@ static BFLanguage const* BFAutoDetectedLanguage;
 }
 
 - (void) translateTimerDidFire:(NSTimer *)aTimer {	
-	NSLog(@"Time fired last: %@ new: %@", lastTextToTranslate, requestedTextToTranslate);
+	BFDevLog(@"Time fired last: %@ new: %@", lastTextToTranslate, requestedTextToTranslate);
 	
 	if ([lastTextToTranslate isEqualToString:[requestedTextToTranslate stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]]) { 
-		NSLog(@"text is the same - stopping");
+		BFDevLog(@"text is the same - stopping");
 		
 		[self stopTranslateTimer];
 	} else {				
@@ -164,7 +150,7 @@ static BFLanguage const* BFAutoDetectedLanguage;
 }
 
 - (void) handleOriginalTextChanged {
-	NSLog(@"Text changed %@", [model originalText]);
+	BFDevLog(@"Text changed %@", [model originalText]);
 	
 	NSInteger size = [[model originalText] length];
 	
@@ -173,18 +159,18 @@ static BFLanguage const* BFAutoDetectedLanguage;
 		
 		if (size < BFMaxTextSizeForInteractiveTranslation) {
 			// implicit translate
-			NSLog(@"Implicit translation");
+			BFDevLog(@"Implicit translation");
 			
 			[requestedTextToTranslate release];
 			requestedTextToTranslate = [[model originalText] copy];
 			
 			if (!translateTimer) {
-				NSLog(@"Timer not running - launching a new one");
+				BFDevLog(@"Timer not running - launching a new one");
 				[self startTranslateTimer];
 			}
 		} else {
 			// from now on we only use expricit translate
-			NSLog(@"Explicit translation");
+			BFDevLog(@"Explicit translation");
 			
 			if (translateTimer) {
 				[self stopTranslateTimer];
@@ -234,7 +220,7 @@ static BFLanguage const* BFAutoDetectedLanguage;
 			[mi setTag:[l hash]];
 		} else {
 			// TODO: crash here
-			NSLog(@"Unexpected item: %@", e);
+			BFDevLog(@"Unexpected item: %@", e);
 		}
 	}
 }
@@ -245,11 +231,8 @@ static BFLanguage const* BFAutoDetectedLanguage;
 	BFLanguage *to = [model selectedTargetLanguage];
 	NSObject<BFTranslator> *translator = [model translator];
 	
-	// TODO assert
-	
-#ifndef NDEBUG
-	NSLog(@"translateText:\"%@\" from:\"%@\" to:\"%@\"", text, from, to);
-#endif
+	// TODO assert	
+	BFDevLog(@"translateText:\"%@\" from:\"%@\" to:\"%@\"", text, from, to);
 	
 	if ([lastTextToTranslate isEqualToString:[text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]]
 		&& [[operationQueue operations] count] == 0) {
@@ -281,9 +264,7 @@ static BFLanguage const* BFAutoDetectedLanguage;
 }
 
 - (void)translationOperationDidFinish:(id)aNotification {
-#ifndef NDEBUG
-	NSLog(@"translationOperationDidFinish: %@", aNotification);
-#endif
+	BFDevLog(@"translationOperationDidFinish: %@", aNotification);
 	
 	[progressIndicator stopAnimation:nil];
 	
@@ -302,9 +283,7 @@ static BFLanguage const* BFAutoDetectedLanguage;
 
 
 - (void)setTranslationBoxHidden:(BOOL)hidden {
-#ifndef NDEBUG
-	NSLog(@"setTranslationVisible: %d", hidden);
-#endif
+	BFDevLog(@"setTranslationVisible: %d", hidden);
 	
 	if ([translationBox isHidden] == hidden) {
 		return; 
@@ -333,18 +312,10 @@ static BFLanguage const* BFAutoDetectedLanguage;
 }
 
 - (IBAction)setSourceLanguage:(id)aSender {
-#ifndef NDEBUG
-	NSLog(@"setSourceLanguage:\"%@\"", aSender);	
-#endif
-	
 	[model setSelectedSourceLanguage:[[sourceLanguagePopup selectedItem] representedObject]];
 }
 
 - (IBAction)setTargetLanguage:(id)aSender {
-#ifndef NDEBUG
-	NSLog(@"setTargetLanguage:\"%@\"", aSender);
-#endif
-	
 	[model setSelectedTargetLanguage:[[targetLanguagePopup selectedItem] representedObject]];
 }
 
@@ -357,10 +328,6 @@ static BFLanguage const* BFAutoDetectedLanguage;
 }
 
 - (IBAction)copyTranslationAndCloseAction:(id)aSender {
-#ifndef NDEBUG
-	NSLog(@"copyTranslationAndCloseAction:\"%@\"", aSender);
-#endif
-	
 	// TODO: this should be synchronized	
 	NSString *string = [[model translation] copy];
 	if (string == nil) {

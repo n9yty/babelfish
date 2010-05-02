@@ -10,10 +10,11 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
-		activeExecutable = 5167961A118C759E00A96627 /* Babelfish - UnitTests */;
-		activeTarget = 51679618118C759E00A96627 /* Babelfish - UnitTests */;
+		activeExecutable = 511594FB10C19323001E60A8 /* Babelfish - App */;
+		activeTarget = 8D1107260486CEB800E47090 /* Babelfish - App */;
 		addToTargets = (
 			8D1107260486CEB800E47090 /* Babelfish - App */,
+			51679618118C759E00A96627 /* Babelfish - UnitTests */,
 		);
 		breakpoints = (
 			510A5B9810C343D600088B20 /* BFLanguageManager.m:10 */,
@@ -22,20 +23,20 @@
 			518CEFB111288D1D00658FB0 /* BFTranslationWindowController.m:18 */,
 			518CF0491128AFDB00658FB0 /* BFTranslationWindowController.m:18 */,
 			518CF0571128B12800658FB0 /* BFTranslationWindowController.m:18 */,
-			5168A4E91168042E004C576A /* BFGoogleTranslator.m:81 */,
-			5168A50A11680466004C576A /* BFTranslateTextOperation.m:68 */,
+			5168A4E91168042E004C576A /* BFGoogleTranslator.m:74 */,
+			5168A50A11680466004C576A /* BFTranslateTextOperation.m:59 */,
 			5168A6931168B894004C576A /* BFTranslationWindowController.m:21 */,
-			5168A6BA1168C185004C576A /* BFGoogleTranslator.m:93 */,
+			5168A6BA1168C185004C576A /* BFGoogleTranslator.m:86 */,
 			5168A6DC1168C406004C576A /* BFTranslationWindowController.m:20 */,
 			5168A7341168D3A8004C576A /* BFTranslationWindowController.m:20 */,
-			516796FF118C7D5800A96627 /* BFGoogleTranslator.m:97 */,
+			516796FF118C7D5800A96627 /* BFGoogleTranslator.m:90 */,
 			5167970E118C7E0B00A96627 /* BFGoogleTranslatorTest.m:38 */,
-			5133EA03118CA687001F4E01 /* NSString+BFGoogleTranslateEncoder.m:45 */,
-			5133EB32118CB475001F4E01 /* NSString+BFGoogleTranslateEncoder.m:51 */,
-			5133EB38118CB49C001F4E01 /* NSString+BFGoogleTranslateEncoder.m:41 */,
-			5133EBA4118CBA9E001F4E01 /* NSString+BFGoogleTranslateEncoder.m:66 */,
-			5133EC48118CCCC8001F4E01 /* NSString+BFGoogleTranslateEncoder.m:25 */,
-			5133EC51118CCCD8001F4E01 /* NSString+BFGoogleTranslateEncoder.m:88 */,
+			5133EA03118CA687001F4E01 /* NSString+BFGoogleTranslateEncoder.m:46 */,
+			5133EB32118CB475001F4E01 /* NSString+BFGoogleTranslateEncoder.m:52 */,
+			5133EB38118CB49C001F4E01 /* NSString+BFGoogleTranslateEncoder.m:42 */,
+			5133EBA4118CBA9E001F4E01 /* NSString+BFGoogleTranslateEncoder.m:67 */,
+			5133EC48118CCCC8001F4E01 /* NSString+BFGoogleTranslateEncoder.m:26 */,
+			5133EC51118CCCD8001F4E01 /* NSString+BFGoogleTranslateEncoder.m:89 */,
 		);
 		codeSenseManager = 5115950110C19342001E60A8 /* Code sense */;
 		executables = (
@@ -561,6 +562,130 @@
 			5133ECBF118CD15F001F4E01 /* PBXTextBookmark */ = 5133ECBF118CD15F001F4E01 /* PBXTextBookmark */;
 			5133ECC1118CD163001F4E01 /* PBXTextBookmark */ = 5133ECC1118CD163001F4E01 /* PBXTextBookmark */;
 			5133ECC4118CD17A001F4E01 /* PBXTextBookmark */ = 5133ECC4118CD17A001F4E01 /* PBXTextBookmark */;
+			5133ECC5118CFE68001F4E01 /* PBXTextBookmark */ = 5133ECC5118CFE68001F4E01 /* PBXTextBookmark */;
+			5133ECC6118CFE68001F4E01 /* PBXTextBookmark */ = 5133ECC6118CFE68001F4E01 /* PBXTextBookmark */;
+			5133ECC7118CFE68001F4E01 /* PBXTextBookmark */ = 5133ECC7118CFE68001F4E01 /* PBXTextBookmark */;
+			5133ECD6118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECD6118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECD7118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECD7118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECD9118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECD9118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECDA118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECDA118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECDB118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECDB118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECDC118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECDC118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECDD118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECDD118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECDE118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECDE118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECDF118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECDF118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECE0118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECE0118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECE1118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECE1118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECE2118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECE2118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECE3118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECE3118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECE4118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECE4118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECE5118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECE5118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECE6118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECE6118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECE7118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECE7118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECE9118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECE9118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECEA118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECEA118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECEB118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECEB118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECEC118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECEC118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECED118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECED118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECEE118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECEE118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECEF118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECEF118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECF0118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECF0118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECF1118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECF1118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECF2118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECF2118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECF3118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECF3118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECF4118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECF4118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECF5118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECF5118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECF6118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECF6118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECF7118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECF7118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECF8118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECF8118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECF9118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECF9118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECFA118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECFA118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECFB118DAA3D001F4E01 /* PBXTextBookmark */ = 5133ECFB118DAA3D001F4E01 /* PBXTextBookmark */;
+			5133ECFF118DAC9B001F4E01 /* PBXTextBookmark */ = 5133ECFF118DAC9B001F4E01 /* PBXTextBookmark */;
+			5133ED00118DAC9B001F4E01 /* PBXTextBookmark */ = 5133ED00118DAC9B001F4E01 /* PBXTextBookmark */;
+			5133ED01118DAC9B001F4E01 /* PBXTextBookmark */ = 5133ED01118DAC9B001F4E01 /* PBXTextBookmark */;
+			5133ED02118DAC9B001F4E01 /* PBXTextBookmark */ = 5133ED02118DAC9B001F4E01 /* PBXTextBookmark */;
+			5133ED03118DAC9B001F4E01 /* PBXTextBookmark */ = 5133ED03118DAC9B001F4E01 /* PBXTextBookmark */;
+			5133ED04118DAC9B001F4E01 /* PBXTextBookmark */ = 5133ED04118DAC9B001F4E01 /* PBXTextBookmark */;
+			5133ED05118DAC9B001F4E01 /* PBXTextBookmark */ = 5133ED05118DAC9B001F4E01 /* PBXTextBookmark */;
+			5133ED06118DACA7001F4E01 /* PBXTextBookmark */ = 5133ED06118DACA7001F4E01 /* PBXTextBookmark */;
+			5133ED0E118DAF41001F4E01 /* PBXTextBookmark */ = 5133ED0E118DAF41001F4E01 /* PBXTextBookmark */;
+			5133ED0F118DAF41001F4E01 /* PBXTextBookmark */ = 5133ED0F118DAF41001F4E01 /* PBXTextBookmark */;
+			5133ED10118DAF41001F4E01 /* PBXTextBookmark */ = 5133ED10118DAF41001F4E01 /* PBXTextBookmark */;
+			5133ED11118DAF41001F4E01 /* PBXTextBookmark */ = 5133ED11118DAF41001F4E01 /* PBXTextBookmark */;
+			5133ED12118DAF41001F4E01 /* PBXTextBookmark */ = 5133ED12118DAF41001F4E01 /* PBXTextBookmark */;
+			5133ED13118DAF41001F4E01 /* PBXTextBookmark */ = 5133ED13118DAF41001F4E01 /* PBXTextBookmark */;
+			5133ED14118DAF41001F4E01 /* PBXTextBookmark */ = 5133ED14118DAF41001F4E01 /* PBXTextBookmark */;
+			5133ED18118DAF6D001F4E01 /* PBXTextBookmark */ = 5133ED18118DAF6D001F4E01 /* PBXTextBookmark */;
+			5133ED19118DAF6D001F4E01 /* PBXTextBookmark */ = 5133ED19118DAF6D001F4E01 /* PBXTextBookmark */;
+			5133ED1A118DAF6D001F4E01 /* PBXTextBookmark */ = 5133ED1A118DAF6D001F4E01 /* PBXTextBookmark */;
+			5133ED1B118DAF6D001F4E01 /* PBXTextBookmark */ = 5133ED1B118DAF6D001F4E01 /* PBXTextBookmark */;
+			5133ED1C118DAF6E001F4E01 /* PBXTextBookmark */ = 5133ED1C118DAF6E001F4E01 /* PBXTextBookmark */;
+			5133ED1D118DAF7F001F4E01 /* PBXTextBookmark */ = 5133ED1D118DAF7F001F4E01 /* PBXTextBookmark */;
+			5133ED1E118DAF7F001F4E01 /* PBXTextBookmark */ = 5133ED1E118DAF7F001F4E01 /* PBXTextBookmark */;
+			5133ED1F118DAFC9001F4E01 /* PBXTextBookmark */ = 5133ED1F118DAFC9001F4E01 /* PBXTextBookmark */;
+			5133ED20118DAFC9001F4E01 /* PBXTextBookmark */ = 5133ED20118DAFC9001F4E01 /* PBXTextBookmark */;
+			5133ED21118DAFC9001F4E01 /* PBXTextBookmark */ = 5133ED21118DAFC9001F4E01 /* PBXTextBookmark */;
+			5133ED22118DAFC9001F4E01 /* PBXTextBookmark */ = 5133ED22118DAFC9001F4E01 /* PBXTextBookmark */;
+			5133ED26118DB06B001F4E01 /* PBXTextBookmark */ = 5133ED26118DB06B001F4E01 /* PBXTextBookmark */;
+			5133ED27118DB06B001F4E01 /* PBXTextBookmark */ = 5133ED27118DB06B001F4E01 /* PBXTextBookmark */;
+			5133ED28118DB06B001F4E01 /* PBXTextBookmark */ = 5133ED28118DB06B001F4E01 /* PBXTextBookmark */;
+			5133ED29118DB06B001F4E01 /* PBXTextBookmark */ = 5133ED29118DB06B001F4E01 /* PBXTextBookmark */;
+			5133ED2A118DB06B001F4E01 /* PBXTextBookmark */ = 5133ED2A118DB06B001F4E01 /* PBXTextBookmark */;
+			5133ED2B118DB06B001F4E01 /* PBXTextBookmark */ = 5133ED2B118DB06B001F4E01 /* PBXTextBookmark */;
+			5133ED2C118DB06B001F4E01 /* PBXTextBookmark */ = 5133ED2C118DB06B001F4E01 /* PBXTextBookmark */;
+			5133ED2D118DB06B001F4E01 /* PBXTextBookmark */ = 5133ED2D118DB06B001F4E01 /* PBXTextBookmark */;
+			5133ED2E118DB06C001F4E01 /* PBXTextBookmark */ = 5133ED2E118DB06C001F4E01 /* PBXTextBookmark */;
+			5133ED2F118DB08A001F4E01 /* PBXTextBookmark */ = 5133ED2F118DB08A001F4E01 /* PBXTextBookmark */;
+			5133ED30118DB0A0001F4E01 /* PBXTextBookmark */ = 5133ED30118DB0A0001F4E01 /* PBXTextBookmark */;
+			5133ED31118DB162001F4E01 /* PBXTextBookmark */ = 5133ED31118DB162001F4E01 /* PBXTextBookmark */;
+			5133EDE7118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDE7118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDE8118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDE8118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDE9118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDE9118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDEA118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDEA118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDEB118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDEB118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDEC118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDEC118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDED118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDED118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDEE118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDEE118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDEF118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDEF118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDF0118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDF0118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDF1118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDF1118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDF2118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDF2118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDF3118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDF3118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDF4118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDF4118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDF5118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDF5118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDF6118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDF6118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDF7118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDF7118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDF8118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDF8118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDF9118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDF9118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDFA118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDFA118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDFB118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDFB118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDFC118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDFC118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDFD118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDFD118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDFE118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDFE118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EDFF118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EDFF118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EE00118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EE00118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EE01118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EE01118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EE02118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EE02118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EE03118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EE03118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EE04118DC6CB001F4E01 /* PBXTextBookmark */ = 5133EE04118DC6CB001F4E01 /* PBXTextBookmark */;
+			5133EE05118DC75A001F4E01 /* PBXTextBookmark */ = 5133EE05118DC75A001F4E01 /* PBXTextBookmark */;
+			5133EE07118E3A6D001F4E01 /* PBXTextBookmark */ = 5133EE07118E3A6D001F4E01 /* PBXTextBookmark */;
+			5133EE08118E3A6D001F4E01 /* PBXTextBookmark */ = 5133EE08118E3A6D001F4E01 /* PBXTextBookmark */;
+			5133EE09118E3A6D001F4E01 /* PBXTextBookmark */ = 5133EE09118E3A6D001F4E01 /* PBXTextBookmark */;
+			5133EE0A118E3A6D001F4E01 /* PBXTextBookmark */ = 5133EE0A118E3A6D001F4E01 /* PBXTextBookmark */;
+			5133EE0B118E3A6E001F4E01 /* PBXTextBookmark */ = 5133EE0B118E3A6E001F4E01 /* PBXTextBookmark */;
+			5133EE0C118E3A73001F4E01 /* PBXTextBookmark */ = 5133EE0C118E3A73001F4E01 /* PBXTextBookmark */;
+			5133EE0D118E3A73001F4E01 /* PBXTextBookmark */ = 5133EE0D118E3A73001F4E01 /* PBXTextBookmark */;
+			5133EE0E118E3AA0001F4E01 /* PBXTextBookmark */ = 5133EE0E118E3AA0001F4E01 /* PBXTextBookmark */;
+			5133EE0F118E3AA0001F4E01 /* PBXTextBookmark */ = 5133EE0F118E3AA0001F4E01 /* PBXTextBookmark */;
+			5133EE10118E3AA0001F4E01 /* PBXTextBookmark */ = 5133EE10118E3AA0001F4E01 /* PBXTextBookmark */;
+			5133EE11118E3AA0001F4E01 /* PBXTextBookmark */ = 5133EE11118E3AA0001F4E01 /* PBXTextBookmark */;
+			5133EE13118E3AAB001F4E01 /* PBXTextBookmark */ = 5133EE13118E3AAB001F4E01 /* PBXTextBookmark */;
+			5133EE14118E3AAB001F4E01 /* PBXTextBookmark */ = 5133EE14118E3AAB001F4E01 /* PBXTextBookmark */;
+			5133EE15118E3AD5001F4E01 /* PBXTextBookmark */ = 5133EE15118E3AD5001F4E01 /* PBXTextBookmark */;
+			5133EE16118E3AD5001F4E01 /* PBXTextBookmark */ = 5133EE16118E3AD5001F4E01 /* PBXTextBookmark */;
+			5133EE17118E3AE0001F4E01 /* PBXTextBookmark */ = 5133EE17118E3AE0001F4E01 /* PBXTextBookmark */;
 			51679421118A299A00A96627 = 51679421118A299A00A96627 /* PBXTextBookmark */;
 			51679424118A299A00A96627 = 51679424118A299A00A96627 /* PBXTextBookmark */;
 			51679425118A299A00A96627 = 51679425118A299A00A96627 /* PBXTextBookmark */;
@@ -927,9 +1052,9 @@
 	};
 	510A588C10C1BC6D00088B20 /* SBJsonParser.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {691, 6496}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1541}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 6174}}";
+			sepNavSelRange = "{10449, 5}";
+			sepNavVisRange = "{9836, 1342}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
@@ -1007,7 +1132,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1062, 509}}";
 			sepNavSelRange = "{904, 0}";
-			sepNavVisRange = "{0, 904}";
+			sepNavVisRange = "{0, 905}";
 			sepNavWindowFrame = "{{84, 252}, {750, 558}}";
 		};
 	};
@@ -1030,9 +1155,9 @@
 	};
 	510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1332, 1260}}";
-			sepNavSelRange = "{863, 0}";
-			sepNavVisRange = "{1633, 805}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 1120}}";
+			sepNavSelRange = "{885, 0}";
+			sepNavVisRange = "{680, 855}";
 		};
 	};
 	510A5A1610C3187D00088B20 /* PBXTextBookmark */ = {
@@ -1075,8 +1200,8 @@
 	};
 	510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 4438}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 4466}}";
+			sepNavSelRange = "{0, 260}";
 			sepNavVisRange = "{0, 751}";
 			sepNavWindowFrame = "{{130, 210}, {750, 558}}";
 		};
@@ -1170,9 +1295,9 @@
 	};
 	510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1524, 1190}}";
-			sepNavSelRange = "{826, 26}";
-			sepNavVisRange = "{615, 1463}";
+			sepNavIntBoundsRect = "{{0, 0}, {1524, 1274}}";
+			sepNavSelRange = "{1690, 5}";
+			sepNavVisRange = "{935, 1387}";
 			sepNavWindowFrame = "{{61, 273}, {750, 558}}";
 		};
 	};
@@ -1228,17 +1353,17 @@
 	};
 	5115950210C19356001E60A8 /* BFTranslationWindowController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 952}}";
-			sepNavSelRange = "{972, 0}";
-			sepNavVisRange = "{3, 1461}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 966}}";
+			sepNavSelRange = "{897, 0}";
+			sepNavVisRange = "{3, 1480}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
 	5115950310C19356001E60A8 /* BFTranslationWindowController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 5628}}";
-			sepNavSelRange = "{9730, 0}";
-			sepNavVisRange = "{11394, 832}";
+			sepNavIntBoundsRect = "{{0, 0}, {1379, 4830}}";
+			sepNavSelRange = "{4810, 0}";
+			sepNavVisRange = "{4562, 435}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
@@ -1251,9 +1376,9 @@
 	};
 	5115950510C19356001E60A8 /* BFGoogleTranslator.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1379, 2310}}";
-			sepNavSelRange = "{5450, 0}";
-			sepNavVisRange = "{5017, 822}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 2268}}";
+			sepNavSelRange = "{1024, 0}";
+			sepNavVisRange = "{0, 1510}";
 		};
 	};
 	5115951410C19356001E60A8 /* BFTranslator.h */ = {
@@ -1320,7 +1445,7 @@
 		fRef = 5115950210C19356001E60A8 /* BFTranslationWindowController.h */;
 		name = "TranslationWindowController.h: 40";
 		rLen = 0;
-		rLoc = 1569;
+		rLoc = 1591;
 		rType = 0;
 		vrLen = 1296;
 		vrLoc = 949;
@@ -1340,7 +1465,7 @@
 		comments = "error: expected ';' before '}' token";
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		rLen = 1;
-		rLoc = 45;
+		rLoc = 46;
 		rType = 1;
 	};
 	5133E9CF118CA4CE001F4E01 /* PBXTextBookmark */ = {
@@ -1348,7 +1473,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 33";
 		rLen = 0;
-		rLoc = 1906;
+		rLoc = 1933;
 		rType = 0;
 		vrLen = 1266;
 		vrLoc = 60;
@@ -1358,7 +1483,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 55";
 		rLen = 0;
-		rLoc = 1965;
+		rLoc = 1992;
 		rType = 0;
 		vrLen = 1267;
 		vrLoc = 0;
@@ -1388,7 +1513,7 @@
 		comments = "warning: 'NSString' may not respond to '-stringByEcodingForGoogleTranslate'";
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		rLen = 1;
-		rLoc = 71;
+		rLoc = 64;
 		rType = 1;
 	};
 	5133E9DA118CA604001F4E01 /* PBXTextBookmark */ = {
@@ -1396,7 +1521,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 55";
 		rLen = 0;
-		rLoc = 1965;
+		rLoc = 1992;
 		rType = 0;
 		vrLen = 1267;
 		vrLoc = 0;
@@ -1416,7 +1541,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 72";
 		rLen = 186;
-		rLoc = 2205;
+		rLoc = 2070;
 		rType = 0;
 		vrLen = 1051;
 		vrLoc = 1867;
@@ -1436,7 +1561,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 72";
 		rLen = 34;
-		rLoc = 2294;
+		rLoc = 2159;
 		rType = 0;
 		vrLen = 1052;
 		vrLoc = 1867;
@@ -1446,7 +1571,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 72";
 		rLen = 0;
-		rLoc = 2327;
+		rLoc = 2192;
 		rType = 0;
 		vrLen = 1079;
 		vrLoc = 1867;
@@ -1456,7 +1581,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 72";
 		rLen = 0;
-		rLoc = 2327;
+		rLoc = 2192;
 		rType = 0;
 		vrLen = 526;
 		vrLoc = 1886;
@@ -1466,7 +1591,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 72";
 		rLen = 0;
-		rLoc = 2327;
+		rLoc = 2192;
 		rType = 0;
 		vrLen = 1271;
 		vrLoc = 1883;
@@ -1476,7 +1601,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 72";
 		rLen = 0;
-		rLoc = 2327;
+		rLoc = 2192;
 		rType = 0;
 		vrLen = 1271;
 		vrLoc = 1883;
@@ -1486,7 +1611,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 72";
 		rLen = 0;
-		rLoc = 2327;
+		rLoc = 2192;
 		rType = 0;
 		vrLen = 776;
 		vrLoc = 2001;
@@ -1503,7 +1628,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 72";
 		rLen = 0;
-		rLoc = 2327;
+		rLoc = 2192;
 		rType = 0;
 		vrLen = 776;
 		vrLoc = 2001;
@@ -1518,7 +1643,7 @@
 		vrLen = 393;
 		vrLoc = 166;
 	};
-	5133EA03118CA687001F4E01 /* NSString+BFGoogleTranslateEncoder.m:45 */ = {
+	5133EA03118CA687001F4E01 /* NSString+BFGoogleTranslateEncoder.m:46 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1530,7 +1655,7 @@
 		functionName = "-stringByEncodingForGoogleTranslate";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 45;
+		lineNumber = 46;
 		location = "Babelfish - UnitTests";
 		modificationTime = 294441308.596505;
 		state = 2;
@@ -1540,7 +1665,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 72";
 		rLen = 0;
-		rLoc = 2327;
+		rLoc = 2192;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 1883;
@@ -1560,7 +1685,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 55";
 		rLen = 0;
-		rLoc = 1965;
+		rLoc = 1992;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 0;
@@ -1580,7 +1705,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 55";
 		rLen = 0;
-		rLoc = 1965;
+		rLoc = 1992;
 		rType = 0;
 		vrLen = 1356;
 		vrLoc = 266;
@@ -1590,7 +1715,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 55";
 		rLen = 0;
-		rLoc = 1965;
+		rLoc = 1992;
 		rType = 0;
 		vrLen = 1342;
 		vrLoc = 266;
@@ -1600,7 +1725,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 56";
 		rLen = 0;
-		rLoc = 1965;
+		rLoc = 1992;
 		rType = 0;
 		vrLen = 1278;
 		vrLoc = 266;
@@ -1620,7 +1745,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 31";
 		rLen = 0;
-		rLoc = 1542;
+		rLoc = 1564;
 		rType = 0;
 		vrLen = 724;
 		vrLoc = 592;
@@ -1630,7 +1755,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 31";
 		rLen = 0;
-		rLoc = 1542;
+		rLoc = 1564;
 		rType = 0;
 		vrLen = 1278;
 		vrLoc = 266;
@@ -1640,7 +1765,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 31";
 		rLen = 0;
-		rLoc = 1542;
+		rLoc = 1564;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 311;
@@ -1650,7 +1775,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 31";
 		rLen = 0;
-		rLoc = 1542;
+		rLoc = 1564;
 		rType = 0;
 		vrLen = 1634;
 		vrLoc = 311;
@@ -1660,7 +1785,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 30";
 		rLen = 0;
-		rLoc = 1542;
+		rLoc = 1564;
 		rType = 0;
 		vrLen = 1541;
 		vrLoc = 311;
@@ -1670,7 +1795,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 30";
 		rLen = 0;
-		rLoc = 1542;
+		rLoc = 1564;
 		rType = 0;
 		vrLen = 1200;
 		vrLoc = 311;
@@ -1680,7 +1805,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 30";
 		rLen = 0;
-		rLoc = 1542;
+		rLoc = 1564;
 		rType = 0;
 		vrLen = 1200;
 		vrLoc = 311;
@@ -1699,7 +1824,7 @@
 		isa = PBXTextBookmark;
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		rLen = 0;
-		rLoc = 44;
+		rLoc = 45;
 		rType = 1;
 	};
 	5133EA37118CA99F001F4E01 /* PBXTextBookmark */ = {
@@ -1707,7 +1832,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1221;
+		rLoc = 1243;
 		rType = 0;
 		vrLen = 726;
 		vrLoc = 654;
@@ -1727,7 +1852,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 767;
@@ -1737,7 +1862,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1310;
 		vrLoc = 311;
@@ -1747,7 +1872,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1200;
 		vrLoc = 311;
@@ -1757,7 +1882,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1210;
 		vrLoc = 525;
@@ -1767,7 +1892,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 725;
 		vrLoc = 721;
@@ -1777,7 +1902,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1210;
 		vrLoc = 525;
@@ -1787,7 +1912,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1210;
 		vrLoc = 525;
@@ -1797,7 +1922,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 725;
 		vrLoc = 721;
@@ -1807,7 +1932,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1339;
 		vrLoc = 525;
@@ -1817,7 +1942,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1210;
 		vrLoc = 525;
@@ -1827,7 +1952,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 725;
 		vrLoc = 721;
@@ -1837,7 +1962,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 765;
@@ -1847,7 +1972,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1339;
 		vrLoc = 525;
@@ -1857,7 +1982,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1210;
 		vrLoc = 525;
@@ -1867,7 +1992,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1210;
 		vrLoc = 525;
@@ -1877,7 +2002,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 725;
 		vrLoc = 721;
@@ -1887,7 +2012,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1380;
 		vrLoc = 0;
@@ -1907,7 +2032,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1380;
 		vrLoc = 0;
@@ -1956,7 +2081,7 @@
 		isa = PBXTextBookmark;
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		rLen = 0;
-		rLoc = 44;
+		rLoc = 45;
 		rType = 1;
 	};
 	5133EAD5118CAE42001F4E01 /* PBXTextBookmark */ = {
@@ -1974,7 +2099,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 544;
 		vrLoc = 957;
@@ -1984,7 +2109,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1380;
 		vrLoc = 0;
@@ -1994,7 +2119,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 459;
+		rLoc = 481;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 590;
@@ -2004,7 +2129,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1380;
 		vrLoc = 0;
@@ -2034,7 +2159,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 725;
 		vrLoc = 721;
@@ -2064,7 +2189,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 35";
 		rLen = 0;
-		rLoc = 1739;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1380;
 		vrLoc = 0;
@@ -2084,7 +2209,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 457;
+		rLoc = 479;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 378;
@@ -2094,7 +2219,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 457;
+		rLoc = 479;
 		rType = 0;
 		vrLen = 1156;
 		vrLoc = 378;
@@ -2104,7 +2229,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 457;
+		rLoc = 479;
 		rType = 0;
 		vrLen = 1246;
 		vrLoc = 188;
@@ -2114,7 +2239,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 457;
+		rLoc = 479;
 		rType = 0;
 		vrLen = 1164;
 		vrLoc = 188;
@@ -2124,7 +2249,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 457;
+		rLoc = 479;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 188;
@@ -2134,7 +2259,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 23";
 		rLen = 0;
-		rLoc = 456;
+		rLoc = 478;
 		rType = 0;
 		vrLen = 1227;
 		vrLoc = 188;
@@ -2144,7 +2269,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1126;
+		rLoc = 1148;
 		rType = 0;
 		vrLen = 1102;
 		vrLoc = 188;
@@ -2154,7 +2279,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1126;
+		rLoc = 1148;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 234;
@@ -2174,7 +2299,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1126;
+		rLoc = 1148;
 		rType = 0;
 		vrLen = 845;
 		vrLoc = 415;
@@ -2184,7 +2309,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1126;
+		rLoc = 1148;
 		rType = 0;
 		vrLen = 845;
 		vrLoc = 415;
@@ -2194,7 +2319,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1126;
+		rLoc = 1148;
 		rType = 0;
 		vrLen = 1107;
 		vrLoc = 1254;
@@ -2204,7 +2329,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 285";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 9431;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 11394;
@@ -2224,7 +2349,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1126;
+		rLoc = 1148;
 		rType = 0;
 		vrLen = 1107;
 		vrLoc = 1254;
@@ -2234,7 +2359,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 285";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 9431;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 11394;
@@ -2244,7 +2369,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1126;
+		rLoc = 1148;
 		rType = 0;
 		vrLen = 1107;
 		vrLoc = 1254;
@@ -2254,7 +2379,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 285";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 9431;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 11394;
@@ -2284,7 +2409,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1126;
+		rLoc = 1148;
 		rType = 0;
 		vrLen = 900;
 		vrLoc = 354;
@@ -2324,7 +2449,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1126;
+		rLoc = 1148;
 		rType = 0;
 		vrLen = 1107;
 		vrLoc = 1254;
@@ -2344,7 +2469,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 38";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1079;
 		vrLoc = 349;
@@ -2354,7 +2479,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 38";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1481;
 		vrLoc = 416;
@@ -2374,7 +2499,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 38";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 468;
 		vrLoc = 895;
@@ -2394,7 +2519,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 38";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 415;
@@ -2404,7 +2529,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 38";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 415;
@@ -2424,7 +2549,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 38";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1241;
 		vrLoc = 429;
@@ -2434,7 +2559,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 38";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1240;
 		vrLoc = 430;
@@ -2444,7 +2569,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 38";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 368;
@@ -2454,7 +2579,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 38";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1629;
 		vrLoc = 657;
@@ -2464,7 +2589,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 16";
 		rLen = 0;
-		rLoc = 337;
+		rLoc = 359;
 		rType = 0;
 		vrLen = 914;
 		vrLoc = 366;
@@ -2474,7 +2599,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 16";
 		rLen = 0;
-		rLoc = 337;
+		rLoc = 359;
 		rType = 0;
 		vrLen = 914;
 		vrLoc = 366;
@@ -2484,7 +2609,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 32";
 		rLen = 0;
-		rLoc = 1599;
+		rLoc = 1621;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 159;
@@ -2494,7 +2619,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 32";
 		rLen = 0;
-		rLoc = 1599;
+		rLoc = 1621;
 		rType = 0;
 		vrLen = 1078;
 		vrLoc = 323;
@@ -2504,7 +2629,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 32";
 		rLen = 0;
-		rLoc = 1599;
+		rLoc = 1621;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 366;
@@ -2514,7 +2639,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 32";
 		rLen = 0;
-		rLoc = 1599;
+		rLoc = 1621;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 366;
@@ -2524,7 +2649,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 30";
 		rLen = 0;
-		rLoc = 1383;
+		rLoc = 1405;
 		rType = 0;
 		vrLen = 1152;
 		vrLoc = 302;
@@ -2534,12 +2659,12 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 30";
 		rLen = 0;
-		rLoc = 1383;
+		rLoc = 1405;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 488;
 	};
-	5133EB32118CB475001F4E01 /* NSString+BFGoogleTranslateEncoder.m:51 */ = {
+	5133EB32118CB475001F4E01 /* NSString+BFGoogleTranslateEncoder.m:52 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -2551,7 +2676,7 @@
 		functionName = "-stringByEncodingForGoogleTranslate";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 51;
+		lineNumber = 52;
 		location = "Babelfish - UnitTests";
 		modificationTime = 294441308.597045;
 		state = 2;
@@ -2561,7 +2686,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 36";
 		rLen = 0;
-		rLoc = 1751;
+		rLoc = 1776;
 		rType = 0;
 		vrLen = 1133;
 		vrLoc = 265;
@@ -2571,12 +2696,12 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 36";
 		rLen = 0;
-		rLoc = 1751;
+		rLoc = 1776;
 		rType = 0;
 		vrLen = 1438;
 		vrLoc = 371;
 	};
-	5133EB38118CB49C001F4E01 /* NSString+BFGoogleTranslateEncoder.m:41 */ = {
+	5133EB38118CB49C001F4E01 /* NSString+BFGoogleTranslateEncoder.m:42 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -2588,7 +2713,7 @@
 		functionName = "-stringByEncodingForGoogleTranslate";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 41;
+		lineNumber = 42;
 		location = "Babelfish - UnitTests";
 		modificationTime = 294441308.597406;
 		state = 2;
@@ -2598,7 +2723,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 36";
 		rLen = 0;
-		rLoc = 1751;
+		rLoc = 1776;
 		rType = 0;
 		vrLen = 1202;
 		vrLoc = 371;
@@ -2608,7 +2733,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 36";
 		rLen = 0;
-		rLoc = 1751;
+		rLoc = 1776;
 		rType = 0;
 		vrLen = 1480;
 		vrLoc = 371;
@@ -2618,7 +2743,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 30";
 		rLen = 0;
-		rLoc = 1433;
+		rLoc = 1455;
 		rType = 0;
 		vrLen = 820;
 		vrLoc = 485;
@@ -2628,7 +2753,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 40";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1119;
 		vrLoc = 266;
@@ -2638,7 +2763,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 40";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1469;
 		vrLoc = 552;
@@ -2648,7 +2773,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 40";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 1844;
 		vrLoc = 553;
@@ -2668,7 +2793,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 16";
 		rLen = 0;
-		rLoc = 337;
+		rLoc = 359;
 		rType = 0;
 		vrLen = 357;
 		vrLoc = 1118;
@@ -2678,7 +2803,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 40";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 485;
@@ -2698,7 +2823,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 16";
 		rLen = 0;
-		rLoc = 337;
+		rLoc = 359;
 		rType = 0;
 		vrLen = 355;
 		vrLoc = 1118;
@@ -2708,7 +2833,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 16";
 		rLen = 0;
-		rLoc = 337;
+		rLoc = 359;
 		rType = 0;
 		vrLen = 1485;
 		vrLoc = 524;
@@ -2728,7 +2853,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 16";
 		rLen = 0;
-		rLoc = 337;
+		rLoc = 359;
 		rType = 0;
 		vrLen = 1485;
 		vrLoc = 524;
@@ -2787,7 +2912,7 @@
 		isa = PBXTextBookmark;
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		rLen = 0;
-		rLoc = 50;
+		rLoc = 51;
 		rType = 1;
 	};
 	5133EB5A118CB613001F4E01 /* PBXTextBookmark */ = {
@@ -2805,7 +2930,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 39";
 		rLen = 0;
-		rLoc = 1758;
+		rLoc = 1783;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 553;
@@ -2845,7 +2970,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 47";
 		rLen = 0;
-		rLoc = 1965;
+		rLoc = 1992;
 		rType = 0;
 		vrLen = 1165;
 		vrLoc = 1304;
@@ -2855,7 +2980,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 139";
 		rLen = 0;
-		rLoc = 5432;
+		rLoc = 5279;
 		rType = 0;
 		vrLen = 1591;
 		vrLoc = 4627;
@@ -2865,7 +2990,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 11";
 		rLen = 0;
-		rLoc = 234;
+		rLoc = 256;
 		rType = 0;
 		vrLen = 1304;
 		vrLoc = 0;
@@ -2875,7 +3000,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 74";
 		rLen = 0;
-		rLoc = 2272;
+		rLoc = 2137;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 1883;
@@ -2895,7 +3020,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 139";
 		rLen = 0;
-		rLoc = 5432;
+		rLoc = 5279;
 		rType = 0;
 		vrLen = 1562;
 		vrLoc = 4657;
@@ -2915,7 +3040,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 47";
 		rLen = 0;
-		rLoc = 1965;
+		rLoc = 1992;
 		rType = 0;
 		vrLen = 1165;
 		vrLoc = 1304;
@@ -2925,7 +3050,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 144";
 		rLen = 0;
-		rLoc = 5503;
+		rLoc = 5350;
 		rType = 0;
 		vrLen = 1625;
 		vrLoc = 4627;
@@ -2935,7 +3060,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 144";
 		rLen = 0;
-		rLoc = 5503;
+		rLoc = 5350;
 		rType = 0;
 		vrLen = 1625;
 		vrLoc = 4627;
@@ -2961,7 +3086,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2685;
+		rLoc = 2712;
 		rType = 0;
 		vrLen = 1409;
 		vrLoc = 1453;
@@ -2971,7 +3096,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 144";
 		rLen = 0;
-		rLoc = 5503;
+		rLoc = 5350;
 		rType = 0;
 		vrLen = 1625;
 		vrLoc = 4627;
@@ -2981,7 +3106,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2685;
+		rLoc = 2712;
 		rType = 0;
 		vrLen = 1407;
 		vrLoc = 1455;
@@ -3013,7 +3138,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2685;
+		rLoc = 2712;
 		rType = 0;
 		vrLen = 1394;
 		vrLoc = 1425;
@@ -3033,7 +3158,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2685;
+		rLoc = 2712;
 		rType = 0;
 		vrLen = 1391;
 		vrLoc = 1428;
@@ -3043,7 +3168,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2685;
+		rLoc = 2712;
 		rType = 0;
 		vrLen = 1394;
 		vrLoc = 1425;
@@ -3063,7 +3188,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 68";
 		rLen = 0;
-		rLoc = 2644;
+		rLoc = 2671;
 		rType = 0;
 		vrLen = 1418;
 		vrLoc = 1428;
@@ -3093,7 +3218,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 67";
 		rLen = 0;
-		rLoc = 2902;
+		rLoc = 2932;
 		rType = 0;
 		vrLen = 1178;
 		vrLoc = 1453;
@@ -3103,7 +3228,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 67";
 		rLen = 0;
-		rLoc = 2902;
+		rLoc = 2932;
 		rType = 0;
 		vrLen = 1176;
 		vrLoc = 1455;
@@ -3133,7 +3258,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1175;
 		vrLoc = 1453;
@@ -3143,7 +3268,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1185;
 		vrLoc = 1285;
@@ -3153,7 +3278,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 1453;
@@ -3163,7 +3288,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 1453;
@@ -3183,7 +3308,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1188;
 		vrLoc = 1282;
@@ -3193,7 +3318,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1188;
 		vrLoc = 1282;
@@ -3213,7 +3338,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1244;
 		vrLoc = 1378;
@@ -3223,7 +3348,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1185;
 		vrLoc = 1285;
@@ -3233,7 +3358,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 45";
 		rLen = 35;
-		rLoc = 1926;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 820;
 		vrLoc = 1428;
@@ -3243,7 +3368,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 45";
 		rLen = 35;
-		rLoc = 1926;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1185;
 		vrLoc = 1285;
@@ -3263,7 +3388,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 45";
 		rLen = 35;
-		rLoc = 1926;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1185;
 		vrLoc = 1285;
@@ -3293,7 +3418,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 45";
 		rLen = 35;
-		rLoc = 1926;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 752;
 		vrLoc = 1428;
@@ -3318,7 +3443,7 @@
 		vrLen = 692;
 		vrLoc = 733;
 	};
-	5133EBA4118CBA9E001F4E01 /* NSString+BFGoogleTranslateEncoder.m:66 */ = {
+	5133EBA4118CBA9E001F4E01 /* NSString+BFGoogleTranslateEncoder.m:67 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -3330,7 +3455,7 @@
 		functionName = "-stringByDecodingFromGoogleTranslate";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 66;
+		lineNumber = 67;
 		location = "Babelfish - UnitTests";
 		modificationTime = 294441308.59771;
 		state = 2;
@@ -3350,7 +3475,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 45";
 		rLen = 35;
-		rLoc = 1926;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1275;
 		vrLoc = 1195;
@@ -3370,7 +3495,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 45";
 		rLen = 35;
-		rLoc = 1926;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 1298;
@@ -3380,7 +3505,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 45";
 		rLen = 35;
-		rLoc = 1926;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1185;
 		vrLoc = 1285;
@@ -3390,7 +3515,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 45";
 		rLen = 35;
-		rLoc = 1926;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 1285;
@@ -3400,7 +3525,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 45";
 		rLen = 35;
-		rLoc = 1926;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1284;
 		vrLoc = 1285;
@@ -3410,7 +3535,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 45";
 		rLen = 35;
-		rLoc = 1926;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1161;
 		vrLoc = 1285;
@@ -3430,7 +3555,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 286;
 		vrLoc = 2323;
@@ -3440,7 +3565,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 1429;
@@ -3450,7 +3575,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 1455;
@@ -3460,7 +3585,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 471;
 		vrLoc = 2132;
@@ -3470,7 +3595,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 1429;
@@ -3480,7 +3605,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 1455;
@@ -3490,7 +3615,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 471;
 		vrLoc = 2132;
@@ -3500,7 +3625,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 1429;
@@ -3510,7 +3635,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 1455;
@@ -3520,7 +3645,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 468;
 		vrLoc = 2132;
@@ -3530,7 +3655,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 1149;
 		vrLoc = 1455;
@@ -3540,7 +3665,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 1100;
 		vrLoc = 1509;
@@ -3550,7 +3675,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 471;
 		vrLoc = 2132;
@@ -3560,7 +3685,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 1429;
@@ -3570,7 +3695,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 144";
 		rLen = 0;
-		rLoc = 5503;
+		rLoc = 5350;
 		rType = 0;
 		vrLen = 1625;
 		vrLoc = 4627;
@@ -3580,7 +3705,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 1429;
@@ -3590,7 +3715,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 144";
 		rLen = 0;
-		rLoc = 5450;
+		rLoc = 5297;
 		rType = 0;
 		vrLen = 1612;
 		vrLoc = 4227;
@@ -3600,7 +3725,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 144";
 		rLen = 0;
-		rLoc = 5450;
+		rLoc = 5297;
 		rType = 0;
 		vrLen = 1610;
 		vrLoc = 4657;
@@ -3610,7 +3735,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 471;
 		vrLoc = 2132;
@@ -3620,7 +3745,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 144";
 		rLen = 0;
-		rLoc = 5450;
+		rLoc = 5297;
 		rType = 0;
 		vrLen = 798;
 		vrLoc = 5041;
@@ -3630,7 +3755,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 144";
 		rLen = 0;
-		rLoc = 5450;
+		rLoc = 5297;
 		rType = 0;
 		vrLen = 1642;
 		vrLoc = 4627;
@@ -3650,7 +3775,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 144";
 		rLen = 0;
-		rLoc = 5450;
+		rLoc = 5297;
 		rType = 0;
 		vrLen = 1642;
 		vrLoc = 4627;
@@ -3680,7 +3805,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 144";
 		rLen = 0;
-		rLoc = 5450;
+		rLoc = 5297;
 		rType = 0;
 		vrLen = 822;
 		vrLoc = 5017;
@@ -3777,7 +3902,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 66";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2922;
 		rType = 0;
 		vrLen = 1156;
 		vrLoc = 1453;
@@ -3797,7 +3922,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1186;
 		vrLoc = 1429;
@@ -3807,7 +3932,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1260;
 		vrLoc = 1192;
@@ -3827,7 +3952,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 1429;
@@ -3837,7 +3962,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 1429;
@@ -3847,7 +3972,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1435;
 		vrLoc = 1091;
@@ -3867,7 +3992,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1435;
 		vrLoc = 1091;
@@ -3907,7 +4032,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 1428;
@@ -4024,7 +4149,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1435;
 		vrLoc = 1091;
@@ -4044,7 +4169,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 14";
 		rLen = 0;
-		rLoc = 315;
+		rLoc = 337;
 		rType = 0;
 		vrLen = 1271;
 		vrLoc = 159;
@@ -4054,7 +4179,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 14";
 		rLen = 0;
-		rLoc = 315;
+		rLoc = 337;
 		rType = 0;
 		vrLen = 1286;
 		vrLoc = 0;
@@ -4074,7 +4199,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 14";
 		rLen = 0;
-		rLoc = 315;
+		rLoc = 337;
 		rType = 0;
 		vrLen = 364;
 		vrLoc = 159;
@@ -4094,7 +4219,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1694;
 		vrLoc = 628;
@@ -4104,7 +4229,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 50";
 		rLen = 0;
-		rLoc = 2108;
+		rLoc = 2135;
 		rType = 0;
 		vrLen = 1799;
 		vrLoc = 523;
@@ -4124,7 +4249,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 49";
 		rLen = 0;
-		rLoc = 2020;
+		rLoc = 2047;
 		rType = 0;
 		vrLen = 1698;
 		vrLoc = 628;
@@ -4134,7 +4259,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 49";
 		rLen = 0;
-		rLoc = 2020;
+		rLoc = 2047;
 		rType = 0;
 		vrLen = 1348;
 		vrLoc = 1092;
@@ -4144,7 +4269,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 49";
 		rLen = 0;
-		rLoc = 2020;
+		rLoc = 2047;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 628;
@@ -4154,7 +4279,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 49";
 		rLen = 0;
-		rLoc = 2020;
+		rLoc = 2047;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 628;
@@ -4174,7 +4299,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 49";
 		rLen = 0;
-		rLoc = 2020;
+		rLoc = 2047;
 		rType = 0;
 		vrLen = 1406;
 		vrLoc = 341;
@@ -4184,7 +4309,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 49";
 		rLen = 0;
-		rLoc = 2020;
+		rLoc = 2047;
 		rType = 0;
 		vrLen = 1410;
 		vrLoc = 337;
@@ -4204,7 +4329,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 42";
 		rLen = 0;
-		rLoc = 1882;
+		rLoc = 1909;
 		rType = 0;
 		vrLen = 1475;
 		vrLoc = 403;
@@ -4214,7 +4339,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1173;
 		rType = 0;
 		vrLen = 1481;
 		vrLoc = 403;
@@ -4224,7 +4349,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1173;
 		rType = 0;
 		vrLen = 1383;
 		vrLoc = 234;
@@ -4234,7 +4359,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1173;
 		rType = 0;
 		vrLen = 1361;
 		vrLoc = 234;
@@ -4244,7 +4369,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1173;
 		rType = 0;
 		vrLen = 1277;
 		vrLoc = 234;
@@ -4254,7 +4379,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1173;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 628;
@@ -4264,7 +4389,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 41";
 		rLen = 0;
-		rLoc = 1882;
+		rLoc = 1909;
 		rType = 0;
 		vrLen = 465;
 		vrLoc = 1283;
@@ -4274,7 +4399,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 41";
 		rLen = 0;
-		rLoc = 1882;
+		rLoc = 1909;
 		rType = 0;
 		vrLen = 1704;
 		vrLoc = 628;
@@ -4294,7 +4419,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 41";
 		rLen = 0;
-		rLoc = 1882;
+		rLoc = 1909;
 		rType = 0;
 		vrLen = 1704;
 		vrLoc = 628;
@@ -4324,7 +4449,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 41";
 		rLen = 0;
-		rLoc = 1882;
+		rLoc = 1909;
 		rType = 0;
 		vrLen = 585;
 		vrLoc = 1092;
@@ -4424,7 +4549,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1555;
 		vrLoc = 337;
@@ -4454,7 +4579,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 27";
 		rLen = 0;
-		rLoc = 882;
+		rLoc = 904;
 		rType = 0;
 		vrLen = 1344;
 		vrLoc = 162;
@@ -4474,7 +4599,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 60";
 		rLen = 0;
-		rLoc = 2173;
+		rLoc = 2200;
 		rType = 0;
 		vrLen = 1536;
 		vrLoc = 647;
@@ -4494,7 +4619,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1555;
 		vrLoc = 337;
@@ -4539,7 +4664,7 @@
 		vrLen = 1185;
 		vrLoc = 592;
 	};
-	5133EC48118CCCC8001F4E01 /* NSString+BFGoogleTranslateEncoder.m:25 */ = {
+	5133EC48118CCCC8001F4E01 /* NSString+BFGoogleTranslateEncoder.m:26 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -4551,7 +4676,7 @@
 		functionName = "-stringByEncodingForGoogleTranslate";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 25;
+		lineNumber = 26;
 		location = "Babelfish - UnitTests";
 		modificationTime = 294441308.598086;
 		state = 2;
@@ -4571,7 +4696,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1555;
 		vrLoc = 337;
@@ -4591,7 +4716,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1529;
 		vrLoc = 337;
@@ -4601,12 +4726,12 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1469;
 		vrLoc = 159;
 	};
-	5133EC51118CCCD8001F4E01 /* NSString+BFGoogleTranslateEncoder.m:88 */ = {
+	5133EC51118CCCD8001F4E01 /* NSString+BFGoogleTranslateEncoder.m:89 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -4618,7 +4743,7 @@
 		functionName = "-stringByDecodingFromGoogleTranslate";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 88;
+		lineNumber = 89;
 		location = "Babelfish - UnitTests";
 		modificationTime = 294441314.238612;
 		state = 2;
@@ -4628,7 +4753,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1469;
 		vrLoc = 159;
@@ -4638,7 +4763,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1469;
 		vrLoc = 159;
@@ -4648,7 +4773,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1473;
 		vrLoc = 159;
@@ -4658,7 +4783,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1473;
 		vrLoc = 159;
@@ -4668,7 +4793,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1559;
 		vrLoc = 159;
@@ -4678,7 +4803,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1469;
 		vrLoc = 159;
@@ -4688,7 +4813,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1471;
 		vrLoc = 159;
@@ -4698,7 +4823,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 24";
 		rLen = 0;
-		rLoc = 494;
+		rLoc = 516;
 		rType = 0;
 		vrLen = 1471;
 		vrLoc = 159;
@@ -4718,7 +4843,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 626;
+		rLoc = 648;
 		rType = 0;
 		vrLen = 691;
 		vrLoc = 235;
@@ -4728,7 +4853,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 626;
+		rLoc = 648;
 		rType = 0;
 		vrLen = 644;
 		vrLoc = 316;
@@ -4738,7 +4863,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 626;
+		rLoc = 648;
 		rType = 0;
 		vrLen = 1561;
 		vrLoc = 159;
@@ -4758,7 +4883,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 626;
+		rLoc = 648;
 		rType = 0;
 		vrLen = 1561;
 		vrLoc = 159;
@@ -4788,7 +4913,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 626;
+		rLoc = 648;
 		rType = 0;
 		vrLen = 728;
 		vrLoc = 337;
@@ -4818,7 +4943,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 626;
+		rLoc = 648;
 		rType = 0;
 		vrLen = 1561;
 		vrLoc = 159;
@@ -4838,7 +4963,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 743;
+		rLoc = 765;
 		rType = 0;
 		vrLen = 1515;
 		vrLoc = 235;
@@ -4848,7 +4973,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 743;
+		rLoc = 765;
 		rType = 0;
 		vrLen = 1510;
 		vrLoc = 234;
@@ -4858,7 +4983,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 743;
+		rLoc = 765;
 		rType = 0;
 		vrLen = 1510;
 		vrLoc = 234;
@@ -4868,7 +4993,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 743;
+		rLoc = 765;
 		rType = 0;
 		vrLen = 1514;
 		vrLoc = 234;
@@ -4878,7 +5003,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 743;
+		rLoc = 765;
 		rType = 0;
 		vrLen = 1508;
 		vrLoc = 234;
@@ -4888,7 +5013,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 743;
+		rLoc = 765;
 		rType = 0;
 		vrLen = 1506;
 		vrLoc = 234;
@@ -4898,7 +5023,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 743;
+		rLoc = 765;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 234;
@@ -4908,7 +5033,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 28";
 		rLen = 0;
-		rLoc = 743;
+		rLoc = 765;
 		rType = 0;
 		vrLen = 1518;
 		vrLoc = 234;
@@ -4928,7 +5053,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 647;
+		rLoc = 669;
 		rType = 0;
 		vrLen = 740;
 		vrLoc = 341;
@@ -4950,7 +5075,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 647;
+		rLoc = 669;
 		rType = 0;
 		vrLen = 740;
 		vrLoc = 341;
@@ -4975,7 +5100,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 647;
+		rLoc = 669;
 		rType = 0;
 		vrLen = 1518;
 		vrLoc = 234;
@@ -4995,7 +5120,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 647;
+		rLoc = 669;
 		rType = 0;
 		vrLen = 1518;
 		vrLoc = 234;
@@ -5075,7 +5200,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 25";
 		rLen = 0;
-		rLoc = 647;
+		rLoc = 669;
 		rType = 0;
 		vrLen = 1570;
 		vrLoc = 188;
@@ -5095,7 +5220,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 85";
 		rLen = 0;
-		rLoc = 3487;
+		rLoc = 3519;
 		rType = 0;
 		vrLen = 1550;
 		vrLoc = 1965;
@@ -5105,7 +5230,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 85";
 		rLen = 0;
-		rLoc = 3487;
+		rLoc = 3519;
 		rType = 0;
 		vrLen = 1347;
 		vrLoc = 2177;
@@ -5125,7 +5250,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 85";
 		rLen = 0;
-		rLoc = 3487;
+		rLoc = 3519;
 		rType = 0;
 		vrLen = 658;
 		vrLoc = 2857;
@@ -5135,7 +5260,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 85";
 		rLen = 0;
-		rLoc = 3487;
+		rLoc = 3519;
 		rType = 0;
 		vrLen = 493;
 		vrLoc = 3031;
@@ -5145,7 +5270,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 85";
 		rLen = 0;
-		rLoc = 3487;
+		rLoc = 3519;
 		rType = 0;
 		vrLen = 1394;
 		vrLoc = 2130;
@@ -5165,7 +5290,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 85";
 		rLen = 0;
-		rLoc = 3487;
+		rLoc = 3519;
 		rType = 0;
 		vrLen = 1394;
 		vrLoc = 2130;
@@ -5195,7 +5320,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 85";
 		rLen = 0;
-		rLoc = 3487;
+		rLoc = 3519;
 		rType = 0;
 		vrLen = 617;
 		vrLoc = 2902;
@@ -5235,7 +5360,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 85";
 		rLen = 0;
-		rLoc = 3487;
+		rLoc = 3519;
 		rType = 0;
 		vrLen = 1494;
 		vrLoc = 2030;
@@ -5255,7 +5380,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 82";
 		rLen = 0;
-		rLoc = 3463;
+		rLoc = 3495;
 		rType = 0;
 		vrLen = 1544;
 		vrLoc = 1965;
@@ -5265,7 +5390,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 82";
 		rLen = 0;
-		rLoc = 3463;
+		rLoc = 3495;
 		rType = 0;
 		vrLen = 1341;
 		vrLoc = 2177;
@@ -5275,7 +5400,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 82";
 		rLen = 0;
-		rLoc = 3463;
+		rLoc = 3495;
 		rType = 0;
 		vrLen = 1388;
 		vrLoc = 2130;
@@ -5285,7 +5410,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 88";
 		rLen = 0;
-		rLoc = 3463;
+		rLoc = 3495;
 		rType = 0;
 		vrLen = 1546;
 		vrLoc = 1964;
@@ -5295,7 +5420,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 88";
 		rLen = 0;
-		rLoc = 3463;
+		rLoc = 3495;
 		rType = 0;
 		vrLen = 1546;
 		vrLoc = 1964;
@@ -5305,10 +5430,1284 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 88";
 		rLen = 0;
-		rLoc = 3463;
+		rLoc = 3495;
 		rType = 0;
 		vrLen = 1548;
 		vrLoc = 1964;
+	};
+	5133ECC5118CFE68001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516798E4118CA0E900A96627 /* NSString+BFGoogleTranslateEncoderTest.m */;
+		name = "NSString+BFGoogleTranslateEncoderTest.m: 59";
+		rLen = 0;
+		rLoc = 2734;
+		rType = 0;
+		vrLen = 1043;
+		vrLoc = 2089;
+	};
+	5133ECC6118CFE68001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
+		name = "NSString+BFGoogleTranslateEncoder.m: 88";
+		rLen = 0;
+		rLoc = 3514;
+		rType = 0;
+		vrLen = 721;
+		vrLoc = 2789;
+	};
+	5133ECC7118CFE68001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
+		name = "NSString+BFGoogleTranslateEncoder.m: 88";
+		rLen = 0;
+		rLoc = 3495;
+		rType = 0;
+		vrLen = 723;
+		vrLoc = 2789;
+	};
+	5133ECC8118D9786001F4E01 /* BFDefines.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 910}}";
+			sepNavSelRange = "{778, 0}";
+			sepNavVisRange = "{226, 1179}";
+			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
+		};
+	};
+	5133ECD6118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A593610C1D48A00088B20 /* version.h */;
+		name = "version.h: 23";
+		rLen = 0;
+		rLoc = 904;
+		rType = 0;
+		vrLen = 905;
+		vrLoc = 0;
+	};
+	5133ECD7118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECD8118DAA3D001F4E01 /* GTMDefines.h */;
+		name = "GTMDefines.h: 95";
+		rLen = 1412;
+		rLoc = 3372;
+		rType = 0;
+		vrLen = 1612;
+		vrLoc = 4552;
+	};
+	5133ECD8118DAA3D001F4E01 /* GTMDefines.h */ = {
+		isa = PBXFileReference;
+		name = GTMDefines.h;
+		path = "/Users/nkuyu/Development/objc/google-toolbox-for-mac/GTMDefines.h";
+		sourceTree = "<absolute>";
+	};
+	5133ECD9118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
+		name = "NSString+BFGoogleTranslateEncoder.m: 11";
+		rLen = 0;
+		rLoc = 255;
+		rType = 0;
+		vrLen = 1150;
+		vrLoc = 0;
+	};
+	5133ECDA118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A588C10C1BC6D00088B20 /* SBJsonParser.m */;
+		name = "SBJsonParser.m: 345";
+		rLen = 5;
+		rLoc = 10449;
+		rType = 0;
+		vrLen = 1342;
+		vrLoc = 9836;
+	};
+	5133ECDB118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
+		name = "BFGoogleTranslatorTest.m: 44";
+		rLen = 5;
+		rLoc = 1690;
+		rType = 0;
+		vrLen = 1387;
+		vrLoc = 935;
+	};
+	5133ECDC118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 1310;
+		vrLoc = 7599;
+	};
+	5133ECDD118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 37";
+		rLen = 0;
+		rLoc = 1490;
+		rType = 0;
+		vrLen = 1229;
+		vrLoc = 36;
+	};
+	5133ECDE118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 155";
+		rLen = 0;
+		rLoc = 5086;
+		rType = 0;
+		vrLen = 878;
+		vrLoc = 0;
+	};
+	5133ECDF118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950210C19356001E60A8 /* BFTranslationWindowController.h */;
+		name = "BFTranslationWindowController.h: 21";
+		rLen = 0;
+		rLoc = 897;
+		rType = 0;
+		vrLen = 1480;
+		vrLoc = 3;
+	};
+	5133ECE0118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
+		name = "BFGoogleTranslator.m: 25";
+		rLen = 0;
+		rLoc = 1024;
+		rType = 0;
+		vrLen = 1510;
+		vrLoc = 0;
+	};
+	5133ECE1118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5A0910C3136200088B20 /* BFTranslateTextOperation.h */;
+		name = "BFTranslateTextOperation.h: 37";
+		rLen = 0;
+		rLoc = 1269;
+		rType = 0;
+		vrLen = 1048;
+		vrLoc = 412;
+	};
+	5133ECE2118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
+		name = "BFTranslateTextOperation.m: 65";
+		rLen = 0;
+		rLoc = 1943;
+		rType = 0;
+		vrLen = 809;
+		vrLoc = 1428;
+	};
+	5133ECE3118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
+		name = "NSString+BFGoogleTranslateEncoder.m: 88";
+		rLen = 0;
+		rLoc = 3495;
+		rType = 0;
+		vrLen = 1152;
+		vrLoc = 0;
+	};
+	5133ECE4118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A593610C1D48A00088B20 /* version.h */;
+		name = "version.h: 23";
+		rLen = 0;
+		rLoc = 904;
+		rType = 0;
+		vrLen = 905;
+		vrLoc = 0;
+	};
+	5133ECE5118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 18";
+		rLen = 0;
+		rLoc = 415;
+		rType = 0;
+		vrLen = 802;
+		vrLoc = 340;
+	};
+	5133ECE6118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 10";
+		rLen = 0;
+		rLoc = 297;
+		rType = 0;
+		vrLen = 161;
+		vrLoc = 0;
+	};
+	5133ECE7118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECE8118DAA3D001F4E01 /* GTMDefines.h */;
+		name = "GTMDefines.h: 95";
+		rLen = 1412;
+		rLoc = 3372;
+		rType = 0;
+		vrLen = 1612;
+		vrLoc = 4552;
+	};
+	5133ECE8118DAA3D001F4E01 /* GTMDefines.h */ = {
+		isa = PBXFileReference;
+		name = GTMDefines.h;
+		path = "/Users/nkuyu/Development/objc/google-toolbox-for-mac/GTMDefines.h";
+		sourceTree = "<absolute>";
+	};
+	5133ECE9118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 19";
+		rLen = 0;
+		rLoc = 434;
+		rType = 0;
+		vrLen = 1209;
+		vrLoc = 0;
+	};
+	5133ECEA118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 31";
+		rLen = 0;
+		rLoc = 658;
+		rType = 0;
+		vrLen = 926;
+		vrLoc = 37;
+	};
+	5133ECEB118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 19";
+		rLen = 0;
+		rLoc = 434;
+		rType = 0;
+		vrLen = 1209;
+		vrLoc = 0;
+	};
+	5133ECEC118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 31";
+		rLen = 0;
+		rLoc = 654;
+		rType = 0;
+		vrLen = 870;
+		vrLoc = 451;
+	};
+	5133ECED118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 19";
+		rLen = 0;
+		rLoc = 434;
+		rType = 0;
+		vrLen = 1209;
+		vrLoc = 0;
+	};
+	5133ECEE118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 155";
+		rLen = 0;
+		rLoc = 5086;
+		rType = 0;
+		vrLen = 1213;
+		vrLoc = 1922;
+	};
+	5133ECEF118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
+		name = "NSString+BFGoogleTranslateEncoder.m: 11";
+		rLen = 0;
+		rLoc = 255;
+		rType = 0;
+		vrLen = 1150;
+		vrLoc = 0;
+	};
+	5133ECF0118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 333";
+		rLen = 0;
+		rLoc = 11040;
+		rType = 0;
+		vrLen = 919;
+		vrLoc = 11000;
+	};
+	5133ECF1118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
+		name = "BFTranslateTextOperation.m: 65";
+		rLen = 0;
+		rLoc = 1943;
+		rType = 0;
+		vrLen = 815;
+		vrLoc = 1428;
+	};
+	5133ECF2118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
+		name = "BFGoogleTranslator.m: 123";
+		rLen = 0;
+		rLoc = 4844;
+		rType = 0;
+		vrLen = 1633;
+		vrLoc = 3907;
+	};
+	5133ECF3118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A588C10C1BC6D00088B20 /* SBJsonParser.m */;
+		name = "SBJsonParser.m: 345";
+		rLen = 5;
+		rLoc = 10449;
+		rType = 0;
+		vrLen = 1342;
+		vrLoc = 9836;
+	};
+	5133ECF4118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */;
+		name = "BFGoogleTranslatorTest.m: 44";
+		rLen = 5;
+		rLoc = 1690;
+		rType = 0;
+		vrLen = 1387;
+		vrLoc = 935;
+	};
+	5133ECF5118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 1310;
+		vrLoc = 7599;
+	};
+	5133ECF6118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 37";
+		rLen = 0;
+		rLoc = 1490;
+		rType = 0;
+		vrLen = 1229;
+		vrLoc = 36;
+	};
+	5133ECF7118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 155";
+		rLen = 0;
+		rLoc = 5086;
+		rType = 0;
+		vrLen = 878;
+		vrLoc = 0;
+	};
+	5133ECF8118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950210C19356001E60A8 /* BFTranslationWindowController.h */;
+		name = "BFTranslationWindowController.h: 21";
+		rLen = 0;
+		rLoc = 897;
+		rType = 0;
+		vrLen = 1480;
+		vrLoc = 3;
+	};
+	5133ECF9118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
+		name = "BFGoogleTranslator.m: 25";
+		rLen = 0;
+		rLoc = 1024;
+		rType = 0;
+		vrLen = 1510;
+		vrLoc = 0;
+	};
+	5133ECFA118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5A0910C3136200088B20 /* BFTranslateTextOperation.h */;
+		name = "BFTranslateTextOperation.h: 37";
+		rLen = 0;
+		rLoc = 1269;
+		rType = 0;
+		vrLen = 1048;
+		vrLoc = 412;
+	};
+	5133ECFB118DAA3D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
+		name = "BFTranslateTextOperation.m: 19";
+		rLen = 0;
+		rLoc = 885;
+		rType = 0;
+		vrLen = 855;
+		vrLoc = 680;
+	};
+	5133ECFF118DAC9B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
+		name = "BFTranslateTextOperation.m: 19";
+		rLen = 0;
+		rLoc = 885;
+		rType = 0;
+		vrLen = 855;
+		vrLoc = 680;
+	};
+	5133ED00118DAC9B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 611;
+		rType = 0;
+		vrLen = 889;
+		vrLoc = 214;
+	};
+	5133ED01118DAC9B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 29";
+		rLen = 0;
+		rLoc = 576;
+		rType = 0;
+		vrLen = 946;
+		vrLoc = 36;
+	};
+	5133ED02118DAC9B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */;
+		name = "BFTranslateTextOperation.m: 19";
+		rLen = 0;
+		rLoc = 885;
+		rType = 0;
+		vrLen = 855;
+		vrLoc = 680;
+	};
+	5133ED03118DAC9B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 29";
+		rLen = 0;
+		rLoc = 576;
+		rType = 0;
+		vrLen = 1018;
+		vrLoc = 36;
+	};
+	5133ED04118DAC9B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 611;
+		rType = 0;
+		vrLen = 889;
+		vrLoc = 214;
+	};
+	5133ED05118DAC9B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 63";
+		rLen = 0;
+		rLoc = 1907;
+		rType = 0;
+		vrLen = 1239;
+		vrLoc = 538;
+	};
+	5133ED06118DACA7001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 56";
+		rLen = 0;
+		rLoc = 1657;
+		rType = 0;
+		vrLen = 1256;
+		vrLoc = 538;
+	};
+	5133ED0E118DAF41001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 611;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 214;
+	};
+	5133ED0F118DAF41001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 30";
+		rLen = 0;
+		rLoc = 698;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 143;
+	};
+	5133ED10118DAF41001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 56";
+		rLen = 0;
+		rLoc = 1657;
+		rType = 0;
+		vrLen = 1256;
+		vrLoc = 538;
+	};
+	5133ED11118DAF41001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 611;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 214;
+	};
+	5133ED12118DAF41001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 30";
+		rLen = 0;
+		rLoc = 698;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 143;
+	};
+	5133ED13118DAF41001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 611;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 214;
+	};
+	5133ED14118DAF41001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 26";
+		rLen = 0;
+		rLoc = 561;
+		rType = 0;
+		vrLen = 1174;
+		vrLoc = 143;
+	};
+	5133ED18118DAF6D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 30";
+		rLen = 0;
+		rLoc = 640;
+		rType = 0;
+		vrLen = 1175;
+		vrLoc = 143;
+	};
+	5133ED19118DAF6D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 611;
+		rType = 0;
+		vrLen = 882;
+		vrLoc = 214;
+	};
+	5133ED1A118DAF6D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 30";
+		rLen = 0;
+		rLoc = 640;
+		rType = 0;
+		vrLen = 1175;
+		vrLoc = 143;
+	};
+	5133ED1B118DAF6D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 611;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 214;
+	};
+	5133ED1C118DAF6E001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 611;
+		rType = 0;
+		vrLen = 845;
+		vrLoc = 172;
+	};
+	5133ED1D118DAF7F001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
+		name = "NSString+BFGoogleTranslateEncoder.m: 89";
+		rLen = 0;
+		rLoc = 3495;
+		rType = 0;
+		vrLen = 492;
+		vrLoc = 3063;
+	};
+	5133ED1E118DAF7F001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 611;
+		rType = 0;
+		vrLen = 520;
+		vrLoc = 363;
+	};
+	5133ED1F118DAFC9001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 611;
+		rType = 0;
+		vrLen = 876;
+		vrLoc = 144;
+	};
+	5133ED20118DAFC9001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 30";
+		rLen = 0;
+		rLoc = 640;
+		rType = 0;
+		vrLen = 1175;
+		vrLoc = 143;
+	};
+	5133ED21118DAFC9001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 611;
+		rType = 0;
+		vrLen = 876;
+		vrLoc = 144;
+	};
+	5133ED22118DAFC9001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 30";
+		rLen = 0;
+		rLoc = 630;
+		rType = 0;
+		vrLen = 1195;
+		vrLoc = 143;
+	};
+	5133ED26118DB06B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */;
+		name = "BFTranslationWindowModel.m: 25";
+		rLen = 0;
+		rLoc = 637;
+		rType = 0;
+		vrLen = 852;
+		vrLoc = 192;
+	};
+	5133ED27118DB06B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 31";
+		rLen = 0;
+		rLoc = 778;
+		rType = 0;
+		vrLen = 1179;
+		vrLoc = 226;
+	};
+	5133ED28118DB06B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 612;
+		rType = 0;
+		vrLen = 848;
+		vrLoc = 144;
+	};
+	5133ED29118DB06B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 24";
+		rLen = 0;
+		rLoc = 503;
+		rType = 0;
+		vrLen = 1195;
+		vrLoc = 143;
+	};
+	5133ED2A118DB06B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */;
+		name = "BFTranslationWindowModel.m: 25";
+		rLen = 0;
+		rLoc = 637;
+		rType = 0;
+		vrLen = 852;
+		vrLoc = 192;
+	};
+	5133ED2B118DB06B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 612;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 144;
+	};
+	5133ED2C118DB06B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133ECC8118D9786001F4E01 /* BFDefines.h */;
+		name = "BFDefines.h: 31";
+		rLen = 0;
+		rLoc = 778;
+		rType = 0;
+		vrLen = 1179;
+		vrLoc = 226;
+	};
+	5133ED2D118DB06B001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 609;
+		rType = 0;
+		vrLen = 820;
+		vrLoc = 144;
+	};
+	5133ED2E118DB06C001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 27";
+		rLen = 0;
+		rLoc = 609;
+		rType = 0;
+		vrLen = 815;
+		vrLoc = 172;
+	};
+	5133ED2F118DB08A001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 21";
+		rLen = 0;
+		rLoc = 438;
+		rType = 0;
+		vrLen = 512;
+		vrLoc = 383;
+	};
+	5133ED30118DB0A0001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 70";
+		rLen = 0;
+		rLoc = 1686;
+		rType = 0;
+		vrLen = 983;
+		vrLoc = 1374;
+	};
+	5133ED31118DB162001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 72";
+		rLen = 0;
+		rLoc = 1592;
+		rType = 0;
+		vrLen = 1185;
+		vrLoc = 1374;
+	};
+	5133EDDB118DC04B001F4E01 /* BFStringConstants.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 509}}";
+			sepNavSelRange = "{275, 0}";
+			sepNavVisRange = "{0, 309}";
+		};
+	};
+	5133EDDC118DC04B001F4E01 /* BFStringConstants.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 509}}";
+			sepNavSelRange = "{271, 0}";
+			sepNavVisRange = "{0, 333}";
+		};
+	};
+	5133EDE7118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */;
+		name = "SupportedLanguages.plist: 1";
+		rLen = 260;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 751;
+		vrLoc = 0;
+	};
+	5133EDE8118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5168A906116BF5C2004C576A /* Credits.rtfd */;
+		name = "Credits.rtfd: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	5133EDE9118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */;
+		name = "BFTranslationWindowModel.m: 25";
+		rLen = 0;
+		rLoc = 637;
+		rType = 0;
+		vrLen = 851;
+		vrLoc = 193;
+	};
+	5133EDEA118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133EDDB118DC04B001F4E01 /* BFStringConstants.h */;
+		name = "BFStringConstants.h: 15";
+		rLen = 0;
+		rLoc = 275;
+		rType = 0;
+		vrLen = 309;
+		vrLoc = 0;
+	};
+	5133EDEB118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133EDDC118DC04B001F4E01 /* BFStringConstants.m */;
+		name = "BFStringConstants.m: 12";
+		rLen = 0;
+		rLoc = 271;
+		rType = 0;
+		vrLen = 333;
+		vrLoc = 0;
+	};
+	5133EDEC118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 1492;
+		vrLoc = 341;
+	};
+	5133EDED118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F12112A0729008BAC42 /* BFAppController.h */;
+		name = "BFAppController.h: 22";
+		rLen = 27;
+		rLoc = 370;
+		rType = 0;
+		vrLen = 827;
+		vrLoc = 0;
+	};
+	5133EDEE118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 181";
+		rLen = 15;
+		rLoc = 5553;
+		rType = 0;
+		vrLen = 1293;
+		vrLoc = 5255;
+	};
+	5133EDEF118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 148";
+		rLen = 0;
+		rLoc = 3679;
+		rType = 0;
+		vrLen = 1062;
+		vrLoc = 4476;
+	};
+	5133EDF0118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */;
+		name = "SupportedLanguages.plist: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 751;
+		vrLoc = 0;
+	};
+	5133EDF1118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */;
+		name = "SupportedLanguages.plist: 1";
+		rLen = 260;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 751;
+		vrLoc = 0;
+	};
+	5133EDF2118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5168A906116BF5C2004C576A /* Credits.rtfd */;
+		name = "Credits.rtfd: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 123;
+		vrLoc = 0;
+	};
+	5133EDF3118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 96";
+		rLen = 0;
+		rLoc = 1592;
+		rType = 0;
+		vrLen = 1164;
+		vrLoc = 2846;
+	};
+	5133EDF4118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133EDDB118DC04B001F4E01 /* BFStringConstants.h */;
+		name = "BFStringConstants.h: 14";
+		rLen = 51;
+		rLoc = 206;
+		rType = 0;
+		vrLen = 257;
+		vrLoc = 0;
+	};
+	5133EDF5118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133EDDC118DC04B001F4E01 /* BFStringConstants.m */;
+		name = "BFStringConstants.m: 12";
+		rLen = 0;
+		rLoc = 253;
+		rType = 0;
+		vrLen = 255;
+		vrLoc = 0;
+	};
+	5133EDF6118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */;
+		name = "BFTranslationWindowModel.m: 25";
+		rLen = 0;
+		rLoc = 637;
+		rType = 0;
+		vrLen = 851;
+		vrLoc = 193;
+	};
+	5133EDF7118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 1492;
+		vrLoc = 341;
+	};
+	5133EDF8118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133EDDB118DC04B001F4E01 /* BFStringConstants.h */;
+		name = "BFStringConstants.h: 15";
+		rLen = 27;
+		rLoc = 281;
+		rType = 0;
+		vrLen = 309;
+		vrLoc = 0;
+	};
+	5133EDF9118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133EDDC118DC04B001F4E01 /* BFStringConstants.m */;
+		name = "BFStringConstants.m: 9";
+		rLen = 0;
+		rLoc = 176;
+		rType = 0;
+		vrLen = 333;
+		vrLoc = 0;
+	};
+	5133EDFA118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 133";
+		rLen = 0;
+		rLoc = 3679;
+		rType = 0;
+		vrLen = 1462;
+		vrLoc = 3699;
+	};
+	5133EDFB118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F12112A0729008BAC42 /* BFAppController.h */;
+		name = "BFAppController.h: 31";
+		rLen = 0;
+		rLoc = 773;
+		rType = 0;
+		vrLen = 827;
+		vrLoc = 0;
+	};
+	5133EDFC118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 96";
+		rLen = 0;
+		rLoc = 1500;
+		rType = 0;
+		vrLen = 955;
+		vrLoc = 2564;
+	};
+	5133EDFD118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133EDDB118DC04B001F4E01 /* BFStringConstants.h */;
+		name = "BFStringConstants.h: 14";
+		rLen = 0;
+		rLoc = 222;
+		rType = 0;
+		vrLen = 304;
+		vrLoc = 0;
+	};
+	5133EDFE118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 96";
+		rLen = 0;
+		rLoc = 1500;
+		rType = 0;
+		vrLen = 1111;
+		vrLoc = 2545;
+	};
+	5133EDFF118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133EDDB118DC04B001F4E01 /* BFStringConstants.h */;
+		name = "BFStringConstants.h: 15";
+		rLen = 0;
+		rLoc = 275;
+		rType = 0;
+		vrLen = 309;
+		vrLoc = 0;
+	};
+	5133EE00118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5133EDDC118DC04B001F4E01 /* BFStringConstants.m */;
+		name = "BFStringConstants.m: 12";
+		rLen = 0;
+		rLoc = 271;
+		rType = 0;
+		vrLen = 333;
+		vrLoc = 0;
+	};
+	5133EE01118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 1492;
+		vrLoc = 341;
+	};
+	5133EE02118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 181";
+		rLen = 15;
+		rLoc = 5553;
+		rType = 0;
+		vrLen = 1293;
+		vrLoc = 5255;
+	};
+	5133EE03118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F12112A0729008BAC42 /* BFAppController.h */;
+		name = "BFAppController.h: 22";
+		rLen = 27;
+		rLoc = 370;
+		rType = 0;
+		vrLen = 827;
+		vrLoc = 0;
+	};
+	5133EE04118DC6CB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 47";
+		rLen = 0;
+		rLoc = 1032;
+		rType = 0;
+		vrLen = 1089;
+		vrLoc = 1009;
+	};
+	5133EE05118DC75A001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 71";
+		rLen = 0;
+		rLoc = 1592;
+		rType = 0;
+		vrLen = 1120;
+		vrLoc = 1009;
+	};
+	5133EE07118E3A6D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 71";
+		rLen = 0;
+		rLoc = 1592;
+		rType = 0;
+		vrLen = 1370;
+		vrLoc = 1147;
+	};
+	5133EE08118E3A6D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 1774;
+		vrLoc = 139;
+	};
+	5133EE09118E3A6D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 71";
+		rLen = 0;
+		rLoc = 1592;
+		rType = 0;
+		vrLen = 1370;
+		vrLoc = 1147;
+	};
+	5133EE0A118E3A6D001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 1483;
+		vrLoc = 3348;
+	};
+	5133EE0B118E3A6E001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 1432;
+		vrLoc = 4109;
+	};
+	5133EE0C118E3A73001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 21";
+		rLen = 0;
+		rLoc = 438;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 239;
+	};
+	5133EE0D118E3A73001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 554;
+		vrLoc = 4277;
+	};
+	5133EE0E118E3AA0001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 1397;
+		vrLoc = 6600;
+	};
+	5133EE0F118E3AA0001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 71";
+		rLen = 0;
+		rLoc = 1592;
+		rType = 0;
+		vrLen = 1112;
+		vrLoc = 1147;
+	};
+	5133EE10118E3AA0001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 1397;
+		vrLoc = 6600;
+	};
+	5133EE11118E3AA0001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 69";
+		rLen = 0;
+		rLoc = 1686;
+		rType = 0;
+		vrLen = 1261;
+		vrLoc = 1147;
+	};
+	5133EE13118E3AAB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 69";
+		rLen = 0;
+		rLoc = 1686;
+		rType = 0;
+		vrLen = 1203;
+		vrLoc = 1147;
+	};
+	5133EE14118E3AAB001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 69";
+		rLen = 0;
+		rLoc = 1686;
+		rType = 0;
+		vrLen = 1146;
+		vrLoc = 1105;
+	};
+	5133EE15118E3AD5001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
+		name = "BFTranslationWindowController.m: 122";
+		rLen = 0;
+		rLoc = 4810;
+		rType = 0;
+		vrLen = 435;
+		vrLoc = 4562;
+	};
+	5133EE16118E3AD5001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 69";
+		rLen = 0;
+		rLoc = 1686;
+		rType = 0;
+		vrLen = 498;
+		vrLoc = 1376;
+	};
+	5133EE17118E3AE0001F4E01 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
+		name = "BFAppController.m: 69";
+		rLen = 0;
+		rLoc = 1686;
+		rType = 0;
+		vrLen = 1259;
+		vrLoc = 1033;
 	};
 	5167938F118A1E7300A96627 /* NSString+URLEncode.h */ = {
 		uiCtxt = {
@@ -5343,7 +6742,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 113";
 		rLen = 0;
-		rLoc = 4432;
+		rLoc = 4303;
 		rType = 0;
 		vrLen = 1615;
 		vrLoc = 4064;
@@ -5393,7 +6792,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 2048;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1918;
 		vrLoc = 2081;
@@ -5413,7 +6812,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 87";
 		rLen = 13;
-		rLoc = 3273;
+		rLoc = 3144;
 		rType = 0;
 		vrLen = 1918;
 		vrLoc = 2081;
@@ -5443,7 +6842,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 87";
 		rLen = 13;
-		rLoc = 3273;
+		rLoc = 3144;
 		rType = 0;
 		vrLen = 1817;
 		vrLoc = 3043;
@@ -5473,7 +6872,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 87";
 		rLen = 13;
-		rLoc = 3273;
+		rLoc = 3144;
 		rType = 0;
 		vrLen = 1817;
 		vrLoc = 3043;
@@ -5493,7 +6892,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 87";
 		rLen = 13;
-		rLoc = 3273;
+		rLoc = 3144;
 		rType = 0;
 		vrLen = 1817;
 		vrLoc = 3043;
@@ -5533,7 +6932,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 89";
 		rLen = 111;
-		rLoc = 3338;
+		rLoc = 3209;
 		rType = 0;
 		vrLen = 1934;
 		vrLoc = 2130;
@@ -5593,7 +6992,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 89";
 		rLen = 111;
-		rLoc = 3338;
+		rLoc = 3209;
 		rType = 0;
 		vrLen = 1933;
 		vrLoc = 2131;
@@ -5613,7 +7012,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 33";
 		rLen = 0;
-		rLoc = 1595;
+		rLoc = 1617;
 		rType = 0;
 		vrLen = 946;
 		vrLoc = 893;
@@ -5633,7 +7032,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 81";
 		rLen = 0;
-		rLoc = 3366;
+		rLoc = 3237;
 		rType = 0;
 		vrLen = 1768;
 		vrLoc = 1810;
@@ -5663,7 +7062,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 83";
 		rLen = 0;
-		rLoc = 3451;
+		rLoc = 3322;
 		rType = 0;
 		vrLen = 1820;
 		vrLoc = 2159;
@@ -5693,7 +7092,7 @@
 		fRef = 5115950210C19356001E60A8 /* BFTranslationWindowController.h */;
 		name = "BFTranslationWindowController.h: 25";
 		rLen = 0;
-		rLoc = 972;
+		rLoc = 994;
 		rType = 0;
 		vrLen = 1461;
 		vrLoc = 3;
@@ -5743,7 +7142,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 22";
 		rLen = 0;
-		rLoc = 542;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 81;
@@ -5763,7 +7162,7 @@
 		fRef = 5115950210C19356001E60A8 /* BFTranslationWindowController.h */;
 		name = "BFTranslationWindowController.h: 25";
 		rLen = 0;
-		rLoc = 972;
+		rLoc = 994;
 		rType = 0;
 		vrLen = 1461;
 		vrLoc = 3;
@@ -5813,7 +7212,7 @@
 		fRef = 5115950210C19356001E60A8 /* BFTranslationWindowController.h */;
 		name = "BFTranslationWindowController.h: 25";
 		rLen = 0;
-		rLoc = 972;
+		rLoc = 994;
 		rType = 0;
 		vrLen = 1461;
 		vrLoc = 3;
@@ -5823,7 +7222,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 125";
 		rLen = 81;
-		rLoc = 4765;
+		rLoc = 4471;
 		rType = 0;
 		vrLen = 1287;
 		vrLoc = 3778;
@@ -5873,7 +7272,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 22";
 		rLen = 0;
-		rLoc = 542;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 81;
@@ -5893,7 +7292,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 22";
 		rLen = 0;
-		rLoc = 542;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 81;
@@ -5913,7 +7312,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 19";
 		rLen = 0;
-		rLoc = 1003;
+		rLoc = 1025;
 		rType = 0;
 		vrLen = 1453;
 		vrLoc = 0;
@@ -5933,7 +7332,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 150";
 		rLen = 0;
-		rLoc = 6492;
+		rLoc = 6339;
 		rType = 0;
 		vrLen = 1319;
 		vrLoc = 4785;
@@ -5943,7 +7342,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 2654;
+		rLoc = 2519;
 		rType = 0;
 		vrLen = 1120;
 		vrLoc = 1631;
@@ -5963,7 +7362,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 71";
 		rLen = 0;
-		rLoc = 2894;
+		rLoc = 2759;
 		rType = 0;
 		vrLen = 1160;
 		vrLoc = 1728;
@@ -6020,7 +7419,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 125";
 		rLen = 81;
-		rLoc = 4765;
+		rLoc = 4471;
 		rType = 0;
 		vrLen = 1288;
 		vrLoc = 3776;
@@ -6030,7 +7429,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 67";
 		rLen = 0;
-		rLoc = 2654;
+		rLoc = 2519;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 1745;
@@ -6077,7 +7476,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 125";
 		rLen = 81;
-		rLoc = 4765;
+		rLoc = 4471;
 		rType = 0;
 		vrLen = 1288;
 		vrLoc = 3776;
@@ -6231,7 +7630,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 125";
 		rLen = 81;
-		rLoc = 4765;
+		rLoc = 4471;
 		rType = 0;
 		vrLen = 1288;
 		vrLoc = 3776;
@@ -6251,7 +7650,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 63";
 		rLen = 0;
-		rLoc = 2392;
+		rLoc = 2257;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 1745;
@@ -6271,7 +7670,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 20";
 		rLen = 0;
-		rLoc = 1003;
+		rLoc = 1025;
 		rType = 0;
 		vrLen = 1591;
 		vrLoc = 0;
@@ -6301,7 +7700,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3414;
+		rLoc = 3285;
 		rType = 0;
 		vrLen = 1460;
 		vrLoc = 2489;
@@ -6346,7 +7745,7 @@
 		vrLen = 1427;
 		vrLoc = 0;
 	};
-	516796FF118C7D5800A96627 /* BFGoogleTranslator.m:97 */ = {
+	516796FF118C7D5800A96627 /* BFGoogleTranslator.m:90 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -6358,7 +7757,7 @@
 		functionName = "-translateText:from:to:error:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 97;
+		lineNumber = 90;
 		location = "Babelfish - UnitTests";
 		modificationTime = 294441308.596006;
 		state = 2;
@@ -6385,7 +7784,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 148";
 		rLen = 0;
-		rLoc = 6358;
+		rLoc = 6205;
 		rType = 0;
 		vrLen = 1887;
 		vrLoc = 1961;
@@ -6395,7 +7794,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 125";
 		rLen = 81;
-		rLoc = 4765;
+		rLoc = 4471;
 		rType = 0;
 		vrLen = 1288;
 		vrLoc = 3776;
@@ -6415,7 +7814,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3338;
+		rLoc = 3209;
 		rType = 0;
 		vrLen = 1536;
 		vrLoc = 72;
@@ -6425,7 +7824,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3338;
+		rLoc = 3209;
 		rType = 0;
 		vrLen = 1721;
 		vrLoc = 2489;
@@ -6462,7 +7861,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 125";
 		rLen = 81;
-		rLoc = 4765;
+		rLoc = 4471;
 		rType = 0;
 		vrLen = 1248;
 		vrLoc = 3816;
@@ -6492,7 +7891,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 285";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 9431;
 		rType = 0;
 		vrLen = 988;
 		vrLoc = 10128;
@@ -6512,7 +7911,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 125";
 		rLen = 81;
-		rLoc = 4765;
+		rLoc = 4471;
 		rType = 0;
 		vrLen = 942;
 		vrLoc = 9300;
@@ -6532,7 +7931,7 @@
 		fRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */;
 		name = "BFTranslationWindowController.m: 285";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 9431;
 		rType = 0;
 		vrLen = 988;
 		vrLoc = 10128;
@@ -6542,7 +7941,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3338;
+		rLoc = 3209;
 		rType = 0;
 		vrLen = 1721;
 		vrLoc = 2489;
@@ -6562,7 +7961,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 84";
 		rLen = 0;
-		rLoc = 3338;
+		rLoc = 3209;
 		rType = 0;
 		vrLen = 1905;
 		vrLoc = 2129;
@@ -6592,7 +7991,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5432;
+		rLoc = 5279;
 		rType = 0;
 		vrLen = 878;
 		vrLoc = 1415;
@@ -6616,7 +8015,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 135";
 		rLen = 0;
-		rLoc = 5432;
+		rLoc = 5279;
 		rType = 0;
 		vrLen = 1502;
 		vrLoc = 4602;
@@ -6656,7 +8055,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 143";
 		rLen = 0;
-		rLoc = 5432;
+		rLoc = 5279;
 		rType = 0;
 		vrLen = 1826;
 		vrLoc = 4278;
@@ -6726,7 +8125,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 15";
 		rLen = 0;
-		rLoc = 340;
+		rLoc = 362;
 		rType = 0;
 		vrLen = 642;
 		vrLoc = 140;
@@ -6756,7 +8155,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 34";
 		rLen = 11;
-		rLoc = 731;
+		rLoc = 768;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 143;
@@ -6796,7 +8195,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 143";
 		rLen = 0;
-		rLoc = 5432;
+		rLoc = 5279;
 		rType = 0;
 		vrLen = 1812;
 		vrLoc = 4292;
@@ -6896,7 +8295,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 15";
 		rLen = 0;
-		rLoc = 340;
+		rLoc = 362;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 143;
@@ -6926,7 +8325,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 143";
 		rLen = 0;
-		rLoc = 5432;
+		rLoc = 5279;
 		rType = 0;
 		vrLen = 1812;
 		vrLoc = 4292;
@@ -6946,7 +8345,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 48";
 		rLen = 0;
-		rLoc = 1800;
+		rLoc = 1742;
 		rType = 0;
 		vrLen = 998;
 		vrLoc = 5106;
@@ -6976,7 +8375,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "BFAppController.m: 15";
 		rLen = 0;
-		rLoc = 340;
+		rLoc = 362;
 		rType = 0;
 		vrLen = 642;
 		vrLoc = 140;
@@ -7006,7 +8405,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 48";
 		rLen = 0;
-		rLoc = 1800;
+		rLoc = 1742;
 		rType = 0;
 		vrLen = 1008;
 		vrLoc = 5096;
@@ -7026,7 +8425,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 141";
 		rLen = 0;
-		rLoc = 5432;
+		rLoc = 5279;
 		rType = 0;
 		vrLen = 1617;
 		vrLoc = 4487;
@@ -7050,9 +8449,9 @@
 	};
 	516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1416, 1344}}";
-			sepNavSelRange = "{3463, 0}";
-			sepNavVisRange = "{1964, 1548}";
+			sepNavIntBoundsRect = "{{0, 0}, {1416, 1400}}";
+			sepNavSelRange = "{3495, 0}";
+			sepNavVisRange = "{3063, 492}";
 		};
 	};
 	516798E3118CA0E900A96627 /* NSString+BFGoogleTranslateEncoderTest.h */ = {
@@ -7153,7 +8552,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 14";
 		rLen = 0;
-		rLoc = 234;
+		rLoc = 256;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 162;
@@ -7163,7 +8562,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 79";
 		rLen = 0;
-		rLoc = 2391;
+		rLoc = 2256;
 		rType = 0;
 		vrLen = 1291;
 		vrLoc = 2142;
@@ -7183,7 +8582,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 15";
 		rLen = 0;
-		rLoc = 1908;
+		rLoc = 1935;
 		rType = 0;
 		vrLen = 381;
 		vrLoc = 0;
@@ -7193,7 +8592,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 39";
 		rLen = 0;
-		rLoc = 1589;
+		rLoc = 1611;
 		rType = 0;
 		vrLen = 1048;
 		vrLoc = 680;
@@ -7213,7 +8612,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 18";
 		rLen = 0;
-		rLoc = 234;
+		rLoc = 256;
 		rType = 0;
 		vrLen = 702;
 		vrLoc = 0;
@@ -7223,7 +8622,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 72";
 		rLen = 0;
-		rLoc = 2391;
+		rLoc = 2256;
 		rType = 0;
 		vrLen = 1409;
 		vrLoc = 1839;
@@ -7233,7 +8632,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 30";
 		rLen = 0;
-		rLoc = 1908;
+		rLoc = 1935;
 		rType = 0;
 		vrLen = 978;
 		vrLoc = 0;
@@ -7243,7 +8642,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 133";
 		rLen = 0;
-		rLoc = 5432;
+		rLoc = 5279;
 		rType = 0;
 		vrLen = 1628;
 		vrLoc = 4001;
@@ -7253,7 +8652,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 44";
 		rLen = 0;
-		rLoc = 1965;
+		rLoc = 1992;
 		rType = 0;
 		vrLen = 1137;
 		vrLoc = 322;
@@ -7263,7 +8662,7 @@
 		fRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */;
 		name = "BFGoogleTranslator.m: 134";
 		rLen = 0;
-		rLoc = 5514;
+		rLoc = 5361;
 		rType = 0;
 		vrLen = 1631;
 		vrLoc = 4001;
@@ -7273,7 +8672,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 34";
 		rLen = 35;
-		rLoc = 1926;
+		rLoc = 1953;
 		rType = 0;
 		vrLen = 1203;
 		vrLoc = 256;
@@ -7303,7 +8702,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 23";
 		rLen = 0;
-		rLoc = 458;
+		rLoc = 480;
 		rType = 0;
 		vrLen = 1203;
 		vrLoc = 256;
@@ -7333,7 +8732,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 52";
 		rLen = 0;
-		rLoc = 1965;
+		rLoc = 1992;
 		rType = 0;
 		vrLen = 1719;
 		vrLoc = 586;
@@ -7430,7 +8829,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 14";
 		rLen = 0;
-		rLoc = 234;
+		rLoc = 256;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 162;
@@ -7450,7 +8849,7 @@
 		fRef = 516798DE118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m */;
 		name = "NSString+BFGoogleTranslateEncoder.m: 26";
 		rLen = 0;
-		rLoc = 459;
+		rLoc = 481;
 		rType = 0;
 		vrLen = 1165;
 		vrLoc = 162;
@@ -7489,7 +8888,7 @@
 		path = /Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Foundation.framework/Versions/C/Headers/NSError.h;
 		sourceTree = "<absolute>";
 	};
-	5168A4E91168042E004C576A /* BFGoogleTranslator.m:81 */ = {
+	5168A4E91168042E004C576A /* BFGoogleTranslator.m:74 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -7501,12 +8900,12 @@
 		functionName = "-translateText:from:to:error:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 81;
+		lineNumber = 74;
 		location = Babelfish;
 		modificationTime = 294441308.594606;
 		state = 2;
 	};
-	5168A50A11680466004C576A /* BFTranslateTextOperation.m:68 */ = {
+	5168A50A11680466004C576A /* BFTranslateTextOperation.m:59 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -7518,7 +8917,7 @@
 		functionName = "-main";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 68;
+		lineNumber = 59;
 		location = Babelfish;
 		modificationTime = 294441308.594832;
 		state = 2;
@@ -7549,7 +8948,7 @@
 		modificationTime = 294441308.595066;
 		state = 2;
 	};
-	5168A6BA1168C185004C576A /* BFGoogleTranslator.m:93 */ = {
+	5168A6BA1168C185004C576A /* BFGoogleTranslator.m:86 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -7561,7 +8960,7 @@
 		functionName = "-translateText:from:to:error:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 93;
+		lineNumber = 86;
 		location = Babelfish;
 		modificationTime = 294441308.595322;
 		state = 2;
@@ -8072,17 +9471,17 @@
 	};
 	51999F12112A0729008BAC42 /* BFAppController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 518}}";
-			sepNavSelRange = "{219, 0}";
-			sepNavVisRange = "{0, 926}";
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 509}}";
+			sepNavSelRange = "{370, 27}";
+			sepNavVisRange = "{0, 827}";
 			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
 		};
 	};
 	51999F13112A0729008BAC42 /* BFAppController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1062, 3550}}";
-			sepNavSelRange = "{340, 0}";
-			sepNavVisRange = "{140, 819}";
+			sepNavIntBoundsRect = "{{0, 0}, {1194, 3206}}";
+			sepNavSelRange = "{1686, 0}";
+			sepNavVisRange = "{1033, 1259}";
 			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
 		};
 	};
@@ -8111,7 +9510,7 @@
 		fRef = 51999F13112A0729008BAC42 /* BFAppController.m */;
 		name = "AppController.m: 78";
 		rLen = 0;
-		rLoc = 4225;
+		rLoc = 4543;
 		rType = 0;
 		vrLen = 1147;
 		vrLoc = 953;

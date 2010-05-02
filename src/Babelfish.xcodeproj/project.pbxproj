@@ -46,6 +46,8 @@
 		5133EABD118CADCC001F4E01 /* PLBlocks.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5133EA55118CAD53001F4E01 /* PLBlocks.framework */; };
 		5133EABF118CADDC001F4E01 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EABE118CADDC001F4E01 /* Cocoa.framework */; };
 		5133EAC2118CADE5001F4E01 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EABE118CADDC001F4E01 /* Cocoa.framework */; };
+		5133EDDD118DC04B001F4E01 /* BFStringConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5133EDDC118DC04B001F4E01 /* BFStringConstants.m */; };
+		5133EDDE118DC04B001F4E01 /* BFStringConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5133EDDC118DC04B001F4E01 /* BFStringConstants.m */; };
 		51679391118A1E7300A96627 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679390118A1E7300A96627 /* NSString+URLEncode.m */; };
 		51679406118A252B00A96627 /* BFDefaultHTTPInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */; };
 		51679663118C764E00A96627 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 516794F7118A388100A96627 /* GHUnitTestMain.m */; };
@@ -165,6 +167,9 @@
 		5133EA5A118CAD6C001F4E01 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = ../../../../Development/objc/GHUnit_OCMock/src/build/Release/GHUnit.framework; sourceTree = SOURCE_ROOT; };
 		5133EA5E118CAD83001F4E01 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = ../../../../Development/objc/BGHUDAppKit/build/Release/BGHUDAppKit.framework; sourceTree = SOURCE_ROOT; };
 		5133EABE118CADDC001F4E01 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5133ECC8118D9786001F4E01 /* BFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDefines.h; sourceTree = "<group>"; };
+		5133EDDB118DC04B001F4E01 /* BFStringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFStringConstants.h; sourceTree = "<group>"; };
+		5133EDDC118DC04B001F4E01 /* BFStringConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFStringConstants.m; sourceTree = "<group>"; };
 		5167934B118A1A1B00A96627 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		5167938F118A1E7300A96627 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
 		51679390118A1E7300A96627 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
@@ -232,6 +237,9 @@
 				510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */,
 				5167938F118A1E7300A96627 /* NSString+URLEncode.h */,
 				51679390118A1E7300A96627 /* NSString+URLEncode.m */,
+				5133ECC8118D9786001F4E01 /* BFDefines.h */,
+				5133EDDB118DC04B001F4E01 /* BFStringConstants.h */,
+				5133EDDC118DC04B001F4E01 /* BFStringConstants.m */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -501,6 +509,7 @@
 				516796B0118C780500A96627 /* BFDefaultHTTPInvoker.m in Sources */,
 				516798E0118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m in Sources */,
 				516798E5118CA0E900A96627 /* NSString+BFGoogleTranslateEncoderTest.m in Sources */,
+				5133EDDE118DC04B001F4E01 /* BFStringConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +534,7 @@
 				51679391118A1E7300A96627 /* NSString+URLEncode.m in Sources */,
 				51679406118A252B00A96627 /* BFDefaultHTTPInvoker.m in Sources */,
 				516798DF118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m in Sources */,
+				5133EDDD118DC04B001F4E01 /* BFStringConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

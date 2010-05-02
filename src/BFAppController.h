@@ -28,8 +28,6 @@
 - (void) newTranslationWindow;
 
 - (NSDictionary *) loadLanguages:(NSError **)anError;
-- (void) loadRating:(NSArray *)theLanguages source:(NSString *)aSource error:(NSError **)anError;
-
 
 - (IBAction) newTranslationWindow:(id)aSender;
 

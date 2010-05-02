@@ -1,38 +1,43 @@
+FEATURES:
 - service
+  - test
 - rating
-- empty lines
+  - sort by last usage
+
 - better font
-
 - recovery from failures like:
-400 (could not reliably detect source language)
+  - 400 (could not reliably detect source language)
+- preference
+  - fonts
+- localization
+- latest revision into about box
+- resizeable window
+- horizontal vertical layout 
+- dictionary mode
+- minimalistic mode
+- keep scrolling position of the translated test
 
-- migrate to mercurial
-
+RELEASE:
 - Write Changelog
 - Auto-update
 - Better DMG
 - Credits
 - Icon from linuxart.com
-- preference
-- localization
+- check domain for this name: babelfiska, thebabelfishapp
+- check the latest BGHUD
+- Makefile
+- Compile instructions
+- Make the framework part of the source tree
 
+CODE:
 - cleanup code
 - indent
 - comments
-- asserts
 - tests
+- code coverage
+  http://code.google.com/p/coverstory/
+- hudson build
 - font properties
 
+QUOI?
 - keywords submission
-- check domain for this name: babelfiska, thebabelfishapp
-- latest revision into about box
-- split requests by new line
-- font properties
-- resizeable window
-- horizontal vertical layout 
-
-- if the text returned aftern new translation especially requested by
-  user - display some smart ass message
-
- NSString *folder = @"~/Library/Application Support/MailDemo/";
-  folder = [folder stringByExpandingTildeInPath];

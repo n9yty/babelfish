@@ -22,6 +22,7 @@
 #import "NSString+URLEncode.h"
 #import "NSString+BFGoogleTranslateEncoder.h"
 #import "BFHTTPInvoker.h"
+#import "BFDefines.h"
 
 @implementation BFGoogleTranslator
 
@@ -43,10 +44,6 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 		return nil;
 	}
 	
-#ifndef NDEBUG
-	NSLog(@"Initializing %@", [BFGoogleTranslator class]);
-#endif
-	
 	// create the JSON parser
 	parser = [[SBJSON alloc] init];
 	httpInvoker = [invoker retain];
@@ -55,10 +52,6 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 }
 
 - (void) dealloc {
-#ifndef NDEBUG
-	NSLog(@"Deallocing %@", [BFGoogleTranslator class]);
-#endif
-
 	[parser release];
 	[httpInvoker release];
 	
@@ -84,9 +77,9 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 	NSString* requestUrl = [NSString stringWithFormat:@"%@&q=%@&langpair=%@", BFGoogleTranslateURLBase, encodedText, langPair];
 	
 #ifdef COUNT_REQUEST
-	NSLog(@"Making %d. call to google translate %@", numRequests++,requestUrl);
+	BFDevLog(@"Making %d. call to google translate %@", numRequests++,requestUrl);
 #else
-	NSLog(@"Making call to google translate %@", requestUrl);
+	BFDevLog(@"Making call to google translate %@", requestUrl);
 #endif
 	
 	// make the call
@@ -128,7 +121,6 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 		NSString *reason = [NSString stringWithFormat:@"Request failed with error code %d (%@)", responseStatus, responseDetails];
 		
 		[self raiseError:error code:BFServiceFailedErrorCodeKey description:@"Translation service failed" reason:reason];
-		NSLog(@"%@", reason);
 		return nil;
 	} 
 	

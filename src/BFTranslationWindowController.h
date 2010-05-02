@@ -18,6 +18,7 @@
 #import <Cocoa/Cocoa.h>
 
 #import "BFTranslator.h"
+#import "BFDefines.h"
 
 @class Translation;
 @class BFTranslateTextOperation;

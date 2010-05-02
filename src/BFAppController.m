@@ -12,24 +12,25 @@
 #import "BFGoogleTranslator.h"
 #import "BFTranslationWindowModel.h"
 #import "BFDefaultHTTPInvoker.h"
+#import "BFDefines.h"
 
 #import "version.h"
 
 @implementation BFAppController
 
+// TODO: as constants
 #define BFLanguageCodeKey @"Code"
 #define BFLanguageNameKey @"Name" 
 #define BFLanguageFlagImageFileType @"png"
 #define BFLanguageFlagsDir @"Flags"
 
 - (id)init {
+	BFTrace();
 	if (![super init]) {
 		return nil;
 	}
 	
-#ifndef NDEBUG
-	NSLog(@"Initializing %@ build number %@", [BFAppController class], [NSNumber numberWithInt:BUILD_NUMBER]);
-#endif
+	BFDevLog(@"Initializing %@ build number %@", [BFAppController class], [NSNumber numberWithInt:BUILD_NUMBER]);
 	
 	httpInvoker = [[BFDefaultHTTPInvoker alloc] init];
 	translator = [[BFGoogleTranslator alloc] initWithHTTPInvoker:httpInvoker];
@@ -37,10 +38,6 @@
 }
 
 - (void)dealloc {
-#ifndef NDEBUG
-	NSLog(@"Deallocing %@", [BFAppController class]);
-#endif
-
 	[sourceLanguages release];
 	[targetLanguages release];
 	[translator release];
@@ -49,10 +46,6 @@
 }	
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-#ifndef NDEBUG
-	NSLog(@"Registering self as a service service");
-#endif
-
 	NSError *error = nil;
 	// load languages
 	NSDictionary *allLanguages = [self loadLanguages:&error];
@@ -63,26 +56,16 @@
 		// TODO: handle error - fail
 	}
 	
-	// TODO: assert the size of languages
-#ifndef NDEBUG
-	NSLog(@"language manager initialized with %d entries", [allLanguages count]);
-#endif
+	BFAssert([allLanguages count] > 0, @"No languages loaded.");
+	BFDevLog(@"Initialized %d languges", [allLanguages count]);
 	
 	// load source language rating
 	error = nil;
 	sourceLanguages = [allLanguages allValues];
-	[self loadRating:sourceLanguages source:nil error:&error];
-	if (error) {
-		// TODO: handle error
-	}
-	
+		
 	// load target langauge rating
 	error = nil;
 	targetLanguages = [allLanguages allValues];
-	[self loadRating:targetLanguages source:nil error:&error];
-	if (error) {
-		// TODO: handle error
-	}
 	
 	// initialize service provider
 	[NSApp setServicesProvider:self];
@@ -92,9 +75,6 @@
 }
 
 - (void)awakeFromNib {
-#ifndef NDEBUG
-	NSLog(@"Main Nib2 has been loaded");
-#endif
 	// TODO: loading preferences goes here	
 }
 
@@ -123,6 +103,28 @@
 }
 
 - (void) loadRating:(NSArray *)theLanguages source:(NSString *)aSource error:(NSError **)anError {
+	NSArray *languages = [NSArray arrayWithContentsOfFile:aSource];
+	
+	if (!languages) {
+		// TODO: handle error
+	}
+	
+	NSMutableDictionary *d = [NSMutableDictionary dictionaryWithCapacity:[languages count]];
+	
+	for (NSDictionary *dict in languages) {
+		NSString *code = [dict objectForKey:BFLanguageCodeKey];
+		NSString *name = [dict objectForKey:BFLanguageNameKey];
+		BFLanguage *lang = [[BFLanguage alloc] initWithCode:code name:name imagePath:[[NSBundle mainBundle] pathForResource:code ofType:BFLanguageFlagImageFileType inDirectory:BFLanguageFlagsDir]];
+		
+		if (!lang) {
+			// TODO: handle error
+		}
+		
+		[d setObject:lang forKey:code];
+	}
+	
+	return [[NSDictionary dictionaryWithDictionary:d] retain];
+
 	for (BFLanguage *l in theLanguages) {
 		int r =  [[l name] isEqualToString:@"French"] ? 200 : 1;
 		[l setRating:r];
@@ -163,9 +165,7 @@
 }
 
 - (void)newTransaltionWindowFromSericeCall:(NSPasteboard *)aPboard userData:(NSString *)aUserData error:(NSString **)anError {
-#ifndef NDEBUG
-	NSLog(@"newTransaltionWindowFromSericeCall:\"%@\" userData:\"%@\"", aPboard, aUserData);
-#endif
+	BFDevLog(@"newTransaltionWindowFromSericeCall:\"%@\" userData:\"%@\"", aPboard, aUserData);
 	
 	BFLanguage *from = nil;
 	BFLanguage *to = nil;

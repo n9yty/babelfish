@@ -8,6 +8,7 @@
 #import "RegexKitLite.h"
 
 #import "NSString+BFGoogleTranslateEncoder.h"
+#import "BFDefines.h"
 
 NSString *const BFSymbols[3][3] = {
 	{@" " ,@"{2,}",@"SP"},
@@ -40,12 +41,12 @@ NSString *const BFSymbols[3][3] = {
 			
 			NSString *s = [NSString stringWithFormat:@" <%@%d> ", outputSymbol, [capturedStrings[0] length]];
 		
-//			NSLog(@"\"%@\" - %d \"%@\"", capturedStrings[0], [capturedStrings[0] length], s);
+//			BFDevLog(@"\"%@\" - %d \"%@\"", capturedStrings[0], [capturedStrings[0] length], s);
 		
 			return s;
 		}];
-		NSAssert1(error == nil, @"Error in the regular expression %@", error);	
-//		NSLog(@" %@ -- %@", error, encodedString);
+		BFAssert(error == nil, @"Error in the regular expression %@", error);	
+//		BFDevLog(@" %@ -- %@", error, encodedString);
 	}
 	
 	return encodedString;	
@@ -70,12 +71,12 @@ NSString *const BFSymbols[3][3] = {
 				[s appendString:outputSymbol];
 			}
 			
-			//			NSLog(@"\"%@\" - %d \"%@\"", capturedStrings[0], count, s);
+			//			BFDevLog(@"\"%@\" - %d \"%@\"", capturedStrings[0], count, s);
 			
 			return [NSString stringWithString:s];
 		}];
-		NSAssert1(error == nil, @"Error in the regular expression %@", error);	
-		//		NSLog(@" %@ -- %@", error, encodedString);
+		BFAssert(error == nil, @"Error in the regular expression %@", error);	
+		//		BFDevLog(@" %@ -- %@", error, encodedString);
 	}
 	
 	for (int i = 0; i<3; i++) {

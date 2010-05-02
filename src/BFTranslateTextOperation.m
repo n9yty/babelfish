@@ -17,6 +17,7 @@
 
 #import "BFTranslateTextOperation.h"
 #import "BFLanguage.h"
+#import "BFDefines.h"
 
 NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNotificationKey";
 
@@ -27,11 +28,7 @@ NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNo
 @synthesize translation;
 @synthesize error;
 
-- (id) initWithText:(NSString *)aText from:(BFLanguage *)fromLang to:(BFLanguage *)toLang translator:(NSObject<BFTranslator> *)aTranslator {
-#ifndef NDEBUG
-	NSLog(@"Initializing %@", [BFTranslateTextOperation class]);
-#endif
-	
+- (id) initWithText:(NSString *)aText from:(BFLanguage *)fromLang to:(BFLanguage *)toLang translator:(NSObject<BFTranslator> *)aTranslator {	
 	if (![super init]) {
 		return nil;
 	}
@@ -47,10 +44,6 @@ NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNo
 }
 
 - (void) dealloc {
-#ifndef NDEBUG
-	NSLog(@"Deallocing %@", [BFTranslateTextOperation class]);
-#endif
-	
 	[text release];
 	[from release];
 	[to release];
@@ -61,19 +54,15 @@ NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNo
 }
 
 - (void) main {
-#ifndef NDEBUG
-	NSLog(@"Translating text:\"%@\" from:\"%@\" to:\"%@\" using %@", text, from, to, [translation description]);
-#endif
+	BFDevLog(@"Translating text operation:\"%@\" from:\"%@\" to:\"%@\" using %@", text, from, to, [translation description]);
 
 	NSString *t = [translator translateText:text from:[from code] to:[to code] error:&error];
 	
-#ifndef NDEBUG
 	if (t == nil) {
-		NSLog(@"Translation error: %@", error);
+		BFDevLog(@"Translation error: %@", error);
 	} else {
-		NSLog(@"Translation: %@", t);
+		BFDevLog(@"Translation: %@", t);
 	}
-#endif	
 	
 	translation = [t retain];
 	if (error) {
