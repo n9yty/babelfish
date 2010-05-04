@@ -14,7 +14,6 @@
 @synthesize name;
 @synthesize imagePath;
 @dynamic image;
-@synthesize rating;
 
 - (id) initWithCode:(NSString *)aCode name:(NSString *)aName imagePath:(NSString *)anImagePath {
 	if (![super init]) {
@@ -66,7 +65,7 @@
 	}
 	else {
 		BFLanguage *other = (BFLanguage *)anObject;
-		if (![code isEqualToString: [other code]]) {
+		if (![name isEqualToString: [other name]]) {
 			return NO;
 		} 
 		return YES;
@@ -75,7 +74,7 @@
 
 - (NSUInteger)hash {
 	NSUInteger hash = 1;
-    hash += 13 *[code hash];
+    hash += 13 *[name hash];
 	
 	return hash;
 }

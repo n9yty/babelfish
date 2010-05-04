@@ -11,5 +11,7 @@
 
 # pragma mark User default keys
 
-extern NSString *const BFTopUsedSourceLanguagesKey;
-extern NSString *const BFTopUsedTargetLanguagesKey;
+extern NSString *const BFLastUsedSourceLanguagesKey;
+extern NSString *const BFLastUsedTargetLanguagesKey;
+
+extern NSUInteger const BFLastUsedLanguageCount;

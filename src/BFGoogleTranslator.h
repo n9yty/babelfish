@@ -19,8 +19,9 @@
 #import "BFTranslator.h"
 #import "BFHTTPInvoker.h"
 
-@class BFHTTPInvoker;
 @class SBJSON;
+@class BFHTTPInvoker;
+@class BFLanguage;
 
 @interface BFGoogleTranslator : NSObject <BFTranslator> {
 	@private

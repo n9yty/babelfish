@@ -15,14 +15,19 @@
 
 //  Created by Filip Krikava on 11/26/09.
 
-@protocol BFTranslator
-
-extern NSString * const BFTranslatorErrorDomainKey;
+extern NSString *const BFTranslatorErrorDomainKey;
 
 extern NSInteger const BFNoResponseErrorCodeKey;
 extern NSInteger const BFInvalidResponseErrorCodeKey;
 extern NSInteger const BFServiceFailedErrorCodeKey;
 
-- (NSString*)translateText:(NSString*)text from:(NSString*)from to:(NSString*)to error:(NSError**)error;
+@class BFLanguage;
+
+@protocol BFTranslator
+
+- (NSArray *)languages;
+- (BFLanguage *)autoDetectTargetLanguage;
+- (BFLanguage *)languageByName:(NSString *)name;
+- (NSString *)translateText:(NSString *)text from:(BFLanguage *)from to:(BFLanguage *)to error:(NSError **)error;
 
 @end

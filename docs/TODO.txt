@@ -2,7 +2,16 @@ FEATURES:
 - service
   - test
 - rating
-  - sort by last usage
+  - tests!!!!
+
+- rename SupportedLanguages
+
+- when language detected add it there - with the change of the title
+  "English - detected"
+
+- fix the retry translation
+- error message should be patrt of the gui
+- hide original when called from the service
 
 - better font
 - recovery from failures like:
@@ -11,11 +20,12 @@ FEATURES:
   - fonts
 - localization
 - latest revision into about box
+- keep scrolling position of the translated test
+
 - resizeable window
 - horizontal vertical layout 
 - dictionary mode
 - minimalistic mode
-- keep scrolling position of the translated test
 
 RELEASE:
 - Write Changelog

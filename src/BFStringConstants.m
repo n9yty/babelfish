@@ -8,5 +8,7 @@
 
 #import "BFStringConstants.h"
 
-NSString *const BFTopUsedSourceLanguagesKey = @"BFTopUsedSourceLanguagesKey";
-NSString *const BFTopUsedTargetLanguagesKey = @"BFTopUsedTargetLanguagesKey";
+NSString *const BFLastUsedSourceLanguagesKey = @"BFTopUsedSourceLanguagesKey";
+NSString *const BFLastUsedTargetLanguagesKey = @"BFTopUsedTargetLanguagesKey";
+
+NSUInteger const BFLastUsedLanguageCount = 5;

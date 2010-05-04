@@ -56,7 +56,7 @@ NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNo
 - (void) main {
 	BFDevLog(@"Translating text operation:\"%@\" from:\"%@\" to:\"%@\" using %@", text, from, to, [translation description]);
 
-	NSString *t = [translator translateText:text from:[from code] to:[to code] error:&error];
+	NSString *t = [translator translateText:text from:from to:to error:&error];
 	
 	if (t == nil) {
 		BFDevLog(@"Translation error: %@", error);

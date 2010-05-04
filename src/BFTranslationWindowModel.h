@@ -10,11 +10,10 @@
 #import "BFTranslator.h"
 #import "BFLanguage.h"
 
-@interface BFTranslationWindowModel : NSObject {
+@interface BFTranslationWindowModel : NSObject {	
+	@private
 	NSObject<BFTranslator>* translator;
-	
-	NSArray* sourceLanguages;
-	NSArray* targetLanguages;
+	NSUserDefaults *userDefaults;
 	
 	NSString* originalText;
 	NSString* translation;
@@ -24,13 +23,17 @@
 }
 
 @property (readonly) NSObject<BFTranslator>* translator;
-@property (readonly) NSArray* sourceLanguages;
-@property (readonly) NSArray* targetLanguages;
 @property (copy) NSString* originalText;
 @property (copy) NSString* translation;
 @property (retain) BFLanguage* selectedSourceLanguage;
 @property (retain) BFLanguage* selectedTargetLanguage;
 
-- (id)initWithTranslator:(NSObject<BFTranslator> *)aTranslator sourceLanguages:(NSArray *)theSourceLanguages targetLanguages:(NSArray *)theTargetLanguages;
+- (id)initWithTranslator:(NSObject<BFTranslator> *)aTranslator userDefaults:(NSUserDefaults *)aUserDefaults;
+
+- (NSArray *) lastUsedSourceLanguages;
+- (NSArray *) lastUsedTargetLanguages;
+
+- (void) setLastUsedSourceLanguage:(BFLanguage *)aLanguage;
+- (void) setLastUsedTargetLanguage:(BFLanguage *)aLanguage;
 
 @end

@@ -16,7 +16,6 @@
 	NSString *name;
 	NSString *imagePath;
 	NSImage *image;	
-	NSInteger rating;
 }
 
 - (id) initWithCode:(NSString *)aCode name:(NSString *)aName imagePath:(NSString *)anImagePath;
@@ -25,6 +24,5 @@
 @property (readonly) NSString *imagePath;
 @property (readonly) NSString *name;
 @property (readonly) NSImage *image;
-@property (assign) NSInteger rating;
 
 @end

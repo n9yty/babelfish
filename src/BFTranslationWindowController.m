@@ -33,15 +33,18 @@ static NSString const* BFTargetLanguageChangedCtxKey = @"BFTargetLanguageChanged
 static NSTimeInterval const BFDelayBetweenTranslations = 1.0;
 static NSInteger const BFMaxTextSizeForInteractiveTranslation = 1024;
 
-static BFLanguage const* BFAutoDetectedLanguage;
+// prepare sort description
+static NSSortDescriptor *nameSortDescriptor;
+
++ (void)initialize {
+	nameSortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
+}
 
 - (id)initWithModel:(BFTranslationWindowModel*)aModel {	
 	if (![super initWithWindowNibName:@"TranslationWindow"]) {
 		return nil;
 	}
-	
-	BFAutoDetectedLanguage = [[BFLanguage alloc] initWithCode:@"" name:@"Detect Language" imagePath:nil];
-	
+		
 	model = [aModel retain];	
 	operationQueue = [[NSOperationQueue alloc] init];
 	[operationQueue setMaxConcurrentOperationCount:1];
@@ -65,39 +68,63 @@ static BFLanguage const* BFAutoDetectedLanguage;
 	[translateTimer release];
 	[requestedTextToTranslate release];
 	[lastTextToTranslate release];
-	
-	[BFAutoDetectedLanguage release];
-	
+		
 	[super dealloc];
+}
+
+- (NSArray *) sourceLanguages {
+	NSArray* languages = [[model translator] languages];
+
+	NSMutableArray *array = [NSMutableArray array];
+	// first is the auto-detect
+	[array addObject: [[model translator] autoDetectTargetLanguage]];
+	// separator
+	[array addObject:[NSMenuItem separatorItem]];
+	// last used ones
+	NSArray *lastUsed = [model lastUsedSourceLanguages];
+	NSMutableArray *remaining = [NSMutableArray arrayWithArray:languages];
+	if (!isEmpty(lastUsed)) {
+		[array addObjectsFromArray:lastUsed];
+		[remaining removeObjectsInArray:lastUsed];		
+		// separator
+		[array addObject:[NSMenuItem separatorItem]];
+	}
+	// all others
+	[array addObjectsFromArray:[remaining sortedArrayUsingDescriptors:[NSArray arrayWithObject:nameSortDescriptor]]];
+	  
+	return [NSArray arrayWithArray:array];
+}
+
+- (NSArray *) targetLanguages {
+	NSArray* languages = [[model translator] languages];
+
+	NSMutableArray *array = [NSMutableArray array];
+	// last used ones
+	NSArray *lastUsed = [model lastUsedTargetLanguages];
+	NSMutableArray *remaining = [NSMutableArray arrayWithArray:languages];
+	if (!isEmpty(lastUsed)) {
+		[array addObjectsFromArray:lastUsed];
+		[remaining removeObjectsInArray:lastUsed];
+		// separator
+		[array addObject:[NSMenuItem separatorItem]];
+	}
+	// all others
+	[array addObjectsFromArray:[remaining sortedArrayUsingDescriptors:[NSArray arrayWithObject:nameSortDescriptor]]];
+		
+	return [NSArray arrayWithArray:array];
 }
 
 - (void)awakeFromNib {
 	// we start with no translation
 	[self setTranslationBoxHidden:YES];
 	
-	// prepare sort description
-	NSSortDescriptor *ratingSort = [[[NSSortDescriptor alloc] initWithKey:@"rating" ascending:NO] autorelease];
-	NSSortDescriptor *nameSort = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
-	
-	NSArray* langs = [[[model sourceLanguages] sortedArrayUsingDescriptors:[NSArray arrayWithObjects: ratingSort,nameSort,nil]] retain];
-	
-	// populate source language selector
-	NSMutableArray *a = [NSMutableArray array];
-	[a addObject:BFAutoDetectedLanguage];
-	[a addObject:[NSMenuItem separatorItem]];
-	[a addObjectsFromArray:langs];
-	
+	// source languages
 	[sourceLanguagePopup removeAllItems];
-	[self populateMenu:[sourceLanguagePopup menu] withItems:a];
-	
-	// populate target language selector
-	langs = [[[model targetLanguages] sortedArrayUsingDescriptors:[NSArray arrayWithObjects: ratingSort,nameSort,nil]] retain];
-	
-	[a removeAllObjects];
-	[a addObjectsFromArray:langs];
-	
+	[self populateMenu:[sourceLanguagePopup menu] withItems:[self sourceLanguages]];
+		
+	// target langages
 	[targetLanguagePopup removeAllItems];
-	[self populateMenu:[targetLanguagePopup menu] withItems:a];
+	[self populateMenu:[targetLanguagePopup menu] withItems:[self targetLanguages]];
 	
 	// synchronize source language - FIXME issue#2
 	if ([model selectedSourceLanguage]) {
@@ -184,7 +211,7 @@ static BFLanguage const* BFAutoDetectedLanguage;
 }
 
 - (void) handleLanguageSelectionChanged {
-	[swapLanguagesButton setHidden:[model selectedSourceLanguage] == BFAutoDetectedLanguage];
+	[swapLanguagesButton setHidden:[model selectedSourceLanguage] == [[model translator] autoDetectTargetLanguage]];
 	if ([[model originalText] length] > 0) {
 		[self translate];
 	}
@@ -278,6 +305,12 @@ static BFLanguage const* BFAutoDetectedLanguage;
 	}
 	
 	[model setTranslation:[operation translation]];
+	
+	if (![[[model translator] autoDetectTargetLanguage] isEqual:[operation from]]) {
+		[model setLastUsedSourceLanguage:[operation from]];
+	}
+	
+	[model setLastUsedTargetLanguage:[operation to]];
 	[self setTranslationBoxHidden:NO];
 }
 
@@ -348,7 +381,7 @@ static BFLanguage const* BFAutoDetectedLanguage;
 - (IBAction)swapLanguages:(id)aSender {
 	
 	BFLanguage *s = [[sourceLanguagePopup selectedItem] representedObject];
-	if (s == BFAutoDetectedLanguage) {
+	if (s == [[model translator] autoDetectTargetLanguage]) {
 		return;
 	}
 	

@@ -27,8 +27,6 @@
 - (void) newTranslationWindowToTranslateText:(NSString *)anOriginaltext from:(BFLanguage *)aSourceLang to:(BFLanguage *)aTargetLang;
 - (void) newTranslationWindow;
 
-- (NSDictionary *) loadLanguages:(NSError **)anError;
-
 - (IBAction) newTranslationWindow:(id)aSender;
 
 @end

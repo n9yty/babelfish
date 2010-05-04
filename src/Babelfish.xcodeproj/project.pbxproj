@@ -154,7 +154,6 @@
 		510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslateTextOperation.m; sourceTree = "<group>"; };
 		510A5AA010C3344900088B20 /* Flags */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Flags; sourceTree = "<group>"; };
 		510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SupportedLanguages.plist; sourceTree = "<group>"; };
-		510A5B2410C3403700088B20 /* Babelfish-Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Babelfish-Tests-Info.plist"; sourceTree = "<group>"; };
 		510A5CB610C5CA9F00088B20 /* BFGoogleTranslatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFGoogleTranslatorTest.m; sourceTree = "<group>"; };
 		5115950210C19356001E60A8 /* BFTranslationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTranslationWindowController.h; sourceTree = "<group>"; };
 		5115950310C19356001E60A8 /* BFTranslationWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslationWindowController.m; sourceTree = "<group>"; };
@@ -170,13 +169,11 @@
 		5133ECC8118D9786001F4E01 /* BFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDefines.h; sourceTree = "<group>"; };
 		5133EDDB118DC04B001F4E01 /* BFStringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFStringConstants.h; sourceTree = "<group>"; };
 		5133EDDC118DC04B001F4E01 /* BFStringConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFStringConstants.m; sourceTree = "<group>"; };
-		5167934B118A1A1B00A96627 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		5167938F118A1E7300A96627 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
 		51679390118A1E7300A96627 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
 		51679404118A252B00A96627 /* BFHTTPInvoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFHTTPInvoker.h; sourceTree = "<group>"; };
 		51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDefaultHTTPInvoker.m; sourceTree = "<group>"; };
 		51679462118A2B3600A96627 /* Babelfish - UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Babelfish - UnitTests-Info.plist"; sourceTree = "<group>"; };
-		516794E2118A373800A96627 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		516794F7118A388100A96627 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitTestMain.m; sourceTree = "<group>"; };
 		51679561118C6A6700A96627 /* Babelfish.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Babelfish.app; path = ../build/Debug/Babelfish.app; sourceTree = SOURCE_ROOT; };
 		51679619118C759E00A96627 /* Babelfish - UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Babelfish - UnitTests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,10 +263,7 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				510A5B2410C3403700088B20 /* Babelfish-Tests-Info.plist */,
-				5167934B118A1A1B00A96627 /* UnitTests-Info.plist */,
 				51679462118A2B3600A96627 /* Babelfish - UnitTests-Info.plist */,
-				516794E2118A373800A96627 /* Tests-Info.plist */,
 				5133EABE118CADDC001F4E01 /* Cocoa.framework */,
 			);
 			name = Babelfish;

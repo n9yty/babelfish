@@ -23,6 +23,7 @@
 #import "NSString+BFGoogleTranslateEncoder.h"
 #import "BFHTTPInvoker.h"
 #import "BFDefines.h"
+#import "BFLanguage.h"
 
 @implementation BFGoogleTranslator
 
@@ -38,6 +39,39 @@ NSInteger const BFNoResponseErrorCodeKey = 1;
 NSInteger const BFInvalidResponseErrorCodeKey = 2;
 NSInteger const BFServiceFailedErrorCodeKey = 3;
 
+NSString *const BFLanguageCodeKey = @"Code";
+NSString *const BFLanguageNameKey = @"Name";
+NSString *const BFLanguageFlagImageFileType = @"png";
+NSString *const BFLanguageFlagsDir = @"Flags";
+
+static NSDictionary* languages;
+static BFLanguage* autoDetectedLanguage;
+
++ (void) initialize {
+	NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SupportedLanguages" ofType:@"plist"]];
+	
+	if (!languages) {
+		// TODO: handle error
+	}
+	
+	NSMutableDictionary *d = [NSMutableDictionary dictionaryWithCapacity:[array count]];
+	
+	for (NSDictionary *dict in array) {
+		NSString *code = [dict objectForKey:BFLanguageCodeKey];
+		NSString *name = [dict objectForKey:BFLanguageNameKey];
+		BFLanguage *lang = [[BFLanguage alloc] initWithCode:code name:name imagePath:[[NSBundle mainBundle] pathForResource:code ofType:BFLanguageFlagImageFileType inDirectory:BFLanguageFlagsDir]];
+		
+		[d setObject:lang forKey:name];
+	}
+	
+	languages = [[NSDictionary dictionaryWithDictionary:d] retain];	
+
+	BFAssert([languages count] > 0, @"No languages loaded.");
+	BFDevLog(@"Initialized %d languges", [languages count]);
+
+
+	autoDetectedLanguage = [[BFLanguage alloc] initWithCode:@"" name:@"Detect Language" imagePath:nil];
+}
 
 - (id) initWithHTTPInvoker:(NSObject<BFHTTPInvoker> *)invoker {
 	if(![super init]) {
@@ -54,13 +88,42 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 - (void) dealloc {
 	[parser release];
 	[httpInvoker release];
-	
+
 	[super dealloc];
 }
 
-- (NSString*)translateText:(NSString*)text from:(NSString*)from to:(NSString*)to error:(NSError **)error {
-	// TODO: check the arguments
+- (NSArray *) languages {
+	return [languages allValues];
+}
 
+- (BFLanguage *) autoDetectTargetLanguage {
+	return autoDetectedLanguage;	
+}
+
+/**
+ *
+ * @return a the language or {@code nil} if no lanugaage with that name exists
+ */
+- (BFLanguage *) languageByName:(NSString *)name {
+	BFAssert(name, @"name must not be nil");
+	
+	BFLanguage *language = [languages valueForKey:name];
+	
+	return language;
+}
+
+- (NSString *) translateText:(NSString *)text from:(BFLanguage *)from to:(BFLanguage *)to error:(NSError **)error {
+	BFAssert(from, @"from language must not be nil");
+	BFAssert(to, @"to language must not be nil");
+	
+	if (isEmpty(text)) {
+		return nil;
+	}
+	
+	if ([from isEqual:to]) {
+		return text;
+	}
+	
 	// prepepare text
 	NSString* encodedText = text;
 	// encode special characters
@@ -73,7 +136,7 @@ NSInteger const BFServiceFailedErrorCodeKey = 3;
 	// experiment URL http://translate.google.com/translate_a/t?client=t&text=Bon&hl=en&sl=auto&tl=en&otf=2&pc=0
 	// expected URL is like: http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=hello%20world&langpair=en%7Cit
 	
-	NSString* langPair = [[NSString stringWithFormat:@"%@|%@", from, to] stringByURLEscape];
+	NSString* langPair = [[NSString stringWithFormat:@"%@|%@", [from code], [to code]] stringByURLEscape];
 	NSString* requestUrl = [NSString stringWithFormat:@"%@&q=%@&langpair=%@", BFGoogleTranslateURLBase, encodedText, langPair];
 	
 #ifdef COUNT_REQUEST

@@ -18,12 +18,6 @@
 
 @implementation BFAppController
 
-// TODO: as constants
-#define BFLanguageCodeKey @"Code"
-#define BFLanguageNameKey @"Name" 
-#define BFLanguageFlagImageFileType @"png"
-#define BFLanguageFlagsDir @"Flags"
-
 - (id)init {
 	BFTrace();
 	if (![super init]) {
@@ -45,28 +39,7 @@
 	[super dealloc];
 }	
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	NSError *error = nil;
-	// load languages
-	NSDictionary *allLanguages = [self loadLanguages:&error];
-	
-	// attach an observer to each language and when the rating changes it will automatically save it to the the .plist
-	
-	if (error) {
-		// TODO: handle error - fail
-	}
-	
-	BFAssert([allLanguages count] > 0, @"No languages loaded.");
-	BFDevLog(@"Initialized %d languges", [allLanguages count]);
-	
-	// load source language rating
-	error = nil;
-	sourceLanguages = [allLanguages allValues];
-		
-	// load target langauge rating
-	error = nil;
-	targetLanguages = [allLanguages allValues];
-	
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {	
 	// initialize service provider
 	[NSApp setServicesProvider:self];
 	
@@ -78,65 +51,12 @@
 	// TODO: loading preferences goes here	
 }
 
-- (NSDictionary *) loadLanguages:(NSError **)anError {
-	NSArray *languages = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SupportedLanguages" ofType:@"plist"]];
-	
-	if (!languages) {
-		// TODO: handle error
-	}
-	
-	NSMutableDictionary *d = [NSMutableDictionary dictionaryWithCapacity:[languages count]];
-		
-	for (NSDictionary *dict in languages) {
-		NSString *code = [dict objectForKey:BFLanguageCodeKey];
-		NSString *name = [dict objectForKey:BFLanguageNameKey];
-		BFLanguage *lang = [[BFLanguage alloc] initWithCode:code name:name imagePath:[[NSBundle mainBundle] pathForResource:code ofType:BFLanguageFlagImageFileType inDirectory:BFLanguageFlagsDir]];
-		
-		if (!lang) {
-			// TODO: handle error
-		}
-		
-		[d setObject:lang forKey:code];
-	}
-	
-	return [[NSDictionary dictionaryWithDictionary:d] retain];
-}
-
-- (void) loadRating:(NSArray *)theLanguages source:(NSString *)aSource error:(NSError **)anError {
-	NSArray *languages = [NSArray arrayWithContentsOfFile:aSource];
-	
-	if (!languages) {
-		// TODO: handle error
-	}
-	
-	NSMutableDictionary *d = [NSMutableDictionary dictionaryWithCapacity:[languages count]];
-	
-	for (NSDictionary *dict in languages) {
-		NSString *code = [dict objectForKey:BFLanguageCodeKey];
-		NSString *name = [dict objectForKey:BFLanguageNameKey];
-		BFLanguage *lang = [[BFLanguage alloc] initWithCode:code name:name imagePath:[[NSBundle mainBundle] pathForResource:code ofType:BFLanguageFlagImageFileType inDirectory:BFLanguageFlagsDir]];
-		
-		if (!lang) {
-			// TODO: handle error
-		}
-		
-		[d setObject:lang forKey:code];
-	}
-	
-	return [[NSDictionary dictionaryWithDictionary:d] retain];
-
-	for (BFLanguage *l in theLanguages) {
-		int r =  [[l name] isEqualToString:@"French"] ? 200 : 1;
-		[l setRating:r];
-	}
-}
-
 /**
  * @param aSourceLanguage has to come from the {@code sourceLanguages} array
  * @param aTargetLanguage has to come from the {@code targetLanguages} array
  */
 - (void) newTranslationWindowToTranslateText:(NSString *)anOriginalText from:(BFLanguage *)aSourceLanguage to:(BFLanguage *)aTargetLanguage {
-	BFTranslationWindowModel *model = [[[BFTranslationWindowModel alloc] initWithTranslator:translator sourceLanguages:sourceLanguages targetLanguages:targetLanguages] autorelease];
+	BFTranslationWindowModel *model = [[[BFTranslationWindowModel alloc] initWithTranslator:translator userDefaults:[NSUserDefaults standardUserDefaults]] autorelease];
 
 	[model setOriginalText:anOriginalText];
 	[model setSelectedSourceLanguage:aSourceLanguage];
@@ -154,16 +74,6 @@
 	[self newTranslationWindow];
 }
 
-- (BFLanguage *) findLanguageByCode:(NSString *)code within:(NSArray *)array {
-	for (BFLanguage *l in array) {
-		if ([code isEqualToString:[l code]]) {
-			return l;
-		}
-	}
-			
-	return nil;
-}
-
 - (void)newTransaltionWindowFromSericeCall:(NSPasteboard *)aPboard userData:(NSString *)aUserData error:(NSString **)anError {
 	BFDevLog(@"newTransaltionWindowFromSericeCall:\"%@\" userData:\"%@\"", aPboard, aUserData);
 	
@@ -177,13 +87,13 @@
 			*anError = NSLocalizedString(@"Error: invalid service description. It should be either empty or contain a language pair as <source_language_code>|<target_language_code> (eg \"en|fr\").", nil);
 			return;
 		} else {
-			from = [self findLanguageByCode:[languagePair objectAtIndex:0] within:sourceLanguages];
+			from = [translator languageByName:[languagePair objectAtIndex:0]];
 			if (!from) {
 				*anError = NSLocalizedString(@"Error: from language is not supported.", nil);
 				return;
 			}
 			
-			from = [self findLanguageByCode:[languagePair objectAtIndex:1] within:targetLanguages];
+			to = [translator languageByName:[languagePair objectAtIndex:1]];
 			if (!to) {
 				*anError = NSLocalizedString(@"Error: to language is not supported.", nil);
 				return;
