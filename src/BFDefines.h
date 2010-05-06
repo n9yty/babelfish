@@ -54,6 +54,12 @@ description:__VA_ARGS__];                             \
 
 #endif // BFAssert
 
+#ifndef BFFail
+
+#define BFFail(...) BFAssert(NO,##__VA_ARGS__)
+
+#endif // BFFail
+
 // TODO refactor
 static inline BOOL isEmpty(id thing) {
     return thing == nil

@@ -33,13 +33,6 @@ static NSString const* BFTargetLanguageChangedCtxKey = @"BFTargetLanguageChanged
 static NSTimeInterval const BFDelayBetweenTranslations = 1.0;
 static NSInteger const BFMaxTextSizeForInteractiveTranslation = 1024;
 
-// prepare sort description
-static NSSortDescriptor *nameSortDescriptor;
-
-+ (void)initialize {
-	nameSortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
-}
-
 - (id)initWithModel:(BFTranslationWindowModel*)aModel {	
 	if (![super initWithWindowNibName:@"TranslationWindow"]) {
 		return nil;
@@ -72,59 +65,16 @@ static NSSortDescriptor *nameSortDescriptor;
 	[super dealloc];
 }
 
-- (NSArray *) sourceLanguages {
-	NSArray* languages = [[model translator] languages];
-
-	NSMutableArray *array = [NSMutableArray array];
-	// first is the auto-detect
-	[array addObject: [[model translator] autoDetectTargetLanguage]];
-	// separator
-	[array addObject:[NSMenuItem separatorItem]];
-	// last used ones
-	NSArray *lastUsed = [model lastUsedSourceLanguages];
-	NSMutableArray *remaining = [NSMutableArray arrayWithArray:languages];
-	if (!isEmpty(lastUsed)) {
-		[array addObjectsFromArray:lastUsed];
-		[remaining removeObjectsInArray:lastUsed];		
-		// separator
-		[array addObject:[NSMenuItem separatorItem]];
-	}
-	// all others
-	[array addObjectsFromArray:[remaining sortedArrayUsingDescriptors:[NSArray arrayWithObject:nameSortDescriptor]]];
-	  
-	return [NSArray arrayWithArray:array];
-}
-
-- (NSArray *) targetLanguages {
-	NSArray* languages = [[model translator] languages];
-
-	NSMutableArray *array = [NSMutableArray array];
-	// last used ones
-	NSArray *lastUsed = [model lastUsedTargetLanguages];
-	NSMutableArray *remaining = [NSMutableArray arrayWithArray:languages];
-	if (!isEmpty(lastUsed)) {
-		[array addObjectsFromArray:lastUsed];
-		[remaining removeObjectsInArray:lastUsed];
-		// separator
-		[array addObject:[NSMenuItem separatorItem]];
-	}
-	// all others
-	[array addObjectsFromArray:[remaining sortedArrayUsingDescriptors:[NSArray arrayWithObject:nameSortDescriptor]]];
-		
-	return [NSArray arrayWithArray:array];
-}
 
 - (void)awakeFromNib {
 	// we start with no translation
 	[self setTranslationBoxHidden:YES];
 	
 	// source languages
-	[sourceLanguagePopup removeAllItems];
-	[self populateMenu:[sourceLanguagePopup menu] withItems:[self sourceLanguages]];
+	[self populateMenu:[sourceLanguagePopup menu] withItems:[model sourceLanguages]];
 		
 	// target langages
-	[targetLanguagePopup removeAllItems];
-	[self populateMenu:[targetLanguagePopup menu] withItems:[self targetLanguages]];
+	[self populateMenu:[targetLanguagePopup menu] withItems:[model targetLanguages]];
 	
 	// synchronize source language - FIXME issue#2
 	if ([model selectedSourceLanguage]) {
@@ -237,8 +187,8 @@ static NSSortDescriptor *nameSortDescriptor;
 
 - (void) populateMenu:(NSMenu *)menu withItems:(NSArray *)items {
 	for (id e in items) {
-		if ([e isKindOfClass: [NSMenuItem class]]) {
-			[menu addItem: (NSMenuItem *)e];
+		if (e == nil) {
+			[menu addItem: [NSMenuItem separatorItem]];
 		} else if ([e isKindOfClass: [BFLanguage class]]) {
 			BFLanguage *l = (BFLanguage *)e;
 			NSMenuItem *mi = [menu addItemWithTitle:[l name] action:nil keyEquivalent:@""];
@@ -246,8 +196,7 @@ static NSSortDescriptor *nameSortDescriptor;
 			[mi setImage:[l image]];
 			[mi setTag:[l hash]];
 		} else {
-			// TODO: crash here
-			BFDevLog(@"Unexpected item: %@", e);
+			BFFail(@"Unexpected item: %@", e);
 		}
 	}
 }

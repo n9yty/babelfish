@@ -30,6 +30,9 @@
 
 - (id)initWithTranslator:(NSObject<BFTranslator> *)aTranslator userDefaults:(NSUserDefaults *)aUserDefaults;
 
+- (NSArray *) sourceLanguages;
+- (NSArray *) targetLanguages;
+
 - (NSArray *) lastUsedSourceLanguages;
 - (NSArray *) lastUsedTargetLanguages;
 

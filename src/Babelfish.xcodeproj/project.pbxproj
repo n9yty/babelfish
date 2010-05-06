@@ -48,6 +48,8 @@
 		5133EAC2118CADE5001F4E01 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EABE118CADDC001F4E01 /* Cocoa.framework */; };
 		5133EDDD118DC04B001F4E01 /* BFStringConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5133EDDC118DC04B001F4E01 /* BFStringConstants.m */; };
 		5133EDDE118DC04B001F4E01 /* BFStringConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5133EDDC118DC04B001F4E01 /* BFStringConstants.m */; };
+		51490A1C1190C835005AB1BE /* BFTranslationWindowModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 51490A1B1190C835005AB1BE /* BFTranslationWindowModelTest.m */; };
+		51490A8C1190D5D3005AB1BE /* BFArgumentCheckUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 51490A8B1190D5D3005AB1BE /* BFArgumentCheckUtils.m */; };
 		51679391118A1E7300A96627 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679390118A1E7300A96627 /* NSString+URLEncode.m */; };
 		51679406118A252B00A96627 /* BFDefaultHTTPInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */; };
 		51679663118C764E00A96627 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 516794F7118A388100A96627 /* GHUnitTestMain.m */; };
@@ -169,6 +171,9 @@
 		5133ECC8118D9786001F4E01 /* BFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDefines.h; sourceTree = "<group>"; };
 		5133EDDB118DC04B001F4E01 /* BFStringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFStringConstants.h; sourceTree = "<group>"; };
 		5133EDDC118DC04B001F4E01 /* BFStringConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFStringConstants.m; sourceTree = "<group>"; };
+		51490A1B1190C835005AB1BE /* BFTranslationWindowModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslationWindowModelTest.m; sourceTree = "<group>"; };
+		51490A8A1190D5D3005AB1BE /* BFArgumentCheckUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFArgumentCheckUtils.h; sourceTree = "<group>"; };
+		51490A8B1190D5D3005AB1BE /* BFArgumentCheckUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFArgumentCheckUtils.m; sourceTree = "<group>"; };
 		5167938F118A1E7300A96627 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
 		51679390118A1E7300A96627 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
 		51679404118A252B00A96627 /* BFHTTPInvoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFHTTPInvoker.h; sourceTree = "<group>"; };
@@ -318,9 +323,20 @@
 		510A5B1B10C3401B00088B20 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				51490A891190D58F005AB1BE /* Utils */,
 				51679558118A3B8C00A96627 /* Translator */,
+				51490A1B1190C835005AB1BE /* BFTranslationWindowModelTest.m */,
 			);
 			name = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		51490A891190D58F005AB1BE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				51490A8A1190D5D3005AB1BE /* BFArgumentCheckUtils.h */,
+				51490A8B1190D5D3005AB1BE /* BFArgumentCheckUtils.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		51679373118A1D0D00A96627 /* External */ = {
@@ -504,6 +520,8 @@
 				516798E0118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m in Sources */,
 				516798E5118CA0E900A96627 /* NSString+BFGoogleTranslateEncoderTest.m in Sources */,
 				5133EDDE118DC04B001F4E01 /* BFStringConstants.m in Sources */,
+				51490A1C1190C835005AB1BE /* BFTranslationWindowModelTest.m in Sources */,
+				51490A8C1190D5D3005AB1BE /* BFArgumentCheckUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

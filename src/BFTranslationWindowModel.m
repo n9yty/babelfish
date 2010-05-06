@@ -18,6 +18,13 @@
 @synthesize selectedSourceLanguage;
 @synthesize selectedTargetLanguage;
 
+// prepare sort description
+static NSSortDescriptor *nameSortDescriptor;
+
++ (void)initialize {
+	nameSortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
+}
+
 - (id)initWithTranslator:(NSObject<BFTranslator> *)aTranslator userDefaults:(NSUserDefaults *)aUserDefaults {
 	BFAssert(aTranslator, @"translator must not be nil");
 	BFAssert(aUserDefaults, @"userDefaults must not be nil");
@@ -32,7 +39,6 @@
 	return self;
 }
 
-
 - (void) dealloc
 {
     [translator release];
@@ -44,6 +50,58 @@
 	
     [super dealloc];
 }
+
+/**
+  * @return returns an array of source language order by the preferences. When nil is presented - a separator should be inserted.
+  */
+- (NSArray *) sourceLanguages {
+	NSArray* languages = [translator languages];
+	
+	NSMutableArray *array = [NSMutableArray array];
+	
+	// first is the auto-detect
+	[array addObject: [translator autoDetectTargetLanguage]];
+	
+	// separator
+	[array addObject:nil];
+	
+	// last used ones
+	NSArray *lastUsed = [self lastUsedSourceLanguages];
+	NSMutableArray *remaining = [NSMutableArray arrayWithArray:languages];
+	if (!isEmpty(lastUsed)) {
+		[array addObjectsFromArray:lastUsed];
+		[remaining removeObjectsInArray:lastUsed];		
+		// separator
+		[array addObject:nil];
+	}
+	
+	// all others
+	[array addObjectsFromArray:[remaining sortedArrayUsingDescriptors:[NSArray arrayWithObject:nameSortDescriptor]]];
+	
+	return [NSArray arrayWithArray:array];
+}
+
+- (NSArray *) targetLanguages {
+	NSArray* languages = [translator languages];
+	
+	NSMutableArray *array = [NSMutableArray array];
+	
+	// last used ones
+	NSArray *lastUsed = [self lastUsedTargetLanguages];
+	NSMutableArray *remaining = [NSMutableArray arrayWithArray:languages];
+	if (!isEmpty(lastUsed)) {
+		[array addObjectsFromArray:lastUsed];
+		[remaining removeObjectsInArray:lastUsed];
+		// separator
+		[array addObject:nil];
+	}
+	
+	// all others
+	[array addObjectsFromArray:[remaining sortedArrayUsingDescriptors:[NSArray arrayWithObject:nameSortDescriptor]]];
+	
+	return [NSArray arrayWithArray:array];
+}
+
 
 - (NSArray *) lastUsedLanguagesForKey:(NSString *)aKey {
 	BFAssert(aKey, @"key must not be nil");
