@@ -1,33 +1,71 @@
 //
-//  BFUserDefaults.m
+//  BFTranslationWindowModel.m
 //  Babelfish
 //
-//  Created by Filip Krikava on 5/8/10.
+//  Created by Filip Krikava on 3/27/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "BFUserDefaults.h"
-#import "BFStringConstants.h"
+#import "BFTranslationModel.h"
+#import "BFTranslationTask.h"
+#import "BFTranslateTextOperation.h"
+#import "BFConstants.h"
 #import "BFDefines.h"
 
-@implementation BFUserDefaults
+@implementation BFTranslationModel
 
-- (id) initWithUserDefaults:(NSUserDefaults *)aUserDefaults {
-	BFAssert(aUserDefaults, @"user defaults must not be nil");
+@dynamic languages;
+@dynamic autoDetectTargetLanguage;
+
+- (id)initWithTranslator:(NSObject<BFTranslator> *)aTranslator userDefaults:(NSUserDefaults *)aUserDefaults {
+	BFAssert(aTranslator, @"translator must not be nil");
+	BFAssert(aTranslator, @"user defaults must not be nil");
 	
 	if (![super init]) {
 		return nil;
 	}
 	
+	operationQueue = [[NSOperationQueue alloc] init];
+	[operationQueue setMaxConcurrentOperationCount:1];
+		
+	translator = [aTranslator retain];
 	userDefaults = [aUserDefaults retain];
 	
 	return self;
 }
 
-- (void) dealloc {
+- (void) dealloc
+{
+    [translator release];
 	[userDefaults release];
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	[operationQueue cancelAllOperations];
+	[operationQueue release];	
+
+    [super dealloc];
+}
+
+- (void) translate:(BFTranslationTask *) aTask andCall:(SEL) aSelector onObject:(id) anObject {
+	// cancel all pending translation (should be at max one)
+	[operationQueue cancelAllOperations];
+		
+	// create a new translation operation
+	BFTranslateTextOperation *operation = [[BFTranslateTextOperation alloc] initWithTask:aTask translator:translator selector:aSelector onObject:anObject];
 	
-	[super dealloc];
+	// enqueue
+	[operationQueue addOperation:operation];	
+}
+
+- (NSArray *) languages {
+	return [translator languages];
+}
+
+- (BFLanguage*) autoDetectTargetLanguage {
+	return [translator autoDetectTargetLanguage];
+}
+
+- (BFLanguage*) languageByName:(NSString *)name {
+	return [translator languageByName:name];
 }
 
 - (NSArray *) lastUsedLanguagesNamesForKey:(NSString *)aKey {
@@ -81,6 +119,5 @@
 	BFAssert(aLanguage, @"language must not be nil");
 	[self setLastUsedLanguage:aLanguage forKey:BFLastUsedTargetLanguagesKey]; 
 }
-
 
 @end

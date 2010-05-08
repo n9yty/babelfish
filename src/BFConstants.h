@@ -17,9 +17,6 @@ extern NSString *const BFLastUsedTargetLanguagesKey;
 extern NSUInteger const BFLastUsedLanguageCount;
 
 @interface BFConstants : NSObject
-{
-	NSSortDescriptor* BFNameSortDescriptor;
-}
 
 +(void) initialize;
 + (NSSortDescriptor *) BFNameSortDescriptor;

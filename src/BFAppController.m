@@ -10,9 +10,8 @@
 #import "BFTranslationWindowController.h"
 #import "BFTranslator.h"
 #import "BFGoogleTranslator.h"
-#import "BFTranslationWindowModel.h"
+#import "BFTranslationModel.h"
 #import "BFDefaultHTTPInvoker.h"
-#import "BFUserDefaults.h"
 #import "BFDefines.h"
 
 #import "version.h"
@@ -29,16 +28,12 @@
 	
 	httpInvoker = [[BFDefaultHTTPInvoker alloc] init];
 	translator = [[BFGoogleTranslator alloc] initWithHTTPInvoker:httpInvoker];
-	userDefaults = [[BFUserDefaults alloc] initWithUserDefaults:[NSUserDefaults standardUserDefaults]];
 	
 	return self;
 }
 
 - (void)dealloc {
-	[sourceLanguages release];
-	[targetLanguages release];
 	[translator release];
-	[userDefaults release];
 	[httpInvoker release];
 	
 	[super dealloc];
@@ -61,17 +56,17 @@
  * @param aTargetLanguage has to come from the {@code targetLanguages} array
  */
 - (void) newTranslationWindowToTranslateText:(NSString *)anOriginalText from:(BFLanguage *)aSourceLanguage to:(BFLanguage *)aTargetLanguage {
-	BFTranslationWindowModel *model = [[[BFTranslationWindowModel alloc] initWithTranslator:translator userDefaults:userDefaults] autorelease];
+	BFTranslationModel *model = [[[BFTranslationModel alloc] initWithTranslator:translator userDefaults:[NSUserDefaults standardUserDefaults]] autorelease];
+	BFTranslationWindowController *window = [[BFTranslationWindowController alloc] initWithModel:model];
 
-	[model setOriginalText:anOriginalText];
+	[window setOriginalText:anOriginalText];
 	if (aSourceLanguage) {
-		[model setSelectedSourceLanguage:aSourceLanguage];
+		[window setSourceLanguage:aSourceLanguage];
 	}
 	if (aTargetLanguage) {
-		[model setSelectedTargetLanguage:aTargetLanguage];
+		[window setTargetLanguage:aTargetLanguage];
 	}
 	
-	BFTranslationWindowController *window = [[BFTranslationWindowController alloc] initWithModel:model userDefaults:userDefaults];
 	[window showWindow:nil];
 }
 	 

@@ -21,9 +21,9 @@
 #import "BFDefines.h"
 
 @class BFTranslateTextOperation;
-@class BFTranslationWindowModel;
+@class BFTranslationModel;
+@class BFTranslationTask;
 @class BFLanguage;
-@class BFUserDefaults;
 
 @interface BFTranslationWindowController : NSWindowController {
 	IBOutlet NSBox *translationBox;
@@ -38,17 +38,26 @@
 	IBOutlet NSTextField *copyrightLabel;
 		
 @private	
-	BFTranslationWindowModel* model;
-	BFUserDefaults *userDefaults;
+	BFTranslationModel* model;
+	
+	NSString *originalText;
+	NSString *translatedText;
+	
+	BFLanguage *sourceLanguage;
+	BFLanguage *targetLanguage;
 }
 
-@property (retain, readonly) BFTranslationWindowModel* model;
+@property(copy) NSString *originalText;
+@property(copy) NSString *translatedText;
+@property(retain) BFLanguage *sourceLanguage;
+@property(retain) BFLanguage *targetLanguage;
 
-- (id)initWithModel:(BFTranslationWindowModel*) aModel userDefaults:(BFUserDefaults*)aUserDefaults;
+- (id)initWithModel:(BFTranslationModel*) aModel;
 
-- (void)translationOperationDidFinish:(id)aNotification;
+- (void)taskTranslated:(BFTranslationTask *) task translation:(NSString *)translation error:(NSError *)error;
 - (void)populateMenu:(NSMenu *)menu withItems:(NSArray *)items;
 - (void)translate;
+- (void)swapLanguages;
 - (void)setTranslationBoxHidden:(BOOL)hidden;
 
 - (void)handleOriginalTextChanged;
@@ -62,8 +71,8 @@
 - (NSArray *) sourceLanguagesMenu;
 - (NSArray *) targetLanguagesMenu;
 
-- (IBAction)setTargetLanguage:(id)aSender;
-- (IBAction)setSourceLanguage:(id)aSender;
+- (IBAction)setTargetLanguageFromMenu:(id)aSender;
+- (IBAction)setSourceLanguageFromMenu:(id)aSender;
 - (IBAction)copyTranslationAndCloseAction:(id)aSender;
 - (IBAction)translateTextAction:(id)aSender;
 - (IBAction)swapLanguages:(id)aSender;

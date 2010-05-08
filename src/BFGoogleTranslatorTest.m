@@ -21,6 +21,7 @@
 #import "BFGoogleTranslator.h"
 #import "BFTranslator.h"
 #import "BFHTTPInvoker.h"
+#import "BFTestHelper.h"
 
 @interface BFGoogleTranslatorTest : GHTestCase {
 @private
@@ -32,22 +33,11 @@
 
 @implementation BFGoogleTranslatorTest
 
-// -- stubbing the actuall calls
-
--(NSData *) simpleWordTranslateRequest:(NSURLRequest *)request returningResponse:(NSURLResponse **)response error:(NSError **)error {
-	GHAssertEqualStrings(@"v=1.0&q=hello&langpair=en%7Cfr", [[request URL] query], @"URLs must be the same");
-	
-	return [@"{\"responseData\": {\"translatedText\":\"translated_hello\"}, \"responseDetails\": null, \"responseStatus\": 200}" dataUsingEncoding:NSUTF8StringEncoding];
-}
-
--(NSData *) newLinesRequest:(NSURLRequest *)request returningResponse:(NSURLResponse **)response error:(NSError **)error {
-	NSLog(@"%@", [request URL]);
-	//GHAssertEqualStrings(@"v=1.0&q=hello&langpair=en%7Cfr", [[request URL] query], @"URLs must be the same");
-	
-	return [@"{\"responseData\": {\"translatedText\":\"translated_text line 1 \\u003cBR\\u003e text line 3 \\u003cBR\\u003e\\u003cBR\\u003e text line 6\"}, \"responseDetails\": null, \"responseStatus\": 200}" dataUsingEncoding:NSUTF8StringEncoding];	
-}
-
 // -- set up / tear down code
+
+- (void)setUpClass {
+	BFTestHelperInitialize();
+}
 
 -(void)setUp {
 	invokerMock = [OCMockObject mockForProtocol:@protocol(BFHTTPInvoker)];
@@ -61,28 +51,16 @@
 // -- actualTest
 
 -(void) testSimpleWordTranslate {
-	[[[invokerMock stub] andCall:@selector(simpleWordTranslateRequest:returningResponse:error:) onObject:self] syncInvokeRequest:[OCMArg any] returningResponse:[OCMArg anyPointer] error:[OCMArg anyPointer]];
+	NSData *responseData = [@"{\"responseData\": {\"translatedText\":\"translated_hello\"}, \"responseDetails\": null, \"responseStatus\": 200}" dataUsingEncoding:NSUTF8StringEncoding];
+	[[[invokerMock stub] andReturn:responseData] syncInvokeRequest:[OCMArg checkWithBlock:^BOOL(NSURLRequest *request) {
+		return [@"v=1.0&q=hello&langpair=en%7Cfr" isEqual:[[request URL] query]];
+	}]  returningResponse:[OCMArg anyPointer] error:[OCMArg anyPointer]];
 	
 	NSError *error = nil;
-	NSString *translation = [translator translateText:@"hello" from:@"en" to:@"fr" error:&error];
-	
-	[invokerMock verify];
-	
+	NSString *translation = [translator translateText:@"hello" from:english to:french error:&error];
+		
 	GHAssertNil(error, @"No error should be set up");
 	GHAssertEqualStrings(@"translated_hello", translation, @"Translation failed");
 }
-
--(void) testNewLines {
-	[[[invokerMock stub] andCall:@selector(newLinesRequest:returningResponse:error:) onObject:self] syncInvokeRequest:[OCMArg any] returningResponse:[OCMArg anyPointer] error:[OCMArg anyPointer]];
-	
-	NSError *error = nil;
-	NSString *translation = [translator translateText:@"text line 1\ntext line 3\n\ntext line 6" from:@"en" to:@"fr" error:&error];
-	
-	[invokerMock verify];
-	
-	GHAssertNil(error, @"No error should be set up");
-	GHAssertEqualStrings(@"translated_text line 1\ntext line 3\n\ntext line 6", translation, @"Translation failed");
-}
-
 
 @end

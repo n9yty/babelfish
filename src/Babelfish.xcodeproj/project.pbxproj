@@ -35,7 +35,7 @@
 		510A5B1110C33B5A00088B20 /* SupportedLanguages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */; };
 		5115951510C19356001E60A8 /* BFTranslationWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5115950310C19356001E60A8 /* BFTranslationWindowController.m */; };
 		5115951610C19356001E60A8 /* BFGoogleTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5115950510C19356001E60A8 /* BFGoogleTranslator.m */; };
-		512192C7115E95EB00150E9E /* BFTranslationWindowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */; };
+		512192C7115E95EB00150E9E /* BFTranslationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 512192C6115E95EB00150E9E /* BFTranslationModel.m */; };
 		5133EA56118CAD53001F4E01 /* PLBlocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EA55118CAD53001F4E01 /* PLBlocks.framework */; };
 		5133EA57118CAD53001F4E01 /* PLBlocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EA55118CAD53001F4E01 /* PLBlocks.framework */; };
 		5133EA5B118CAD6C001F4E01 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5133EA5A118CAD6C001F4E01 /* GHUnit.framework */; };
@@ -49,11 +49,11 @@
 		5133EDDD118DC04B001F4E01 /* BFConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5133EDDC118DC04B001F4E01 /* BFConstants.m */; };
 		5133EDDE118DC04B001F4E01 /* BFConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5133EDDC118DC04B001F4E01 /* BFConstants.m */; };
 		51490A1C1190C835005AB1BE /* BFTranslationWindowModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 51490A1B1190C835005AB1BE /* BFTranslationWindowModelTest.m */; };
-		51490A8C1190D5D3005AB1BE /* BFArgumentCheckUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 51490A8B1190D5D3005AB1BE /* BFArgumentCheckUtils.m */; };
-		51490C5711958E56005AB1BE /* BFUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 51490C5611958E56005AB1BE /* BFUserDefaults.m */; };
-		51490C5811958E56005AB1BE /* BFUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 51490C5611958E56005AB1BE /* BFUserDefaults.m */; };
-		51490C5A11958EF4005AB1BE /* BFUserDefaultsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 51490C5911958EF4005AB1BE /* BFUserDefaultsTest.m */; };
 		51490D3611959D96005AB1BE /* BFTranslationWindowControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 51490D3511959D96005AB1BE /* BFTranslationWindowControllerTest.m */; };
+		51490E3F1195BDAE005AB1BE /* BFTranslationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 51490E3E1195BDAE005AB1BE /* BFTranslationTask.m */; };
+		51490E401195BDAE005AB1BE /* BFTranslationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 51490E3E1195BDAE005AB1BE /* BFTranslationTask.m */; };
+		51490F1F1195D707005AB1BE /* BFTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 51490F1E1195D707005AB1BE /* BFTestHelper.m */; };
+		5149115111960481005AB1BE /* SupportedLanguages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 510A5B1010C33B5A00088B20 /* SupportedLanguages.plist */; };
 		51679391118A1E7300A96627 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679390118A1E7300A96627 /* NSString+URLEncode.m */; };
 		51679406118A252B00A96627 /* BFDefaultHTTPInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */; };
 		51679663118C764E00A96627 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 516794F7118A388100A96627 /* GHUnitTestMain.m */; };
@@ -69,7 +69,7 @@
 		516796AB118C780500A96627 /* BFTranslateTextOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A5A0A10C3136200088B20 /* BFTranslateTextOperation.m */; };
 		516796AC118C780500A96627 /* BFLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CEFF91128AB6000658FB0 /* BFLanguage.m */; };
 		516796AD118C780500A96627 /* BFAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51999F13112A0729008BAC42 /* BFAppController.m */; };
-		516796AE118C780500A96627 /* BFTranslationWindowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */; };
+		516796AE118C780500A96627 /* BFTranslationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 512192C6115E95EB00150E9E /* BFTranslationModel.m */; };
 		516796AF118C780500A96627 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679390118A1E7300A96627 /* NSString+URLEncode.m */; };
 		516796B0118C780500A96627 /* BFDefaultHTTPInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51679405118A252B00A96627 /* BFDefaultHTTPInvoker.m */; };
 		516797C0118C903B00A96627 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 516797BF118C903B00A96627 /* RegexKitLite.m */; };
@@ -166,8 +166,8 @@
 		5115950410C19356001E60A8 /* BFGoogleTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFGoogleTranslator.h; sourceTree = "<group>"; };
 		5115950510C19356001E60A8 /* BFGoogleTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFGoogleTranslator.m; sourceTree = "<group>"; };
 		5115951410C19356001E60A8 /* BFTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTranslator.h; sourceTree = "<group>"; };
-		512192C5115E95EB00150E9E /* BFTranslationWindowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTranslationWindowModel.h; sourceTree = "<group>"; };
-		512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslationWindowModel.m; sourceTree = "<group>"; };
+		512192C5115E95EB00150E9E /* BFTranslationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTranslationModel.h; sourceTree = "<group>"; };
+		512192C6115E95EB00150E9E /* BFTranslationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslationModel.m; sourceTree = "<group>"; };
 		5133EA55118CAD53001F4E01 /* PLBlocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PLBlocks.framework; path = ../../../../Development/objc/PLBlocks/PLBlocks.framework; sourceTree = SOURCE_ROOT; };
 		5133EA5A118CAD6C001F4E01 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = ../../../../Development/objc/GHUnit_OCMock/src/build/Release/GHUnit.framework; sourceTree = SOURCE_ROOT; };
 		5133EA5E118CAD83001F4E01 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = ../../../../Development/objc/BGHUDAppKit/build/Release/BGHUDAppKit.framework; sourceTree = SOURCE_ROOT; };
@@ -176,12 +176,11 @@
 		5133EDDB118DC04B001F4E01 /* BFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFConstants.h; sourceTree = "<group>"; };
 		5133EDDC118DC04B001F4E01 /* BFConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFConstants.m; sourceTree = "<group>"; };
 		51490A1B1190C835005AB1BE /* BFTranslationWindowModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslationWindowModelTest.m; sourceTree = "<group>"; };
-		51490A8A1190D5D3005AB1BE /* BFArgumentCheckUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFArgumentCheckUtils.h; sourceTree = "<group>"; };
-		51490A8B1190D5D3005AB1BE /* BFArgumentCheckUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFArgumentCheckUtils.m; sourceTree = "<group>"; };
-		51490C5511958E56005AB1BE /* BFUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFUserDefaults.h; sourceTree = "<group>"; };
-		51490C5611958E56005AB1BE /* BFUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFUserDefaults.m; sourceTree = "<group>"; };
-		51490C5911958EF4005AB1BE /* BFUserDefaultsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFUserDefaultsTest.m; sourceTree = "<group>"; };
 		51490D3511959D96005AB1BE /* BFTranslationWindowControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslationWindowControllerTest.m; sourceTree = "<group>"; };
+		51490E3D1195BDAE005AB1BE /* BFTranslationTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTranslationTask.h; sourceTree = "<group>"; };
+		51490E3E1195BDAE005AB1BE /* BFTranslationTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTranslationTask.m; sourceTree = "<group>"; };
+		51490F1D1195D707005AB1BE /* BFTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTestHelper.h; sourceTree = "<group>"; };
+		51490F1E1195D707005AB1BE /* BFTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTestHelper.m; sourceTree = "<group>"; };
 		5167938F118A1E7300A96627 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
 		51679390118A1E7300A96627 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
 		51679404118A252B00A96627 /* BFHTTPInvoker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFHTTPInvoker.h; sourceTree = "<group>"; };
@@ -238,8 +237,8 @@
 				51999F0C112A0429008BAC42 /* Translator */,
 				51999F12112A0729008BAC42 /* BFAppController.h */,
 				51999F13112A0729008BAC42 /* BFAppController.m */,
-				512192C5115E95EB00150E9E /* BFTranslationWindowModel.h */,
-				512192C6115E95EB00150E9E /* BFTranslationWindowModel.m */,
+				512192C5115E95EB00150E9E /* BFTranslationModel.h */,
+				512192C6115E95EB00150E9E /* BFTranslationModel.m */,
 				5115950210C19356001E60A8 /* BFTranslationWindowController.h */,
 				5115950310C19356001E60A8 /* BFTranslationWindowController.m */,
 				510A593610C1D48A00088B20 /* version.h */,
@@ -250,8 +249,8 @@
 				5133ECC8118D9786001F4E01 /* BFDefines.h */,
 				5133EDDB118DC04B001F4E01 /* BFConstants.h */,
 				5133EDDC118DC04B001F4E01 /* BFConstants.m */,
-				51490C5511958E56005AB1BE /* BFUserDefaults.h */,
-				51490C5611958E56005AB1BE /* BFUserDefaults.m */,
+				51490E3D1195BDAE005AB1BE /* BFTranslationTask.h */,
+				51490E3E1195BDAE005AB1BE /* BFTranslationTask.m */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -330,22 +329,13 @@
 		510A5B1B10C3401B00088B20 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				51490A891190D58F005AB1BE /* Utils */,
 				51679558118A3B8C00A96627 /* Translator */,
 				51490A1B1190C835005AB1BE /* BFTranslationWindowModelTest.m */,
-				51490C5911958EF4005AB1BE /* BFUserDefaultsTest.m */,
 				51490D3511959D96005AB1BE /* BFTranslationWindowControllerTest.m */,
+				51490F1D1195D707005AB1BE /* BFTestHelper.h */,
+				51490F1E1195D707005AB1BE /* BFTestHelper.m */,
 			);
 			name = "Unit Tests";
-			sourceTree = "<group>";
-		};
-		51490A891190D58F005AB1BE /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				51490A8A1190D5D3005AB1BE /* BFArgumentCheckUtils.h */,
-				51490A8B1190D5D3005AB1BE /* BFArgumentCheckUtils.m */,
-			);
-			name = Utils;
 			sourceTree = "<group>";
 		};
 		51490BED11937806005AB1BE /* Frameworks */ = {
@@ -478,6 +468,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5149115111960481005AB1BE /* SupportedLanguages.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +523,7 @@
 				516796AB118C780500A96627 /* BFTranslateTextOperation.m in Sources */,
 				516796AC118C780500A96627 /* BFLanguage.m in Sources */,
 				516796AD118C780500A96627 /* BFAppController.m in Sources */,
-				516796AE118C780500A96627 /* BFTranslationWindowModel.m in Sources */,
+				516796AE118C780500A96627 /* BFTranslationModel.m in Sources */,
 				516796AF118C780500A96627 /* NSString+URLEncode.m in Sources */,
 				51679667118C766400A96627 /* BFGoogleTranslatorTest.m in Sources */,
 				51679663118C764E00A96627 /* GHUnitTestMain.m in Sources */,
@@ -541,10 +532,9 @@
 				516798E5118CA0E900A96627 /* NSString+BFGoogleTranslateEncoderTest.m in Sources */,
 				5133EDDE118DC04B001F4E01 /* BFConstants.m in Sources */,
 				51490A1C1190C835005AB1BE /* BFTranslationWindowModelTest.m in Sources */,
-				51490A8C1190D5D3005AB1BE /* BFArgumentCheckUtils.m in Sources */,
-				51490C5711958E56005AB1BE /* BFUserDefaults.m in Sources */,
-				51490C5A11958EF4005AB1BE /* BFUserDefaultsTest.m in Sources */,
 				51490D3611959D96005AB1BE /* BFTranslationWindowControllerTest.m in Sources */,
+				51490E3F1195BDAE005AB1BE /* BFTranslationTask.m in Sources */,
+				51490F1F1195D707005AB1BE /* BFTestHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,12 +555,12 @@
 				510A5A0B10C3136200088B20 /* BFTranslateTextOperation.m in Sources */,
 				518CEFFA1128AB6000658FB0 /* BFLanguage.m in Sources */,
 				51999F14112A0729008BAC42 /* BFAppController.m in Sources */,
-				512192C7115E95EB00150E9E /* BFTranslationWindowModel.m in Sources */,
+				512192C7115E95EB00150E9E /* BFTranslationModel.m in Sources */,
 				51679391118A1E7300A96627 /* NSString+URLEncode.m in Sources */,
 				51679406118A252B00A96627 /* BFDefaultHTTPInvoker.m in Sources */,
 				516798DF118C9A3100A96627 /* NSString+BFGoogleTranslateEncoder.m in Sources */,
 				5133EDDD118DC04B001F4E01 /* BFConstants.m in Sources */,
-				51490C5811958E56005AB1BE /* BFUserDefaults.m in Sources */,
+				51490E401195BDAE005AB1BE /* BFTranslationTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,7 +775,7 @@
 				GCC_VERSION = coop.plausible.blocks.compilers.gcc.4_2;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				OTHER_CFLAGS = "-DRKL_BLOCKS=1";
+				OTHER_CFLAGS = "-DNS_BLOCKS_AVAILABLE=1";
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
 				SYMROOT = build;

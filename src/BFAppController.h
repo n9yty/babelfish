@@ -21,9 +21,6 @@
 	NSObject<BFHTTPInvoker> *httpInvoker;
 	
 	BFUserDefaults* userDefaults;
-	
-	NSArray *sourceLanguages;
-	NSArray *targetLanguages;
 }
 
 - (void) newTransaltionWindowFromSericeCall:(NSPasteboard *)aPboard userData:(NSString *)aUserData error:(NSString **)anError;

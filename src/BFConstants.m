@@ -13,6 +13,8 @@ NSString *const BFLastUsedTargetLanguagesKey = @"BFLastUsedTargetLanguagesKey";
 
 NSUInteger const BFLastUsedLanguageCount = 5;
 
+static NSSortDescriptor* BFNameSortDescriptor;
+
 @implementation BFConstants
 
 + (void) initialize {

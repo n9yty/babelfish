@@ -18,27 +18,27 @@
 #import <Cocoa/Cocoa.h>
 #import "BFTranslator.h"
 
-@class BFLanguage;
+//extern NSString *const BFTranslationFinishedNotificationKey;
 
-extern NSString *const BFTranslationFinishedNotificationKey;
+@class BFLanguage;
+@class BFTranslationTask;
 
 @interface BFTranslateTextOperation : NSOperation {
 
 @private
-	NSString *text;
-	BFLanguage *from;
-	BFLanguage *to;
+	BFTranslationTask *task;
 	NSObject<BFTranslator> *translator;
+	
+	SEL selector;
+	id provider;
 	
 	NSString *translation;
 	NSError *error;
 }
 
-- (id) initWithText:(NSString *)aText from:(BFLanguage *)fromLang to:(BFLanguage *)toLang translator:(NSObject<BFTranslator> *)aTranslator;
+- (id) initWithTask:(BFTranslationTask *)aTask translator:(NSObject<BFTranslator> *)aTranslator selector:(SEL) aSelector onObject:(id) anObject;
 
-@property (readonly) NSString *translation;
-@property (readonly) BFLanguage *from;
-@property (readonly) BFLanguage *to;
+@property (readonly) BFTranslationTask *task;
 @property (readonly) NSError *error;
 
 @end

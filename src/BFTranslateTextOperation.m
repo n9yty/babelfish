@@ -17,46 +17,53 @@
 
 #import "BFTranslateTextOperation.h"
 #import "BFLanguage.h"
+#import "BFTranslationTask.h"
 #import "BFDefines.h"
 
-NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNotificationKey";
+// NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNotificationKey";
+
+@interface BFTranslateTextOperation (Private)
+- (void) notify;
+@end
 
 @implementation BFTranslateTextOperation
 
-@synthesize from;
-@synthesize to;
-@synthesize translation;
+@synthesize task;
 @synthesize error;
 
-- (id) initWithText:(NSString *)aText from:(BFLanguage *)fromLang to:(BFLanguage *)toLang translator:(NSObject<BFTranslator> *)aTranslator {	
+- (id) initWithTask:(BFTranslationTask *)aTask translator:(NSObject<BFTranslator> *)aTranslator selector:(SEL) aSelector onObject:(id) anObject {
+	BFAssert(aTask, @"task must not be null");
+	BFAssert(aTranslator, @"translator must not be null");
+	BFAssert(aSelector, @"selector must not be null");
+	BFAssert(anObject, @"object must not be null");
+	
 	if (![super init]) {
 		return nil;
 	}
 	
 	// TODO: check arguments
-	
-	text = [aText retain];
-	from = [fromLang retain];
-	to = [toLang retain];
+
+	task = [aTask retain];
 	translator = [aTranslator retain];
+	selector = aSelector;
+	provider = [anObject retain];
 	
 	return self;
 }
 
 - (void) dealloc {
-	[text release];
-	[from release];
-	[to release];
+	[task release];
 	[translation release];
 	[error release];
+	[provider release];
 	
 	[super dealloc];
 }
 
 - (void) main {
-	BFDevLog(@"Translating text operation:\"%@\" from:\"%@\" to:\"%@\" using %@", text, from, to, [translation description]);
+	BFDevLog(@"Translatinng task:\"%@\" using %@", task, translation);
 
-	NSString *t = [translator translateText:text from:from to:to error:&error];
+	NSString *t = [translator translateText:[task originalText] from:[task sourceLanguage] to:[task targetLanguage] error:&error];
 	
 	if (t == nil) {
 		BFDevLog(@"Translation error: %@", error);
@@ -70,9 +77,16 @@ NSString *const BFTranslationFinishedNotificationKey = @"BFTranslationFinishedNo
 	}
 	
 	if (![self isCancelled]) {
-		[[NSNotificationCenter defaultCenter] performSelectorOnMainThread:@selector(postNotification:) withObject: [NSNotification notificationWithName:BFTranslationFinishedNotificationKey object:self] waitUntilDone:NO];
-	}
-	
+		[self performSelectorOnMainThread:@selector(notify) withObject:nil waitUntilDone:YES];
+	}	
+}
+
+@end
+
+@implementation BFTranslateTextOperation (Private) 
+
+- (void) notify {
+	objc_msgSend(provider, selector, task, translation, error);
 }
 
 @end
