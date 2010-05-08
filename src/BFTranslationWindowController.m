@@ -20,6 +20,8 @@
 #import "BFTranslateTextOperation.h"
 #import "BFLanguage.h"
 #import "BFTranslationWindowModel.h"
+#import "BFUserDefaults.h"
+#import "BFConstants.h"
 
 @implementation BFTranslationWindowController
 
@@ -33,16 +35,13 @@ static NSString const* BFTargetLanguageChangedCtxKey = @"BFTargetLanguageChanged
 static NSTimeInterval const BFDelayBetweenTranslations = 1.0;
 static NSInteger const BFMaxTextSizeForInteractiveTranslation = 1024;
 
-- (id)initWithModel:(BFTranslationWindowModel*)aModel {	
+- (id)initWithModel:(BFTranslationWindowModel*)aModel userDefaults:(BFUserDefaults*)aUserDefaults {	
 	if (![super initWithWindowNibName:@"TranslationWindow"]) {
 		return nil;
 	}
 		
-	model = [aModel retain];	
-	operationQueue = [[NSOperationQueue alloc] init];
-	[operationQueue setMaxConcurrentOperationCount:1];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(translationOperationDidFinish:) name:BFTranslationFinishedNotificationKey object:nil];
+	model = [aModel retain];
+	userDefaults = [aUserDefaults retain];
 	
 	[model addObserver:self forKeyPath:@"originalText" options:NSKeyValueObservingOptionNew context:&BFOriginalTextChangedCtxKey];
 	[model addObserver:self forKeyPath:@"translation" options:NSKeyValueObservingOptionNew context:&BFTranslationChangedCtxKey];
@@ -52,15 +51,9 @@ static NSInteger const BFMaxTextSizeForInteractiveTranslation = 1024;
 	return self;
 }
 
-- (void)dealloc {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	[operationQueue cancelAllOperations];
-	[operationQueue release];	
-	
+- (void)dealloc {	
 	[model release];
-	[translateTimer release];
-	[requestedTextToTranslate release];
-	[lastTextToTranslate release];
+	[userDefaults release];
 		
 	[super dealloc];
 }
@@ -71,106 +64,65 @@ static NSInteger const BFMaxTextSizeForInteractiveTranslation = 1024;
 	[self setTranslationBoxHidden:YES];
 	
 	// source languages
-	[self populateMenu:[sourceLanguagePopup menu] withItems:[model sourceLanguages]];
+	[sourceLanguagePopup removeAllItems];
+	[self populateMenu:[sourceLanguagePopup menu] withItems:[self sourceLanguagesMenu]];
 		
 	// target langages
-	[self populateMenu:[targetLanguagePopup menu] withItems:[model targetLanguages]];
-	
-	// synchronize source language - FIXME issue#2
-	if ([model selectedSourceLanguage]) {
-		[sourceLanguagePopup selectItemWithTag:[[model selectedSourceLanguage] hash]];
-	} else {
-		[model setSelectedSourceLanguage:[[sourceLanguagePopup selectedItem] representedObject]];
-	}
-	
-	// synchronize target language - FIXME issue#2
-	if ([model selectedTargetLanguage]) {
-		[targetLanguagePopup selectItemWithTag:[[model selectedTargetLanguage] hash]];
-	} else {
-		[model setSelectedTargetLanguage:[[targetLanguagePopup selectedItem] representedObject]];
-	}
+	[targetLanguagePopup removeAllItems];
+	[self populateMenu:[targetLanguagePopup menu] withItems:[self targetLanguagesMenu]];
 	
 	[self handleOriginalTextChanged];
 	[self handleLanguageSelectionChanged];
 	[self handleTranslationChanged];
 }
 
-- (void) stopTranslateTimer {
-	BFDevLog(@"Stopping timer");
+- (void) handleLanguageSelectionChanged {
+	// update swap button status
+	[swapLanguagesButton setHidden:[model selectedSourceLanguage] == [[model translator] autoDetectTargetLanguage]];
 
-	[translateTimer invalidate];
-	[translateTimer release];
-	translateTimer = nil;
-}
-
-- (void) startTranslateTimer {
-	BFDevLog(@"Starting timer %@", translateTimer);
-	
-	if (!translateTimer) {
-		translateTimer = [[NSTimer scheduledTimerWithTimeInterval:BFDelayBetweenTranslations target:self selector:@selector(translateTimerDidFire:) userInfo:nil repeats:YES] retain];
+	// synchronize source language - FIXME issue#2
+	if (![[[sourceLanguagePopup selectedItem] representedObject] isEqual:[model selectedSourceLanguage]]) {
+		[sourceLanguagePopup selectItemWithTag:[[model selectedSourceLanguage] hash]];
 	}
-}
-
-- (void) translateTimerDidFire:(NSTimer *)aTimer {	
-	BFDevLog(@"Time fired last: %@ new: %@", lastTextToTranslate, requestedTextToTranslate);
 	
-	if ([lastTextToTranslate isEqualToString:[requestedTextToTranslate stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]]) { 
-		BFDevLog(@"text is the same - stopping");
-		
-		[self stopTranslateTimer];
-	} else {				
-		[self translate];
-		
-		[lastTextToTranslate release];
-		lastTextToTranslate = [[requestedTextToTranslate stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] retain];
-	}
+	// synchronize target language - FIXME issue#2
+	if (![[[targetLanguagePopup selectedItem] representedObject] isEqual:[model selectedTargetLanguage]]) {
+		[targetLanguagePopup selectItemWithTag:[[model selectedTargetLanguage] hash]];	
+	}	
+
+// should translate
+//	if ([[model originalText] length] > 0) {
+//		[self translate];
+//	}
 }
 
 - (void) handleOriginalTextChanged {
-	BFDevLog(@"Text changed %@", [model originalText]);
-	
-	NSInteger size = [[model originalText] length];
-	
-	if (size > 0) {
-		[translateButton setEnabled:YES];
-		
-		if (size < BFMaxTextSizeForInteractiveTranslation) {
-			// implicit translate
-			BFDevLog(@"Implicit translation");
-			
-			[requestedTextToTranslate release];
-			requestedTextToTranslate = [[model originalText] copy];
-			
-			if (!translateTimer) {
-				BFDevLog(@"Timer not running - launching a new one");
-				[self startTranslateTimer];
-			}
-		} else {
-			// from now on we only use expricit translate
-			BFDevLog(@"Explicit translation");
-			
-			if (translateTimer) {
-				[self stopTranslateTimer];
-			}
-		}
-	} else {
-		[translateButton setEnabled:NO];
-		[model setTranslation:@""];
-		[self stopTranslateTimer];
-	}
-}
-
-- (void) handleLanguageSelectionChanged {
-	[swapLanguagesButton setHidden:[model selectedSourceLanguage] == [[model translator] autoDetectTargetLanguage]];
-	if ([[model originalText] length] > 0) {
-		[self translate];
-	}
 }
 
 - (void) handleTranslationChanged {
 	[copyAndCloseButton setEnabled:[[model translation] length] > 0];		
 }
 
+// TODO: use notification instead
+//- (void) handleTranslationStateChanged:(BFTranslationState)state {
+//	switch (state) {
+//		case BFTranslationStarted:
+//			
+//			break;
+//		case BFTranslationStopped:
+//			
+//			break;
+//		case BFTranslationFailed:
+//			
+//			break;
+//		default:
+//			BFFail(@"Unknown state %@", state);
+//	}
+//}
+
+/**
+ * Dispatching events method
+ */
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
 	if (context == &BFOriginalTextChangedCtxKey) {
@@ -185,84 +137,88 @@ static NSInteger const BFMaxTextSizeForInteractiveTranslation = 1024;
 	}
 }
 
+/**
+ * @return returns an array of source language order by the preferences.
+ */
+- (NSArray *) sourceLanguagesMenu {
+	NSArray* languages = [[model translator] languages];
+	
+	NSMutableArray *array = [NSMutableArray array];
+	
+	// first is the auto-detect
+	[array addObject:[[model translator] autoDetectTargetLanguage]];
+	
+	// separator
+	[array addObject:[NSMenuItem separatorItem]];
+	
+	// last used ones
+	NSMutableArray *lastUsed = [NSMutableArray array];
+	for (NSString *name in [userDefaults lastUsedSourceLanguagesNames]) {
+		[lastUsed addObject:[[model translator] languageByName:name]];
+	}
+	
+	NSMutableArray *remaining = [NSMutableArray arrayWithArray:languages];
+	if (!isEmpty(lastUsed)) {
+		[array addObjectsFromArray:lastUsed];
+		[remaining removeObjectsInArray:lastUsed];		
+		// separator
+		[array addObject:[NSMenuItem separatorItem]];
+	}
+	
+	// all others
+	[array addObjectsFromArray:[remaining sortedArrayUsingDescriptors:[NSArray arrayWithObject:[BFConstants BFNameSortDescriptor]]]];
+	
+	return [NSArray arrayWithArray:array];
+}
+
+- (NSArray *) targetLanguagesMenu {
+	NSArray* languages = [[model translator] languages];
+	
+	NSMutableArray *array = [NSMutableArray array];
+	
+	// last used ones
+	NSMutableArray *lastUsed = [NSMutableArray array];
+	for (NSString *name in [userDefaults lastUsedTargetLanguagesNames]) {
+		[lastUsed addObject:[[model translator] languageByName:name]];
+	}
+
+	NSMutableArray *remaining = [NSMutableArray arrayWithArray:languages];
+	if (!isEmpty(lastUsed)) {
+		[array addObjectsFromArray:lastUsed];
+		[remaining removeObjectsInArray:lastUsed];
+		// separator
+		[array addObject:[NSMenuItem separatorItem]];
+	}
+	
+	// all others
+	[array addObjectsFromArray:[remaining sortedArrayUsingDescriptors:[NSArray arrayWithObject:[BFConstants BFNameSortDescriptor]]]];
+	
+	return [NSArray arrayWithArray:array];
+}
+
 - (void) populateMenu:(NSMenu *)menu withItems:(NSArray *)items {
 	for (id e in items) {
-		if (e == nil) {
-			[menu addItem: [NSMenuItem separatorItem]];
+		NSMenuItem *mi = nil;
+
+		if ([e isKindOfClass:[NSMenuItem class]]) {
+			mi = e;
 		} else if ([e isKindOfClass: [BFLanguage class]]) {
 			BFLanguage *l = (BFLanguage *)e;
-			NSMenuItem *mi = [menu addItemWithTitle:[l name] action:nil keyEquivalent:@""];
+			
+			mi = [[NSMenuItem alloc] initWithTitle:[l name] action:nil keyEquivalent:@""];
+			[mi autorelease];
+			
 			[mi setRepresentedObject:l];
 			[mi setImage:[l image]];
 			[mi setTag:[l hash]];
 		} else {
 			BFFail(@"Unexpected item: %@", e);
 		}
+
+		BFAssert(mi, @"menu item must not be nil");
+		[menu addItem:mi];
 	}
 }
-
-- (void)translate {
-	NSString* text = [model originalText];
-	BFLanguage *from = [model selectedSourceLanguage];
-	BFLanguage *to = [model selectedTargetLanguage];
-	NSObject<BFTranslator> *translator = [model translator];
-	
-	// TODO assert	
-	BFDevLog(@"translateText:\"%@\" from:\"%@\" to:\"%@\"", text, from, to);
-	
-	if ([lastTextToTranslate isEqualToString:[text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]]
-		&& [[operationQueue operations] count] == 0) {
-		
-		NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-		[alert addButtonWithTitle:@"Translate"];
-		[alert addButtonWithTitle:@"Cancel"];
-		[alert setMessageText:@"Translate again?"];
-		[alert setInformativeText:@"The same text has been already translated. Are you sure you wanna do it again?"];
-		[alert setAlertStyle:NSInformationalAlertStyle];
-		
-		if ([alert runModal] == NSAlertSecondButtonReturn) {
-			// cancel clicked
-			return;
-		}
-	}
-	
-	// cancel all pending translation (should be at max one)
-	[operationQueue cancelAllOperations];
-	
-	// show busy animation
-	[progressIndicator startAnimation:nil];
-	
-	// create a new translation operation
-	BFTranslateTextOperation *operation = [[BFTranslateTextOperation alloc] initWithText:text from:from to:to translator:translator];
-	
-	// enqueue
-	[operationQueue addOperation:operation];	
-}
-
-- (void)translationOperationDidFinish:(id)aNotification {
-	BFDevLog(@"translationOperationDidFinish: %@", aNotification);
-	
-	[progressIndicator stopAnimation:nil];
-	
-	BFTranslateTextOperation *operation = [aNotification object];
-	// TODO: assert operation != nil
-	if ([operation error]) {
-		// TODO: to retry count?
-		
-		[NSApp presentError:[operation error]];
-		return;
-	}
-	
-	[model setTranslation:[operation translation]];
-	
-	if (![[[model translator] autoDetectTargetLanguage] isEqual:[operation from]]) {
-		[model setLastUsedSourceLanguage:[operation from]];
-	}
-	
-	[model setLastUsedTargetLanguage:[operation to]];
-	[self setTranslationBoxHidden:NO];
-}
-
 
 - (void)setTranslationBoxHidden:(BOOL)hidden {
 	BFDevLog(@"setTranslationVisible: %d", hidden);
@@ -294,19 +250,23 @@ static NSInteger const BFMaxTextSizeForInteractiveTranslation = 1024;
 }
 
 - (IBAction)setSourceLanguage:(id)aSender {
-	[model setSelectedSourceLanguage:[[sourceLanguagePopup selectedItem] representedObject]];
+	BFLanguage* language = [[sourceLanguagePopup selectedItem] representedObject];
+	
+	if (![[model selectedSourceLanguage] isEqual:language]) {
+		[model setSelectedSourceLanguage:[[sourceLanguagePopup selectedItem] representedObject]];
+	}
 }
 
 - (IBAction)setTargetLanguage:(id)aSender {
-	[model setSelectedTargetLanguage:[[targetLanguagePopup selectedItem] representedObject]];
+	BFLanguage* language = [[targetLanguagePopup selectedItem] representedObject];
+	
+	if (![[model selectedSourceLanguage] isEqual:language]) {
+		[model setSelectedSourceLanguage:language];
+	}
 }
 
 - (IBAction)translateTextAction:(id)aSender {
-	if (translateTimer) {
-		[self stopTranslateTimer];
-	}
-	
-	[self translate];
+
 }
 
 - (IBAction)copyTranslationAndCloseAction:(id)aSender {
@@ -327,19 +287,8 @@ static NSInteger const BFMaxTextSizeForInteractiveTranslation = 1024;
 	[self close];
 }
 
-- (IBAction)swapLanguages:(id)aSender {
-	
-	BFLanguage *s = [[sourceLanguagePopup selectedItem] representedObject];
-	if (s == [[model translator] autoDetectTargetLanguage]) {
-		return;
-	}
-	
-	BFLanguage *t = [[targetLanguagePopup selectedItem] representedObject];
-	
-	[sourceLanguagePopup selectItemWithTag:[t hash]];
-	[self setSourceLanguage:sourceLanguagePopup];
-	[targetLanguagePopup selectItemWithTag:[s hash]];
-	[self setTargetLanguage:targetLanguagePopup];
+- (IBAction)swapLanguages:(id)aSender {	
+	[model swapLanguages];
 }
 
 @end

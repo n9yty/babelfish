@@ -23,6 +23,12 @@
 	return utils;
 }
 
+- (void) dealloc {
+	[expectedArray dealloc];
+	
+	[super dealloc];
+}
+
 - (BOOL) checkArray:(NSArray *)anArray { 
 	BFAssert(expectedArray, @"extected array must not be nil");
 	BFAssert(anArray, @"array to check must not be nil");

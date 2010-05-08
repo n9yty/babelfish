@@ -20,10 +20,10 @@
 #import "BFTranslator.h"
 #import "BFDefines.h"
 
-@class Translation;
 @class BFTranslateTextOperation;
 @class BFTranslationWindowModel;
 @class BFLanguage;
+@class BFUserDefaults;
 
 @interface BFTranslationWindowController : NSWindowController {
 	IBOutlet NSBox *translationBox;
@@ -37,19 +37,14 @@
 	IBOutlet NSPopUpButton *targetLanguagePopup;
 	IBOutlet NSTextField *copyrightLabel;
 		
-@private
-	NSString *lastTextToTranslate;
-	NSString *requestedTextToTranslate;
-	NSTimer *translateTimer;
-
-	NSOperationQueue *operationQueue;
-	
+@private	
 	BFTranslationWindowModel* model;
+	BFUserDefaults *userDefaults;
 }
 
 @property (retain, readonly) BFTranslationWindowModel* model;
 
-- (id)initWithModel:(BFTranslationWindowModel*) aModel;
+- (id)initWithModel:(BFTranslationWindowModel*) aModel userDefaults:(BFUserDefaults*)aUserDefaults;
 
 - (void)translationOperationDidFinish:(id)aNotification;
 - (void)populateMenu:(NSMenu *)menu withItems:(NSArray *)items;
@@ -64,6 +59,8 @@
 - (void)stopTranslateTimer;
 - (void)translateTimerDidFire:(NSTimer *)aTimer;
 
+- (NSArray *) sourceLanguagesMenu;
+- (NSArray *) targetLanguagesMenu;
 
 - (IBAction)setTargetLanguage:(id)aSender;
 - (IBAction)setSourceLanguage:(id)aSender;

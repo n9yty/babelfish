@@ -7,7 +7,8 @@
 //
 
 #import "BFTranslationWindowModel.h"
-#import "BFStringConstants.h"
+#import "BFConstants.h"
+#import "BFUserDefaults.h"
 #import "BFDefines.h"
 
 @implementation BFTranslationWindowModel
@@ -18,14 +19,7 @@
 @synthesize selectedSourceLanguage;
 @synthesize selectedTargetLanguage;
 
-// prepare sort description
-static NSSortDescriptor *nameSortDescriptor;
-
-+ (void)initialize {
-	nameSortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
-}
-
-- (id)initWithTranslator:(NSObject<BFTranslator> *)aTranslator userDefaults:(NSUserDefaults *)aUserDefaults {
+- (id)initWithTranslator:(NSObject<BFTranslator> *)aTranslator userDefaults:(BFUserDefaults *)aUserDefaults {
 	BFAssert(aTranslator, @"translator must not be nil");
 	BFAssert(aUserDefaults, @"userDefaults must not be nil");
 	
@@ -33,8 +27,34 @@ static NSSortDescriptor *nameSortDescriptor;
 		return nil;
 	}
 	
+	operationQueue = [[NSOperationQueue alloc] init];
+	[operationQueue setMaxConcurrentOperationCount:1];
+		
+	
 	translator = [aTranslator retain];
 	userDefaults = [aUserDefaults retain];
+	
+	// set the defaults
+	
+	// set source language
+	NSString* languageName = [[userDefaults lastUsedSourceLanguagesNames] objectAtIndex:0];
+	BFLanguage *language = languageName ? [translator languageByName:languageName] : nil;
+	if (!language) {
+		language = [translator autoDetectTargetLanguage];
+	}
+	BFAssert(language, @"source language has to be set");
+	[self setSelectedSourceLanguage:language];
+	
+	// set target language
+	languageName = [[userDefaults lastUsedTargetLanguagesNames] objectAtIndex:0];
+	language = languageName ? [translator languageByName:languageName] : nil;
+	
+	if (!language) {
+		// TODO: get language close to the local settings
+		language = [[[translator languages] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[BFConstants BFNameSortDescriptor]]] objectAtIndex:0];
+	}
+	BFAssert(language, @"target language has to be set");
+	[self setSelectedTargetLanguage:language];
 	
 	return self;
 }
@@ -48,120 +68,28 @@ static NSSortDescriptor *nameSortDescriptor;
 	[selectedSourceLanguage release];
 	[selectedTargetLanguage release];
 	
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	[operationQueue cancelAllOperations];
+	[operationQueue release];	
+	[translateTimer release];
+
     [super dealloc];
 }
 
-/**
-  * @return returns an array of source language order by the preferences. When nil is presented - a separator should be inserted.
-  */
-- (NSArray *) sourceLanguages {
-	NSArray* languages = [translator languages];
+- (void) swapLanguages {
+	BFLanguage* source = selectedSourceLanguage;
+	BFLanguage* target = selectedTargetLanguage;
 	
-	NSMutableArray *array = [NSMutableArray array];
-	
-	// first is the auto-detect
-	[array addObject: [translator autoDetectTargetLanguage]];
-	
-	// separator
-	[array addObject:nil];
-	
-	// last used ones
-	NSArray *lastUsed = [self lastUsedSourceLanguages];
-	NSMutableArray *remaining = [NSMutableArray arrayWithArray:languages];
-	if (!isEmpty(lastUsed)) {
-		[array addObjectsFromArray:lastUsed];
-		[remaining removeObjectsInArray:lastUsed];		
-		// separator
-		[array addObject:nil];
+	if ([source isEqual:[translator autoDetectTargetLanguage]]) {
+		return;
 	}
-	
-	// all others
-	[array addObjectsFromArray:[remaining sortedArrayUsingDescriptors:[NSArray arrayWithObject:nameSortDescriptor]]];
-	
-	return [NSArray arrayWithArray:array];
+
+	[self setSelectedSourceLanguage: target];
+	[self setSelectedTargetLanguage: source];	
 }
 
-- (NSArray *) targetLanguages {
-	NSArray* languages = [translator languages];
+- (void) translate {
 	
-	NSMutableArray *array = [NSMutableArray array];
-	
-	// last used ones
-	NSArray *lastUsed = [self lastUsedTargetLanguages];
-	NSMutableArray *remaining = [NSMutableArray arrayWithArray:languages];
-	if (!isEmpty(lastUsed)) {
-		[array addObjectsFromArray:lastUsed];
-		[remaining removeObjectsInArray:lastUsed];
-		// separator
-		[array addObject:nil];
-	}
-	
-	// all others
-	[array addObjectsFromArray:[remaining sortedArrayUsingDescriptors:[NSArray arrayWithObject:nameSortDescriptor]]];
-	
-	return [NSArray arrayWithArray:array];
-}
-
-
-- (NSArray *) lastUsedLanguagesForKey:(NSString *)aKey {
-	BFAssert(aKey, @"key must not be nil");
-
-	NSArray *array = [userDefaults arrayForKey:aKey];
-	if (isEmpty(array)) {
-		return [NSArray array];
-	}
-	
-	NSMutableArray *result = [NSMutableArray arrayWithCapacity:[array count]];
-	for (NSString *name in array) {
-		BFLanguage *lang = [translator languageByName:name];
-		
-		// TODO: detect somebody was messing with preferences
-		BFAssert(lang, @"Unknown language name: %@", name);
-		[result addObject:lang];
-	}
-	
-	return [NSArray arrayWithArray:result];	
-}
-
-- (NSArray *) lastUsedSourceLanguages {
-	return [self lastUsedLanguagesForKey:BFLastUsedSourceLanguagesKey];
-}
-
-- (NSArray *) lastUsedTargetLanguages {
-	return [self lastUsedLanguagesForKey:BFLastUsedTargetLanguagesKey];
-}
-
-- (void) setLastUsedLanguage:(BFLanguage *)aLanguage forKey:(NSString *)aKey {
-	BFAssert(aLanguage, @"language must not be nil");
-	BFAssert(aKey, @"key must not be nil");
-	
-	NSMutableArray *array = [NSMutableArray arrayWithArray:[userDefaults arrayForKey:aKey]];
-
-	if (isEmpty(array)) {
-		[array addObject:[aLanguage name]];
-	} else {
-		if (![[array objectAtIndex:0] isEqual:[aLanguage name]]) {
-			[array insertObject:[aLanguage name] atIndex:0];
-		}
-		
-		if ([array count] > BFLastUsedLanguageCount) {
-			[array removeObjectsInRange:NSMakeRange(BFLastUsedLanguageCount, [array count] - BFLastUsedLanguageCount)];
-		}
-		BFAssert([array count] <= BFLastUsedLanguageCount, @"maximum %d languages", BFLastUsedLanguageCount);
-	}
-	
-	// save it
-	[userDefaults setObject:array forKey:aKey];
-}
-
-- (void) setLastUsedSourceLanguage:(BFLanguage *)aLanguage {
-	BFAssert(aLanguage, @"language must not be nil");
-	[self setLastUsedLanguage:aLanguage forKey:BFLastUsedSourceLanguagesKey]; 
-}
-
-- (void) setLastUsedTargetLanguage:(BFLanguage *)aLanguage {
-	BFAssert(aLanguage, @"language must not be nil");
-	[self setLastUsedLanguage:aLanguage forKey:BFLastUsedTargetLanguagesKey]; 
 }
 
 @end

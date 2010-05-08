@@ -21,63 +21,118 @@
 #import "BFTranslator.h"
 #import "BFLanguage.h"
 #import "BFTranslationWindowModel.h"
+#import "BFUserDefaults.h"
 #import "BFStringConstants.h"
-#import "BFArgumentCheckUtils.h"
 
 @interface BFTranslationWindowModelTest : GHTestCase {
-@private
-	BFTranslationWindowModel *model;
 	id userDefaultsMock;
 	id translatorMock;
 }
 
 @end
 
+static BFLanguage *autoDetect;
+static BFLanguage *africans;
+static BFLanguage *english;
+static BFLanguage *french;
+
 @implementation BFTranslationWindowModelTest
 
 // -- set up / tear down code
 
+- (void)setUpClass {
+	autoDetect = [[BFLanguage alloc] initWithCode:@"" name:@"Auto" imagePath:@""];
+	africans = [[BFLanguage alloc] initWithCode:@"af" name:@"Africans" imagePath:@""];
+	english = [[BFLanguage alloc] initWithCode:@"en" name:@"English" imagePath:@""];
+	french = [[BFLanguage alloc] initWithCode:@"fr" name:@"French" imagePath:@""]; 
+}
+
 -(void)setUp {
-	userDefaultsMock = [OCMockObject mockForClass:[NSUserDefaults class]];
-	translatorMock = [OCMockObject mockForProtocol:@protocol(BFTranslator)];
-	model = [[BFTranslationWindowModel alloc] initWithTranslator:translatorMock userDefaults:userDefaultsMock];
+	userDefaultsMock = [[OCMockObject mockForClass:[BFUserDefaults class]] retain];
+	translatorMock = [[OCMockObject mockForProtocol:@protocol(BFTranslator)] retain];
+	
+	[[[translatorMock stub] andReturn:africans] languageByName:[africans name]];
+	[[[translatorMock stub] andReturn:english] languageByName:[english name]];
+	[[[translatorMock stub] andReturn:french] languageByName:[french name]];
+	[[[translatorMock stub] andReturn:autoDetect] autoDetectTargetLanguage];
 }
 
 -(void)tearDown {
-	[model release];
+	[userDefaultsMock release];
+	userDefaultsMock = nil;
+	
+	[translatorMock release];
+	translatorMock = nil;
+}
+
+// -- helpers
+
+- (void) prepareEmptyLastUsedLanguageDefaults {
+	[[[userDefaultsMock expect] andReturn:nil] lastUsedSourceLanguagesNames];
+	[[[userDefaultsMock expect] andReturn:nil] lastUsedTargetLanguagesNames];
+	
 }
 
 // -- actualTest
 
-- (void)testUserPreferencesLastUsedSourceLanguages {
-	[[[userDefaultsMock stub] andReturn:[NSArray arrayWithObjects:@"English", @"French", nil]] arrayForKey:BFLastUsedSourceLanguagesKey];
-	BFLanguage *languageEn = [[BFLanguage alloc] initWithCode:@"en" name:@"English" imagePath:@""];
-	BFLanguage *languageFr = [[BFLanguage alloc] initWithCode:@"fr" name:@"French" imagePath:@""]; 
+- (void)testInitializationDefaults {
+	// prepare mocks
+	[self prepareEmptyLastUsedLanguageDefaults];
 	
-	[[[translatorMock stub] andReturn:languageEn] languageByName:@"English"];
-	[[[translatorMock stub] andReturn:languageFr] languageByName:@"French"];
+	[[[translatorMock stub] andReturn:[NSArray arrayWithObject:africans]] languages];
 
-	NSArray *langs = [model lastUsedSourceLanguages];
-	
-	[userDefaultsMock verify];
-	[translatorMock verify];
-	
-	GHAssertEquals([langs count], (NSUInteger)2, @"size must be 2");
-	GHAssertTrue([langs containsObject:languageEn], @"english is not present");
-	GHAssertTrue([langs containsObject:languageFr], @"french is not present");
+	// test
+	BFTranslationWindowModel *model = [[BFTranslationWindowModel alloc] initWithTranslator:translatorMock userDefaults:userDefaultsMock];
+		
+	GHAssertEquals(autoDetect, [model selectedSourceLanguage], @"invalid source language selected");	
+	GHAssertEquals(africans, [model selectedTargetLanguage], @"invalid target language selected");	
 }
 
-- (void)testUserPreferencesAddLastUsedSourceLanguages {
-	BFLanguage *languageEn = [[BFLanguage alloc] initWithCode:@"en" name:@"English" imagePath:@""];
+- (void)testInitializationDefaultsWithUserDefaults {
+	// prepare mocks	
+	[[[userDefaultsMock stub] andReturn:[NSArray arrayWithObjects:[english name], [french name], nil]] lastUsedSourceLanguagesNames];
+	[[[userDefaultsMock stub] andReturn:[NSArray arrayWithObjects:[french name], [english name], nil]] lastUsedTargetLanguagesNames];
 
-	[[[userDefaultsMock stub] andReturn:nil] arrayForKey:BFLastUsedSourceLanguagesKey];	
+	// test
+	BFTranslationWindowModel *model = [[BFTranslationWindowModel alloc] initWithTranslator:translatorMock userDefaults:userDefaultsMock];
+		
+	GHAssertEquals(english, [model selectedSourceLanguage], @"invalid source language selected");	
+	GHAssertEquals(french, [model selectedTargetLanguage], @"invalid target language selected");	
+}
 
-	BFArgumentCheckUtils *util = [BFArgumentCheckUtils checkExpectedArray:[NSArray arrayWithObjects:[languageEn name],nil]];
-	[[userDefaultsMock expect] setObject:[OCMArg checkWithSelector:@selector(checkArray:) onObject:util] forKey:BFLastUsedSourceLanguagesKey];
-
-	[model setLastUsedSourceLanguage:languageEn];
+- (void)testSwap {
+	// prepare mocks
+	[self prepareEmptyLastUsedLanguageDefaults];
 	
-	[userDefaultsMock verify];
-}				  
-				  
+	[[[translatorMock stub] andReturn:[NSArray arrayWithObject:africans]] languages];
+	
+	// test
+	BFTranslationWindowModel *model = [[BFTranslationWindowModel alloc] initWithTranslator:translatorMock userDefaults:userDefaultsMock];
+	[model setSelectedSourceLanguage:english];
+	[model setSelectedTargetLanguage:french];
+	[model swapLanguages];
+
+	// verify
+	GHAssertEquals(french, [model selectedSourceLanguage],@"invalid source languge after swap");
+	GHAssertEquals(english, [model selectedTargetLanguage],@"invalid target languge after swap");
+}
+
+- (void)testSwapAutoDetectLanguage {
+	[self prepareEmptyLastUsedLanguageDefaults];
+
+	[[[translatorMock stub] andReturn:[NSArray arrayWithObject:africans]] languages];
+	
+	// test
+	BFTranslationWindowModel *model = [[BFTranslationWindowModel alloc] initWithTranslator:translatorMock userDefaults:userDefaultsMock];
+	[model setSelectedSourceLanguage:autoDetect];
+	[model setSelectedTargetLanguage:french];
+	
+	[model swapLanguages];
+	
+	// verify
+	GHAssertEquals(autoDetect, [model selectedSourceLanguage],@"invalid source languge after swap");
+	GHAssertEquals(french, [model selectedTargetLanguage],@"invalid target languge after swap");
+}
+
+
 @end

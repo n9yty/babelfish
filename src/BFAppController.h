@@ -12,12 +12,15 @@
 #import "BFHTTPInvoker.h"
 
 @class BFLanguage;
+@class BFUserDefaults;
 
 @interface BFAppController : NSObject {
 
 	@private
 	NSObject<BFTranslator> *translator;
 	NSObject<BFHTTPInvoker> *httpInvoker;
+	
+	BFUserDefaults* userDefaults;
 	
 	NSArray *sourceLanguages;
 	NSArray *targetLanguages;
